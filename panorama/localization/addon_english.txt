@@ -1,0 +1,15 @@
+ "addon"
+{
+	"addonname"										"Custom hero arena"
+	"addon_game_name"								"Custom hero arena"
+	
+	"GlyphTooltipTitle"	"Change team"
+	"GlyphTooltip"	"Change your team!<br>Highlighted button means that you sent request."
+	
+	"NotEnoughDuel"				"Not enough heroes to duel!"
+	"DuelFail"					"Duel Failed to start, need more alive players!"
+	
+	"spell_shop_hotkey"			"Shop (F6)"
+
+}
+

@@ -1,0 +1,73 @@
+"itembuilds"
+{
+	"author"		"Turbo-"
+	"Title"			"Recommended items for every hero"
+	
+		"Items"
+	{		
+		"#DOTA_Item_Build_Potions"
+		{
+			"item"		"item_mana_potion"
+			"item"		"item_heal_potion"
+			"item"      "item_strength_potion"
+			"item"		"item_agility_potion"
+			"item"		"item_intellegence_potion"
+			"item"		"item_combined_potion"
+		}
+		
+		"#DOTA_Item_Build_Early_Game"
+		{	
+			"item"		"item_leaf_buckler"
+			"item"		"item_hand_of_midas_custom_two"
+			"item"      "item_ring_of_vasilius"
+			"item"		"item_phase_boots_2"
+			"item"		"item_power_treads_strength_2"
+			"item"		"item_fireblend"
+		}
+		
+		"#DOTA_Item_Build_Mage"
+		{
+			"item"		"item_quibbela"
+			"item"      "item_aghanim_core"
+			"item"      "item_aether_lens_1"
+			"item"		"item_mana_heart"
+			"item"		"item_durandal"
+			"item"		"item_kaya_c"
+			"item"		"item_manteau_invis"
+		}
+		
+		"#DOTA_Item_Build_Carry"
+		{
+			"item"      "item_desocay"
+			"item"      "item_doebalus"
+			"item"		"item_fly"
+			"item"		"item_cuirass_offering"
+			"item"		"item_demon_lifesteal"
+			"item"		"item_suzzwke"
+			"item"		"item_gauntlet_of_madness"
+			"item"		"item_echotic_sabre"
+		}
+		
+		"#DOTA_Item_Build_Unisex"
+		{
+			"item"      "item_midas_sword"
+			"item"		"item_scarlet_edge"
+			"item"      "item_power_band"
+			"item"      "item_blade_guard"
+			"item"		"item_treatment_greaves"
+			"item"		"item_black_king_hood"
+			"item"		"item_omnipresent_eye"
+			"item"		"item_purged_heart"
+			"item"		"item_alebard"
+		}
+		
+		"#DOTA_Item_Build_Ascention"
+		{
+			"item"		"item_ascention_scroll"
+			"item"		"item_soul_shard"
+			"item"		"item_empowered_treads"
+			"item"		"item_mirror_blade"
+			
+		}
+	}
+}

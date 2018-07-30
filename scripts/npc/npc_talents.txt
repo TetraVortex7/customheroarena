@@ -1,0 +1,137 @@
+"TalentManifest"
+{	
+	"DefaultTalentSet"
+	{
+		"TalentLevels" "10 20 30 50"
+		"Talents"
+		{
+		    "1" 
+		    {
+		    "left"
+		        {      
+		            "name" "all_bonus"
+		            "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"5"
+		            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"5"
+		            "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"5"
+		        }
+		        "right"
+		        {
+	                "name" "movespeed_bonus"
+	                "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "35"
+	            }
+	        }
+	        "2" 
+	        {
+	            "left"
+	            {      
+	                "name" "mana_regen"
+	                "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	"9"
+	            }
+	            "right"
+	            {
+	                "name" "atk_speed_bonus"
+	                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "15"
+	            }
+	        }
+	        "3" 
+	        {
+	            "left"
+	            {      
+	               "name" "cooldown_reduce"
+	                "MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"15" 
+	            }
+	            "right"
+	            {
+	                "name" "dmg_bonus"
+	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "50"
+	            }
+	        }
+	        "4" 
+	        {
+	            "left"
+	            {      
+	                "name" "mana_regen_total"
+	                "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"	"210"
+	            }
+	            "right"
+	            {
+	                "name" "mana_health_bonus"
+	                "MODIFIER_PROPERTY_HEALTH_BONUS" "700"
+	                "MODIFIER_PROPERTY_MANA_BONUS" "700"	                
+	            }
+	        }
+	    }
+	}
+
+	"TalentSets"
+	{
+		"ExampleTalentSet"
+		{
+		"TalentLevels" "10 20 30 50"
+		"Talents"
+			{
+			    "1" 
+			    {
+			    "left"
+			        {      
+			            "name" "all_bonus"
+			            "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"20"
+			            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"20"
+			            "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"20"
+			        }
+			        "right"
+			        {
+		                "name" "sf_sacrifice_soul_damage_bonus"
+		                "Ability" "sf_special_bonus_1"
+		                "v"  "2"
+		            }
+		        }
+		        "2" 
+		        {
+		            "left"
+		            {      
+		                "name" "all_bonus_2"
+		                "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"40"
+		                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"40"
+		                "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"40"
+		            }
+		            "right"
+		            {
+		                "name" "atk_speed_bonus"
+		                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "80"
+		            }
+		        }
+		        "3" 
+		        {
+		            "left"
+		            {      
+		                "name" "all_bonus_3"
+		                "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"60"
+		                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"60"
+		                "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"60"
+		            }
+		            "right"
+		            {
+		                "name" "dmg_bonus"
+		                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "200"
+		            }
+		        }
+		        "4" 
+		        {
+		            "left"
+		            {      
+		                "name" "all_bonus_4"
+		                "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"80"
+		                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"80"
+		                "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"80"
+		            }
+		            "right"
+		            {
+		                "name" "armor_bonus"
+		                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "20"
+		            }
+		        }
+		    }	 
+		}
+	}
+}

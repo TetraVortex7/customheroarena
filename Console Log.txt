@@ -1,0 +1,100 @@
+[   General        ]: WriteSteamRemoteStorageFileAsync( "scripts/control_groups.txt" ) -> at 580.784
+[   General        ]: CAsyncWriteInProgress::OnComplete( "scripts/control_groups.txt" ) -> Success at 581.488
+[   General        ]: Initializing script VM...
+[ W VScript        ]: Script not found (scripts/vscripts/quest.lua) 
+[ W VScript        ]: Script not found (scripts/vscripts/quest.lua) 
+[   VScript        ]: [Timers] creating Timers
+[   VScript        ]: [PHYSICS] creating Physics
+[   VScript        ]: [PROJECTILES] creating Projectiles
+[ W General        ]: Script failed to LoadKeyValues scripts/attachments.txt
+[   VScript        ]: [Orb Effects Library] Creating OEL
+[   VScript        ]: [Orb Effects Library] OEL Loaded
+[   VScript        ]: [Constants] Creating Constants
+[   VScript        ]: [Constants] Constants Loaded
+[ W General        ]: Script failed to LoadKeyValues scripts/npc/npc_heroes_override.txt
+[   VScript        ]: [StatsFinder] Creating StatsFinder
+[   VScript        ]: [StatsFinder] StatsFinder Loaded
+[ W General        ]: KeyValues Error: RecursiveLoadFromBuffer:  got NULL key in file scripts/npc/KV/ItemsAndAbilityLocalisation.kv
+[ W General        ]: Script failed to LoadKeyValues scripts/npc/KV/ItemsAndAbilityLocalisation.kv
+[   General        ]: Initializing script VM...
+[   VScript        ]: CreatedNetTableSettings
+[   VScript        ]: HeroListRefilled
+[   General        ]: ReadSteamRemoteStorageFile( bufOut, "scripts/control_groups.txt" ) -> 0.000202 seconds
+[   VScript        ]: playerID 	0
+[   VScript        ]: Stat Collection: GetDotaStats module is trying to init...
+[   VScript        ]: Stat Collection: Attempting to register the match with GetDotaStats...
+[   VScript        ]: Stat Collection: Flag was successfully set! {dedi:0}
+[   VScript        ]: Stat Collection: Flag was successfully set! {map:zxc}
+[   VScript        ]: Stat Collection: {"hostSteamID32":"96670086","modIdentifier":"bd1ed924f601413b4441a8644566e8d8","schemaVersion":5}
+[   VScript        ]: Stat Collection: Flag was successfully set! {version:0.82}
+[   VScript        ]: Stat Collection: Flag was successfully set! {loadTime:1}
+[   VScript        ]: Stat Collection: Match was successfully registered with GetDotaStats!
+[   VScript        ]: Stat Collection: Auth Key:  CYXLR57AYG
+[   VScript        ]: Stat Collection: MatchID:  19686058
+[   PanoramaScript ]: StatCollection Client Loaded
+[   VScript        ]: Stat Collection: Attempting to send pregame stats...
+[   VScript        ]: Stat Collection: Flag was successfully set! {numPlayers:1}
+[   VScript        ]: Stat Collection: {"schemaVersion":5,"matchID":19686058,"flags":{"dedi":0,"loadTime":1,"version":0.82,"numPlayers":1,"map":"zxc"},"modIdentifier":"bd1ed924f601413b4441a8644566e8d8","authKey":"CYXLR57AYG","dotaMatchID":"0","players":[{"connectionState":2,"steamID32":96670086,"playerName":""}]}
+[   PanoramaScript ]: Sending: {"modIdentifier":"bd1ed924f601413b4441a8644566e8d8","steamID32":"96670086","isHost":true,"matchID":19686058,"schemaVersion":5}
+[ W VScript        ]: PrecacheResource	must be passed a valid precache context!
+[   Developer      ]: scripts/vscripts/talents/talents.lua:180: attempt to perform arithmetic on local 'first' (a nil value)
+[   Developer      ]: 	scripts/vscripts/talents/talents.lua:180: in function 'OnUnitCreate'
+[   Developer      ]: 	scripts/vscripts/events.lua:406: in function <scripts/vscripts/events.lua:336>
+[ W VScript        ]: Script Runtime Error: scripts/vscripts/talents/talents.lua:180: attempt to perform arithmetic on local 'first' (a nil value)
+[ W VScript        ]: stack traceback:
+[ W VScript        ]: 	scripts/vscripts/talents/talents.lua:180: in function 'OnUnitCreate'
+[ W VScript        ]: 	scripts/vscripts/events.lua:406: in function <scripts/vscripts/events.lua:336>
+[   VScript        ]: Stat Collection: Match pregame settings have been recorded!
+[   PanoramaScript ]: GDS Reply: {"result":0,"error":"Caught Exception: Field `isHost` has invalid value!","schemaVersion":4}
+[   VScript        ]: Stat Collection: Attempting to send final stats...
+[   VScript        ]: Stat Collection: {"rounds":{"0":{"players":[{"isWinner":"1","steamID32":96670086,"connectionState":2}]}},"schemaVersion":5,"modIdentifier":"bd1ed924f601413b4441a8644566e8d8","gameDuration":15,"matchID":19686058,"authKey":"CYXLR57AYG"}
+[   VScript        ]: -------- GAME DATA --------
+[   VScript        ]: {
+[   VScript        ]:    time                            	= 3 (number)
+[   VScript        ]: }
+[   VScript        ]: 
+[   VScript        ]: -------- PLAYER DATA --------
+[   VScript        ]: {
+[   VScript        ]:    1                               	= table: 0x001b65c0 (table)
+[   VScript        ]:    {
+[   VScript        ]:       hl                              	= 100 (number)
+[   VScript        ]:       is3                             	= "-1" (string)
+[   VScript        ]:       hag                             	= 222 (number)
+[   VScript        ]:       hn                              	= "obsidian destroyer" (string)
+[   VScript        ]:       al3                             	= "-1" (string)
+[   VScript        ]:       hin                             	= 293 (number)
+[   VScript        ]:       al1                             	= "-1" (string)
+[   VScript        ]:       hasc                            	= 0 (number)
+[   VScript        ]:       hst                             	= 246 (number)
+[   VScript        ]:       is4                             	= "-1" (string)
+[   VScript        ]:       ha                              	= 0 (number)
+[   VScript        ]:       al4                             	= "-1" (string)
+[   VScript        ]:       hbk                             	= 0 (number)
+[   VScript        ]:       as5                             	= "-1" (string)
+[   VScript        ]:       is6                             	= "-1" (string)
+[   VScript        ]:       is1                             	= "blink dagger two" (string)
+[   VScript        ]:       al5                             	= "-1" (string)
+[   VScript        ]:       hnw                             	= 158449 (number)
+[   VScript        ]:       as2                             	= "-1" (string)
+[   VScript        ]:       al6                             	= "-1" (string)
+[   VScript        ]:       hd                              	= 0 (number)
+[   VScript        ]:       as1                             	= "-1" (string)
+[   VScript        ]:       hab                             	= 24 (number)
+[   VScript        ]:       hgpm                            	= 66 (number)
+[   VScript        ]:       steamID32                       	= 96670086 (number)
+[   VScript        ]:       as6                             	= "-1" (string)
+[   VScript        ]:       hk                              	= 0 (number)
+[   VScript        ]:       al2                             	= "-1" (string)
+[   VScript        ]:       ht                              	= "GoodGuys" (string)
+[   VScript        ]:       is2                             	= "ascention scroll" (string)
+[   VScript        ]:       is5                             	= "-1" (string)
+[   VScript        ]:       as3                             	= "-1" (string)
+[   VScript        ]:       as4                             	= "-1" (string)
+[   VScript        ]:    }
+[   VScript        ]: }
+[   VScript        ]: -------------------------------------
+[   VScript        ]: Stat Collection: Attempting to send custom stats...
+[   VScript        ]: Stat Collection: {"rounds":{"0":{"players":[{"hl":100,"is3":"-1","hag":222,"hn":"obsidian destroyer","al3":"-1","hin":293,"al1":"-1","hasc":0,"hst":246,"is4":"-1","ha":0,"al4":"-1","hbk":0,"as5":"-1","is6":"-1","is1":"blink dagger two","al5":"-1","hnw":158449,"as2":"-1","al6":"-1","hd":0,"as1":"-1","hab":24,"hgpm":66,"steamID32":96670086,"as6":"-1","hk":0,"al2":"-1","ht":"GoodGuys","is2":"ascention scroll","is5":"-1","as3":"-1","as4":"-1"}],"game":{"time":3}}},"schemaAuthKey":"v1 C89SL8M5XLCGMGUY","modIdentifier":"bd1ed924f601413b4441a8644566e8d8","schemaVersion":5,"matchID":19686058,"authKey":"CYXLR57AYG"}
+[   VScript        ]: Stat Collection: Match stats were successfully recorded!
+[   VScript        ]: Stat Collection: The server said something went wrong, see below:
+[   VScript        ]: Stat Collection: Caught Exception: No schema found matching parameters!

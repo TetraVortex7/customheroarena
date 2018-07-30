@@ -1,0 +1,20 @@
+"AddonInfo"
+{
+  "TeamCount" "2"
+  "maps"  "zxc"
+  
+  "zxc"
+  {
+    "MaxPlayers"    "10"
+	"IsPlayable"  "1"
+  }
+     "Default_Keys"
+	{
+		"01"
+		{
+			"Key"		"F6"
+			"Command"	"+CustomGameTestButton"
+			"Name"		"Example"
+		}
+	}
+}

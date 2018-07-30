@@ -1,0 +1,2440 @@
+"DOTAAbilities"
+{
+
+"marksmanship_datadriven"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName"			"drow_ranger_marksmanship"
+	"MaxLevel" "7"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"marksmanship_agility_bonus"	"40 60 80 100 120 140 160"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"radius"						"400"
+		}
+		// Extra variables
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"think_interval"				"0.1"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"chance"						"5 7 9 11 13 15 17"
+		}
+	}
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"							"particles/units/heroes/hero_drow/drow_marksmanship.vpcf"
+		"particle"							"particles/units/heroes/hero_drow/drow_marksmanship_start.vpcf"
+	}
+	
+	"Modifiers"
+	{
+		"modifier_marksmanship_passive_datadriven"
+		{
+			"Passive"						"1"
+			"IsHidden"						"1"
+			"IsPurgable"					"0"
+		
+			"ThinkInterval"					"%think_interval"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"heroes/hero_drow_ranger/marksmanship.lua"
+					"Function"				"marksmanship_detection"
+				}
+			}
+		}
+		
+		"modifier_marksmanship_effect_datadriven"
+		{
+			"IsPurgable"					"0"
+			
+			"OnCreated"
+			{
+				"FireEffect"
+				{
+					"Target"				"CASTER"
+					"EffectName"			"particles/units/heroes/hero_drow/drow_marksmanship_start.vpcf"
+					"EffectAttachType"		"start_at_customorigin"
+					"ControlPointEntities"
+					{
+						"CASTER"			"attach_attack1"
+					}
+				}
+			
+				"AttachEffect"
+				{
+					"Target"				"CASTER"
+					"EffectName"			"particles/units/heroes/hero_drow/drow_marksmanship.vpcf"
+					"EffectAttachType"		"follow_origin"
+					"ControlPoints"
+					{
+						"02"				"150 150 150"
+					}
+				}
+			}
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%marksmanship_agility_bonus"
+			}
+		}
+	}
+}
+
+"legion_commander_moment_of_courage_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"legion_commander_moment_of_courage"
+		"MaxLevel" "7"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"3.0 2.8 2.2 2.0 1.8 1.4 1.2"
+		"AbilityDuration" "1.5"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"trigger_chance"			"19 20 21 22 23 24 25"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"buff_duration"				"1.5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hp_leech_percent"			"40 45 50 55 60 65 70"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_speed"			"500"
+			}
+		}
+		
+		"Modifiers"
+		{
+			    "modifier_legion_commander_moment_of_courage_datadriven"
+					{
+					  "Passive"     "1"
+					  "IsHidden"    "1"
+					  "IsPurgable"  "0"
+					  
+					  "OnAttacked"
+					  {
+						"RunScript"
+						{
+						  "ScriptFile"    "heroes/hero_legion_commander/moment_of_courage.lua"
+						  "Function"      "courage_start"
+						}
+					  }
+					}
+					
+				    "modifier_attack_speed"
+						{
+						  "Passive"    "0"
+						  "Duration"   "%buff_duration"
+						  "Properties"
+						  {
+							"MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT" "0.23"
+							"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed"
+						  }
+						  
+						  "OnAttackLanded"
+						  {
+						      "RemoveModifier"
+								{
+								  "ModifierName"     "modifier_attack_speed"
+								  "Target"           "CASTER"
+								}
+							
+								"Lifesteal"
+								{
+									"Target"			"ATTACKER"
+									"LifestealPercent"	"%hp_leech_percent"
+								}
+						  }
+						}
+		}
+	}
+	
+"lina_fiery_soul_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"lina_fiery_soul"
+		"MaxLevel"						"7"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDuration"				"9"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"fiery_soul_attack_speed_bonus"	"45 50 55 60 65 70 75"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"fiery_soul_move_speed_bonus"	"1 2 3 4 5 6 7"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"fiery_soul_max_stacks"		"2 3 3 3 4 4 5"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"chance"		"18 23 27 32 37 42"
+			}
+		}
+	
+	
+	"Modifiers"
+		{
+			"modifier_fiery_soul_datadriven"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+	
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/heroes/hero_lina/fiery_soul.lua"
+						"Function"		"FierySoul"
+					}
+				}
+			}
+	
+			"modifier_fiery_soul_buff_datadriven"
+			{
+				"IsHidden"		"0"
+				"Duration"		"%AbilityDuration"
+	
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%fiery_soul_attack_speed_bonus"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%fiery_soul_move_speed_bonus"
+				}
+			}
+		}
+	}
+	
+"earthshaker_aftershock_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityTextureName"			"earthshaker_aftershock"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityDuration"				"0.3 0.4 0.5 0.6 0.7 0.8 0.9"
+		"AbilityCooldown"				"9 8 7 6 5 4 3"
+		"AbilityDamage"					"30 60 90 120 150 180 210"
+		"AbilityCastRange"				"300"
+		"MaxLevel"	"7"
+		
+		"precache"
+		{
+			"particle"		"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_aftershock_egset.vpcf"		
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aftershock_range"			"300"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tooltip_duration"			"0.3 0.4 0.5 0.6 0.7 0.8 0.9"
+			}
+		}
+		
+	"Modifiers"
+		{
+					"modifier_aftershock_datadriven"
+			{
+				"Passive"	"1"
+				"IsPurgable"	"0"
+				"IsHidden"	"1"
+				
+				"OnAbilityExecuted"
+				{
+							"RunScript"
+							{
+								"ScriptFile"	"scripts/vscripts/heroes/hero_earthshaker/aftershock.lua"
+								"Function"		"Aftershock"
+								"Target"
+									  {
+										"Center"  "CASTER"
+										"Radius"  "%aftershock_range"
+										"Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+										"Types"   "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+									  }
+							"particle1"		"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_aftershock_egset.vpcf"
+							"sound"			""
+							}
+				}
+			}
+		}
+	}
+	
+"obsidian_destroyer_essence_aura_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityTextureName"			"obsidian_destroyer_essence_aura"
+		"MaxLevel" "7"
+	
+			// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"		"particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_essence_effect.vpcf"		
+		}
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"900 900 900 900 900 900 900"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_mana"	    "50 100 150 200 250 300 350"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"restore_amount"	"30 30 30 30 30 30 35"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"restore_chance"		"10 15 20 25 30 35 40"
+			}
+		}
+	
+	"Modifiers"
+		{
+			//Static bonus mana which applies to od only
+	
+			"modifier_essence_aura_mana_bonus_datadriven"
+			{
+				"Passive"	"1"
+				"IsPurgable"	"0"
+				"IsHidden"	"1"
+				"Aura" "modifier_essence_aura_effect_datadriven" // this should be the actual mana restore on proc
+				"Aura_Radius" "%radius"
+				"Aura_Teams" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" "DOTA_UNIT_TARGET_HERO"
+				"Aura_ApplyToCaster" "1"
+	
+	
+	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_BONUS"	"%bonus_mana"
+				}
+			}	
+	
+			"modifier_essence_aura_effect_datadriven"
+			{
+						"IsHidden"	"1"
+				"OnAbilityExecuted"
+				{
+							"RunScript"
+							{
+								"ScriptFile"	"scripts/vscripts/heroes/hero_obsidian_destroyer/essence_aura.lua"
+								"Function"		"RestoreMana"
+								"Target"	"UNIT"
+							"particle"		"particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_essence_effect.vpcf"
+							"sound"			"Hero_DoomBringer.InfernalBlade"
+							}
+				}
+			}
+		}
+	}
+	
+"mana_break_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"		
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"antimage_mana_break"
+		"MaxLevel" 						"7"
+	
+		// Precache	
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/generic_gameplay/generic_manaburn.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}
+	
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_per_burn"		"0.6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_per_hit"			"20 30 40 50 60 70 80"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"percent"			"0.5 1.0 1.5 2.0 2.5 3.0 3.5"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_mana_break_orb_datadriven"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+	
+				"Orb"
+				{
+					"Priority"	"DOTA_ORB_PRIORITY_ABILITY"
+				}
+	
+				"OnOrbImpact"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Hero_Antimage.ManaBreak"
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_MANA_ONLY"
+						}
+					}
+	
+					"FireEffect"
+					{
+						"EffectName"	"particles/generic_gameplay/generic_manaburn.vpcf"
+						"EffectAttachType"	"attach_hitloc"
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_MANA_ONLY"
+						}
+					}
+	
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/heroes/hero_antimage/mana_break.lua"
+						"Function"		"ManaBreak"
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_MANA_ONLY"
+						}
+					}				
+				}
+			}
+		}
+	}
+	
+"silencer_glaives_of_wisdom_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityTextureName"			"silencer_glaives_of_wisdom"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"11"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"				
+		}
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDuration"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
+		"AbilityCastRange"				"600"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20 35 50 75 120 250 350"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"intellect_damage_pct"	"10 15 20 25 30 32.5 35"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"steal_range"		"925"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"dop_uron"		"10 20 30 40 50 60 70"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_glaives_of_wisdom_datadriven"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+	
+				"Orb"
+				{
+					"Priority"	"DOTA_ORB_PRIORITY_ABILITY"
+					"ProjectileName"	"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom.vpcf"
+					"CastAttack"	"1"
+				}
+	
+				"OnOrbFire"
+				{
+					"SpendMana"
+					{
+						"Mana"	"%AbilityManaCost"
+					}
+	
+					"FireSound"
+					{
+						"EffectName"	"Hero_Silencer.GlaivesOfWisdom"
+						"Target"		"CASTER"
+					}
+				}
+	
+				"OnOrbImpact"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Hero_Silencer.GlaivesOfWisdom.Damage"
+						"Target"		"TARGET"
+					}
+	
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/heroes/hero_silencer/glaives_of_wisdom.lua"
+						"Function"		"IntToDamage"
+						"Target"		"TARGET"
+					}
+				}	
+			}
+		}
+	}
+
+"tinker_rearm_cha"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                "ability_datadriven"
+        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityType"                    "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityTextureName"            "tinker_rearm"
+        "AbilityCastAnimation"            "ACT_DOTA_CHANNEL_ABILITY_4"
+		"MaxLevel"	"7"
+    
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"                "0.53 0.53 0.53 0.53 0.53 0.53 0.53"
+        "AbilityChannelTime"            "7. 6. 5. 4. 3. 2. 1.75 1.25"
+    
+        // Time        
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"                "0 0 0 0 0 0 0 0"
+    
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"                "100 150 200 250 300 350 400"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                "FIELD_FLOAT"
+                "channel_tooltip"            "7. 6. 5. 4. 3. 2. 1.75 1.25"
+            }
+        }
+        
+        // Data Driven
+        //-------------------------------------------------------------------------------------------------------------
+        "precache"
+        {
+            "soundfile"                "soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+            "particle"                "particles/units/heroes/hero_tinker/tinker_rearm.vpcf"
+        }
+        
+        "OnAbilityPhaseStart"
+        {
+            "FireSound"
+            {
+                "Target"            "CASTER"
+                "EffectName"        "Hero_Tinker.RearmStart"
+            }
+        }
+        
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "Target"            "CASTER"
+                "EffectName"        "Hero_Tinker.Rearm"
+            }
+        
+            "RunScript"
+            {
+                "ScriptFile"        "scripts/vscripts/abilities/tinker_rearm_lod.lua"
+                "Function"            "rearm_start"
+            }
+        }
+        
+        "OnChannelInterrupted"
+        {
+            "RemoveModifier"
+            {
+                "Target"            "CASTER"
+                "ModifierName"        "modifier_rearm_level_1_datadriven"
+            }
+        
+            "RemoveModifier"
+            {
+                "Target"            "CASTER"
+                "ModifierName"        "modifier_rearm_level_2_datadriven"
+            }
+        
+            "RemoveModifier"
+            {
+                "Target"            "CASTER"
+                "ModifierName"        "modifier_rearm_level_3_datadriven"
+            }
+        }
+        
+        "OnChannelSucceeded"
+        {
+            "RunScript"
+            {
+                "ScriptFile"        "scripts/vscripts/abilities/tinker_rearm_lod.lua"
+                "Function"            "rearm_refresh_cooldown"
+            }
+        }
+        
+        "Modifiers"
+        {
+            "modifier_rearm_level_datadriven"
+            {
+                "IsHidden"            "0"
+        
+                "Duration"            "%channel_tooltip"
+        
+                "EffectName"        "particles/units/heroes/hero_tinker/tinker_rearm.vpcf"
+                "EffectAttachType"    "follow_origin"
+        
+                "OverrideAnimation"    "ACT_DOTA_TINKER_REARM1"
+            }
+        }
+    }
+	
+"npc_base_heal"
+	{
+	  "BaseClass"                "ability_datadriven"
+	  "AbilityBehavior"          "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	  "AbilityTextureName"       ""
+	  "AbilityCastRange"        "0"
+	  "AbilityCastPoint"        "0"
+	  "AbilityCooldown"         "0"
+	  "Modifiers"
+	  {
+	    "modifier_base_heal_emitter"
+	    {
+	      "Passive" "1"
+	      "IsHidden" "1"
+	      "Aura" "modifier_base_heal"
+	      "Aura_Radius" "850"
+	      "Aura_Teams" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	      "Aura_Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	      "Aura_Flags" "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+	      "Aura_ApplyToCaster" "1"
+	    }
+	    "modifier_base_heal"
+	    {
+	      "Passive"         "0"
+	      "IsBuff"           "1"
+	      "IsPurgable"      "0"
+	      "IsHidden"        "1"  
+	      "Properties"
+	      {
+	        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"   "5.00"
+	        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE" "8.00"
+	      }
+		  		  "States"
+		  {
+		  "MODIFIER_STATE_INVULNERABLE" "MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_STATE_TRUESIGHT_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_STATE_CANNOT_MISS" "MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES" "MODIFIER_STATE_VALUE_ENABLED"
+		  }
+	    }
+	  }
+	}
+	
+"CREEP_GROW"
+  	{
+    	"BaseClass"                   	"ability_datadriven"
+	    "AbilityName"                 	"dota_ability_xp_granter"
+	    "AbilityBehavior"             	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	    "AbilityTextureName"          	"axe_battle_hunger"
+		"MaxLevel"               		"1"
+		"Modifiers"
+	    {
+			"stat_increase"
+			{
+				"IsHidden"              "1"
+				"Passive"               "1"
+				"Properties"
+				{
+				  "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"0.40"
+				  "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"				"1.00"
+				}
+			}
+	    }
+  	}
+	
+"phantom_roulette"
+	{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"phantom_roulette"
+	"MaxLevel" "7"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"reduce"		"-3 -5 -7 -9 -11 -13 -15 -17"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"increase"		"10 15 20 25 30 35 40"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"dur"		"0.24"
+		}
+	}
+
+	"Modifiers"
+	{
+		"control"
+		{
+			"Passive" "1"
+			"IsHidden" "1"
+	        "ThinkInterval" ".25"
+
+			"OnIntervalThink"
+			{
+			    "RunScript"
+			  {
+				"ScriptFile"  "abilities/phantom/roulette.lua"
+				"Function"    "roulette"
+			  }
+			}
+		}
+		"modifier_dec"
+		{
+			"Passive"	"0"
+			"IsHidden" "1"
+			"Duration" "%dur"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"%reduce"
+			}
+		}
+		
+		"modifier_inc"
+		{
+			"Passive"	"0"
+			"IsHidden" "1"
+			"Duration" "%dur"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"%increase"
+			}
+		}
+	}
+	}
+
+"boss_ability_loh"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"boss_ability"
+		"AbilityCastRange"				"1030"
+		"MaxLevel"						"1"
+
+		"precache"
+		{
+			"particle"	"particles\econ\events\league_teleport_2014\teleport_end_ground_flash_league.vpcf"
+			"particle"	"particles\dire_fx\dire_ancient_base001_destruction_l1.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hp_require"			"50"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"interval"				"1.2"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"damage"				"2.35"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"				"0.2"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"				"1030"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_boss_ability_loh_rage_check"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				
+				"ThinkInterval"	"0.05"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"boss_abilities\boss_ability_loh.lua"
+						"Function"		"rage_check"
+					}
+				}
+			}
+			"modifier_boss_ability_loh"
+			{
+				"Passive"	"0"
+				"IsHidden"	"0"
+
+				"ThinkInterval"	"%interval"
+				"OnIntervalThink"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_boss_ability_loh_particle"
+						"Target"		"CASTER"
+					}
+					"ActOnTargets"
+			      	{
+			        	"Target"
+			        	{
+				        	"Center"        "CASTER"
+				        	"Radius"        "%radius"
+				        	"Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+				        	"Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			        	}
+			  
+				        "Action"
+				        {			  
+					        "ApplyModifier"
+					        {
+					        	"Target"    "TARGET"
+					        	"ModifierName"  "modifier_boss_ability_loh_damage"
+					        }
+				        }
+			      	}	
+				}
+			}
+
+			"modifier_boss_ability_loh_particle"
+			{
+				"Passive"	"0"
+				"IsHidden"	"1"
+				"Duration"	"%duration"
+
+				"EffectName"            "particles\dire_fx\dire_ancient_base001_destruction_l1.vpcf"
+			    "EffectAttachType"      "follow_absorigin"
+			}
+
+			"modifier_boss_ability_loh_damage"
+			{
+				"Passive"	"0"
+				"IsHidden"	"0"
+				"Duration"	"%duration"
+				"IsDebuff"	"1"
+				"IsPurgable""0"
+
+				"EffectName"            "particles\econ\events\league_teleport_2014\teleport_end_ground_flash_league.vpcf"
+			    "EffectAttachType"      "follow_absorigin"
+			    "OverrideAnimation"     "ACT_DOTA_DISABLED"
+			    "States"
+			    {
+			        "MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED"
+			    } 
+
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"boss_abilities\boss_ability_loh.lua"
+						"Function"		"damage"
+					}
+				}
+			}
+		}
+	}
+
+"boss_ability_purge"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"boss_ability_purge"
+		"AbilityCastRange"				"1030"
+		"MaxLevel"						"1"
+		
+		"Modifiers"
+	    {
+			"modifier_boss_purge"
+			{
+				"IsHidden"              "1"
+				"Passive"               "1"
+				"IsPurgeable" 			"0"
+				"ThinkInterval"   		"0.25"
+					  
+				"OnIntervalThink"
+			  	{
+						"ActOnTargets"
+					  {
+						"Target"
+						{
+						  "Center"          "CASTER"
+						  "Radius"        "1030"
+						  "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+						  "Types"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+						}
+				  
+						"Action"
+						{
+						  "Damage"
+						  {
+							"Target"  "TARGET"
+							"Type"    "DAMAGE_TYPE_PURE"
+							"Damage"  "37.5"
+						  }
+						}
+					  }
+					  
+						"RunScript"
+						  {
+						          "ScriptFile"      "boss_abilities\boss_ability_purge.lua"
+									"Function"        "Purge"
+									  "Target"
+									  {
+									   "Center"  "CASTER"
+										"Radius" "1030"
+										"Teams"  "DOTA_UNIT_TARGET_TEAM_ENEMY" 
+										"Types"  "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+									  }
+						  }
+				}
+			}
+	    }
+ 
+
+
+	}
+
+"boss_ability_hardcore"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"boss_abilities/boss_ability_hardcore.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"boss_ability_hardcore"
+		"LevelsBetweenUpgrades"  		"50"
+		"MaxLevel"						"3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"eps"				"4.3 6.4 7.6"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"block_prc"			"160 325 600"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"eva_duration"			"4.3"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"dmg_duration"			"7.4"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"bdps"				"3.4 5.6 6.8"
+			}
+		}
+	}
+
+"creeps_slark_ability_shield"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"creeps_abilities/creeps_slark_ability_shield.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" 		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityTextureName"			"creeps_slark_ability_shield"
+		"AbilityCooldown"				"14"
+		"AbilityManaCost"				"160"
+
+		"precache"
+		{
+			"particle"	"particles/slark_infinity_blades.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"				"1.4"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"prc"					"0.75"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"prc_t"					"75"
+			}
+		}
+	}
+
+"naix_feast_c"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_life_stealer/naix_feast_c.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"naix_feast_c"
+        "HasScepterUpgrade"     "1"
+		"MaxLevel"	"7"
+		"BaseLevel"	"1"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"steal_scepter"				"1.3 2 3 4 4.5 6 7"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"c_steal_scepter"			"0.3 0.4 0.5 0.6 0.7 0.8 1"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lifesteal_static"			"15 20 25 30 35 40 45"
+			}
+		}
+	}
+
+"woodchopper_king_perfect_chop"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "boss_abilities/woodchopper_king_perfect_chop.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"            "woodchopper_king_perfect_chop"
+        "MaxLevel"		"1"
+        "AbilityCooldown"               "2"
+
+        "precache"
+        {
+            "soundfile" "sounds/weapons/hero/axe/culling_blade_fail.vsnd"
+            "particle"  "particles/woodchopper_king_blood_meer.vpcf"
+        }
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "duration"              "3"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "dps"                   "20"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "chance"                "35"
+            }
+            "04"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "rate"                  "1"
+            }
+        }
+    }
+
+"woodchopper_king_perfect_summon_choppers"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "boss_abilities/woodchopper_king_perfect_summon_choppers.lua"
+        "AbilityCastPoint"              "0.4"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCastAnimation"          "ACT_DOTA_TAUNT"
+        "MaxLevel"  "1"
+        "AbilityTextureName"            "woodchopper_king_perfect_summon_choppers"
+        "AbilityManaCost"               "1300"
+        "AbilityCooldown"               "8"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "countmin"              "2"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "countmax"              "6"
+            }
+        }
+    }
+
+"woodchopper_king_rage_chop"
+    {
+        "BaseClass"                     "ability_datadriven"
+        //"ScriptFile"                    "boss_abilities/woodchopper_king_rage_chop.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"            "woodchopper_king_perfect_chop"
+        "MaxLevel"      "1"
+        "AbilityCooldown"               "2"
+
+        "precache"
+        {
+            "soundfile" "sounds/weapons/hero/axe/culling_blade_fail.vsnd"
+            "particle"  "particles/woodchopper_king_blood_meer.vpcf"
+        }
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "duration"              "3"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "dps"                   "20"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "chance"                "35"
+            }
+            "04"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "rate"                  "1"
+            }
+        }
+    }
+
+"woodchopper_king_rage_summon_choppers"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "boss_abilities/woodchopper_king_rage_summon_choppers.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "MaxLevel"  "1"
+        "AbilityTextureName"            "woodchopper_king_rage_summon_choppers"
+        "AbilityManaCost"               "100"
+        "AbilityCooldown"               "1"
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "countmin"              "1"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "countmax"              "2"
+            }
+        }
+    }
+
+"elder_titan_natural_order_custom"
+    {
+        "BaseClass"                     "ability_lua"
+        "AbilityCastRange"				"250"
+        "ScriptFile"                    "heroes/hero_elder_titan/elder_titan_natural_order_custom.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"            "elder_titan_natural_order"
+        "MaxLevel"  "7"
+        "BaseLevel" "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "range"                 "250"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "disarmor"          "20 40 50 65 75 85 100"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "disresist"         "20 40 50 65 75 85 100"
+            }
+            "04"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "b_disarmor"        "10 13 16 18 20 22 24"
+            }
+            "05"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "b_disresist"       "6 9 11 13 15 17 20"
+            }
+        }
+    }
+
+"medusa_mana_shield_custom"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/hero_medusa/medusa_mana_shield_custom.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"
+        "AbilityCooldown"               "3 2.8 2.5 2.3 2 1.7 1.5"
+        "AbilityTextureName"            "medusa_mana_shield"
+        "MaxLevel"  "7"
+        "BaseLevel" "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "absorb"         "30 40 50 60 65 70 75"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "mpd"           "6 4 3 2.5 2 1.7 1.5"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "b_absorb"       "15 20 25 30 32.5 35 37.5"
+            }
+        }
+    }
+
+"creeps_doom_ability_shift"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"creeps_abilities/creeps_doom_ability_shift.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"creeps_doom_ability_shift"
+
+		"precache"
+		{
+			"particle"	"particles/slark_infinity_blades.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"prc"					"50"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"prc_c"					"5"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stats"					"6"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"					"12"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"armor"					"2"
+			}
+		}
+	}
+
+"creeps_doom_ability_illusioness"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"creeps_abilities/creeps_doom_ability_illusioness.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"AbilityTextureName"			"creeps_doom_ability_illusioness"
+		"AbilityManaCost"				"1300"
+		"MaxLevel"						"1"
+		"AbilityCooldown"				"35"
+
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_puck/puck_illusory_orb_launch.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"illusions"				"3"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"outcome"				"30"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"income"				"460"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"				"15"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration_invul"		"0.3"
+			}
+		}
+	}
+
+"creeps_doom_ability_mana_steal"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"creeps_abilities/creeps_doom_ability_mana_steal.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"creeps_doom_ability_mana_steal"
+		"AbilityCastRange"				"950"
+		"AbilityCooldown"				"20"
+
+		"precache"
+		{
+			"particle"	"particles/slark_infinity_blades.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"prc"					"50"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"prc_c"					"2.4"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"				"6"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_targets"			"4"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"rate"					"0.1"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"range"				"950"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"chance"				"42"
+			}
+		}
+	}
+
+"nevermore_necromastery_custom"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_nevermore/necromastery.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"nevermore_necromastery_custom"
+        "HasScepterUpgrade"     		"1"
+		"AbilityCooldown"				"2"
+		"MaxLevel"						"7"
+
+
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_nevermore/nevermore_necro_souls.vpcf"
+		}
+		
+		"AbilitySpecial"
+		{
+			
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"tick"					"1"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"tick_scepter"					"0.6"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_souls"					"10 20 30 40 50 60 70"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_souls_scepter"		"20 30 40 60 75 90 100"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"soul_damage"			"3 3 3 2.75 2.5 2.25 2.1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"chance"					"75 70 60 50 45 40 40"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hero_souls"				"10"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hero_chance"				"50"
+			}
+			"08"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"dpt"				"8"
+			}
+			"09"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"spt"				"1"
+			}
+			"10"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"soul_loss"					"60"
+			}
+			"11"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"soul_loss_scepter"					"45"
+			}
+			"12"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"					"20"
+			}
+		}
+	}
+
+"spectre_dispersion_custom"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_spectre/dispersion.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"spectre_dispersion"
+		"AbilityCastRange"				"1000"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"prc"					"8 10 13 16 17 18 20"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"c_prc"					"3 4 5 6 7 8 10"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"reduce"				"15"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"min_range"					"300"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_range"				"1000"
+			}
+		}
+	}
+
+"storm_spirit_overload_c"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_stormspirit/overload.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"storm_spirit_overload_c"
+		"AbilityDamage"					"%damage"
+		"HasScepterUpgrade"     		"1"
+		//"AbilityCastRange"				"1000"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"range"					"275"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"					"30 50 70 90 120 180 260"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"prc_scepter"					"30 50 70 95 100 110 130"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"slow"				"80"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"as_slow"					"50"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"				"0.6"
+			}
+		}
+	}
+
+"death_prophet_witchcraft_c"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_death_prophet/withcraft.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		//"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_NO"
+		//"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		//"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"death_prophet_witchcraft_c"
+		//"AbilityDamage"					"%damage"
+		//"HasScepterUpgrade"     		"1"
+		//"AbilityCastRange"				"1000"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"reduce"					"1 2 2.5 3 3.5 4 4.5"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"min_cd"					"1.2"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"speed"					"10 12 14 16 18 20 25"
+			}
+		}
+	}
+"faceless_void_time_lock_custom"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_faceless_void/TimeLock.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"faceless_void_time_lock_custom"
+		"AbilityDamage"					"%damage"
+		//"HasScepterUpgrade"     		"1"
+		//"AbilityCastRange"				"1000"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		"AbilityCooldown"				"2 1.9 1.8 1.7 1.6 1.5 1.3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"chance"					"10 12 15 18 20 21 22"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"					"0.4"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"					"40 50 60 70 90 120 160"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"cd"					"2 1.9 1.8 1.7 1.6 1.5 1.3"
+			}
+		}
+	}
+"slardar_bash_of_the_deep"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_slardar/Bash.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilityTextureName"			"slardar_bash_of_the_deep"
+		"AbilityDamage"					"%damage"
+		//"HasScepterUpgrade"     		"1"
+		//"AbilityCastRange"				"1000"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		"AbilityCooldown"				"2 1.9 1.8 1.7 1.6 1.5 1.4"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"chance"					"10 12 15 18 20 21 22"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"					"0.3"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"					"60 80 100 120 160 180 250"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"cd"					"2 1.9 1.8 1.7 1.6 1.5 1.4"
+			}
+		}
+	}
+"ursa_fury_swipes_custom"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_ursa/FurySwipes.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilityTextureName"			"ursa_fury_swipes_custom"
+		"AbilityDamage"					"%damage"
+		"AbilityCooldown"				"0.4"
+		//"HasScepterUpgrade"     		"1"
+		//"AbilityCastRange"				"1000"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"chance"					"70 72 74 76 78 80 85"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"chance_c"					"20 22 24 26 28 30 33"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"					"10 9 8 7 6 5 4"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_damage"					"5 8 13 17 22 25 28"
+			}
+		}
+	}
+"woodchopper_king_chop"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"boss_abilities/BlackKing/Chop.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilityTextureName"			"ursa_fury_swipes_custom"
+		"AbilityDamage"					"%damage"
+		"AbilityCooldown"				"6"
+		//"HasScepterUpgrade"     		"1"
+		//"AbilityCastRange"				"1000"
+		"MaxLevel"						"1"
+		"LevelsBetweenUpgrades"			"3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"chance"					"65"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"					"4"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"					"5"
+			}
+		}
+	}
+"sandking_caustic_finale_custom"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_sand_king/CausticFinale.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"sandking_caustic_finale_custom"
+		"AbilityDamage"					"%damage"
+		//"AbilityCooldown"				"6"
+		//"HasScepterUpgrade"     		"1"
+		//"AbilityCastRange"				"1000"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"					"30 50 60 70 120 170 210"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"aoe"					"400"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"					"7"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"end_damage"					"30 35 37.5 40 42.5 45 50"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"slow"					"50"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"slow_duration"					"3"
+			}
+		}
+	}
+
+"bane_enfeeble_custom"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_bane/Enfeeble.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		//"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"bane_enfeeble"
+		"LevelsBetweenUpgrades"			"3"
+		
+		"MaxLevel"						"7"
+	
+			// Casting
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityCastRange"				"1000"
+			"AbilityCastPoint"				"0.5 0.4 0.3 0.2 0.1 0.0 0.0"
+	
+			// Time		
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityCooldown"				"8.0"
+			"AbilityDuration"				"20.0 20.0 20.0 20.0 20.0 20.0 20.0"
+	
+			// Cost
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityManaCost"				"95 105 115 125 145 165 180"		
+	
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"						"FIELD_INTEGER"
+					"enfeeble_attack_reduction"		"-30 -60 -120 -210 -320 -590 -"
+					"LinkedSpecialBonus"			"special_bonus_unique_bane_1"
+				}
+			}
+	}
+
+"elder_titan_soul_twice"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_elder_titan/SoulTwice.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		//"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		//"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"elder_titan_soul_twice"
+		"AbilityDamage"					"%damage"
+		"HasScepterUpgrade"     		"1"
+		//"AbilityCastRange"				"1000"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"8"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"illusion_damage"					"600 550 525 500 475 450 425"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"illusion_mag_damage"					"200 400 600 700 750 800 850"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hero_damage"					"170 200 225 250 275 300 325"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"					"10 9 8 7 6 6.5 5"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_range"					"1200"
+			}
+		}
+	}
+
+"dragon_knight_dragon_blood_custom"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/hero_dragon_knight/DragonBlood.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown"               "20 19 18 17 16 15 14"
+        "AbilityTextureName"            "dragon_knight_dragon_blood_custom"
+        "MaxLevel"  "7"
+        "BaseLevel" "1"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "armor"         "1 3 5 7 9 11 13"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "health_regen"           "3 9 13 18 25 36 41"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "additive_regen_active"       "6 18 26 36 50 72 82"
+            }
+            "04"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "duration"       "15 14 13 12 9 7 5"
+            }
+        }
+    }
+
+"visage_gravekeepers_cloak_custom"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/hero_visage/GravekeepersCloak.lua"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"            "visage_gravekeepers_cloak_custom"
+        "MaxLevel"  "7"
+        "LevelsBetweenUpgrades"			"6"
+        "BaseLevel" "1"
+        
+			
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"max_layers"						"15 13 11 10 9 8 7"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"damage_reduction"					"3.3 4.6 5.9 7 8.3 10 12.1"
+			}
+			"03"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"recovery_time"						"2 2.5 3 4 5 5.5 6"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"minimum_damage"					"10 30 50 90 130 160 220"
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"dpm"								"10"
+			}
+			"06"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"radius"							"900"
+			}
+		}
+    }
+
+"winter_wyvern_arctic_burn_custom"
+	{
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"7"
+																	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+			"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"		
+			"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+        	"AbilityTextureName"            "winter_wyvern_arctic_burn_custom"
+			"BaseClass"		"ability_lua"
+			"ScriptFile"	"heroes/hero_winter_wyvern/ArcticBurn.lua"
+
+			"HasScepterUpgrade"			"1"
+			
+			// Casting
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityCastPoint"				"0"
+			
+			// Time		
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityCooldown"				"%cooldown"
+
+			// Cost
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityManaCost"				"120 110 90 80 100 130 200"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_FLOAT"
+					"duration"				"6 7 8 9 6.5 6 7"
+				}
+				"02"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"attack_range_bonus"	"100 125 180 275 375 375 375"
+				}
+				"03"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"night_vision_bonus"	"400"
+				}
+				"4"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"projectile_speed_bonus"	"450"
+				}
+				"05"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"tree_destruction_radius"	"175"
+				}
+				"06"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"mana_cost_scepter"		"40 60 70 80 90 100 130"
+				}
+				"07"
+				{
+					"var_type"				"FIELD_FLOAT"
+					"cooldown"		"55.0 45.0 35.0 30.0 25.0 22.5 20"
+				}		
+				"08"
+				{
+					"var_type"				"FIELD_FLOAT"
+					"cooldown_scepter"		"2.0"
+				}		
+				"09"
+				{
+					"var_type"				"FIELD_FLOAT"
+					"percent_damage"		"2.0"
+				}
+				"10"
+				{
+					"var_type"				"FIELD_FLOAT"
+					"tick_rate"				"1.5"
+				}
+				"11"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"duration_damage"		"3"
+				}
+				"12"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"move_slow"				"15 17 18 19 26 33 40"
+				}
+			}
+		}
+
+"monkey_king_jingu_mastery_custom"
+	{
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"5"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_monkey_king/JinguMastery.lua"
+		"AbilityTextureName"					"monkey_king_jingu_mastery_custom"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"required_hits"				"4"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"ranged_required_hits"				"7"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"duration"					"6"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"counter_duration"			"10"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"charges"					"4"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"75 100 125 150 170 210 300"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"lifesteal"					"15 20 30 40 50 60 70"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Axe Counter Helix
+	//=================================================================================================================
+	"axe_counter_helix_custom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/axe_counter_helix_custom.lua"
+		"AbilityTextureName"			"axe_counter_helix"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Axe.CounterHelix"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"5"
+		"HasScepterUpgrade"				"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.45 0.4 0.35 0.3 0.25 0.2 0.15"
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"%damage"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"275"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trigger_chance"			"25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"25 35 45 55 65 75 85"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cooldown"					"0.45 0.4 0.35 0.3 0.25 0.2 0.15"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_chance"			"30.0"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_damage"			"100"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_block"				"10 12.5 15 17.5 20 22.5 25"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_damage_block"		"20 25 30 35 40 45 50"
+			}
+		}
+		//"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+"untouchable_custom"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_enchantress/untouchable_custom.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityTextureName"			"untouchable_custom"
+        "HasScepterUpgrade"     		"1"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"5"
+		"BaseLevel"						"1"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attack_speed"				"20 30 40 50 60 70 80"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"boss_attack_speed"			"20"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"scepter_attack_speed"			"0.1 0.12 0.15 0.17 0.2 0.22 0.25"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"scepter_boss_attack_speed"			"0.1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"3"
+			}
+		}
+	}
+
+"undying_tombstone_custom"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/undying/tomstone_custom.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"FightRecapLevel"				"1"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Undying.Tombstone"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityTextureName"			"untouchable_custom"
+        "HasScepterUpgrade"     		"1"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"5"
+		"BaseLevel"						"1"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"zombie_attack_speed"				"100 130 160 190 210 230 260"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"zombie_damage"			"20 35 50 75 90 130 150"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"zombie_health"			"50 90 130 160 190 250 450"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"zombie_armor"			"2 3 5 7 9 12 15"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"zombie_spawn_rate"			"3 2.5 2 1.8 1.6 1.5 1.4"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"scepter_str_to_health"			"25"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"scepter_agi_to_armor"			"30"
+			}
+			"08"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"scepter_int_to_damage"			"15"
+			}
+			"09"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"tombstone_lifetime"			"15 17.5 20 22.5 25 27.5 30"
+			}
+		}
+	}
+	
+}
+
+    "ability_empty_1"
+	    {
+	        "BaseClass"					"ability_datadriven"
+	        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	    }
+    "ability_empty_2"
+	    {
+	        "BaseClass"					"ability_datadriven"
+	        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	    }
+    "ability_empty_3"
+	    {
+	        "BaseClass"					"ability_datadriven"
+	        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	    }
+    "ability_empty_4"
+	    {
+	        "BaseClass"					"ability_datadriven"
+	        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	    }
+    "ability_empty_5"
+	    {
+	        "BaseClass"					"ability_datadriven"
+	        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	    }
+    "ability_empty_6"
+	    {
+	        "BaseClass"					"ability_datadriven"
+	        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	    }
