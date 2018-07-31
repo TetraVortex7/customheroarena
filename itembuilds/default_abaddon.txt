@@ -17,12 +17,12 @@
 		
 		"#DOTA_Item_Build_Early_Game"
 		{	
+			"item"		"item_fireblend"
 			"item"		"item_leaf_buckler"
-			"item"		"item_hand_of_midas_custom_two"
+			"item"		"item_hand_of_midas_custom"
 			"item"      "item_ring_of_vasilius"
 			"item"		"item_phase_boots_2"
 			"item"		"item_power_treads_strength_2"
-			"item"		"item_fireblend"
 		}
 		
 		"#DOTA_Item_Build_Mage"
@@ -38,27 +38,29 @@
 		
 		"#DOTA_Item_Build_Carry"
 		{
-			"item"      "item_desocay"
-			"item"      "item_doebalus"
-			"item"		"item_fly"
 			"item"		"item_cuirass_offering"
+			"item"		"item_fly"
+			"item"      "item_desocay"
+			"item"		"weapon_breaker"
+			"item"      "item_doebalus"
 			"item"		"item_demon_lifesteal"
 			"item"		"item_suzzwke"
 			"item"		"item_gauntlet_of_madness"
 			"item"		"item_echotic_sabre"
+			"item"		"item_alebard"
 		}
 		
-		"#DOTA_Item_Build_Unisex"
+		"#DOTA_Item_Build_Ganker"
 		{
 			"item"      "item_midas_sword"
-			"item"		"item_scarlet_edge"
+			"item"		"item_ringed_glove"
 			"item"      "item_power_band"
 			"item"      "item_blade_guard"
 			"item"		"item_treatment_greaves"
 			"item"		"item_black_king_hood"
 			"item"		"item_omnipresent_eye"
 			"item"		"item_purged_heart"
-			"item"		"item_alebard"
+			
 			"item"		"item_splash_staff"
 		}
 		
@@ -66,7 +68,7 @@
 		{
 			"item"		"item_ascention_scroll"
 			"item"		"item_soul_shard"
-			"item"		"item_empowered_treads"
+			"item"		"item_demonic_axe"
 			"item"		"item_mirror_blade"
 			
 		}

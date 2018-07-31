@@ -1,0 +1,34 @@
+
+ДЦАТЫЙ ПАТЧЕК - ПАЦАНЫ С ДИСКОРДА
+ITEMS:
+Javelin 2 icon changed to light rapier
+Halberds icon changed to Pike
+
+COSMETICS:
+Hero builds reworked
+English translation fixes
+
+ABILITIES:
+TA's Psi blades fixed
+Storm's Overload fixed
+BH's Track gold fixed
+
+New Drow Ranger's Marksmanship 
+
+
+OPEN:
+TOMBSTONE last lvl NOT WORKING
+KILL LIMIT VOTING
+TEAM VS TEAM ARENA
+ABADDON PASSIVE
+SELL BUTTON
+CHANGE TEAM BUTTON
+NO LEAVERS ON DUEL
+SLARKS AND DOOMS ANCIENTS (TO PREVENT DOMINATOR ABUSE)
+CHRONO AND DOOM FIXES
+POWER BAND DEAD BUG
+ASCEND TOO MANY STATS, JUST REBIRTH
+FERVOR 
+JUGG CRITS
+LEFT PEOPLE DONT PARTICIPATE IN DUEL
+REFRESH ABILITIES WHEN DUELING

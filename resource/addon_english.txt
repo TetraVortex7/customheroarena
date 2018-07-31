@@ -9,10 +9,14 @@
         "DOTA_GoodGuys"                 "Not a bad Guys"
         "DOTA_BadGuys"                  "Bad Guys"
 		
-		"#DOTA_Item_Build_Mage"			"FOR CASTERS"
-		"#DOTA_Item_Build_Carry"		"FOR CARRY HEROES"
-		"#DOTA_Item_Build_Unisex"		"SITUATIONAL FOR EVERY HERO"
-		"admin"						"GAME MASTER"
+            "DOTA_Item_Build_Ganker"    "Ganker"
+            "DOTA_Item_Build_Carry"     "Carry"
+            "DOTA_Item_Build_Mage"      "Mage"
+			"DOTA_Item_Build_Potions"	"Potions"
+            "DOTA_Item_Build_Ascention" "LEGENDARY"
+			
+            "spell_shop" "Spell Shop"
+            "spell_shop_text" "Press this button to buy abilities."
         
         "Ursa_level_1"                              "Zeta Bear"
         "Ursa_level_5"                              "Epsilon Bear"
@@ -221,6 +225,7 @@
 
                 "DOTA_Tooltip_modifier_storm_spirit_overload_buff"                  "Overload"
                 "DOTA_Tooltip_modifier_storm_spirit_overload_buff_Description"      "Next attack deal additional damage and slow enemies around target."
+				"DOTA_Tooltip_modifier_storm_spirit_overload_buff_Note0"      "Do not triggers with abilities that have 0 manacost."
 
                 "DOTA_Tooltip_modifier_storm_spirit_overload_c_slow"                "Overload Attack"
                 "DOTA_Tooltip_modifier_storm_spirit_overload_c_slow_Description"    "Your movespeed decreased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%.<br>Attack speed decreased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%%."
@@ -856,14 +861,13 @@
 
         //Линзы
             //Линза
-
-                "DOTA_Tooltip_ability_item_lens_1"                       "Aether Lens"
-                "DOTA_Tooltip_ability_item_lens_1_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
-                "DOTA_Tooltip_ability_item_lens_1_Lore"                  "Focusing on the glass that thing enhance your magical potential."
-                "DOTA_Tooltip_ability_item_lens_1_bonus_mana"            "+$mana"
-                "DOTA_Tooltip_ability_item_lens_1_bonus_health_regen"    "+$hp_regen"
-                "DOTA_Tooltip_ability_item_lens_1_cast_range_bonus"      "+spell cast range"
-                "DOTA_Tooltip_ability_item_lens_1_spell_amp"             "%BONUS SPELL DAMAGE:"
+                "DOTA_Tooltip_ability_item_aether_lens_1"                       "Aether Lens"
+                "DOTA_Tooltip_ability_item_aether_lens_1_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
+                "DOTA_Tooltip_ability_item_aether_lens_1_Lore"                  "Focusing on the glass that thing enhance your magical potential."
+                "DOTA_Tooltip_ability_item_aether_lens_1_bonus_mana"            "+$mana"
+                "DOTA_Tooltip_ability_item_aether_lens_1_bonus_health_regen"    "+$hp_regen"
+                "DOTA_Tooltip_ability_item_aether_lens_1_cast_range_bonus"      "+spell cast range"
+                "DOTA_Tooltip_ability_item_aether_lens_1_spell_amp"             "%BONUS SPELL DAMAGE:"
 
             //Линза 2
 
@@ -919,45 +923,45 @@
         //Используемые
         
             "DOTA_Tooltip_ability_item_mana_potion"                             "Mana Potion"
-            "DOTA_Tooltip_ability_item_mana_potion_Description"                 "Restore mana"
+            "DOTA_Tooltip_ability_item_mana_potion_Description"                 "Restore some mana."
             "DOTA_Tooltip_ability_item_mana_potion_buff_duration"               "RESTORE TIME:"
-            "DOTA_Tooltip_ability_item_mana_potion_total_mana_regen"            "RESTORE MANA:"
-            "DOTA_Tooltip_ability_item_mana_potion_mana_per_second"             "MANA RESTORE PER SECOND:"
+            "DOTA_Tooltip_ability_item_mana_potion_total_mana_regen"            "TOTAL:"
+            "DOTA_Tooltip_ability_item_mana_potion_mana_per_second"             "MANA PER SECOND:"
             "DOTA_Tooltip_modifier_mana_potion_active"                          "Mana Restore"
             "DOTA_Tooltip_ability_item_mana_potion_mana_per_second_x"           "%MAX MANA REGEN PER SECOND:"
             "DOTA_Tooltip_ability_item_mana_potion_total_mana_x"                "%TOTAL MANA REGEN:"
             
             "DOTA_Tooltip_ability_item_heal_potion"                             "Heal Potion"
-            "DOTA_Tooltip_ability_item_heal_potion_Description"                 "Restore health points"
+            "DOTA_Tooltip_ability_item_heal_potion_Description"                 "Restore some health."
             "DOTA_Tooltip_ability_item_heal_potion_buff_duration"               "RESTORE TIME:"
-            "DOTA_Tooltip_ability_item_heal_potion_total_health_regen"          "RESTORE HEALTH:"
+            "DOTA_Tooltip_ability_item_heal_potion_total_health_regen"          "TOTAL:"
             "DOTA_Tooltip_ability_item_heal_potion_health_per_second"           "HEALTH RESTORE PER SECOND:"
             "DOTA_Tooltip_modifier_modifier_item_heal_potion_active"            "Health Restore"
             "DOTA_Tooltip_ability_item_mana_potion_health_per_second_x"         "%MAX HEALTH REGEN PER SECOND:"
             "DOTA_Tooltip_ability_item_mana_potion_total_health_x"              "%TOTAL HEALTH REGEN:"
             
             "DOTA_Tooltip_ability_item_strength_potion"                         "Strength Potion"
-            "DOTA_Tooltip_ability_item_strength_potion_Description"             "Increase strength"
+            "DOTA_Tooltip_ability_item_strength_potion_Description"             "Increases strength for a short period of time."
             "DOTA_Tooltip_ability_item_strength_potion_buff_duration"           "BUFF DURATION:"
-            "DOTA_Tooltip_ability_item_strength_potion_str_bonus"               "BUFF:"
+            "DOTA_Tooltip_ability_item_strength_potion_str_bonus"               "STR BONUS:"
             "DOTA_Tooltip_modifier_item_str_active"                             "Strength Boost"
             
             "DOTA_Tooltip_ability_item_agility_potion"                          "Agility Potion"
-            "DOTA_Tooltip_ability_item_agility_potion_Description"              "Increase agility"
+            "DOTA_Tooltip_ability_item_agility_potion_Description"              "Increases agility for a short period of time."
             "DOTA_Tooltip_ability_item_agility_potion_buff_duration"            "BUFF DURATION:"
-            "DOTA_Tooltip_ability_item_agility_potion_agi_bonus"                "BUFF:"
+            "DOTA_Tooltip_ability_item_agility_potion_agi_bonus"                "AGI BONUS:"
             "DOTA_Tooltip_modifier_item_agi_active"                             "Agility Boost"
             
             "DOTA_Tooltip_ability_item_intellegence_potion"                     "Intellect Potion"
-            "DOTA_Tooltip_ability_item_intellegence_potion_Description"         "Increase intellect"
+            "DOTA_Tooltip_ability_item_intellegence_potion_Description"         "Increase intellect for a short period of time."
             "DOTA_Tooltip_ability_item_intellegence_potion_buff_duration"       "BUFF DURATION:"
-            "DOTA_Tooltip_ability_item_intellegence_potion_int_bonus"           "BUFF:"
+            "DOTA_Tooltip_ability_item_intellegence_potion_int_bonus"           "INT BONUS:"
             "DOTA_Tooltip_modifier_item_int_active"                             "Intellect Boost"
             
             "DOTA_Tooltip_ability_item_combined_potion"                     "Combined Potion"
-            "DOTA_Tooltip_ability_item_combined_potion_Description"         "Increase all attributes"
+            "DOTA_Tooltip_ability_item_combined_potion_Description"         "Increases all attributes for a short period of time."
             "DOTA_Tooltip_ability_item_combined_potion_buff_duration"       "BUFF DURATION:"
-            "DOTA_Tooltip_ability_item_combined_potion_int_bonus"           "BUFF:"
+            "DOTA_Tooltip_ability_item_combined_potion_int_bonus"           "BONUS:"
             "DOTA_Tooltip_modifier_item_combined_active"                    "All Attributes Boost"
 
         //Демонический топор
@@ -1227,6 +1231,7 @@
             "DOTA_Tooltip_ability_item_stalker_coat_Lore"           "Talented killers hides more effectively."
             "DOTA_Tooltip_ability_item_stalker_coat_a"  "+$attack"
             "DOTA_Tooltip_ability_item_stalker_coat_dmg"    "+$damage"
+			"DOTA_Tooltip_ability_item_stalker_coat_attributes"    "ALL STATS:"
 
                 "DOTA_Tooltip_modifier_stalker_coat_speed_up"                "Hunt"
                 "DOTA_Tooltip_modifier_stalker_coat_speed_up_Description"    "Increase your move speed and magic resistance by 20%%%."
@@ -2070,11 +2075,6 @@
 
             "spell_shop" "Spell Shop"
             "spell_shop_text" "In order to buy the ability you need to open this tab."
-
-            "DOTA_Item_Build_Unisex"    "Unisex"
-            "DOTA_Item_Build_Carry"     "Carry"
-            "DOTA_Item_Build_Mage"      "Mage"
-            "DOTA_Item_Build_Ascention" "Ascention"
 
             "dota_hud_error_custom_is_boss"            "Cannot use on boss unit"
             "dota_hud_error_custom_not_enought_charges" "Not enough charges"

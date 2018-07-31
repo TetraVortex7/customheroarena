@@ -26,7 +26,7 @@ function modifier_storm_spirit_overload_c_passive:OnAbilityExecuted( params )
 	local caster = self:GetCaster()
 	if params.unit == caster then 
 		local ability = self:GetAbility()
-		if params.ability:GetCooldown(params.ability:GetLevel()) > 1 and params.ability:GetManaCost(params.ability:GetLevel()) > 20 then 
+		if params.ability:GetManaCost(params.ability:GetLevel()) > 1 then 
 			caster:AddNewModifier(caster,ability,"modifier_storm_spirit_overload_buff",{})
 		end
 	end
