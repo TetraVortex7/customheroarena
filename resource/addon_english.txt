@@ -1740,8 +1740,8 @@
         //Ascension Scroll
 
         "DOTA_Tooltip_ability_item_ascention_scroll"                "Ascension Scroll"
-        "DOTA_Tooltip_ability_item_ascention_scroll_Description"    "<h1>Active: Ascend</h1> Removes all your abilities, set yor lvl to 1, save your base attributes, reset your talent tree, has %chance%% to give Soul Shard."
-        "DOTA_Tooltip_ability_item_ascention_scroll_Lore"           "In this scroll written a method how to become your person stronger."
+        "DOTA_Tooltip_ability_item_ascention_scroll_Description"    "<h1>Active: Rebirth</h1> Removes all your abilities, set yor lvl to 1, save your base attributes, has %chance%% to give Soul Shard."
+        "DOTA_Tooltip_ability_item_ascention_scroll_Lore"           "Never too late to start everything from beginning. With new power."
         "DOTA_Tooltip_ability_item_ascention_scroll_lvl"            "REQUIRE LVL TO ASCEND:"
         "DOTA_Tooltip_ability_item_ascention_scroll_int"            "BONUS STATS PER ASCEND:"
         "DOTA_Tooltip_ability_item_ascention_scroll_chance"         "%CHANCE TO GET SHARD:"

@@ -312,7 +312,7 @@
                 {
                     "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%bonus_armor"
                     "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"       "%bonus_int"
-                    "MODIFIER_PROPERTY_BASE_MANA_REGEN"             "%mana_regen"   
+                    "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"             "%mana_regen"   
                     "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT_SECONDARY"    "%atck_speed"
                 }
             }
@@ -6723,7 +6723,7 @@
         "ID" "2190"
         "BaseClass"                     "item_lua"
         "ScriptFile"                    "items/item_ascention_scroll.lua"
-        "ItemCost"                      "50000"
+        "ItemCost"                      "30000"
         "AbilityCooldown"               "800"
         "AbilityManaCost"               "3000"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -6750,7 +6750,7 @@
             "03"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "int"          "100"
+                "int"          "10"
             }
         }
     }
@@ -6775,17 +6775,17 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "agi"          "4"
+                "agi"          "10"
             }
             "02"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "str"          "4"
+                "str"          "10"
             }
             "03"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "int"          "4"
+                "int"          "10"
             }
         }
     }

@@ -60,7 +60,6 @@
 			"item"		"item_black_king_hood"
 			"item"		"item_omnipresent_eye"
 			"item"		"item_purged_heart"
-			
 			"item"		"item_splash_staff"
 		}
 		

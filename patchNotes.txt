@@ -3,6 +3,9 @@
 ITEMS:
 Javelin 2 icon changed to light rapier
 Halberds icon changed to Pike
+Ascention scroll rebirth attribute bonus 100 > 10
+Ascention scroll cost 50000 > 30000
+Soul shard attribute % 4 > 10
 
 COSMETICS:
 Hero builds reworked

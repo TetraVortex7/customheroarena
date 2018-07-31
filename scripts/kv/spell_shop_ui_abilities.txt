@@ -659,7 +659,7 @@
   "4"    "visage_summon_familiars"
   }
   "winter_wyvern" {
-  "1"    "winter_wyvern_arctic_burn_custom"
+  "1"    "winter_wyvern_arctic_burn"
   "2"    "winter_wyvern_splinter_blast"
   "3"    "winter_wyvern_cold_embrace"
   "4"    "winter_wyvern_winters_curse"
