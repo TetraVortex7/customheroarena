@@ -16,66 +16,6 @@
     "ItemBaseLevel"                 "1"
     "ItemPurchasable"				"0"
 	}
-"item_cheat_test"
-	{
-    "ID" "2001"
-		"BaseClass"						"item_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemDeclarations"        		"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-		"Model"                         "models/props_gameplay/red_box.vmdl" 
-		"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
-		"AbilityTextureName"            "cheat_test"
-		"ItemQuality"                   "artifact"		// consumable component rare epic artifact secretshop
-		"ItemPurchasable"				"0"
-		
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"bonus_health"		"20000"
-			}
-			"02"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"dmg_prc"		"-98"
-			}
-			"03"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"armor"			"5000"
-			}
-			"04"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"lifesteal"		"500"
-			}
-		}
-		"Modifiers"
-		{
-			"modifier_cheat_passive"
-			{
-				"Passive"	"1"
-				"IsHidden"	"1"
-
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"%dmg_prc"
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%armor"
-				}
-				"OnDealDamage"
-				{
-					"Lifesteal"
-					{
-						"Target"				"ATTACKER"
-						"LifestealPercetange"	"%lifesteal"
-					}
-				}
-			}
-		}
-	}
-
 
 "item_ring_of_vasilius"
 	{
@@ -173,165 +113,167 @@
 	}
 "item_mana_stone"
 	{
-    "ID" "2004"
-	//General
-	//-----------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityTextureName"				"mana_stone"
-	"BaseClass"							"item_datadriven"
-	
-	//Item Info
-	"ItemCost"							"210"
-	"ItemShopTags"						"mana_regen;int"
-	"ItemQuality"						"component"
-	"ItemAliases"                   	"mana; stone"
-	
-	//Ability Special
-	"AbilitySpecial"
-		{
-			"01"
+		"ID" "2004"
+		//General
+		//-----------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"				"mana_stone"
+		"BaseClass"							"item_datadriven"
+		
+		//Item Info
+		"ItemCost"							"210"
+		"ItemShopTags"						"mana_regen;int"
+		"ItemQuality"						"component"
+		"ItemAliases"                   	"mana; stone"
+		
+		//Ability Special
+		"AbilitySpecial"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"0.85"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_int"				"2"
-			}
-		}
-	
-	//Modifiers
-	"Modifiers"
-		{
-			"modifier_mana_stone_passive"
-			{
-			"Passive"				"1"
-			"IsHidden"				"1"
-			"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
-			"Properties"
-				{				
-					"MODIFIER_PROPERTY_BASE_MANA_REGEN"				"%mana_regen"
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_int"
+				"01"
+				{
+					"var_type"				"FIELD_FLOAT"
+					"mana_regen"			"0.85"
+				}
+				"02"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"bonus_int"				"2"
 				}
 			}
-		}
+		
+		//Modifiers
+		"Modifiers"
+			{
+				"modifier_mana_stone_passive"
+				{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+					{				
+						"MODIFIER_PROPERTY_BASE_MANA_REGEN"				"%mana_regen"
+						"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_int"
+					}
+				}
+			}
 	}
 "item_hyper_glove"
     {
-    "ID" "2006"
-    "BaseClass"             "item_datadriven"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "AbilityTextureName"    "hyper_glove"
-	"ItemAliases"           "glove; speed; hyper"
-    
-        "ItemQuality"           "rare"
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"      "FIELD_INTEGER"
-                "bonus_a_speed" "35"
-            }
-        }
-        "Modifiers"
-        {
-            "modifier_hyper_glove_passive"
-            {
-                "Passive"   "1"
-                "IsHidden"  "1"
-                "Properties"
-                {
-                    "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT_SECONDARY"    "%bonus_a_speed"
-                }
-            }
-        }
+		"ID" "2006"
+		"BaseClass"             "item_datadriven"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityTextureName"    "hyper_glove"
+		"ItemAliases"           "glove; speed; hyper"
+		
+			"ItemQuality"           "rare"
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"      "FIELD_INTEGER"
+					"bonus_a_speed" "35"
+				}
+			}
+			"Modifiers"
+			{
+				"modifier_hyper_glove_passive"
+				{
+					"Passive"   "1"
+					"IsHidden"  "1"
+					"Properties"
+					{
+						"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT_SECONDARY"    "%bonus_a_speed"
+					}
+				}
+			}
     }
+	
 "item_ringed_glove"
     {
-    "ID" "2008"
-    "BaseClass"     "item_datadriven"
-    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
-    "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "AbilityTextureName"    "ringed_glove"
-    "ItemQuality"                   "epic"
-	"ItemAliases"                   	"ringed; glove; armor; radius"
-    "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "aura_radius"           "900"
-            }
-            "02"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "aura_bonus_armor"      "3"
-            }
-            "03"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "bonus_armor"           "5"
-            }
-            "04"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "aura_int"              "5"
-            }
-            "05"
-            {
-                "var_type"              "FIELD_FLOAT"
-                "mana_regen"            "5"
-            }
-            "06"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "bonus_int"             "10"
-            }
-            "07"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "atck_speed"            "35"
-            }
-        }
+		"ID" "2008"
+		"BaseClass"     "item_datadriven"
+		"AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityTextureName"    "ringed_glove"
+		"ItemQuality"                   "epic"
+		"ItemAliases"                   	"ringed; glove; armor; radius"
+		"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"              "FIELD_INTEGER"
+					"aura_radius"           "900"
+				}
+				"02"
+				{
+					"var_type"              "FIELD_INTEGER"
+					"aura_bonus_armor"      "3"
+				}
+				"03"
+				{
+					"var_type"              "FIELD_INTEGER"
+					"bonus_armor"           "5"
+				}
+				"04"
+				{
+					"var_type"              "FIELD_INTEGER"
+					"aura_int"              "5"
+				}
+				"05"
+				{
+					"var_type"              "FIELD_FLOAT"
+					"mana_regen"            "5"
+				}
+				"06"
+				{
+					"var_type"              "FIELD_INTEGER"
+					"bonus_int"             "10"
+				}
+				"07"
+				{
+					"var_type"              "FIELD_INTEGER"
+					"atck_speed"            "35"
+				}
+			}
 
-    "Modifiers"
-        {
-            "glove_modifiers"
-            {
-                "Passive"       "1"
-                "IsHidden"      "1"
-                "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-                "Aura"                                          "glove_aura"
-                "Aura_Teams"                                    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-                "Aura_Types"                                    "DOTA_UNIT_TARGET_HERO"
-                "Aura_Radius"                                   "%aura_radius"
-                
-                "Properties"
-                {
-                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%bonus_armor"
-                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"       "%bonus_int"
-                    "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"             "%mana_regen"   
-                    "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT_SECONDARY"    "%atck_speed"
-                }
-            }
-            "glove_aura"
-            {
-                "Passive"               "1"
-                "IsHidden"              "0"
-                "TextureName"           "item_ringed_glove"
-                "Properties"
-                {
-                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%aura_bonus_armor"
-                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"       "%aura_int"     
-                }
-            }
-        }
+		"Modifiers"
+			{
+				"glove_modifiers"
+				{
+					"Passive"       "1"
+					"IsHidden"      "1"
+					"Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+					"Aura"                                          "glove_aura"
+					"Aura_Teams"                                    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+					"Aura_Types"                                    "DOTA_UNIT_TARGET_HERO"
+					"Aura_Radius"                                   "%aura_radius"
+					
+					"Properties"
+					{
+						"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%bonus_armor"
+						"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"       "%bonus_int"
+						"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"             "%mana_regen"   
+						"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT_SECONDARY"    "%atck_speed"
+					}
+				}
+				"glove_aura"
+				{
+					"Passive"               "1"
+					"IsHidden"              "0"
+					"TextureName"           "item_ringed_glove"
+					"Properties"
+					{
+						"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "%aura_bonus_armor"
+						"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"       "%aura_int"     
+					}
+				}
+			}
     }
+	
 "item_stone_of_decay"
     {
-    "ID" "2010"
+		"ID" "2010"
         "BaseClass"                     "item_lua"
         "ScriptFile"                    "items/item_stone_of_decay.lua"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -353,9 +295,10 @@
             }
         }
     }
+	
 "item_katana"
     {
-    "ID" "2011"
+		"ID" "2011"
         "BaseClass"                     "item_lua"
         "ItemCost"  "9100"
         "ItemPurchasable"   "0"
@@ -408,48 +351,49 @@
             }
         }
     }
+	
 "item_fly"
-    {
-    "ID" "2012"
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "BaseClass"                     "item_datadriven"
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "AbilityTextureName"            "item_fly"
-	"ItemAliases"                   "butterfly; fly"
+		{
+		"ID" "2012"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityTextureName"            "item_fly"
+		"ItemAliases"                   "butterfly; fly"
 
-    "ItemQuality"                   "epic"
-        
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-        "01"
-        {
-            "var_type"                      "FIELD_INTEGER"
-            "bonus_agility"                 "50"
-        }
-        "02"
-        {
-            "var_type"                      "FIELD_INTEGER"
-            "bonus_damage"                  "45"
-        }
-        "03"
-        {
-            "var_type"                      "FIELD_INTEGER"
-            "bonus_evasion"                 "40"
-        }
-        "04"
-        {
-            "var_type"                      "FIELD_INTEGER"
-            "bonus_attack_speed"            "30"
-        }
-        "05"
-        {
-            "var_type"                      "FIELD_INTEGER"
-            "bonus_move_speed_percent"      "7"
-        }
+		"ItemQuality"                   "epic"
+			
+		// Special  
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"bonus_agility"                 "50"
+			}
+			"02"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"bonus_damage"                  "45"
+			}
+			"03"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"bonus_evasion"                 "40"
+			}
+			"04"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"bonus_attack_speed"            "30"
+			}
+			"05"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"bonus_move_speed_percent"      "7"
+			}
     }
     
         "Modifiers"
@@ -471,9 +415,10 @@
             }
         }
     }
+	
 "item_handed_sword"
     {
-    "ID" "2013"
+		"ID" "2013"
         "ItemCost"  "9600"
         "BaseClass"                     "item_datadriven"
         "ItemPurchasable"   "0"
@@ -578,9 +523,10 @@
             }
         }
     }
+	
 "item_katana_and_handed"
     {
-    "ID" "2015"
+		"ID" "2015"
         "BaseClass"                     "item_lua"
         "ScriptFile"                    "items/item_katana_and_handed.lua"
         "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
@@ -663,7 +609,7 @@
     }
 "item_mana_heart"
     {
-    "ID" "2017"
+		"ID" "2017"
         "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
         "BaseClass"                     "item_datadriven"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -1153,11 +1099,12 @@
             }
         }
     }
+	
 "item_war_axe_piece"
     {
-    "ID" "2029"
+		"ID" "2029"
         "ItemCost"                      "800"
-        "BaseClass"                     "item_datadriven"
+        "BaseClass"	                     "item_datadriven"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "Model"                         "models/props_gameplay/red_box.vmdl" 
         "Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
@@ -1212,6 +1159,7 @@
             }
         }
     }
+	
 "item_war_axe_dummy"
     {
     "ID" "2031"
@@ -5835,17 +5783,17 @@
             "02"
             {
                 "var_type"      "FIELD_INTEGER"
-                "str"    "10"
+                "str"    "30"
             }
             "03"
             {
                 "var_type"      "FIELD_INTEGER"
-                "hp"    "200"
+                "hp"    "2000"
             }
             "04"
             {
                 "var_type"      "FIELD_INTEGER"
-                "chance"    "15"
+                "chance"    "25"
             }
         }
     }

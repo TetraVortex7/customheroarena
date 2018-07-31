@@ -6,32 +6,56 @@ Halberds icon changed to Pike
 Ascention scroll rebirth attribute bonus 100 > 10
 Ascention scroll cost 50000 > 30000
 Soul shard attribute % 4 > 10
+Reflect shield HP 200 > 2000
+Reflect shield chance 15 > 25
+Reflect shield str 10 > 30
+
+NEW ITEM VENOM CLAWS (say hi to gankers)
+
 
 COSMETICS:
 Hero builds reworked
 English translation fixes
 
 ABILITIES:
-TA's Psi blades fixed
+TA's Psi Blades fixed
 Storm's Overload fixed
 BH's Track gold fixed
 
-New Drow Ranger's Marksmanship 
+REWORK Drow Ranger's Marksmanship 
+
 
 
 OPEN:
+
+ABILITIES:
+
 TOMBSTONE last lvl NOT WORKING
-KILL LIMIT VOTING
-TEAM VS TEAM ARENA
 ABADDON PASSIVE
-SELL BUTTON
-CHANGE TEAM BUTTON
-NO LEAVERS ON DUEL
-SLARKS AND DOOMS ANCIENTS (TO PREVENT DOMINATOR ABUSE)
 CHRONO AND DOOM FIXES
-POWER BAND DEAD BUG
-ASCEND TOO MANY STATS, JUST REBIRTH
 FERVOR 
 JUGG CRITS
-LEFT PEOPLE DONT PARTICIPATE IN DUEL
+
+PANORAMA:
+
+KILL LIMIT VOTING
+SELL BUTTON
+CHANGE TEAM BUTTON
+
+
+ENGINE:
+
+TEAM VS TEAM ARENA
+NO LEAVERS ON DUEL
 REFRESH ABILITIES WHEN DUELING
+
+
+CREEPS:
+
+SLARKS AND DOOMS ANCIENTS (TO PREVENT DOMINATOR ABUSE)
+
+
+BUGS
+POWER BAND DEAD BUG
+
+
