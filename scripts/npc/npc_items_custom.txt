@@ -7711,7 +7711,7 @@
 			}
 
 			"modifier_permanent_invisibility_datadriven"	
-			{	
+			{
 				"IsHidden"	"1"
 				
 				"States"

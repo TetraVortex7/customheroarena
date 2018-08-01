@@ -443,6 +443,22 @@ function GameMode:OnPlayerPickHero(keys)
               local S01 = ParticleManager:CreateParticle("particles/se7en_time_h_c.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
               ParticleManager:SetParticleControlEnt(S01, 1, hero, PATTACH_ABSORIGIN_FOLLOW, "attach_hitloc", hero:GetAbsOrigin(), false)
         end
+		
+        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 59874861 then --Aqua
+          local green = 0
+          local blue = 0
+          local red = 0
+          Timers:CreateTimer(0,function() 
+              green = RandomInt(0,255)
+              blue = RandomInt(0,255)
+              red = RandomInt(0,255) 
+               hero:SetCustomHealthLabel("ℙℝO██ǤȺᛖĖ℟", red, green, blue)
+            return 0.2 
+            end)  
+              PrecacheResource( "particle_folder", "particles/se7en_time_h_c.vpcf", context )
+              local S01 = ParticleManager:CreateParticle("particles/se7en_time_h_c.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+              ParticleManager:SetParticleControlEnt(S01, 1, hero, PATTACH_ABSORIGIN_FOLLOW, "attach_hitloc", hero:GetAbsOrigin(), false)
+        end
         
     hero.ability = {} --cooldowns for duels
     hero.IsDueling = false

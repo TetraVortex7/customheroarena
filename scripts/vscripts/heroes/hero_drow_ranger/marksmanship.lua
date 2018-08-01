@@ -3,7 +3,7 @@
 	Date: 1.1.2015.
 	Check number of units every interval
 	Note: Might be possible to do entirely in datadriven, however, I seem to crash everytime I tried
-	to do so, insteads, I just use simple script
+	to do so, insteads, I just use simple script 
 ]]
 function marksmanship_detection( keys )
 	local caster = keys.caster
