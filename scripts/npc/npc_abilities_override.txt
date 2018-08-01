@@ -1558,6 +1558,7 @@
 				{
 					"var_type"				"FIELD_INTEGER"
 					"radius"				"300"
+					"LinkedSpecialBonus"		"special_bonus_unique_axe_2"
 				}
 				"02"
 				{
@@ -5019,6 +5020,7 @@
 				{
 					"var_type"						"FIELD_FLOAT"
 					"damage_pct"					"1 1.2 1.6 1.8 2.6 3.4 4.0"
+					"LinkedSpecialBonus"	"special_bonus_unique_death_prophet_3"
 				}
 				"03"
 				{
@@ -5262,6 +5264,7 @@
 				{
 					"var_type"					"FIELD_FLOAT"
 					"duration"					"2.6 3.2 3.8 4.4 4.6 4.8 5.0"
+					"LinkedSpecialBonus"		"special_bonus_unique_disruptor_5"
 				}
 			}
 		}	
@@ -9752,6 +9755,27 @@
 				{
 					"var_type"					"FIELD_INTEGER"
 					"shock_damage"				"125 210 285 380 450 590 777"
+					"LinkedSpecialBonus"	"special_bonus_unique_magnus_4"
+				}
+				"04"
+				{
+					"var_type"					"FIELD_INTEGER"
+					"movement_slow"				"60"
+				}
+				"05"
+				{
+					"var_type"					"FIELD_FLOAT"
+					"slow_duration"				"2"
+				}
+				"06"
+				{
+					"var_type"					"FIELD_FLOAT"
+					"scepter_distance"		"1725"
+				}
+				"07"
+				{
+					"var_type"					"FIELD_FLOAT"
+					"scepter_speed"		"1700"
 				}
 			}
 		}
@@ -13332,6 +13356,7 @@
 				{
 					"var_type"				"FIELD_INTEGER"
 					"rot_slow"				"-30"
+					"LinkedSpecialBonus"			"special_bonus_unique_pudge_4"
 				}
 				"04"
 				{
@@ -17768,6 +17793,7 @@
 				{
 					"var_type"				"FIELD_INTEGER"
 					"damage_reduction"		"-30 -35 -40 -45 -50 -55 -60"
+					"LinkedSpecialBonus"	"special_bonus_unique_tidehunter_3"
 				}
 				"02"
 				{

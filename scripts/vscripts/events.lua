@@ -307,13 +307,13 @@ function GameMode:OnPlayerChat(event)
   local userid = PlayerResource:GetSteamAccountID(player:GetPlayerID())
   local text = event.text
 
-  if userid == 96670086 or userid == 339110098 then
+  if userid == 339110098 then
     if text == "-золото" then
       hero:SetGold(99999,true)
     end
   end
 	
-  if userid == 96670086 or userid == 339110098 then
+  if userid == 339110098 then
     if text == "-опыт" then
       hero:AddExperience(700000,0,false,false)
     end
@@ -428,10 +428,6 @@ function GameMode:OnPlayerPickHero(keys)
       hero:AddNewModifier(hero,modifier_cha_mmar,"modifier_cha_mmar",{}) --Melee max attack range cap
     end
 
-        --if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 169834690 then --Layneks
-        --  hero:SetCustomHealthLabel("ТАНКИСТ", 255, 0, 255) --30 144 255
-        --end
-
         if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 339110098 then --Turbo-
           local green = 0
           local blue = 0
@@ -447,81 +443,7 @@ function GameMode:OnPlayerPickHero(keys)
               local S01 = ParticleManager:CreateParticle("particles/se7en_time_h_c.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
               ParticleManager:SetParticleControlEnt(S01, 1, hero, PATTACH_ABSORIGIN_FOLLOW, "attach_hitloc", hero:GetAbsOrigin(), false)
         end
-		
-        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 113399176 then
-              hero:SetCustomHealthLabel("ЯЙЦЕХВАТ", 30, 144, 12) 
-        end
-		
-		if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 858159647 then
-              hero:SetCustomHealthLabel("Всевышний﻿", 30, 144, 12) 
-        end
-		
-		if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 888410296 then
-              hero:SetCustomHealthLabel("LightFury﻿", 30, 144, 12) 
-        end
-		
-		if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 489425388 then
-              hero:SetCustomHealthLabel("NightTiger﻿", 30, 144, 12) 
-        end
-		
-		if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 313077680 then
-              hero:SetCustomHealthLabel("КУРОЩУП﻿", 30, 144, 12) 
-        end
-		
-		if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 189004325 then
-              hero:SetCustomHealthLabel("Hacker", 30, 144, 12) 
-        end
-		
-		if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 442156783 then
-              hero:SetCustomHealthLabel("PowerPuff Luv", 30, 144, 12) 
-        end
-		
-        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 462788295 then
-              hero:SetCustomHealthLabel("ПОПУ МЫЛ?", 30, 144, 12) 
-        end
-		
-        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 462788295 then
-              hero:SetCustomHealthLabel("ПЕДИQ", 30, 144, 12) 
-        end
-		
-        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 361215413 then
-              hero:SetCustomHealthLabel("НА100ЯЩЕР", 30, 144, 12) 
-        end
-		
-        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 361215413 then 
-              hero:SetCustomHealthLabel("7_LETOV", 30, 144, 12) 
-        end
-
-		if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 121326498 then 
-              hero:SetCustomHealthLabel("ПАЖИЛАЯ ГАДЮКА", 30, 144, 12) 
-        end
-		
-		if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 195279267 then 
-              hero:SetCustomHealthLabel("GOD OF CHA", 30, 144, 12) --не считается за ту десятку, это отдельный чел
-        end
-
         
-        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 96670086 then --Dani's
-          local green = 0
-          local blue = 0
-          local red = 0
-          Timers:CreateTimer(0,function() 
-              green = RandomInt(0,255)
-              blue = RandomInt(0,255)
-              red = RandomInt(0,255) 
-               hero:SetCustomHealthLabel("۞[U.N.N.A.M.E.D]۞", red, green, blue)
-            return 0.2 
-            end)  
-          --Timers:CreateTimer(0.55, function() hero:SetGold(99999,true) hero:AddExperience(700000,0,false,false) hero:AddItem(CreateItem("item_blink_dagger_two",hero,hero)) hero:AddItem(CreateItem("item_lens_five",hero,hero)) end)
-        
-          PrecacheResource( "particle_folder", "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_trail.vpcf", context )
-          local D01 = ParticleManager:CreateParticle("particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_trail.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
-          ParticleManager:SetParticleControlEnt(D01, 0, hero, PATTACH_ABSORIGIN_FOLLOW, "attach_hitloc", hero:GetAbsOrigin(), false)
-          ParticleManager:SetParticleControlEnt(D01, 3, hero, PATTACH_ABSORIGIN_FOLLOW, "attach_hitloc", hero:GetAbsOrigin(), false)
-          ParticleManager:SetParticleControlEnt(D01, 16, hero, PATTACH_ABSORIGIN_FOLLOW, "attach_hitloc", hero:GetAbsOrigin(), false)
-        end
-        
-    --hero:FindAbilityByName("SDMS"):SetLevel(1)
     hero.ability = {} --cooldowns for duels
     hero.IsDueling = false
     hero.hidden = 0

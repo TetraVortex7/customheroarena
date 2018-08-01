@@ -1,3 +1,0 @@
-Fixed WindRunner PowerShot
-Fixed Batrider FlameBreak
-Added to all abilities level between upgrade (again)

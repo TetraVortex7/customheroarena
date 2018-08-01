@@ -117,167 +117,167 @@
 		//Slark's'
 			"npc_slark_creep_e" // -createhero npc_slark_creep_e
 				{
-				"BaseClass" "npc_dota_creature" 
-				"Model" "models/heroes/slark/slark.vmdl"
-				"SoundSet" "Hero_Pudge" 
-				"GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
-				"ModelScale" "1" 
-				"Level" "5" 
-				"IsNeutralUnitType"            "1"
+					"BaseClass" "npc_dota_creature" 
+					"Model" "models/heroes/slark/slark.vmdl"
+					"SoundSet" "Hero_Pudge" 
+					"GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
+					"ModelScale" "1" 
+					"Level" "5" 
+					"IsNeutralUnitType"            "1"
+					
+					"AbilityLayout"				"4"
+					"Ability1" "" //creeps_slark_ability_shield
+					"Ability2" "" 
+					"Ability3" "" 
+					"Ability4" "" 
+					"Ability5" "" 
+					"Ability6" "" 
+					"Ability7" "" 
+					"Ability8" "" 
+		
+					"ArmorPhysical" "1" 
+					"MagicalResistance" "25" 
+					
+					"UseNeutralCreepBehavior"    "1" 	
+					"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
+					"AttackDamageMin" "16" 
+					"AttackDamageMax" "24" 
+					"AttackRate" "1.2" 
+					"AttackAnimationPoint" "0.3" 
+					"AttackAcquisitionRange" "300" 
+					"AttackRange" "128" 
+					"ProjectileModel" "" 
+					"ProjectileSpeed" ""
+					//"AttackRangeBuffer" "200" 		
+					 
+					"BountyXP" "30" 
+					"BountyGoldMin" "26" 
+					"BountyGoldMax" "34" 
+					 
+					"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
+					"MovementSpeed" "320" 
+					"MovementTurnRate" "0.8" 
 				
-				"AbilityLayout"				"4"
-				"Ability1" "" //creeps_slark_ability_shield
-				"Ability2" "" 
-				"Ability3" "" 
-				"Ability4" "" 
-				"Ability5" "" 
-				"Ability6" "" 
-				"Ability7" "" 
-				"Ability8" "" 
-	
-				"ArmorPhysical" "1" 
-				"MagicalResistance" "25" 
+					"StatusHealth" "460" 
+					"StatusHealthRegen" "4.5" 
+					"StatusMana" "200" 
+					"StatusManaRegen" "20" 
+		
+		
+					 
+					"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+					"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+					"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+					"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+					  
+					"VisionDaytimeRange" "1000" 
+					"VisionNighttimeRange" "600" 
 				
-				"UseNeutralCreepBehavior"    "1" 	
-				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
-				"AttackDamageMin" "16" 
-				"AttackDamageMax" "24" 
-				"AttackRate" "1.2" 
-				"AttackAnimationPoint" "0.3" 
-				"AttackAcquisitionRange" "300" 
-				"AttackRange" "128" 
-				"ProjectileModel" "" 
-				"ProjectileSpeed" ""
-				//"AttackRangeBuffer" "200" 		
-				 
-				"BountyXP" "30" 
-				"BountyGoldMin" "26" 
-				"BountyGoldMax" "34" 
-				 
-				"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-				"MovementSpeed" "320" 
-				"MovementTurnRate" "0.8" 
-			
-				"StatusHealth" "460" 
-				"StatusHealthRegen" "4.5" 
-				"StatusMana" "200" 
-				"StatusManaRegen" "20" 
-	
-	
-				 
-				"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-				"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-				"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-				"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-				  
-				"VisionDaytimeRange" "1000" 
-				"VisionNighttimeRange" "600" 
-			
-				"precache"
-				{
-					"model" "models/heroes/pudge/pudge.vmdl"
-	
-					"model" "models/items/slark/dark_reef_back/dark_reef_back.mdl"
-				}
-				
-				"Creature"
-				{
-					"HPGain"                    "14.5"
-					"HealthRegenGain"			"0.1"
-					"DamageGain"                "10"
-					"ArmorGain"                 "0.8"
-					"ManaGain"                  "3"
-					"MagicResistGain"           "0"
-					"MoveSpeedGain"             "0.02"
-					"BountyGain"                "3.1"
-	
-					"AttachWearables"
+					"precache"
 					{
-						"Wearable1" { "ItemDef" "6202" }
-						"Wearable2" { "ItemDef" "7711" }
+						"model" "models/heroes/pudge/pudge.vmdl"
+		
+						"model" "models/items/slark/dark_reef_back/dark_reef_back.mdl"
 					}
-				}
+					
+					"Creature"
+					{
+						"HPGain"                    "14.5"
+						"HealthRegenGain"			"0.1"
+						"DamageGain"                "10"
+						"ArmorGain"                 "0.8"
+						"ManaGain"                  "3"
+						"MagicResistGain"           "0"
+						"MoveSpeedGain"             "0.02"
+						"BountyGain"                "3.1"
+		
+						"AttachWearables"
+						{
+							"Wearable1" { "ItemDef" "6202" }
+							"Wearable2" { "ItemDef" "7711" }
+						}
+					}
 				}
 
 			"npc_slark_creep_h" // -createhero npc_slark_creep_h
 						{
-						"BaseClass" "npc_dota_creature" 
-						"Model" "models/heroes/slark/slark.vmdl"
-						"SoundSet" "Hero_Pudge" 
-						"GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
-						"ModelScale" "1.6" 
-						"Level" "50" 
-						"HealthBarOffset"           "220"
-						"IsNeutralUnitType"            "1"
-						"RingRadius"                "90"
+							"BaseClass" "npc_dota_creature" 
+							"Model" "models/heroes/slark/slark.vmdl"
+							"SoundSet" "Hero_Pudge" 
+							"GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
+							"ModelScale" "1.6" 
+							"Level" "50" 
+							"HealthBarOffset"           "220"
+							"IsNeutralUnitType"            "1"
+							"RingRadius"                "90"
+							
+							"AbilityLayout"				"4"
+							"Ability1" "" 
+							"Ability2" "" 
+							"Ability3" "" 
+							"Ability4" "" 
+							"Ability5" "" 
+							"Ability6" "" 
+							"Ability7" "" 
+							"Ability8" "" 
+				
+							"ArmorPhysical" "46" 
+							"MagicalResistance" "25" 
+							
+							"UseNeutralCreepBehavior"    "1" 	
+							"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
+							"AttackDamageMin" "168" 
+							"AttackDamageMax" "180" 
+							"AttackRate" "0.5" 
+							"AttackAnimationPoint" "0.3" 
+							"AttackAcquisitionRange" "300" 
+							"AttackRange" "128" 
+							"ProjectileModel" "" 
+							"ProjectileSpeed" ""
+							//"AttackRangeBuffer" "200" 		
+							 
+							"BountyXP" "190" 
+							"BountyGoldMin" "77" 
+							"BountyGoldMax" "82" 
+							 
+							"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
+							"MovementSpeed" "320" 
+							"MovementTurnRate" "0.8" 
 						
-						"AbilityLayout"				"4"
-						"Ability1" "" 
-						"Ability2" "" 
-						"Ability3" "" 
-						"Ability4" "" 
-						"Ability5" "" 
-						"Ability6" "" 
-						"Ability7" "" 
-						"Ability8" "" 
-			
-						"ArmorPhysical" "46" 
-						"MagicalResistance" "76" 
+							"StatusHealth" "1860" 
+							"StatusHealthRegen" "35" 
+							"StatusMana" "250" 
+							"StatusManaRegen" "25" 
+							 
+							"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+							"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+							"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+							"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+							  
+							"VisionDaytimeRange" "1000" 
+							"VisionNighttimeRange" "600" 
 						
-						"UseNeutralCreepBehavior"    "1" 	
-						"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
-						"AttackDamageMin" "168" 
-						"AttackDamageMax" "180" 
-						"AttackRate" "0.5" 
-						"AttackAnimationPoint" "0.3" 
-						"AttackAcquisitionRange" "300" 
-						"AttackRange" "128" 
-						"ProjectileModel" "" 
-						"ProjectileSpeed" ""
-						//"AttackRangeBuffer" "200" 		
-						 
-						"BountyXP" "190" 
-						"BountyGoldMin" "77" 
-						"BountyGoldMax" "82" 
-						 
-						"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-						"MovementSpeed" "320" 
-						"MovementTurnRate" "0.8" 
-					
-						"StatusHealth" "1860" 
-						"StatusHealthRegen" "35" 
-						"StatusMana" "250" 
-						"StatusManaRegen" "25" 
-						 
-						"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-						"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-						"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-						"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-						  
-						"VisionDaytimeRange" "1000" 
-						"VisionNighttimeRange" "600" 
-					
-						"precache"
-						{
-							"model" "models/heroes/pudge/pudge.vmdl"
-			
-							"model" "models/items/slark/the_silent_ripper/the_silent_ripper.mdl"
-			
-							"model" "models/items/dragon_knight/wurmblood_head/wurmblood_head.mdl"
-			
-							"model" "models/items/slark/dark_reef_back/dark_reef_back.mdl"
-						}
-						
-						"Creature"
-						{
-							"AttachWearables"
+							"precache"
 							{
-								"Wearable1" { "ItemDef" "6202" }
-								"Wearable2" { "ItemDef" "4804" }
-								"Wearable3" { "ItemDef" "7416" }
-								"Wearable4" { "ItemDef" "7711" }
+								"model" "models/heroes/pudge/pudge.vmdl"
+				
+								"model" "models/items/slark/the_silent_ripper/the_silent_ripper.mdl"
+				
+								"model" "models/items/dragon_knight/wurmblood_head/wurmblood_head.mdl"
+				
+								"model" "models/items/slark/dark_reef_back/dark_reef_back.mdl"
 							}
-						}
+							
+							"Creature"
+							{
+								"AttachWearables"
+								{
+									"Wearable1" { "ItemDef" "6202" }
+									"Wearable2" { "ItemDef" "4804" }
+									"Wearable3" { "ItemDef" "7416" }
+									"Wearable4" { "ItemDef" "7711" }
+								}
+							}
 						}// -createhero npc_slark_creep_h
 
 			"npc_slark_creep_m" // -createhero npc_slark_creep_m
@@ -301,7 +301,7 @@
 						"Ability8" "" 
 			
 						"ArmorPhysical" "4" 
-						"MagicalResistance" "30" 
+						"MagicalResistance" "25" 
 						
 						"UseNeutralCreepBehavior"    "1" 	
 						"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -379,7 +379,7 @@
 						"Ability8" "" 
 			
 						"ArmorPhysical" "59" 
-						"MagicalResistance" "79" 
+						"MagicalResistance" "25" 
 						
 						"UseNeutralCreepBehavior"    "1" 	
 						"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -442,117 +442,117 @@
 
 			"npc_slark_creep_mb" // -createhero npc_slark_creep_mb
 				{
-				"BaseClass" "npc_dota_creature" 
-				"Model" "models/heroes/slark/slark.vmdl"
-				"SoundSet" "Hero_Pudge" 
-				"GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
-				"ModelScale" "2.1" 
-				"Level" "100" 
-				"HealthBarOffset"           "310"
-				"IsNeutralUnitType"            "1"
-				"RingRadius"                "140"
-				"BoundsHullName"            "DOTA_HULL_SIZE_HUGE"
-                "ConsideredHero"            "1"
-				"IsAncient" "1"
-	            	"CanBeDominated" "0"
-	
-	            	"vscripts"	"ai/ai_slark_miniboss.lua"
+					"BaseClass" "npc_dota_creature" 
+					"Model" "models/heroes/slark/slark.vmdl"
+					"SoundSet" "Hero_Pudge" 
+					"GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
+					"ModelScale" "2.1" 
+					"Level" "100" 
+					"HealthBarOffset"           "310"
+					"IsNeutralUnitType"            "1"
+					"RingRadius"                "140"
+					"BoundsHullName"            "DOTA_HULL_SIZE_HUGE"
+					"ConsideredHero"            "1"
+					"IsAncient" "1"
+						"CanBeDominated" "0"
+		
+						"vscripts"	"ai/ai_slark_miniboss.lua"
+					
+					"AbilityLayout"				"4"
+					"Ability1" "creeps_slark_ability_shield" 
+					"Ability2" "enchantress_untouchable" 
+					"Ability3" "omniknight_degen_aura" 
+					"Ability4" "necronomicon_warrior_sight" 
+					"Ability5" "" 
+					"Ability6" "" 
+					"Ability7" "" 
+					"Ability8" "" 
+		
+					"ArmorPhysical" "46" 
+					"MagicalResistance" "25" 
+					
+					"UseNeutralCreepBehavior"    "1" 	
+					"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
+					"AttackDamageMin" "640" 
+					"AttackDamageMax" "740" 
+					"AttackRate" "0.6" 
+					"AttackAnimationPoint" "0.3" 
+					"AttackAcquisitionRange" "300" 
+					"AttackRange" "128" 
+					"ProjectileModel" "" 
+					"ProjectileSpeed" ""
+					//"AttackRangeBuffer" "200" 		
+					 
+					"BountyXP" "3400" 
+					"BountyGoldMin" "2800" 
+					"BountyGoldMax" "3600" 
+					 
+					"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
+					"MovementSpeed" "320" 
+					"MovementTurnRate" "0.8" 
 				
-				"AbilityLayout"				"4"
-				"Ability1" "creeps_slark_ability_shield" 
-				"Ability2" "enchantress_untouchable" 
-				"Ability3" "omniknight_degen_aura" 
-				"Ability4" "necronomicon_warrior_sight" 
-				"Ability5" "" 
-				"Ability6" "" 
-				"Ability7" "" 
-				"Ability8" "" 
-	
-				"ArmorPhysical" "46" 
-				"MagicalResistance" "30" 
+					"StatusHealth" "112000" 
+					"StatusHealthRegen" "366" 
+					"StatusMana" "1400" 
+					"StatusManaRegen" "25" 
+					 
+					"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+					"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+					"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+					"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+					  
+					"VisionDaytimeRange" "1000" 
+					"VisionNighttimeRange" "600" 
 				
-				"UseNeutralCreepBehavior"    "1" 	
-				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
-				"AttackDamageMin" "640" 
-				"AttackDamageMax" "740" 
-				"AttackRate" "0.6" 
-				"AttackAnimationPoint" "0.3" 
-				"AttackAcquisitionRange" "300" 
-				"AttackRange" "128" 
-				"ProjectileModel" "" 
-				"ProjectileSpeed" ""
-				//"AttackRangeBuffer" "200" 		
-				 
-				"BountyXP" "3400" 
-				"BountyGoldMin" "2800" 
-				"BountyGoldMax" "3600" 
-				 
-				"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-				"MovementSpeed" "320" 
-				"MovementTurnRate" "0.8" 
-			
-				"StatusHealth" "112000" 
-				"StatusHealthRegen" "366" 
-				"StatusMana" "1400" 
-				"StatusManaRegen" "25" 
-				 
-				"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-				"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-				"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-				"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-				  
-				"VisionDaytimeRange" "1000" 
-				"VisionNighttimeRange" "600" 
-			
-				"precache"
-				{
-					"model" "models/heroes/pudge/pudge.vmdl"
-	
-					"model" "models/items/slark/barb_of_skadi/barb_of_skadi.mdl"
-					"particle" "particles/econ/items/slark/slark_barb_of_skadi.pcf"
-	
-					"model" "models/items/dragon_knight/wurmblood_head/wurmblood_head.mdl"
-	
-					"model" "models/items/slark/dark_reef_back/dark_reef_back.mdl"
-	
-					"model" "models/heroes/phantom_assassin/phantom_assassin_shoulders.mdl"
-	
-					"model" "models/heroes/troll_warlord/troll_warlord_bracer.mdl"
-				}
-				
-				"Creature"
-				{
-					"AttachWearables"
+					"precache"
 					{
-						"Wearable1" { "ItemDef" "6202" }
-						"Wearable2" { "ItemDef" "7396" }
-						"Wearable3" { "ItemDef" "7416" }
-						"Wearable4" { "ItemDef" "7711" }
-						"Wearable5" { "ItemDef" "138" }
-						"Wearable6" { "ItemDef" "412" }
+						"model" "models/heroes/pudge/pudge.vmdl"
+		
+						"model" "models/items/slark/barb_of_skadi/barb_of_skadi.mdl"
+						"particle" "particles/econ/items/slark/slark_barb_of_skadi.pcf"
+		
+						"model" "models/items/dragon_knight/wurmblood_head/wurmblood_head.mdl"
+		
+						"model" "models/items/slark/dark_reef_back/dark_reef_back.mdl"
+		
+						"model" "models/heroes/phantom_assassin/phantom_assassin_shoulders.mdl"
+		
+						"model" "models/heroes/troll_warlord/troll_warlord_bracer.mdl"
 					}
-	
-					"DefaultState"              "Invade"
-					"States"
-		            {
-		                "Invade"
-		                {
-		                    "Name"              "Invade"
-		                    "Aggression"        "25.0"
-		                    "Avoidance"         "25.0"
-		                    "Support"           "38.0"
-		                }
-		            }
-	
-					"OffensiveAbilities"
+					
+					"Creature"
 					{
-						"Ability1"				
+						"AttachWearables"
 						{
-							"Name"				"creeps_slark_ability_shield"
-							"UseSelfishly"		"1"
+							"Wearable1" { "ItemDef" "6202" }
+							"Wearable2" { "ItemDef" "7396" }
+							"Wearable3" { "ItemDef" "7416" }
+							"Wearable4" { "ItemDef" "7711" }
+							"Wearable5" { "ItemDef" "138" }
+							"Wearable6" { "ItemDef" "412" }
+						}
+		
+						"DefaultState"              "Invade"
+						"States"
+						{
+							"Invade"
+							{
+								"Name"              "Invade"
+								"Aggression"        "25.0"
+								"Avoidance"         "25.0"
+								"Support"           "38.0"
+							}
+						}
+		
+						"OffensiveAbilities"
+						{
+							"Ability1"				
+							{
+								"Name"				"creeps_slark_ability_shield"
+								"UseSelfishly"		"1"
+							}
 						}
 					}
-				}
 				}
 
 				"npc_dota_unit_tombstone5"
@@ -699,7 +699,7 @@
 						"VisionNighttimeRange"		"1800"		// Range of vision at night time.
 					}
 
-				"npc_dota_unit_tombstone6"
+				"npc_dota_unit_tombstone7"
 					{
 						// General
 						//

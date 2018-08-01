@@ -8052,6 +8052,172 @@
 		}
 	}
 	
+	"item_solomon_book_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+        "ID" "2215"
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemDeclarations"        		"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" 		"DOTA_UNIT_TARGET_HERO"
+		"AbilityTextureName"			"solomon_book"
+		"ItemAliases"                   "exp; book; mage; int"
+        "ItemCost"                      "3225"
+		"ItemBaseLevel"                 "2"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"exp; book; mage; int; amplify"
+		"ItemQuality"					"rare"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"exp_per_cast"			"30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"exp_lvl_bonus"			"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"					"30 35 40"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana"					"500 700 900"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen"			"9 11 13"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"amplification"			"100 200 300"
+			}
+		}
+		
+		// Modifiers
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+					"modifier_solomon_book"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				
+			"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_BONUS"		"%mana"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%int"
+					"MODIFIER_PROPERTY_BASE_MANA_REGEN"				"%mana_regen"		
+				}
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/items/item_quibbela.lua"
+						"Function"		"Give_exp"
+					}
+				}
+			}
+		}
+	}
+	
+	"item_solomon_book_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+        "ID" "2216"
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemDeclarations"        		"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" 		"DOTA_UNIT_TARGET_HERO"
+		"AbilityTextureName"			"solomon_book"
+		"ItemAliases"                   "exp; book; mage; int"
+        "ItemCost"                      "3225"
+		"ItemBaseLevel"                 "3"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"exp; book; mage; int; amplify"
+		"ItemQuality"					"rare"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"exp_per_cast"			"30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"exp_lvl_bonus"			"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int"					"30 35 40"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana"					"500 700 900"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen"			"9 11 13"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"amplification"			"100 200 300"
+			}
+		}
+		
+		// Modifiers
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+					"modifier_solomon_book"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				
+			"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_BONUS"		"%mana"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%int"
+					"MODIFIER_PROPERTY_BASE_MANA_REGEN"				"%mana_regen"		
+				}
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/items/item_quibbela.lua"
+						"Function"		"Give_exp"
+					}
+				}
+			}
+		}
+	}
+	
 "item_recipe_alebard"
     {
         "ID" "5000"

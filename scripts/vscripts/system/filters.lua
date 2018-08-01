@@ -15,6 +15,17 @@ if entindex_inflictor_const then ability = EntIndexToHScript(entindex_inflictor_
 	if victim:IsAlive() and victim:IsRealHero() and (victim:HasItemInInventory("item_stalker_coat") or victim:HasItemInInventory("item_manteau_invis")) and damagetype == "DAMAGE_TYPE_MAGICAL" then
 		event.damage = event.damage / 4
 	end
+	if victim ~= attacker and victim:IsAlive() and not victim:IsRealHero() and attacker:HasItemInInventory("item_solomon_book") and damagetype == 2 then --2 = magical
+		event.damage = event.damage * 2
+	end
+	
+	if victim ~= attacker and victim:IsAlive() and not victim:IsRealHero() and attacker:HasItemInInventory("item_solomon_book_2") and damagetype == 2 then
+		event.damage = event.damage * 3
+	end
+	
+	if victim ~= attacker and victim:IsAlive() and not victim:IsRealHero() and attacker:HasItemInInventory("item_solomon_book_3") and damagetype == 2 then
+		event.damage = event.damage * 4
+	end
 
 	if victim ~= attacker and victim:IsAlive() and attacker:IsRealHero() and attacker:HasItemInInventory("item_aether_lens_5") and ability and not ability:IsItem() then
 		local count = StatsFinder:GetItemsCount("item_aether_lens_5", attacker)

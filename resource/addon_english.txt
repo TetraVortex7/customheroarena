@@ -1952,13 +1952,33 @@
 		//Sanctum Regnum
 		    "DOTA_Tooltip_ability_item_solomon_book"                "Sanctum Regnum"
 			"DOTA_Tooltip_ability_item_solomon_book_Description"    "<h1>Experience gain</h1> Takes (%exp_per_cast% + bonus per hero level) experience every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Creep killer</h1> Amplificates outgoing damage to crees by %amplification%%.\n"
-            "DOTA_Tooltip_ability_item_solomon_book_Lore"           "."
+            "DOTA_Tooltip_ability_item_solomon_book_Lore"           "Секреты магии открываются постепенно."
             "DOTA_Tooltip_ability_item_solomon_book_exp_per_cast"  "Опыт за каст:"
             "DOTA_Tooltip_ability_item_solomon_book_exp_lvl_bonus"    "Бонус опыта за уровень героя:"
 			"DOTA_Tooltip_ability_item_solomon_book_int"  "+$int"
 			"DOTA_Tooltip_ability_item_solomon_book_mana"  "+$mana"
 			"DOTA_Tooltip_ability_item_solomon_book_mana_regen"	"%+$mana_regen"
 			"DOTA_Tooltip_ability_item_solomon_book_amplification"	"%Увеличение урона по крипам:"
+			
+		    "DOTA_Tooltip_ability_item_solomon_book_2"                "Sanctum Regnum"
+			"DOTA_Tooltip_ability_item_solomon_book_2_Description"    "<h1>Experience gain</h1> Takes (%exp_per_cast% + bonus per hero level) experience every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Creep killer</h1> Amplificates outgoing damage to crees by %amplification%%.\n"
+            "DOTA_Tooltip_ability_item_solomon_book_2_Lore"           "Секреты магии открываются постепенно."
+            "DOTA_Tooltip_ability_item_solomon_book_2_exp_per_cast"  "Опыт за каст:"
+            "DOTA_Tooltip_ability_item_solomon_book_2_exp_lvl_bonus"    "Бонус опыта за уровень героя:"
+			"DOTA_Tooltip_ability_item_solomon_book_2_int"  "+$int"
+			"DOTA_Tooltip_ability_item_solomon_book_2_mana"  "+$mana"
+			"DOTA_Tooltip_ability_item_solomon_book_2_mana_regen"	"%+$mana_regen"
+			"DOTA_Tooltip_ability_item_solomon_book_2_amplification"	"%Увеличение урона по крипам:"
+			
+		    "DOTA_Tooltip_ability_item_solomon_book_3"                "Sanctum Regnum"
+			"DOTA_Tooltip_ability_item_solomon_book_3_Description"    "<h1>Experience gain</h1> Takes (%exp_per_cast% + bonus per hero level) experience every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Creep killer</h1> Amplificates outgoing damage to crees by %amplification%%.\n"
+            "DOTA_Tooltip_ability_item_solomon_book_3_Lore"           "Секреты магии открываются постепенно."
+            "DOTA_Tooltip_ability_item_solomon_book_3_exp_per_cast"  "Опыт за каст:"
+            "DOTA_Tooltip_ability_item_solomon_book_3_exp_lvl_bonus"    "Бонус опыта за уровень героя:"
+			"DOTA_Tooltip_ability_item_solomon_book_3_int"  "+$int"
+			"DOTA_Tooltip_ability_item_solomon_book_3_mana"  "+$mana"
+			"DOTA_Tooltip_ability_item_solomon_book_3_mana_regen"	"%+$mana_regen"
+			"DOTA_Tooltip_ability_item_solomon_book_3_amplification"	"%Увеличение урона по крипам:"
 
 
 
