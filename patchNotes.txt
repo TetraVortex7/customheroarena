@@ -9,8 +9,11 @@ Soul shard attribute % 4 > 10
 Reflect shield HP 200 > 2000
 Reflect shield chance 15 > 25
 Reflect shield str 10 > 30
+Tome of Experience manacost now 0
 
-NEW ITEM VENOM BROONCH (say hi to gankers)
+NEW ITEM Gu (say hi to gankers)
+NEW ITEM Sanctum Regnum (mages strikes back!)
+
 
 
 COSMETICS:
@@ -22,7 +25,7 @@ TA's Psi Blades fixed
 Storm's Overload fixed
 BH's Track gold fixed
 
-REWORKED Drow Ranger's Marksmanship 
+REWORKED Drow Ranger's Marksmanship
 
 
 

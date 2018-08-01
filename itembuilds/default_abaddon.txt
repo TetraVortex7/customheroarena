@@ -34,6 +34,7 @@
 			"item"		"item_durandal"
 			"item"		"item_kaya_c"
 			"item"		"item_manteau_invis"
+			"item"		"item_solomon_book"
 		}
 		
 		"#DOTA_Item_Build_Carry"

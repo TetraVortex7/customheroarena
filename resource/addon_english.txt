@@ -127,6 +127,16 @@
     		"DOTA_Tooltip_ability_legion_commander_moment_of_courage_datadriven_trigger_chance"    "%CHANCE:"
     		"DOTA_Tooltip_ability_legion_commander_moment_of_courage_datadriven_hp_leech_percent"    "%LIFESTEAL:"
     		"DOTA_Tooltip_ability_legion_commander_moment_of_courage_datadriven_buff_duration"    "DURATION:"
+			
+		//дровочка
+        
+            "DOTA_Tooltip_ability_marksmanship_datadriven"                "Marksmanship"
+            "DOTA_Tooltip_ability_marksmanship_datadriven_Description"     "Increases the hero's dexterity and also gives him a chance to instantly kill the creep. If the enemy hero comes close to you bonus will be lost."
+            "DOTA_Tooltip_ability_marksmanship_datadriven_Lore"            "When the arrow does not hit the target, the shooter blames himself, not the other. So does the wise man."
+			"DOTA_Tooltip_ability_marksmanship_datadriven_marksmanship_agility_bonus"    "AGI bonus:"
+            "DOTA_Tooltip_ability_marksmanship_datadriven_radius"    "Radius:"
+			"DOTA_Tooltip_ability_marksmanship_datadriven_chance"    "Chance:"
+
 
         //приказ натурала
 
@@ -1091,7 +1101,7 @@
 
         //Ядовитые Когти
 
-            "DOTA_Tooltip_ability_item_venom_liquid"                 "Poisonous moon"
+            "DOTA_Tooltip_ability_item_venom_liquid"                 "Gu"
             "DOTA_Tooltip_ability_item_venom_liquid_Description"     "<h1>Passive: Pyrexia</h1> Every attack infects enemy, dealing %dps% + %hpd%% max health pure damage with interval %rate% sec, decrease target movement speed by %slow%% on each stack.<br>Max stack count: %cap%"
             "DOTA_Tooltip_ability_item_venom_liquid_Lore"            "At every opportunity better will be pour poison to enemy wounds."
             "DOTA_Tooltip_ability_item_venom_liquid_dps"             "DAMAGE PER STACK:"
@@ -1938,6 +1948,18 @@
 			"DOTA_Tooltip_ability_item_quibbela_3_int"  "+$int"
 			"DOTA_Tooltip_ability_item_quibbela_3_mana"  "+$mana"
 			"DOTA_Tooltip_ability_item_quibbela_3_mana_regen"	"%+$mana_regen"
+		
+		//Sanctum Regnum
+		    "DOTA_Tooltip_ability_item_solomon_book"                "Sanctum Regnum"
+			"DOTA_Tooltip_ability_item_solomon_book_Description"    "<h1>Experience gain</h1> Takes (%exp_per_cast% + bonus per hero level) experience every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Creep killer</h1> Amplificates outgoing damage to crees by %amplification%%.\n"
+            "DOTA_Tooltip_ability_item_solomon_book_Lore"           "."
+            "DOTA_Tooltip_ability_item_solomon_book_exp_per_cast"  "Опыт за каст:"
+            "DOTA_Tooltip_ability_item_solomon_book_exp_lvl_bonus"    "Бонус опыта за уровень героя:"
+			"DOTA_Tooltip_ability_item_solomon_book_int"  "+$int"
+			"DOTA_Tooltip_ability_item_solomon_book_mana"  "+$mana"
+			"DOTA_Tooltip_ability_item_solomon_book_mana_regen"	"%+$mana_regen"
+			"DOTA_Tooltip_ability_item_solomon_book_amplification"	"%Увеличение урона по крипам:"
+
 
 
     //Аблики боссов
