@@ -186,7 +186,7 @@
     "item"    "item_deso2"
     "item"    "item_alebard"
     "item"    "item_sange_and_yasha"
-	  "item"	  ""
+	"item"    "item_venom_liquid"
     "item"    "item_greater_lightning"
     "item"    "item_cursed_eye" 
     "item"    "item_demonic_axe"    

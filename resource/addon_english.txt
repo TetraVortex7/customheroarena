@@ -1091,8 +1091,8 @@
 
         //Ядовитые Когти
 
-            "DOTA_Tooltip_ability_item_venom_liquid"                 "Venome Claws"
-            "DOTA_Tooltip_ability_item_venom_liquid_Description"     "<h1>Passive: Venome</h1> Every attack infects enemy, dealing %dps% + %hpd%% max health pure damage with interval %rate% sec, decrease target movement speed by %slow%% on each stack.<br>Max stack count: %cap%"
+            "DOTA_Tooltip_ability_item_venom_liquid"                 "Poisonous moon"
+            "DOTA_Tooltip_ability_item_venom_liquid_Description"     "<h1>Passive: Pyrexia</h1> Every attack infects enemy, dealing %dps% + %hpd%% max health pure damage with interval %rate% sec, decrease target movement speed by %slow%% on each stack.<br>Max stack count: %cap%"
             "DOTA_Tooltip_ability_item_venom_liquid_Lore"            "At every opportunity better will be pour poison to enemy wounds."
             "DOTA_Tooltip_ability_item_venom_liquid_dps"             "DAMAGE PER STACK:"
             "DOTA_Tooltip_ability_item_venom_liquid_duration"        "DURATION:"
@@ -1162,7 +1162,7 @@
 
                 "DOTA_Tooltip_ability_item_reflect_shield"                  "Reflect Shield"
                 "DOTA_Tooltip_ability_item_reflect_shield_Note0"            "Drops from Slark Miniboss."
-                "DOTA_Tooltip_ability_item_reflect_shield_Description"      "<h1>Passive: Reflection</h1> If attacked, has %chance%% chance to return full taked damage."
+                "DOTA_Tooltip_ability_item_reflect_shield_Description"      "<h1>Passive: Reflect</h1> If attacked, has %chance%% chance to return full taked damage."
                 "DOTA_Tooltip_ability_item_reflect_shield_Lore"             ""
                 "DOTA_Tooltip_ability_item_reflect_shield_chance"           "%RETURN DAMAGE CHANCE:"
                 "DOTA_Tooltip_ability_item_reflect_shield_armor"            "+$armor"

@@ -4310,7 +4310,8 @@
     {
         "ID" "2116"
         "BaseClass"                     "item_lua"
-        "ItemPurchasable"               "0"
+        "ItemPurchasable"               "1"
+		"ItemCost"                      "1200"
         "ScriptFile"                    "items/item_venom_liquid.lua"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "Model"                         "models/props_gameplay/red_box.vmdl" 

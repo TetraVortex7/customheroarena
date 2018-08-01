@@ -28,7 +28,7 @@ function modifier_reflect_shield_passive:OnAttackLanded( params )
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
 	local damagetype = params.damage_type
-	local damage_type = GetDamageTypeFromNumber(damagetype)
+	local damage_type = DAMAGE_TYPE_PURE
 	local point = PATTACH_ROOTBONE_FOLLOW
 	if params.target == caster then 
 		local target = params.target

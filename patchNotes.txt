@@ -10,7 +10,7 @@ Reflect shield HP 200 > 2000
 Reflect shield chance 15 > 25
 Reflect shield str 10 > 30
 
-NEW ITEM VENOM CLAWS (say hi to gankers)
+NEW ITEM VENOM BROONCH (say hi to gankers)
 
 
 COSMETICS:
@@ -22,7 +22,7 @@ TA's Psi Blades fixed
 Storm's Overload fixed
 BH's Track gold fixed
 
-REWORK Drow Ranger's Marksmanship 
+REWORKED Drow Ranger's Marksmanship 
 
 
 
