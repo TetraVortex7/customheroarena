@@ -3346,7 +3346,7 @@
             "03"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "damage_c"      "150"
+                "damage_c"      "225"
             }
             "04"
             {
@@ -4311,7 +4311,7 @@
         "ID" "2116"
         "BaseClass"                     "item_lua"
         "ItemPurchasable"               "1"
-		"ItemCost"                      "1200"
+		"ItemCost"                      "30000"
         "ScriptFile"                    "items/item_venom_liquid.lua"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "Model"                         "models/props_gameplay/red_box.vmdl" 

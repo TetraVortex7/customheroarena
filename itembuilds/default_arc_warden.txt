@@ -17,12 +17,11 @@
 		
 		"#DOTA_Item_Build_Early_Game"
 		{	
+			"item"		"item_fireblend"
 			"item"		"item_leaf_buckler"
-			"item"		"item_hand_of_midas_custom_two"
-			"item"      "item_ring_of_vasilius"
+			"item"		"item_hand_of_midas_custom"
 			"item"		"item_phase_boots_2"
 			"item"		"item_power_treads_strength_2"
-			"item"		"item_fireblend"
 		}
 		
 		"#DOTA_Item_Build_Mage"
@@ -34,39 +33,42 @@
 			"item"		"item_durandal"
 			"item"		"item_kaya_c"
 			"item"		"item_manteau_invis"
+			"item"		"item_solomon_book"
 		}
 		
 		"#DOTA_Item_Build_Carry"
 		{
-			"item"      "item_desocay"
-			"item"      "item_doebalus"
-			"item"		"item_fly"
 			"item"		"item_cuirass_offering"
+			"item"		"item_fly"
+			"item"      "item_desocay"
+			"item"		"item_weapon_breaker"
+			"item"      "item_doebalus"
 			"item"		"item_demon_lifesteal"
 			"item"		"item_suzzwke"
 			"item"		"item_gauntlet_of_madness"
 			"item"		"item_echotic_sabre"
+			"item"		"item_alebard"
+			"item"		"item_splash_staff"
 		}
 		
-		"#DOTA_Item_Build_Unisex"
+		"#DOTA_Item_Build_Ganker"
 		{
-			"item"      "item_midas_sword"
-			"item"		"item_scarlet_edge"
-			"item"      "item_power_band"
-			"item"      "item_blade_guard"
-			"item"		"item_treatment_greaves"
-			"item"		"item_black_king_hood"
-			"item"		"item_omnipresent_eye"
-			"item"		"item_purged_heart"
-			"item"		"item_alebard"
+			"item"      "item_ring_of_vasilius"
+			"item"		"item_greater_javelin"
+			"item"      "item_blood_blade"
+			"item"		"item_stalker_coat"
+			"item"		"item_venom_liquid"
 		}
 		
 		"#DOTA_Item_Build_Ascention"
 		{
 			"item"		"item_ascention_scroll"
 			"item"		"item_soul_shard"
-			"item"		"item_empowered_treads"
 			"item"		"item_mirror_blade"
+			"item"		"item_demonic_axe"
+			"item"		"item_purged_heart"
+			"item"		"item_power_band"
+			"item"		"item_empowered_treads"
 			
 		}
 	}

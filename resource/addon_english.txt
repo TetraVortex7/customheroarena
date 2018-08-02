@@ -1006,7 +1006,7 @@
 
         //Улучшенный джавелин
 
-            "DOTA_Tooltip_ability_item_greater_javelin"                 "Javelin 2"
+            "DOTA_Tooltip_ability_item_greater_javelin"                 "Pierce sword"
             "DOTA_Tooltip_ability_item_greater_javelin_Description"     "<h1>Passive: Pierce</h1> %chance%% Chance to deal extra %damage_c% pure damage per attack."
             "DOTA_Tooltip_ability_item_greater_javelin_Lore"            "Surprisingly typical spear, which can sometimes break through enemy armor."
             "DOTA_Tooltip_ability_item_greater_javelin_damage"          "+$damage"
@@ -1015,7 +1015,7 @@
 
         //Алебарда
 
-            "DOTA_Tooltip_ability_item_alebard"                         "Halberd"
+            "DOTA_Tooltip_ability_item_alebard"                         "Pike"
             "DOTA_Tooltip_ability_item_alebard_Description"             "<h1>Active: Disarm</h1>Prevents a target from attacking for %duration% sec.\n<h1>Passive: Pierce</h1> %chance%% Chance to deal extra %damage_c% pure damage per attack.\n<h1>Passive: Huge Maim</h1> Every attack have %maim_chance%% chance to maim target, slows movement speed by %maim_movement_speed%% and attack speed by %maim_attack_speed%.<br> Maim lasts %maim_duration% sec.\n<h1>Passive: PowerCore</h1> Increase your outgoing damage by %damage_bonus%%."
             "DOTA_Tooltip_ability_item_alebard_Lore"                    "Cursed weapon, allowing disarming enemies."
             "DOTA_Tooltip_ability_item_alebard_damage"                  "+$damage"

@@ -1,17 +1,17 @@
 
 ДЦАТЫЙ ПАТЧЕК - ПАЦАНЫ С ДИСКОРДА
 ITEMS:
-Javelin 2 icon changed to light rapier
-Halberds icon changed to Pike
+Pierce sword icon changed 
+Pike's icon changed 
 Ascention scroll rebirth attribute bonus 100 > 10
 Ascention scroll cost 50000 > 30000
-Soul shard attribute % 4 > 10
+Soul shard attribute (%) 4 > 10
 Reflect shield HP 200 > 2000
 Reflect shield chance 15 > 25
 Reflect shield str 10 > 30
 Tome of Experience manacost now 0
 
-NEW ITEM Gu (say hi to gankers)
+NEW ITEM Gu (say hi to bosses)
 NEW ITEM Sanctum Regnum (mages strikes back!)
 
 
@@ -29,11 +29,27 @@ Tidehunter's Anchor Smash damage reduction fixed
 DP's Spirit Siphon percentage damage fixed
 Magnus' Shockwave aghanim and damage fixed
 Disruptor's Kinetic Field duration fixed
+Void's Chrono cooldown 120 > 230
+Void's Chrono agh cd 100 > 200
+Void's Chrono duration 6.0 > 4.2
+Void's Chrono aghs 7.0 > 4.7
+Void's Chrono cost 3 > 5
+Sand King's Burrowstrike dmg 650 > 475
+Sand King's Burrowstrike agh max range 2000 > 1150
+Doom duration on all lvls > 13.0
+Doom dmg with aghs 160 > 120
+Razor's passive dmg description fixes
+Nyx's Impale dmg description fixes
+Necrolyte's Reaper Scythe cd > 100
+Necrolyte's Reaper Scythe aghs cd 70
+Alchemist' Greevil's Greed duration 20 > 25
+Alchemist's Greevil's Greed bonus gold 7 > 9
 
 REWORKED Drow Ranger's Marksmanship
 
-OTHER:
-No titles about hero for players now
+CREEPS:
+SLARKS max magical resist 80 > 25
+DOOMS max magical resist 80 > 25
 
 
 
@@ -48,9 +64,11 @@ No titles about hero for players now
 OPEN:
 
 ABILITIES:
-
+"maybe abilities gained from killing certain bosses"
+"custom abilities that cost a lot but are really useful"
+TROLLS 1
+NULL FIELDS
 ABADDON PASSIVE
-CHRONO AND DOOM FIXES
 FERVOR 
 JUGG CRITS
 
