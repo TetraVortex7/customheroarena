@@ -138,8 +138,8 @@ function GameMode:OnGameInProgress()
     end})
 
 
-  RadBase = CreateUnitByName("npc_base", Entities:FindByName(nil,"RadiantBase"):GetAbsOrigin(), false, nil, nil, DOTA_TEAM_GOODGUYS)
-  DireBase = CreateUnitByName("npc_base", Entities:FindByName(nil,"DireBase"):GetAbsOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
+  RadBase = CreateUnitByName("npc_base", Entities:FindByName(nil,"npc_base1"):GetAbsOrigin(), false, nil, nil, DOTA_TEAM_GOODGUYS)
+  DireBase = CreateUnitByName("npc_base", Entities:FindByName(nil,"npc_base2"):GetAbsOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
 end
 
 

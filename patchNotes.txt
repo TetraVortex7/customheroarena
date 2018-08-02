@@ -61,12 +61,7 @@ Runes back
 ABILITIES:
 Drop Ranger's Marksmanship works now
 Spectre's Desolate rollback
-
-ITEMS:
---Manteau of life
---Gu
---Midas
-
+	
 MECHANICS:
 When duel starts heroes will receive 2 random stats (agi, int, str)
 
@@ -75,6 +70,11 @@ When duel starts heroes will receive 2 random stats (agi, int, str)
 
 
 OPEN:
+
+ITEMS:
+--Manteau of life
+--Gu
+--Midas
 
 ABILITIES:
 "maybe abilities gained from killing certain bosses"

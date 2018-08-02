@@ -14,6 +14,7 @@
                 "IsAncient" "1"
                 "CanBeDominated" "0"
                 "DisableResistance"     "0"
+				"vscripts"  "ai/ai_base.lua"
                 "AbilityLayout"             "4"
                 "Ability1" "npc_base_heal"
 				"Ability2" "necronomicon_warrior_sight" 
