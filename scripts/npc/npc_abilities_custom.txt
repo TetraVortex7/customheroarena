@@ -22,16 +22,10 @@
 		}
 		"02"
 		{
-			"var_type"						"FIELD_INTEGER"
-			"radius"						"400"
-		}
-		// Extra variables
-		"03"
-		{
 			"var_type"						"FIELD_FLOAT"
 			"think_interval"				"0.1"
 		}
-		"04"
+		"03"
 		{
 			"var_type"						"FIELD_INTEGER"
 			"chance"						"5 7 9 11 13 15 17"
@@ -48,26 +42,11 @@
 	
 	"Modifiers"
 	{
-		"modifier_marksmanship_passive_datadriven"
-		{
-			"Passive"						"1"
-			"IsHidden"						"1"
-			"IsPurgable"					"0"
-		
-			"ThinkInterval"					"%think_interval"
-			"OnIntervalThink"
-			{
-				"RunScript"
-				{
-					"ScriptFile"			"heroes/hero_drow_ranger/marksmanship.lua"
-					"Function"				"marksmanship_detection"
-				}
-			}
-		}
-		
 		"modifier_marksmanship_effect_datadriven"
 		{
 			"IsPurgable"					"0"
+			"Passive"						"1"
+			"IsHidden"						"1"
 			
 			"OnCreated"
 			{
@@ -91,6 +70,15 @@
 					{
 						"02"				"150 150 150"
 					}
+				}
+			}
+			
+			"OnAttack"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"heroes/hero_drow_ranger/marksmanship.lua"
+					"Function"			"kill_target"
 				}
 			}
 			

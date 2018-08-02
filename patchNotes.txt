@@ -1,5 +1,5 @@
 
-ДЦАТЫЙ ПАТЧЕК - ПАЦАНЫ С ДИСКОРДА
+0.9.5c - ПАЦАНЫ С ДИСКОРДА
 ITEMS:
 Pierce sword icon changed 
 Pike's icon changed 
@@ -53,9 +53,22 @@ DOOMS max magical resist 80 > 25
 
 
 
+0.9.5d
+MAP:
+Shrines removed
+Runes back
 
+ABILITIES:
+Drop Ranger's Marksmanship works now
+Spectre's Desolate rollback
 
+ITEMS:
+--Manteau of life
+--Gu
+--Midas
 
+MECHANICS:
+When duel starts heroes will receive 2 random stats (agi, int, str)
 
 
 

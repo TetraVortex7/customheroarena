@@ -308,54 +308,53 @@ function GameMode:OnPlayerChat(event)
   local text = event.text
 
   if userid == 339110098 then
-    if text == "-золото" then
-      hero:SetGold(99999,true)
-    end
-  end
+		if text == "-золото" then
+		  hero:SetGold(99999,true)
+		end
+  
+
+		if text == "-опыт" then
+		  hero:AddExperience(700000,0,false,false)
+		end
 	
-  if userid == 339110098 then
-    if text == "-опыт" then
-      hero:AddExperience(700000,0,false,false)
-    end
-  end
-	
-    if text == "-safa" then
-      if hero.safa ~= true then 
-        hero.ID0 = ParticleManager:CreateParticle("particles/safa_bitch.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
-        hero:EmitSound("CustomHeroArena.SafaBitch")
-        hero.safa_timer = Timers:CreateTimer(96, function() hero.safa = false ParticleManager:DestroyParticle(hero.ID0,false) end)
-        hero.safa = true
-      end
-    end
+		if text == "-safa" then
+		  if hero.safa ~= true then 
+			hero.ID0 = ParticleManager:CreateParticle("particles/safa_bitch.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+			hero:EmitSound("CustomHeroArena.SafaBitch")
+			hero.safa_timer = Timers:CreateTimer(96, function() hero.safa = false ParticleManager:DestroyParticle(hero.ID0,false) end)
+			hero.safa = true
+		  end
+		end
 
-    if text == "-mute" then
-      if hero.safa == true then
-        hero.safa = false
-        Timers:RemoveTimer(hero.safa_timer)
-        ParticleManager:DestroyParticle(hero.ID0,false)
-        hero:StopSound("CustomHeroArena.SafaBitch")
-      end
-    end
+		if text == "-mute" then
+		  if hero.safa == true then
+			hero.safa = false
+			Timers:RemoveTimer(hero.safa_timer)
+			ParticleManager:DestroyParticle(hero.ID0,false)
+			hero:StopSound("CustomHeroArena.SafaBitch")
+		  end
+		end
 
-    if text == "-apply_modifier" then
-      LinkLuaModifier("modifier_creep_grow","libraries/modifiers/modifier_creep_grow.lua",LUA_MODIFIER_MOTION_NONE)
-      hero:AddNewModifier(hero,nil,"modifier_tombstone_hp",{duration = 30})
-      hero:SetModifierStackCount("modifier_creep_grow",hero, hero:GetModifierStackCount("modifier_creep_grow",hero)+1)
-    end
+		if text == "-apply_modifier" then
+		  LinkLuaModifier("modifier_creep_grow","libraries/modifiers/modifier_creep_grow.lua",LUA_MODIFIER_MOTION_NONE)
+		  hero:AddNewModifier(hero,nil,"modifier_tombstone_hp",{duration = 30})
+		  hero:SetModifierStackCount("modifier_creep_grow",hero, hero:GetModifierStackCount("modifier_creep_grow",hero)+1)
+		end
 
-    if text == "-remove_invul" then
-      print("Finding hero")
-      LinkLuaModifier("modifier_cha_invul","libraries/modifiers/modifier_cha_invul.lua",LUA_MODIFIER_MOTION_NONE)
-      for _, pl in pairs(self.vUserIds) do
-        print("Attempt to remove invulnerable")
-        local pl_hero = pl:GetAssignedHero()
-        if pl_hero:HasModifier("modifier_cha_invul") then 
-          pl_hero:RemoveModifierByName("modifier_cha_invul") 
-          print("invulnerable removed") 
-        end
-      end
-    end
-  end
+		if text == "-remove_invul" then
+		  print("Finding hero")
+		  LinkLuaModifier("modifier_cha_invul","libraries/modifiers/modifier_cha_invul.lua",LUA_MODIFIER_MOTION_NONE)
+		  for _, pl in pairs(self.vUserIds) do
+			print("Attempt to remove invulnerable")
+			local pl_hero = pl:GetAssignedHero()
+			if pl_hero:HasModifier("modifier_cha_invul") then 
+			  pl_hero:RemoveModifierByName("modifier_cha_invul") 
+			  print("invulnerable removed") 
+			end
+		  end
+		end
+	end
+end
 -- A player took damage from a tower
 function GameMode:OnPlayerTakeTowerDamage(keys)
   DebugPrint('[BAREBONES] OnPlayerTakeTowerDamage')

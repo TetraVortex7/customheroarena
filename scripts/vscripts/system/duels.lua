@@ -144,7 +144,6 @@ hero.position = hero:GetAbsOrigin()
 hero.mana = hero:GetMana()
 hero.hp = hero:GetHealth()
 hero.saved = true
-print(hero:GetAbilityCount())
 local count = hero:GetAbilityCount() - 1
 --GetCooldownTimeRemaining()
 		for i = 0, count do
@@ -192,19 +191,19 @@ local rnd = math.random(1,3)
 	if rnd == 1 
 		then 
 			atr = hero:GetStrength()
-			hero:ModifyStrength(1)
+			hero:ModifyStrength(2)
 		end
 			
 	if rnd == 2 
 		then 
 			atr = hero:GetAgility()
-			hero:ModifyAgility(1)
+			hero:ModifyAgility(2)
 		end
 	
 	if rnd == 3
 		then
 			atr = hero:GetIntellect()
-			hero:ModifyIntellect(1)
+			hero:ModifyIntellect(2)
 	end
 	hero:CalculateStatBonus()
 end

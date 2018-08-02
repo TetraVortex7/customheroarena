@@ -133,16 +133,12 @@ function GameMode:OnGameInProgress()
     end)	
 
     Timers:CreateTimer({endTime = 180, callback = function()
-      --[[
-          Здеся была ваша реклама)0 функция вызова сообщения на экран
-        ]]--
       CreateUnitByName(npc_creature_woodchopper_king_boss, Vector(220,620,421), true, nil, nil, DOTA_TEAM_NEUTRALS)
      return
     end})
 
 
   RadBase = CreateUnitByName("npc_base", Entities:FindByName(nil,"RadiantBase"):GetAbsOrigin(), false, nil, nil, DOTA_TEAM_GOODGUYS)
-  --RadBase = CreateUnitByName("npc_base", Entities:FindByName(nil,"DireBase"):GetAbsOrigin(), false, nil, nil, DOTA_TEAM_GOODGUYS)
   DireBase = CreateUnitByName("npc_base", Entities:FindByName(nil,"DireBase"):GetAbsOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
 end
 
