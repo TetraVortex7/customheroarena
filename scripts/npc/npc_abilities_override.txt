@@ -634,7 +634,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"radius"				"625"
+					"radius"				"450"
 				}
 				"02"
 				{
@@ -644,13 +644,13 @@
 				"03"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"damage"				"30 40 50 60 70 80 90"
+					"damage"				"60 70 80 90 110 130 150"
 					
 				}
 				"04"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"armor_reduction"		"5 7 9 14 19 20 25 30"
+					"armor_reduction"		"3 5 7 9 12 15 19"
 					"LinkedSpecialBonus"	"special_bonus_unique_alchemist"
 				}
 				"05"
@@ -2228,7 +2228,7 @@
 				"04"
 				{
 					"var_type"					"FIELD_INTEGER"
-					"axe_damage"				"50 100 150 220 290 375 400"
+					"axe_damage"				"100 150 220 290 375 400 450"
 					"LinkedSpecialBonus"		"special_bonus_unique_beastmaster"
 				}
 
@@ -2943,6 +2943,7 @@
 				{
 					"var_type"				"FIELD_INTEGER"
 					"stack_limit"			"4 4 4 5 6 8 10"
+					"LinkedSpecialBonus"	"special_bonus_unique_bristleback"
 				}
 				"07"
 				{
@@ -2953,6 +2954,11 @@
 				{
 					"var_type"				"FIELD_INTEGER"
 					"radius_scepter"				"700"
+				}
+				"09"
+				{
+					"var_type"				"FIELD_FLOAT"
+					"base_armor"		"2"
 				}
 			}
 		}
@@ -3315,7 +3321,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"return_damage"				"10 20 30 40 50 60 70"
+				"return_damage"				"25 35 45 55 65 75 85"
 			}
 			"02"
 			{
@@ -5935,7 +5941,7 @@
 				"01"
 				{
 					"var_type"					"FIELD_INTEGER"
-					"totem_damage_percentage"	"50 60 70 80 90 100 115"
+					"totem_damage_percentage"	"50 70 90 110 130 150 170"
 				}
 				"02"
 				{
@@ -6008,11 +6014,7 @@
 	
 			// Time		
 			//-------------------------------------------------------------------------------------------------------------
-			"AbilityCooldown"				"90.0 80.0 70.0 60.0 58.0 55.0 50.0"
-	
-			// Damage.
-			//-------------------------------------------------------------------------------------------------------------
-			"AbilityDamage"					"160 210 270 350 480 650 780"
+			"AbilityCooldown"				"90.0"
 	
 			// Cost
 			//-------------------------------------------------------------------------------------------------------------
@@ -6042,6 +6044,11 @@
 					"var_type"					"FIELD_INTEGER"
 					"echo_slam_echo_damage"		"90 120 220 280 340 380 420"
 					"LinkedSpecialBonus"		"special_bonus_unique_earthshaker_2"
+				}
+				"05"
+				{
+					"var_type"					"FIELD_INTEGER"
+					"echo_slam_initial_damage"		"160 210 270 350 480 650 780"
 				}
 			}
 		}
@@ -8260,7 +8267,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"duration"				"4.0 4.5 4.75 5.0 5.5 6.0 6.5"
+					"duration"				"4.0"
 				}
 				"02"
 				{
@@ -16772,7 +16779,7 @@
 				"03"
 				{
 					"var_type"							"FIELD_INTEGER"
-					"ball_lightning_move_speed"			"600 700 750 800 850 900 999"		
+					"ball_lightning_move_speed"			"1000 1200 1400 1600 1800 2000 2200"		
 				}
 				"04"
 				{
@@ -16787,7 +16794,7 @@
 				"06"
 				{
 					"var_type"								"FIELD_FLOAT"
-					"ball_lightning_travel_cost_percent"	"5"		
+					"ball_lightning_travel_cost_percent"	"3"		
 				}
 				"07"
 				{
@@ -16890,7 +16897,7 @@
 				"04"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"great_cleave_damage"	"10 13 16 19 22 25 28"
+					"great_cleave_damage"	"10 15 20 25 30 35 40"
 				}
 			}
 		}
@@ -18534,7 +18541,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"60 55 50 45 40 35 30"
+		"AbilityCooldown"				"50 45 40 35 30 25 20"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -19118,7 +19125,7 @@
 				"01"
 				{
 					"var_type"					"FIELD_INTEGER"
-					"crit_multiplier"			"120 130 150 160 170 180 200"
+					"crit_multiplier"			"120 140 160 180 200 240 260"
 					"LinkedSpecialBonus"		"special_bonus_unique_tusk"
 				}
 				"02"
