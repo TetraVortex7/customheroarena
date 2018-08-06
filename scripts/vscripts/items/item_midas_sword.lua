@@ -91,8 +91,7 @@ function modifier_midas_sword_gold:OnAttackLanded( params )
 	if ability == nil then caster:RemoveModifierByName("modifier_midas_sword_gold") return nil; end
 	if params.attacker == caster then 
 	
-	if IsBoss(params.target) then ability:StartCooldown(16) end
-		if not self:IsActiveOrb() then print('not orb'); return end
+		if not self:IsActiveOrb() then return end
 	
 	local condition = RollPercentage(ability:GetSpecialValueFor("gold_chance"))
 			if caster:IsRealHero() and condition then

@@ -79,8 +79,31 @@ MECHANICS:
 When duel starts heroes will receive 2 random stats (agi, int, str)
 
 
+0.9.5e Rafu вернись, я пошутил :)
+ABILITIES:
+Alchemist's Acid Spray Radius Decreased 625 > 450
+Alchemist's Acid Spray armor reduction 30 > 19
+Alchemist's Acid Spray damage 90 > 150
 
+Storm Spirit's Ball lightning travel cost % 5 > 3 (sup 2 all storm lovers)
+Storm Spirit's Ball Lightning speed 999 > 2200 
 
+Earthshaker's Enchant totem dmg 115% > 170% 
+Earthshaker's Echo Slam damage 100 > 780
+
+Sven's Great Cleave splash (%) 28 > 40
+
+Tiny's Tree Grab cd 30 > 20
+
+Beastmaster's Wild Axes dmg per axe 400 > 450
+
+REMOVED Io's Spirits due to crash issue
+
+Centaur's Return base damage 70 > 85
+
+Bristleback's Visious Nasal Goo fixed
+
+Tuskar's Walrus Punch crit 200 > 260
 
 OPEN:
 
@@ -90,6 +113,9 @@ ITEMS:
 --Midas
 
 ABILITIES:
+
+SF's AURA
+IO SERVER CRASH
 "maybe abilities gained from killing certain bosses"
 "custom abilities that cost a lot but are really useful"
 TROLLS 1
@@ -110,11 +136,6 @@ ENGINE:
 TEAM VS TEAM ARENA
 NO LEAVERS ON DUEL
 REFRESH ABILITIES WHEN DUELING
-
-
-CREEPS:
-
-SLARKS AND DOOMS ANCIENTS (TO PREVENT DOMINATOR ABUSE)
 
 
 
