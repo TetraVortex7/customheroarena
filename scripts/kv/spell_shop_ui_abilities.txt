@@ -158,10 +158,8 @@
   }
   "wisp" {
   "1"    "wisp_tether"
-  "2"    "wisp_spirits"
-  "3"    "wisp_overcharge"
-  "4"    "wisp_relocate"
-  "5"    "wisp_spirits_in"
+  "2"    "wisp_overcharge"
+  "3"    "wisp_relocate"
   }
   "centaur" {
   "1"    "centaur_hoof_stomp"

@@ -1,4 +1,3 @@
-@@ -1,32 +0,0 @@
 require( "ai/ai_core" )
 require('libraries/isboss')
 -- GENERIC AI FOR SIMPLE CHASE ATTACKERS

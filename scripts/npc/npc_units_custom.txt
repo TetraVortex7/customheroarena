@@ -1742,13 +1742,14 @@
 				}
 			}
 
-		"npc_creature_dire_boss_normal" // -createhero npc_creature_dire_boss_normal Skelet
+		"npc_creature_dire_boss_normal" // -createhero npc_creature_dire_boss_normal SK
 			{
 		        // General
 		        //----------------------------------------------------------------
 		        "BaseClass"             "npc_dota_creature" // Базовый класс
-		        "Model"                 "models\creeps\neutral_creeps\n_creep_troll_skeleton\n_creep_skeleton_melee.vmdl" // Модель
-		        "ModelScale"            "2.6" // Размер модели
+		        "Model"		"models/heroes/sand_king/sand_king.vmdl"
+				"Portrait"		"vgui/hud/heroportraits/portrait_sandking"
+		        "ModelScale"            "3.5" // Размер модели
 		        "Level"                 "100" // Уровень
 		        "HasInventory"          "0" // Имеет ли инвентарь
 		        "IsAncient" "1"
@@ -1756,22 +1757,23 @@
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
-		        "Ability1"              "boss_ability_loh"
-		        "Ability2"              "necronomicon_warrior_sight"
+		        "Ability1"              "boss_hard_skin"
+				"Ability2"				"boss_poison"
+		        "Ability3"              "necronomicon_warrior_sight"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "56"
-		        "MagicalResistance"     "30"
-		        "DisableResistance"     "99.9"
+		        "ArmorPhysical"         "99"
+		        "MagicalResistance"     "15"
+		        "DisableResistance"     "25.0"
 		       
 		        // Attack
 		        //----------------------------------------------------------------
 		        "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
 		        "AttackDamageType"      "DAMAGE_TYPE_ArmorPhysical"
-		        "AttackDamageMin"       "1020"
-		        "AttackDamageMax"       "1555"
+		        "AttackDamageMin"       "2500"
+		        "AttackDamageMax"       "2677"
 		        "AttackRate"            "0.7"
 		        "AttackAnimationPoint"  "0.3"
 		        "AttackAcquisitionRange""666"
@@ -1780,28 +1782,28 @@
 		       
 		        // Bounty
 		        //----------------------------------------------------------------
-		        "BountyGoldMin"         "3000"
-		        "BountyGoldMax"         "12000"
-		        "BountyXP"				"4200"
+		        "BountyGoldMin"         "4000"
+		        "BountyGoldMax"         "5000"
+		        "BountyXP"				"8000"
 		       
 		        // Bounds
 		        //----------------------------------------------------------------
 		        "HealthBarOffset"           "550"		
-				"RingRadius"                "140"
+				"RingRadius"                "280"
 				"BoundsHullName"            "DOTA_HULL_SIZE_HUGE"
 		       
 		        // Movement
 		        //----------------------------------------------------------------
 		        "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
-		        "MovementSpeed"         "340"
+		        "MovementSpeed"         "500"
 		        "MovementTurnRate"      "0.4"
 		       
 		        // Status
 		        //----------------------------------------------------------------
-		        "StatusHealth"          "260000"
+		        "StatusHealth"          "300000"
 		        "StatusHealthRegen"     "360"
-		        "StatusMana" 			"8000" 
-				"StatusManaRegen" 		"220" 
+		        "StatusMana" 			"65536" 
+				"StatusManaRegen" 		"550" 
 		       
 		        // Vision
 		        //----------------------------------------------------------------
@@ -1815,22 +1817,56 @@
 		        "CombatClassAttack"     "DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		        "CombatClassDefend"     "DOTA_COMBAT_CLASS_DEFEND_STRONG"
 		        "UnitRelationShipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-
-		        "precache"
+				"RenderablePortrait"
 				{
-					"particle"	"particles/econ/items/juggernaut/lord_sword_ivory.pcf"
-					"model"		"models/items/juggernaut/lord_wep_ivorysword.mdl"
-
-					"model"		"models/items/juggernaut/lord_mask_ivory.mdl"
+					"Particles"
+					{
+						"particles/units/heroes/hero_sandking/sandking_loadout.vpcf"
+						{
+							"0"
+							{
+								"type"		"follow_origin"
+								"location"		"attach_hitloc"
+							}
+							"1"
+							{
+								"type"		"follow_origin"
+								"position"		"100 0 0"
+							}
+						}
+					}
 				}
 				
 				"Creature"
 				{
 					"AttachWearables"
-					{
-						"Wearable1" { "ItemDef" "4072" }
-						"Wearable2" { "ItemDef" "4073" }
-					}
+							{
+								"Wearable1"
+								{
+									"ItemDef"	"7302"
+								}
+					
+								"Wearable2"
+								{
+									"ItemDef"	"7303"
+								}
+					
+								"Wearable3"
+								{
+									"ItemDef"	"7304"
+								}
+					
+								"Wearable4"
+								{
+									"ItemDef"	"7305"
+								}
+					
+								"Wearable5"
+								{
+									"ItemDef"	"7306"
+								}
+					
+							}
 				}
 			}
 

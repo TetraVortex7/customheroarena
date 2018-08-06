@@ -1,3 +1,16 @@
+0.9.7 - Объявлена неделя Рафу, все кто подпишется этим ником красавчики
+Alchemist's Acid Spray armor reduction 19 > 7
+Alchemist's Acid Spray radius 450 > 400
+
+Centaur's Return damage 85 > 95
+
+Tuskar's Walrus Punch crit mult 260 > 320
+
+Spirit Siphon usable only on heroes now
+
+
+Ganker Coat now drops only from boss
+Ganker Coat gives only 3k hp to only int heroes, instead gives 1k
 
 0.9.5c - ПАЦАНЫ С ДИСКОРДА
 ITEMS:

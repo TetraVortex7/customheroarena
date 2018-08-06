@@ -1,5 +1,67 @@
 "DOTAAbilities"
 {
+"boss_hard_skin"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"centaur_return"
+	"MaxLevel" "7"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"chance"						"25"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"dmg"							"100 150 200 250 300"
+		}
+	}
+	
+	"Modifiers"
+	{
+		
+	}
+}
+
+"boss_poison"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"broodmother_poison_sting"
+	"MaxLevel" "7"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"noheal"	"50"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"dmg_per_second"				"120"
+		}
+	}
+	
+	
+	"Modifiers"
+	{
+
+	}
+}
 
 "marksmanship_datadriven"
 {
