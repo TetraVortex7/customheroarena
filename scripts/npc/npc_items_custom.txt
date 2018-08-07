@@ -4873,12 +4873,12 @@
             "02"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "gold"          "190 300"
+                "gold"          "150 225"
             }
             "03"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "exp"          "250 500"
+                "exp"          "150 250"
             }
             "04"
             {
@@ -4890,6 +4890,11 @@
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
                 "chance"         "15 25"
             }
+			"06"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"lvl_difference" "5"
+			}
         }
     }
 "item_hand_of_midas_custom_two"
@@ -4929,12 +4934,12 @@
             "02"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "gold"          "190 300"
+                "gold"          "150 225"
             }
             "03"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "exp"          "250 500"
+                "exp"          "150 250"
             }
             "04"
             {
@@ -8285,7 +8290,7 @@
         "AbilityTextureName"            "recipe"
         "ItemRequirements"
         {
-            "01"                        "item_ring_of_health;item_vitality_booster;item_stout_shield"
+            "01"                        "item_leaf_buckler;item_vitality_booster;item_stout_shield"
         }
     }
 "item_recipe_ring_of_basilius"
@@ -9823,7 +9828,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "390"  
+        "ItemCost"                      "200"  
         "ItemShopTags"                  ""
         
         // Recipe
@@ -9833,7 +9838,7 @@
         "AbilityTextureName"            "recipe"
         "ItemRequirements"
         {
-            "01"                        "item_stout_shield;item_blade_of_alacrity"
+            "01"                        "item_stout_shield;item_boots_of_elves"
         }
     }
 "item_recipe_midas_sword"

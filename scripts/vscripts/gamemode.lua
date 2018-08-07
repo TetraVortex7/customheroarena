@@ -72,8 +72,7 @@ end
 ]]
 function GameMode:OnHeroInGame(hero)
   DebugPrint("[BAREBONES] Hero spawned in game for first time -- " .. hero:GetUnitName())
-  local gold = hero:GetGold() + 325
-  hero:SetGold(gold, false)
+  hero:SetGold(1000, false)
 end
 
 --[[

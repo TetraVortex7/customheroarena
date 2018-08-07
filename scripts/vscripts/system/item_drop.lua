@@ -35,7 +35,6 @@ _G.easy_drop = { --1-10 min
 	"item_cloak",
 	"item_sobi_mask",
 	"item_ring_of_regen",
-	"item_poor_mans_shield",
 	"item_ring_of_basilius",
 	"item_gold_bag"
 	
@@ -69,7 +68,6 @@ _G.middle_drop = { --10-15 min
 	"item_cloak",
 	"item_sobi_mask",
 	"item_ring_of_regen",
-	"item_poor_mans_shield",
 	"item_ring_of_basilius",
 	
     "item_boots",
@@ -84,7 +82,6 @@ _G.middle_drop = { --10-15 min
 	"item_blades_of_attack",
 	"item_chainmail",
 	"item_quarterstaff",
-	"item_poor_mans_shield",
 	"item_soul_ring",
 	"item_ring_of_basilius",
 	"item_headdress",
@@ -107,10 +104,8 @@ _G.only_middle = {  --15-25 min
 	"item_blades_of_attack",
 	"item_chainmail",
 	"item_quarterstaff",
-	"item_poor_mans_shield",
 	"item_soul_ring",
 	"item_ring_of_basilius",
-	"item_iron_talon",
 	"item_headdress",
 	"item_buckler",
 	"item_urn_of_shadows",
@@ -137,10 +132,8 @@ _G.hard_drop = {  --25-to end game
 	"item_blades_of_attack",
 	"item_chainmail",
 	"item_quarterstaff",
-	"item_poor_mans_shield",
 	"item_soul_ring",
 	"item_ring_of_basilius",
-	"item_iron_talon",
 	"item_headdress",
 	"item_buckler",
 	"item_urn_of_shadows",
@@ -183,6 +176,10 @@ _G.boss_drop = {
 
 _G.demonic_drop = {
 	"item_demonic_rod"
+}
+
+_G.scorpion_drop = {
+	"item_venom_liquid"
 }
 
 _G.miniboss_doom_drop = {

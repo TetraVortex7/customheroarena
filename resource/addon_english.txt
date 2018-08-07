@@ -12,6 +12,7 @@
             "DOTA_Item_Build_Ganker"    "Ganker"
             "DOTA_Item_Build_Carry"     "Carry"
             "DOTA_Item_Build_Mage"      "Mage"
+			"#DOTA_Item_Build_Tank"     "Tank"
 			"DOTA_Item_Build_Potions"	"Potions"
             "DOTA_Item_Build_Ascention" "LEGENDARY"
 			
@@ -1289,7 +1290,7 @@
 
             //1lvl
                 "DOTA_Tooltip_ability_item_hand_of_midas_custom"                    "Hand of Midas"
-                "DOTA_Tooltip_ability_item_hand_of_midas_custom_Description"        "<h1>Active: Midas</h1> Use on creep give you %gold% + (0.2 * target level * gold from kill) gold, and %exp%% bonus exp, have %chance%% chance to add 1.75x bonus gold and 2x bonus exp.\n<h1>Passive: Bounty</h1> You will get additional %rune% gold from bounty runes."
+                "DOTA_Tooltip_ability_item_hand_of_midas_custom_Description"        "<h1>Active: Midas</h1> Use on creep give you %gold% + (0.2 * hero level * gold from kill) gold, and %exp%% bonus exp, have %chance%% chance to add 1.75x bonus gold and 2x bonus exp.\n<h1>Passive: Bounty</h1> You will get additional %rune% gold from bounty runes."
                 "DOTA_Tooltip_ability_item_hand_of_midas_custom_Lore"               ""
                 "DOTA_Tooltip_ability_item_hand_of_midas_custom_chance"             "%CHANCE:"
                 "DOTA_Tooltip_ability_item_hand_of_midas_custom_gold"               "GOLD:"
@@ -1299,7 +1300,7 @@
 
             //2lvl
                 "DOTA_Tooltip_ability_item_hand_of_midas_custom_two"                    "Hand of Midas"
-                "DOTA_Tooltip_ability_item_hand_of_midas_custom_two_Description"        "<h1>Active: Midas</h1> Use on creep give you %gold% + (0.2 * target level * gold from kill) gold, and %exp%% bonus exp, have %chance%% chance to add 1.75x bonus gold and 2x bonus exp.\n<h1>Passive: Bounty</h1> You will get additional %rune% gold from bounty runes."
+                "DOTA_Tooltip_ability_item_hand_of_midas_custom_two_Description"        "<h1>Active: Midas</h1> Use on creep give you %gold% + (0.2 * hero level * gold from kill) gold, and %exp%% bonus exp, have %chance%% chance to add 1.75x bonus gold and 2x bonus exp.\n<h1>Passive: Bounty</h1> You will get additional %rune% gold from bounty runes."
                 "DOTA_Tooltip_ability_item_hand_of_midas_custom_two_Lore"               ""
                 "DOTA_Tooltip_ability_item_hand_of_midas_custom_two_chance"             "%CHANCE:"
                 "DOTA_Tooltip_ability_item_hand_of_midas_custom_two_gold"               "GOLD:"
@@ -1550,7 +1551,7 @@
 
             "DOTA_Tooltip_ability_item_midas_sword"                     "Midas Sword"
             "DOTA_Tooltip_ability_item_midas_sword_Note0"               "If you attacked boss and MidasTouch worked, then you can't take bonus gold by 16 sec."
-            "DOTA_Tooltip_ability_item_midas_sword_Description"         "<h1>Passive: Explose</h1> On attack has chance %chance%% to create explosion on every target who stay nearby main target in %radius% radius and deal magic %damage% damage.\n<h1>Active: Destroy Tree</h1> Destroy trees around selected tree in 160 radius and give vision on tree pos.\n<h1>Passive: Quell</h1> Increases damage done to creeps by %dmg%%, It does not apply to the bosses.\n<h1>Passive: Midas Touch</h1> On attack has %gold_per_hit_chance%% to add %gold_per_hit% gold to owner, after succes you can't take bonus gold by %gold_per_hit_cooldown% sec.\n<br>Midas Sword - is an a unique explosive modifier, and it don't stack's with other explosive modifiers."
+            "DOTA_Tooltip_ability_item_midas_sword_Description"         "<h1>Active: Midas touch</h1> Turns the target into pure gold (0.2 * hero lvl * gold bounty), and and hero receives %exp%%  experience.\n<h1>Passive: Midas Touch</h1> When attacking there is a %gold_chance%%  chance to receive %gold% gold.\n"
             "DOTA_Tooltip_ability_item_midas_sword_Lore"                "Touch of the this sword turns everything into a precious metal."
             "DOTA_Tooltip_ability_item_midas_sword_chance"              "%EXPLOSE:<br>• CHANCE:"
             "DOTA_Tooltip_ability_item_midas_sword_atk"                 "+$attack"
@@ -1749,7 +1750,7 @@
         //Ascension Scroll
 
         "DOTA_Tooltip_ability_item_ascention_scroll"                "Ascension Scroll"
-        "DOTA_Tooltip_ability_item_ascention_scroll_Description"    "<h1>Active: Rebirth</h1> Removes all your abilities, set yor lvl to 1, save your base attributes, has %chance%% to give Soul Shard."
+        "DOTA_Tooltip_ability_item_ascention_scroll_Description"    "<h1>Active: Rebirth</h1> Start with lvl 1 with no effect (duel, pudge stacks etc), save your base attributes, has %chance%% to give Soul Shard."
         "DOTA_Tooltip_ability_item_ascention_scroll_Lore"           "Never too late to start everything from beginning. With new power."
         "DOTA_Tooltip_ability_item_ascention_scroll_lvl"            "REQUIRE LVL TO ASCEND:"
         "DOTA_Tooltip_ability_item_ascention_scroll_int"            "BONUS STATS PER ASCEND:"

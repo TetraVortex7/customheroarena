@@ -7,7 +7,7 @@ function item_midas_sword:OnSpellStart(  )
 	if IsClient() then ClientLoadGridNav() end
 	local target = self:GetCursorTarget()
 	local caster = self:GetCaster()
-	local target_gold = target:GetLevel() * 0.2 * RandomFloat(target:GetMinimumGoldBounty(),target:GetMaximumGoldBounty())
+	local target_gold = caster:GetLevel() * 0.2 * RandomFloat(target:GetMinimumGoldBounty(),target:GetMaximumGoldBounty())
 	local gold = self:GetSpecialValueFor("gold_active") + target_gold
 	local exp = self:GetSpecialValueFor("exp")
 

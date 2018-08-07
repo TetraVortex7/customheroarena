@@ -511,7 +511,7 @@ function GameMode:OnEntityKilled( keys )
       local hero_level = math.min(killedUnit:GetLevel(), 100)
       local respawn_time = HERO_RESPAWN_TIME_PER_LEVEL[hero_level]
       killedUnit:SetTimeUntilRespawn(respawn_time)
-    elseif killedUnit:IsReincarnating() then
+    elseif killedUnit:IsReincarnating() and not killedUnit:IsSummoned() then
       killedUnit:SetTimeUntilRespawn(7.5)
     end
   end

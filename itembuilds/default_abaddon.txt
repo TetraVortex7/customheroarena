@@ -60,6 +60,15 @@
 			"item"		"item_venom_liquid"
 		}
 		
+		"#DOTA_Item_Build_Tank"
+		{
+			"item"      "item_ring_of_vasilius"
+			"item"		"item_greater_javelin"
+			"item"      "item_blood_blade"
+			"item"		"item_stalker_coat"
+			"item"		"item_venom_liquid"
+		}
+		
 		"#DOTA_Item_Build_Ascention"
 		{
 			"item"		"item_ascention_scroll"

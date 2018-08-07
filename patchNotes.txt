@@ -1,131 +1,51 @@
-0.9.7 - Объявлена неделя Рафу, все кто подпишется этим ником красавчики
-Alchemist's Acid Spray armor reduction 19 > 7
-Alchemist's Acid Spray radius 450 > 400
+0.9.7b Summoners War
 
-Centaur's Return damage 85 > 95
+ITEMS
+Leaf buckler recipe cost 390 > 200
+Leaf buckler now crafts with Boots of elvenskin
+Vanguard now is based on Leaf Buckler
 
-Tuskar's Walrus Punch crit mult 260 > 320
+Midas Sword shares cooldown with midas now
+Midas gold formula now based on hero level instead of monsters
 
-Spirit Siphon usable only on heroes now
+Poor Man's Shield excluded from drop tables
+Iron Talon excluded from drop tables
 
-
-Ganker Coat now drops only from boss
-Ganker Coat gives only 3k hp to only int heroes, instead gives 1k
-
-0.9.5c - ПАЦАНЫ С ДИСКОРДА
-ITEMS:
-Pierce sword icon changed 
-Pike's icon changed 
-Ascention scroll rebirth attribute bonus 100 > 10
-Ascention scroll cost 50000 > 30000
-Soul shard attribute (%) 4 > 10
-Reflect shield HP 200 > 2000
-Reflect shield chance 15 > 25
-Reflect shield str 10 > 30
-Tome of Experience manacost now 0
-
-NEW ITEM Gu (say hi to bosses)
-NEW ITEM Sanctum Regnum (mages strikes back!)
-
-
-COSMETICS:
-Hero builds reworked
-English translation fixes
 
 ABILITIES:
-TA's Psi Blades fixed
-Storm's Overload fixed
-BH's Track gold fixed
-Axe's Berserkers Call radius fixed
-Pudge's Rot slow fixed
-Tidehunter's Anchor Smash damage reduction fixed
-DP's Spirit Siphon percentage damage fixed
-Magnus' Shockwave aghanim and damage fixed
-Disruptor's Kinetic Field duration fixed
-Void's Chrono cooldown 120 > 230
-Void's Chrono agh cd 100 > 200
-Void's Chrono duration 6.0 > 4.2
-Void's Chrono aghs 7.0 > 4.7
-Void's Chrono cost 3 > 5
-Sand King's Burrowstrike dmg 650 > 475
-Sand King's Burrowstrike agh max range 2000 > 1150
-Doom duration on all lvls > 13.0
-Doom dmg with aghs 160 > 120
-Razor's passive dmg description fixes
-Nyx's Impale dmg description fixes
-Necrolyte's Reaper Scythe cd > 100
-Necrolyte's Reaper Scythe aghs cd 70
-Alchemist' Greevil's Greed duration 20 > 25
-Alchemist's Greevil's Greed bonus gold 7 > 9
+Ursa's Enrage cooldown now 60
 
-REWORKED Drow Ranger's Marksmanship
+NEW Summon spirit bear (7 lvls)
 
-CREEPS:
-SLARKS max magical resist 80 > 25
-DOOMS max magical resist 80 > 25
+
+GAME:
+Starting gold increased to 1000
 
 
 
-0.9.5d
-MAP:
-Shrines removed
-Runes back
-
-ABILITIES:
-Drop Ranger's Marksmanship works now
-Spectre's Desolate rollback
-	
-MECHANICS:
-When duel starts heroes will receive 2 random stats (agi, int, str)
-
-
-0.9.5e Rafu вернись, я пошутил :)
-ABILITIES:
-Alchemist's Acid Spray Radius Decreased 625 > 450
-Alchemist's Acid Spray armor reduction 30 > 19
-Alchemist's Acid Spray damage 90 > 150
-
-Storm Spirit's Ball lightning travel cost % 5 > 3 (sup 2 all storm lovers)
-Storm Spirit's Ball Lightning speed 999 > 2200 
-
-Earthshaker's Enchant totem dmg 115% > 170% 
-Earthshaker's Echo Slam damage 100 > 780
-
-Sven's Great Cleave splash (%) 28 > 40
-
-Tiny's Tree Grab cd 30 > 20
-
-Beastmaster's Wild Axes dmg per axe 400 > 450
-
-REMOVED Io's Spirits due to crash issue
-
-Centaur's Return base damage 70 > 85
-
-Bristleback's Visious Nasal Goo fixed
-
-Tuskar's Walrus Punch crit 200 > 260
 
 OPEN:
+
+--Tank class added to itembuilds
 
 ITEMS:
 --Manteau of life
 --Gu
---Midas
+--Mirror Blade illusion tp bug fix
 
 ABILITIES:
 
 SF's AURA
-IO SERVER CRASH
 "maybe abilities gained from killing certain bosses"
 "custom abilities that cost a lot but are really useful"
 TROLLS 1
-NULL FIELDS
 ABADDON PASSIVE
-FERVOR 
+FERVOR 	
 JUGG CRITS
 
 PANORAMA:
 
+TIMER
 KILL LIMIT VOTING
 SELL BUTTON
 CHANGE TEAM BUTTON
