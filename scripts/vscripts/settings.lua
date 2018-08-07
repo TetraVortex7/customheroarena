@@ -2,7 +2,7 @@
 
 --Global game Settings--
 require('events')
-CHA_VERSION = "0.9.4" --Gamemode Version
+CHA_VERSION = "0.9.7" --Gamemode Version
 
 ------------------------
 
