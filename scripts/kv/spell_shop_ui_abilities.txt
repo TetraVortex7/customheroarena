@@ -419,7 +419,8 @@
   "venomancer" {
   "1"    "venomancer_venomous_gale"
   "2"    "venomancer_poison_sting"
-  "3"    "venomancer_poison_nova"
+  "3"	 "venomancer_plague_ward"
+  "4"    "venomancer_poison_nova"
   }
   "faceless_void" {
   "1"    "faceless_void_time_walk"
