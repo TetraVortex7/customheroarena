@@ -44,6 +44,18 @@
 
             "DOTA_Tooltip_ability_necrolyte_heartstopper_aura_Note0"    "Dont deal damage to bosses"
             "DOTA_Tooltip_ability_enigma_midnight_pulse_Note_0"         "Dont deal damage to bosses"
+			
+		//Ядовитое оружие
+
+            "DOTA_Tooltip_ability_hero_poison"                     "Vescor"
+            "DOTA_Tooltip_ability_hero_poison_Description"         "Deals damage and slows enemy. Poison so strong so it PREVENTS TARGET FROM HEALING."
+            "DOTA_Tooltip_ability_hero_poison_dmg_per_second"      "DPS:"
+			"DOTA_Tooltip_ability_hero_poison_poison_movement_speed_melee"     "SLOW:"
+            "DOTA_Tooltip_ability_hero_poison_poison_duration"     	"DURATION:"
+            "DOTA_Tooltip_ability_hero_poison_Lore"    "Poison always was best weapon for GREATEST SCORPIONS."
+			
+		//QoP Scream of pain
+		DOTA_Tooltip_ability_queenofpain_scream_of_pain_damage_pct"    "%DMG HP:"
 
         //Рулетка
 
@@ -1979,8 +1991,12 @@
 			"DOTA_Tooltip_ability_item_solomon_book_3_mana"  "+$mana"
 			"DOTA_Tooltip_ability_item_solomon_book_3_mana_regen"	"%+$mana_regen"
 			"DOTA_Tooltip_ability_item_solomon_book_3_amplification"	"%Увеличение урона по крипам:"
-
-
+			
+	
+		//книжки с боссов
+			"DOTA_Tooltip_ability_item_spellbook_hero_poison"                "Manuscript: Vescor"
+			"DOTA_Tooltip_ability_item_spellbook_hero_poison_Description"    "<h1>Passive: Vescor</h1>Poisons enemy, deals PURE damage per second and slows. Also Prevents enemy from healing.\n"
+            "DOTA_Tooltip_ability_item_spellbook_hero_poison_Lore"           "Gilden's sages do not have all the knowledge. This ancient manuscript is proof of this."
 
     //Аблики боссов
 

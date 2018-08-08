@@ -8224,6 +8224,45 @@
 		}
 	}
 	
+"item_spellbook_hero_poison"
+    {
+        "ID" "2217"
+        "ItemCost"                      "4000"
+        "BaseClass"                     "item_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+        "Model"                         "models/props_gameplay/red_box.vmdl" 
+        "Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+        "AbilityTextureName"            "spellbook"
+        "AbilityCooldown"               "2"
+        "AbilityManaCost"               "0"
+        "ItemQuality"                   "artifact"
+        "ItemBaseLevel"                 "1"
+        "ItemAliases"                   "ability;boss;"
+        "ItemShareability"              "ITEM_FULLY_SHAREABLE_STACKING"
+        "ItemShopTags"                  "consumable"
+        "ItemQuality"                   "consumable"
+        "ItemPermanent"                 "0"
+        "ItemKillable"                  "0"
+        "ItemSellable"                  "1"
+		"ItemPurchasable"				"0"
+        "ItemDroppable"                 "1"
+        "ItemInitialCharges"            "1"
+        "ItemStackable"                 "0"
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "items/books/item_book_of_hero_poison.lua"
+                "Function"      "AbilityCheck"
+            }
+
+            "SpendCharge"
+            {}
+        }
+    }
+	
 "item_recipe_alebard"
     {
         "ID" "5000"

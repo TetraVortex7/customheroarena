@@ -1,19 +1,26 @@
-0.9.7с SUMMONERS ALIVE!
+0.9.7с SUMMONERS? Where?
 
 ABILITIES:
 QoP's Screem of pain reworked: % damage included
 NEW Plague Ward ability (10 lvls)
-Reworked Lucky Chance: now it's based on white damage
+Reworked Lucky Chance: now it's based on white damage (watch PA)
 Added Necrolyte's Reaper's Skythe
 Crystal Maiden's Aura mana regen rate 32 > 16
+Drow Ranger's Marksmanship now doesn't stacks with splashes
+Drow Ranger's creep kill chance always 15 now
 
 BOSS:
 Skorpion abilities works now
-Skorpion Drops Gu
-Skorpion Drops ABILITY BOOK
+Skorpion Drops Gu with 10% chance
+Skorpion Drops ABILITY BOOK with 25% chance [Ability book can be 8th ability of your hero]
 
 GAME:
-fountain now doesn't makes you invulnerable
+Fountain now doesn't makes you invulnerable just full resistance to all damage types
+You can use spellbook as 7th spell of your hero
+
+ITEMS
+Gu interaction with bear fixed
+
 
 0.9.7b Summoners War
 

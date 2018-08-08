@@ -178,10 +178,6 @@ _G.demonic_drop = {
 	"item_demonic_rod"
 }
 
-_G.scorpion_drop = {
-	"item_venom_liquid"
-}
-
 _G.miniboss_doom_drop = {
 	"item_doom_upgrade_scroll"
 }
@@ -250,6 +246,18 @@ function DropSlark(unit)
 	local point = unit:GetAbsOrigin()
 
 	LaunchItem("item_reflect_shield",point)
+end
+
+function DropSkorpion(unit)
+	if unit.disable_drop then return end
+	local point = unit:GetAbsOrigin()
+		if RollPercentage(15) then
+			LaunchItem("item_spellbook_hero_poison",point)
+		end
+
+		if RollPercentage(10) then
+			LaunchItem("item_venom_liquid",point)
+		end
 end
 
 function DropDemonic(unit)

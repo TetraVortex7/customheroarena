@@ -16,7 +16,7 @@
 		"01"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"reflect_back_percentage"						"100"
+			"reflect_back_percentage"						"25"
 		}
 		"02"
 		{
@@ -73,7 +73,7 @@
 	"BaseClass"				"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"broodmother_poison_sting"
-	"MaxLevel" "7"
+
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -168,6 +168,111 @@
 	}
 }
 
+"hero_poison"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"broodmother_poison_sting"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"		
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"MaxLevel" "7"
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"noheal"	"100"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"dmg_per_second"				"30 60 90 120 150 180 210"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"poison_duration"				"5"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"poison_movement_speed_melee"	"10 15 20 25 30 35 40"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"poison_damage_interval"	"0.5"
+		}
+	}
+	
+	
+	"Modifiers"
+	{
+			"hero_poison_orb"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes" 			"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				
+				"Orb"
+				{
+					"Priority"				"DOTA_ORB_PRIORITY_ITEM"
+					"Label"					"DOTA_ORB_LABEL_SKADI"  //This does not currently seem to have an effect.  "Label" may not be the right key.
+					"CastAttack"			"0"
+				}
+
+				"OnOrbImpact"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"hero_poison"
+						"Target"		"TARGET"
+					}
+				}
+			}
+
+			"hero_poison"
+			{
+				"Duration"				"%poison_duration"
+				"Passive"				"0"
+				"IsHidden"				"0"
+				"IsBuff"				"0"
+				"IsDebuff"				"1"
+				"IsPurgable"			"1"
+				
+				"EffectName"			"particles/items2_fx/orb_of_venom.vpcf"
+				"EffectAttachType"		"follow_origin"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%poison_movement_speed_melee"
+					"MODIFIER_PROPERTY_DISABLE_HEALING"	"1"
+				}
+				
+
+				
+				"ThinkInterval" 		"%poison_damage_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"					"bosses/skorpion/skorpion_poison.lua"
+						"Function"						"damage_target"
+						"PoisonDamagePerSecond"			"%dmg_per_second"
+						"PoisonDamageInterval"			"%poison_damage_interval"
+					}
+				}
+			}
+	}
+}
+
 "marksmanship_datadriven"
 {
 	// General
@@ -195,7 +300,7 @@
 		"03"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"chance"						"5 7 9 11 13 15 17"
+			"chance"						"15"
 		}
 	}
 	
@@ -240,7 +345,7 @@
 				}
 			}
 			
-			"OnAttack"
+			"OnAttackLanded"
 			{
 				"RunScript"
 				{
@@ -944,14 +1049,9 @@
 		"01"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"reduce"		"-3 -5 -7 -9 -11 -13 -15"
-		}
-		"02"
-		{
-			"var_type"		"FIELD_INTEGER"
 			"increase"		"10 15 20 25 30 35 40"
 		}
-		"03"
+		"02"
 		{
 			"var_type"		"FIELD_INTEGER"
 			"dur"		"0.5"
@@ -974,18 +1074,7 @@
 				"Function"    "roulette"
 			  }
 			}
-		}
-		"modifier_dec"
-		{
-			"Passive"	"0"
-			"IsHidden" "1"
-			"Duration" "%dur"
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"%reduce"
-			}
-		}
-		
+		}	
 		"modifier_inc"
 		{
 			"Passive"	"0"

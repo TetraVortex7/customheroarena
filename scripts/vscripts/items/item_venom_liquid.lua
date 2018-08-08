@@ -72,13 +72,12 @@ function modifier_venom_liquid_venome:OnCreated(  )
 	if IsServer() then
 		self.timer = Timers:CreateTimer(0,function() 
 			local stacks = self:GetStackCount()
-			local int = (caster:GetIntellect() / 12) / 100
+			--local int = (caster:GetIntellect() / 12) / 100
 			local hp = self.target:GetMaxHealth() * 0.01 * hpd
 			damage = hp + dps * stacks
-			damage = damage + damage * int
+			damage = damage + damage --*int
 			damage = math.floor(damage)
 			ApplyDamage({victim = self.target, attacker = caster, damage = damage, damage_type = DAMAGE_TYPE_PURE})
-			print("Damage "..damage)
 			return ability:GetSpecialValueFor("rate") 
 		end)
 	end

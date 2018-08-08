@@ -11,5 +11,5 @@ function damage_target(keys)
 		damage_to_deal = current_hp - 1
 	end
 	
-	ApplyDamage({victim = keys.target, attacker = keys.caster, damage = damage_to_deal, damage_type = DAMAGE_TYPE_MAGICAL,})
+	ApplyDamage({victim = keys.target, attacker = keys.caster, damage = damage_to_deal, damage_type = DAMAGE_TYPE_PURE,})
 end

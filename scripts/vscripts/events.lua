@@ -504,6 +504,7 @@ function GameMode:OnEntityKilled( keys )
   if IsDemonic(killedUnit) then DropDemonic(killedUnit) end
   if IsMiniBoss(killedUnit) then DropSlark(killedUnit) end
   if IsDoomMiniBoss(killedUnit) then DropDoom(killedUnit) end
+  if IsSkorpion(killedUnit) then DropSkorpion(killedUnit) end
 
   
   if not killedUnit:IsNeutralUnitType() and not IsBoss(killedUnit) then
