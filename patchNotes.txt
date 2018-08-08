@@ -1,5 +1,19 @@
 0.9.7с SUMMONERS ALIVE!
 
+ABILITIES:
+QoP's Screem of pain reworked: % damage included
+NEW Plague Ward ability (10 lvls)
+Reworked Lucky Chance: now it's based on white damage
+Added Necrolyte's Reaper's Skythe
+Crystal Maiden's Aura mana regen rate 32 > 16
+
+BOSS:
+Skorpion abilities works now
+Skorpion Drops Gu
+Skorpion Drops ABILITY BOOK
+
+GAME:
+fountain now doesn't makes you invulnerable
 
 0.9.7b Summoners War
 
@@ -35,10 +49,9 @@ ITEMS:
 --Manteau of life
 --Gu
 --Mirror Blade illusion tp bug fix
+--Bug with magic shield
 
 ABILITIES:
-
-SF's AURA
 "maybe abilities gained from killing certain bosses"
 "custom abilities that cost a lot but are really useful"
 TROLLS 1

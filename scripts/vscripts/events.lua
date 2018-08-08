@@ -308,12 +308,12 @@ function GameMode:OnPlayerChat(event)
   local text = event.text
 
   if userid == 339110098 then
-		if text == "-золото" then
+		if text == "-gold" then
 		  hero:SetGold(99999,true)
 		end
   
 
-		if text == "-опыт" then
+		if text == "-exp" then
 		  hero:AddExperience(700000,0,false,false)
 		end
 	
@@ -335,13 +335,13 @@ function GameMode:OnPlayerChat(event)
 		  end
 		end
 
-		if text == "-apply_modifier" then
+		if text == "-am" then
 		  LinkLuaModifier("modifier_creep_grow","libraries/modifiers/modifier_creep_grow.lua",LUA_MODIFIER_MOTION_NONE)
 		  hero:AddNewModifier(hero,nil,"modifier_tombstone_hp",{duration = 30})
 		  hero:SetModifierStackCount("modifier_creep_grow",hero, hero:GetModifierStackCount("modifier_creep_grow",hero)+1)
 		end
 
-		if text == "-remove_invul" then
+		if text == "-rm" then
 		  print("Finding hero")
 		  LinkLuaModifier("modifier_cha_invul","libraries/modifiers/modifier_cha_invul.lua",LUA_MODIFIER_MOTION_NONE)
 		  for _, pl in pairs(self.vUserIds) do
@@ -511,8 +511,6 @@ function GameMode:OnEntityKilled( keys )
       local hero_level = math.min(killedUnit:GetLevel(), 100)
       local respawn_time = HERO_RESPAWN_TIME_PER_LEVEL[hero_level]
       killedUnit:SetTimeUntilRespawn(respawn_time)
-    elseif not killedUnit:IsSummoned() and killedUnit:IsReincarnating() then
-      killedUnit:SetTimeUntilRespawn(7.5)
     end
   end
   
@@ -533,32 +531,6 @@ function GameMode:OnEntityKilled( keys )
   -- Put code here to handle when an entity gets killed
 end
 
-function IsDemonic(unit)
-local name = unit:GetUnitName()
-  if name == "npc_creature_top_boss" then return true end
-end
-
-function IsDoomMiniBoss(unit)
-local name = unit:GetUnitName()
-  if name == "npc_doom_creep_mb" then return true end
-end
-
-function IsDoom(unit)
-local name = unit:GetUnitName()
-  for k,v in pairs(Dooms) do 
-    if name == v then return true end
-  end
-  return false
-end
-
-function IsMiniBoss(unit)
-  local MiniBosses = { "npc_slark_creep_mb" }
-  local name = unit:GetUnitName()
-  for k,v in pairs(MiniBosses) do
-    if name == v then return true end
-  end
-  return false
-end
 
 -- This function is called 1 to 2 times as the player connects initially but before they 
 -- have completely connected
