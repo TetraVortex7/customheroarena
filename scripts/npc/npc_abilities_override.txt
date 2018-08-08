@@ -4354,12 +4354,12 @@
 				"01"
 				{
 					"var_type"			"FIELD_FLOAT"
-					"mana_regen"		"1.0 2.5 4.0 8.5 10.0 14.0 16.0"
+					"mana_regen"		"1.0 2.0 3.0 4.0 5.0 6.0 7.0"
 				}
 				"02"
 				{
 					"var_type"			"FIELD_FLOAT"
-					"mana_regen_self"		"2.0 5.0 8.0 17.0 20.0 28.0 32.0"
+					"mana_regen_self"		"2.0 4.0 6.0 8.0 10.0 12.0 14.0"
 				}
 			}
 		}
@@ -11450,7 +11450,7 @@
 				"02"
 				{
 					"var_type"					"FIELD_FLOAT"
-					"stun_duration"				"1.5 1.25 1 .9 .8 .7 .65"
+					"stun_duration"				"1.5"
 				}
 				"03"
 				{
@@ -13806,7 +13806,7 @@
 			"AbilityTextureName"			"queenofpain_scream_of_pain"
 			
 			"MaxLevel"						"7"
-			"LevelsBetweenUpgrades"			"9"
+			"LevelsBetweenUpgrades"			"3"
 			
 			// Precache
 			//-------------------------------------------------------------------------------------------------------------
@@ -13884,7 +13884,7 @@
 					"Target"
 					{
 						"Center"	"CASTER"
-						"Radius"	"%area_of_effect"
+						"Radius"	"%area_of_effect"	
 						"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 						"Types"		"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
 					}
@@ -13909,7 +13909,7 @@
 				"RunScript"
 				{
 					"Target" 		"TARGET"
-					"ScriptFile"    "heroes/qop/scream.lua"
+					"ScriptFile"    "heroes/hero_queenofpain/scream.lua"
 				    "Function"      "Damage"
 					"dmg_const"		"%AbilityDamage"
 					"dmg_pct"		"%damage_pct"
@@ -20067,6 +20067,70 @@
 				}			
 			}
 		}
+
+	//=================================================================================================================
+	// Venomancer: Plague Ward
+	//=================================================================================================================
+	"venomancer_plague_ward"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5180"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Venomancer.Plague_Ward"
+		"MaxLevel"						"10"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"850"
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"40 80 120 160 200 240 280 320 360 400"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"40.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ward_hp_tooltip"		"200 400 600 950 1200 1500 1700 2000 2400 2700 3000"
+				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ward_damage_tooltip"	"35 55 85 105 135 165 195 225 265 285 325"
+				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+			}
+			"04" // For special bonus at level 25
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ward_hp"		"200 400 600 950 1200 1500 1700 2000 2400 2700 3000"
+			}
+			"05" // For special bonus at level 25
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ward_damage"	"35 55 85 105 135 165 195 225 265 285 325"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
 	
 		//=================================================================================================================
 		// Venomancer: Poison Nova

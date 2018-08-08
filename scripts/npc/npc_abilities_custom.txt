@@ -16,18 +16,53 @@
 		"01"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"chance"						"25"
+			"reflect_back_percentage"						"100"
 		}
 		"02"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"dmg"							"100 150 200 250 300"
+			"dmg_block"							"150"
 		}
 	}
 	
 	"Modifiers"
 	{
+			"modifier_boss_block"
+	    {
+	      "Passive"         "1"
+	      "IsBuff"           "1"
+	      "IsPurgable"      "0"
+	      "IsHidden"        "1"  
+	      "Properties"
+	      {
+	        "MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK"   "%dmg_block"
+	      }
+		  		  "States"
+		  {
+		  "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE" "MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_STATE_CANNOT_MISS" "MODIFIER_STATE_VALUE_ENABLED"
+		  }
+	    }
 		
+		"modifier_reflect"
+		{
+			"IsBuff"				"0"
+			"IsPurgable"			"0"
+			"Passive"         "1"
+			"IsHidden"        "1"
+			
+			"EffectName"			"particles/units/heroes/hero_nyx_assassin/nyx_assassin_spiked_carapace.vpcf"
+			
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"bosses/skorpion/skorpion_reflect_damage.lua"
+					"Function"		"reflect_damage"
+					"DamageTaken"	"%attack_damage"
+				}
+			}
+		}
 	}
 }
 
@@ -54,12 +89,82 @@
 			"var_type"						"FIELD_INTEGER"
 			"dmg_per_second"				"120"
 		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"poison_duration"				"5"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"poison_movement_speed_melee"	"35"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"poison_damage_interval"	"0.5"
+		}
 	}
 	
 	
 	"Modifiers"
 	{
+			"boss_poison_orb"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes" 			"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				
+				"Orb"
+				{
+					"Priority"				"DOTA_ORB_PRIORITY_ITEM"
+					"Label"					"DOTA_ORB_LABEL_SKADI"  //This does not currently seem to have an effect.  "Label" may not be the right key.
+					"CastAttack"			"0"
+				}
 
+				"OnOrbImpact"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"boss_poison"
+						"Target"		"TARGET"
+					}
+				}
+			}
+
+			"boss_poison"
+			{
+				"Duration"				"%poison_duration"
+				"Passive"				"0"
+				"IsHidden"				"0"
+				"IsBuff"				"0"
+				"IsDebuff"				"1"
+				"IsPurgable"			"1"
+				
+				"EffectName"			"particles/items2_fx/orb_of_venom.vpcf"
+				"EffectAttachType"		"follow_origin"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%poison_movement_speed_melee"
+					"MODIFIER_PROPERTY_DISABLE_HEALING"	"1"
+				}
+				
+
+				
+				"ThinkInterval" 		"%poison_damage_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"					"bosses/skorpion/skorpion_poison.lua"
+						"Function"						"damage_target"
+						"PoisonDamagePerSecond"			"%dmg_per_second"
+						"PoisonDamageInterval"			"%poison_damage_interval"
+					}
+				}
+			}
 	}
 }
 
@@ -794,7 +899,9 @@
 	      }
 		  		  "States"
 		  {
-		  "MODIFIER_STATE_INVULNERABLE" "MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE" "MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL" "MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL" "MODIFIER_STATE_VALUE_ENABLED"
 		  "MODIFIER_STATE_TRUESIGHT_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED"
 		  "MODIFIER_STATE_CANNOT_MISS" "MODIFIER_STATE_VALUE_ENABLED"
 		  "MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES" "MODIFIER_STATE_VALUE_ENABLED"
@@ -837,7 +944,7 @@
 		"01"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"reduce"		"-3 -5 -7 -9 -11 -13 -15 -17"
+			"reduce"		"-3 -5 -7 -9 -11 -13 -15"
 		}
 		"02"
 		{
@@ -847,7 +954,7 @@
 		"03"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"dur"		"0.24"
+			"dur"		"0.5"
 		}
 	}
 
@@ -857,7 +964,7 @@
 		{
 			"Passive" "1"
 			"IsHidden" "1"
-	        "ThinkInterval" ".25"
+	        "ThinkInterval" ".5"
 
 			"OnIntervalThink"
 			{
@@ -875,7 +982,7 @@
 			"Duration" "%dur"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"%reduce"
+				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"%reduce"
 			}
 		}
 		
@@ -886,7 +993,7 @@
 			"Duration" "%dur"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"%increase"
+				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"%increase"
 			}
 		}
 	}

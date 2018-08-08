@@ -47,8 +47,8 @@
 
         //Рулетка
 
-            "DOTA_Tooltip_ability_phantom_roulette"                     "Roulette"
-            "DOTA_Tooltip_ability_phantom_roulette_Description"         "Randomly increases or decreases attack damage 4 times per second."
+            "DOTA_Tooltip_ability_phantom_roulette"                     "Lucky chance"
+            "DOTA_Tooltip_ability_phantom_roulette_Description"         "Randomly increases or decreases attack damage 4 times per second. Goes well with critical strikes."
             "DOTA_Tooltip_ability_phantom_roulette_reduce"                 "%DECREASE:"
             "DOTA_Tooltip_ability_phantom_roulette_increase"                 "%INCREASE:"
             "DOTA_Tooltip_ability_phantom_roulette_Lore"    "Take your lucky moment on impending chaos!"
@@ -2022,6 +2022,14 @@
 
                     "DOTA_Tooltip_boss_ability_hardcore_modifier_evasion"               "Hardcore Evasion"
                     "DOTA_Tooltip_boss_ability_hardcore_modifier_evasion_Description"   "You have %dMODIFIER_PROPERTY_TOOLTIP%%% decreased evasion chance."
+					
+			//HARD SKIN
+				"DOTA_Tooltip_ability_boss_hard_skin"                    "Magical chitin"
+				"DOTA_Tooltip_ability_boss_hard_skin_Description"        "<h1>Passive: Damage block</h1>Blocks %dmg_block% damage. Also returns 20% back to attacker.\n"
+				
+			//SKORPION POISON
+				"DOTA_Tooltip_ability_boss_poison"                    "Poisonous Sting"
+				"DOTA_Tooltip_ability_boss_poison_Description"        "<h1>Passive: Toxic poison</h1>Deal %dmg_per_second% damage per second. The units affected by this poison can't heal.\n"
 
     //Абилки крипов
 
