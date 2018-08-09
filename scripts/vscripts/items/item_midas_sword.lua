@@ -13,7 +13,10 @@ function item_midas_sword:OnSpellStart(  )
 
 	if target:IsBoss() or target:IsAncient() or target:IsMagicImmune() then return end
 
-		caster:AddExperience(target:GetDeathXP() * exp * 0.01, false,false)
+		if caster:IsRealHero() then 
+			caster:AddExperience(target:GetDeathXP() * exp * 0.01, false,false) 
+		end
+		
 		caster:ModifyGold(gold,true,0)
 		SendOverheadEventMessage( caster,  OVERHEAD_ALERT_GOLD , target, gold, nil )
 	target:EmitSound("DOTA_Item.Hand_Of_Midas")

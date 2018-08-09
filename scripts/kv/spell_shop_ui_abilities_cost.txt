@@ -116,7 +116,7 @@
     "death_pact_datadriven"                   "3"
     "broodmother_insatiable_hunger"           "2"
     "weaver_time_lapse"                       "2"
-    "queenofpain_sonic_wave"                  "2"
+    "queenofpain_sonic_wave"                  "3"
     "death_prophet_exorcism"                  "2"
     "pugna_life_drain"                        "2"
     "dazzle_weave"                            "2"

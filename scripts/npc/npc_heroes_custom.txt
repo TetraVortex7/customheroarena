@@ -2625,7 +2625,7 @@
 		"Ability23"					""
 		"Ability24"					""
 		"VisionNightTimeRange"		"800"
-		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"15"
 		"AttributeStrengthGain"		"1.500000"
 		"AttributeBaseIntelligence"		"20"

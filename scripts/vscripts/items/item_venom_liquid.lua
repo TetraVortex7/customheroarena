@@ -51,6 +51,14 @@ function modifier_venom_liquid_venome:IsDebuff(  )
 	return true
 end
 
+function modifier_venom_liquid_venome:IsHidden(  )
+	return true
+end
+
+function modifier_venom_liquid_venome:IsPurgable(  )
+	return false
+end
+
 function modifier_venom_liquid_venome:GetTexture(  )
 	return "item_venom_liquid"
 end

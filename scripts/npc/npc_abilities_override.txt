@@ -13965,7 +13965,7 @@
 				"05"
 				{
 					"var_type"			"FIELD_INTEGER"
-					"damage"			"310 510 710 910 1120 1320 1530"
+					"damage"			"200 300 400 500 600 700 800"
 				}
 				"06"
 				{
@@ -13975,7 +13975,7 @@
 				"07"
 				{
 					"var_type"			"FIELD_INTEGER"
-					"damage_scepter"	"420 630 720 920 1400 1800 2400"
+					"damage_scepter"	"310 510 710 910 1120 1320 1530"
 				}
 			}
 		}
@@ -16164,7 +16164,7 @@
 				"01"
 				{
 					"var_type"						"FIELD_INTEGER"
-					"bonus_attack_range"			"50 75 90 110 120 130 140"
+					"bonus_attack_range"			"50 75 100 125 150 175 200"
 				}
 			}
 		}
@@ -20107,26 +20107,26 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_hp_tooltip"		"200 400 600 950 1200 1500 1700 2000 2400 2700 3000"
+				"ward_hp_tooltip"		"200 400 600 950 1200 1500 1700 2000"
 				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
 				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_damage_tooltip"	"35 55 85 105 135 165 195 225 265 285 325"
+				"ward_damage_tooltip"	"35 55 85 105 135 165 195 225"
 				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
 				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 			}
 			"04" // For special bonus at level 25
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_hp"		"200 400 600 950 1200 1500 1700 2000 2400 2700 3000"
+				"ward_hp"		"200 400 600 950 1200 1500 1700 2000"
 			}
 			"05" // For special bonus at level 25
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_damage"	"35 55 85 105 135 165 195 225 265 285 325"
+				"ward_damage"	"35 55 85 105 135 165 195 225"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
