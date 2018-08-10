@@ -5000,7 +5000,7 @@
 		{
 			"MaxLevel"						"7"
 			"LevelsBetweenUpgrades"			"8"
-			"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+			"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
 			// Casting
 			//-------------------------------------------------------------------------------------------------------------
 			"AbilityCastRange"				"600"

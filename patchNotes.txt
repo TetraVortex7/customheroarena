@@ -7,10 +7,11 @@ QoP's Sonic wave damage with aghs 2400 > 1530
 QoP's Sonic wave damage without aghs 1530 > 800
 QoP's Sonic wave cost 2>3
 Sniper's Take Aim max range 140 > 200
+DP's Spirit Siphon can't target bosses now
 --Tiny's Grow 4 lvl bug
 
 ITEMS:
---Gu crashes fixed
+Gu crashes fixed
 Splash staff cost reduced by 800 on each level
                      --Splash staff sborka--
 Sturdy Armor renamed to Kadash
@@ -18,6 +19,7 @@ Black King hood active ability bug fixed
 Sanctum Regnum now doesnt stack with itself or lvl higher versions
 Sanctum Regnum doents affect bosses now
 Time Scale shard drop rate 3 > 5%
+Manteau of life now has active invis ability instead of full
 
 BOSSES:
 Skorpion BM interaction fixed

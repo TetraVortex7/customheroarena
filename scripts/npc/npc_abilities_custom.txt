@@ -134,6 +134,7 @@
 	"HotKeyOverride"				"Y"
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"invoker_cold_snap"
+	"MaxLevel"						"7"
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
