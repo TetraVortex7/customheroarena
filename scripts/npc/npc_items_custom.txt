@@ -1718,6 +1718,7 @@
         "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
         "ItemQuality"                   "rare"      
 		"ItemAliases"                   "power; treads"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 
         "OnSpellStart"
         {
@@ -1775,6 +1776,7 @@
         "ItemQuality"                   "rare"      // consumable component rare epic artifact secretshop
 		"ItemAliases"                   "treads; power"
         "ItemCost"                      "3710"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 
         "OnSpellStart"
         {
@@ -1832,6 +1834,7 @@
         "ItemQuality"                   "rare"
 		"ItemAliases"                   "treads; power"
         "ItemCost"                      "3710"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 
         "OnSpellStart"
         {
@@ -1889,6 +1892,7 @@
         "ItemBaseLevel"                 "3"
         "ItemQuality"                   "epic"      
 		"ItemAliases"                   "treads; power"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 
         "OnSpellStart"
         {
@@ -2014,6 +2018,7 @@
         "ItemQuality"                   "epic"
 		"ItemAliases"                   "treads; power"
         "ItemCost"                      "9270"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 
         "OnSpellStart"
         {
@@ -2139,6 +2144,7 @@
         "ItemQuality"                   "epic"
 		"ItemAliases"                   "treads; power"
         "ItemCost"                      "9270"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 
         "OnSpellStart"
         {
@@ -2917,7 +2923,7 @@
         "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
         "AbilityCooldown"               "16"
         "AbilityManaCost"               "180"
-        "AbilityChannelTime"            "%channel_time"
+        "AbilityChannelTime"            "1.0"
         "AbilityDuration"               "%duration"
         "CastRange"                     "%radius"
         "Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
@@ -10283,7 +10289,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      ""  
+        "ItemCost"                      "5"  
         "ItemShopTags"                  ""
         
         // Recipe

@@ -1,3 +1,50 @@
+0.9.7с SUMMONERS? Where?
+
+ABILITIES:
+QoP's Screem of pain reworked: % damage included
+NEW Plague Ward ability (10 lvls)
+Reworked Lucky Chance: now it's based on white damage (watch PA)
+Added Necrolyte's Reaper's Skythe
+Crystal Maiden's Aura mana regen rate 32 > 16
+Drow Ranger's Marksmanship now doesn't stacks with splashes
+Drow Ranger's creep kill chance always 15 now
+
+BOSS:
+Skorpion abilities works now
+Skorpion Drops Gu with 10% chance
+Skorpion Drops ABILITY BOOK with 25% chance [Ability book can be 8th ability of your hero]
+
+GAME:
+Fountain now doesn't makes you invulnerable just full resistance to all damage types
+You can use spellbook as 7th spell of your hero
+
+ITEMS
+Gu interaction with bear fixed
+
+
+0.9.7b Summoners War
+
+ITEMS
+Leaf buckler recipe cost 390 > 200
+Leaf buckler now crafts with Boots of elvenskin
+Vanguard now is based on Leaf Buckler
+
+Midas Sword shares cooldown with midas now
+Midas gold formula now based on hero level instead of monsters
+
+Poor Man's Shield excluded from drop tables
+Iron Talon excluded from drop tables
+
+
+ABILITIES:
+Ursa's Enrage cooldown now 60
+
+NEW Summon spirit bear (7 lvls)
+
+
+GAME:
+Starting gold increased to 1000
+
 0.9.7 - Объявлена неделя Рафу, все кто подпишется этим ником красавчики
 Alchemist's Acid Spray armor reduction 19 > 7
 Alchemist's Acid Spray radius 450 > 400

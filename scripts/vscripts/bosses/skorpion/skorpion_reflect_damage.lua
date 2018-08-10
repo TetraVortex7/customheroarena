@@ -14,7 +14,8 @@ function reflect_damage( keys )
           victim = attacker,
           attacker = caster,
           damage = damage,
-          damage_type = DAMAGE_TYPE_MAGICAL
+          damage_type = DAMAGE_TYPE_MAGICAL,
+		  damage_flags = DOTA_DAMAGE_FLAG_REFLECTION
         }
   ApplyDamage(damage_table)
 end

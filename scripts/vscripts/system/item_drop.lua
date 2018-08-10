@@ -236,7 +236,7 @@ end
 function DropDooms(unit)
 	if unit.disable_drop then return end
 	local point = unit:GetAbsOrigin()
-	if RollPercentage(3) then 
+	if RollPercentage(5) then 
 		LaunchItem("item_time_scale_shard",point)
 	end
 end

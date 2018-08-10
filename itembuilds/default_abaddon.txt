@@ -62,7 +62,10 @@
 		
 		"#DOTA_Item_Build_Tank"
 		{
-			"item"      "item_ring_of_vasilius"
+			"item"      "item_leaf_buckler"
+			"item"      "item_reflect_shield"
+			"item"		"item_insane_shield"
+			"item"		"black_king_hood"
 		}
 		
 		"#DOTA_Item_Build_Ascention"

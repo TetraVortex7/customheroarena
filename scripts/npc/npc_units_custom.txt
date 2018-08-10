@@ -1210,6 +1210,7 @@
                 "BountyXP" "20" 
                 "BountyGoldMin" "13" 
                 "BountyGoldMax" "16" 
+				"BoundsHullName"            "0"
                  
                 "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_NONE" 
                 "MovementSpeed" "0" 
@@ -1619,7 +1620,8 @@
 					"BoundsHullName"            "DOTA_HULL_SIZE_HUGE"
 					"ConsideredHero"            "1"
 					"IsAncient" "1"
-						"CanBeDominated" "0"
+					"CanBeDominated" "0"
+					"UnitLabel"		"boss"
 		
 						"vscripts"	"ai/ai_slark_miniboss.lua"
 					
@@ -2830,6 +2832,7 @@
 		        "HasInventory"          "0" // Имеет ли инвентарь
 		        "IsAncient" "1"
 				"CanBeDominated" "0"
+				"UnitLabel"				"boss"
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
@@ -2921,6 +2924,7 @@
 		        "HasInventory"          "0" // Имеет ли инвентарь
 		        "IsAncient" "1"
 				"CanBeDominated" "0"
+				"UnitLabel"				"boss"
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
@@ -3048,6 +3052,7 @@
 		        "HasInventory"          "0" // Имеет ли инвентарь
 		        "IsAncient" "1"
 				"CanBeDominated" "0"
+				"UnitLabel"				"boss"
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
@@ -3140,6 +3145,7 @@
 		        "HasInventory"          "0" // Имеет ли инвентарь
 		        "IsAncient" "1"
 				"CanBeDominated" "0"
+				"UnitLabel"				"boss"
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
@@ -3235,6 +3241,7 @@
 		        "HasInventory"          "0" // Имеет ли инвентарь
 		        "IsAncient" "1"
 				"CanBeDominated" "0"
+				"UnitLabel"				"boss"
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------

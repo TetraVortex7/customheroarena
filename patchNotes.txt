@@ -1,8 +1,8 @@
 0.9.7d DID I HEAR THE SQUEEK?
 
 ABILITIES:
---NEW ABILITY: COLD SNAP
---QoP's Scream of pain description fixed
+--NEW ABILITY: COLD SNAP (look Dazzle)
+QoP's Scream of pain description fixed
 QoP's Sonic wave damage with aghs 2400 > 1530
 QoP's Sonic wave damage without aghs 1530 > 800
 QoP's Sonic wave cost 2>3
@@ -12,65 +12,25 @@ Sniper's Take Aim max range 140 > 200
 ITEMS:
 --Gu crashes fixed
 Splash staff cost reduced by 800 on each level
+                     --Splash staff sborka--
+Sturdy Armor renamed to Kadash
+Black King hood active ability bug fixed
+Sanctum Regnum now doesnt stack with itself or lvl higher versions
+Sanctum Regnum doents affect bosses now
+Time Scale shard drop rate 3 > 5%
 
 BOSSES:
---Skorpion BM interaction fixed
+Skorpion BM interaction fixed
 
 SUMMONS:
 --Plague ward now spawns with random passives with ability level
 Plague ward max lvl 10 > 7
 Plague ward attack speed 1.5 > 1.3
---Syllabear's Bear can use Midas-based items
-
-
-0.9.7с SUMMONERS? Where?
-
-ABILITIES:
-QoP's Screem of pain reworked: % damage included
-NEW Plague Ward ability (10 lvls)
-Reworked Lucky Chance: now it's based on white damage (watch PA)
-Added Necrolyte's Reaper's Skythe
-Crystal Maiden's Aura mana regen rate 32 > 16
-Drow Ranger's Marksmanship now doesn't stacks with splashes
-Drow Ranger's creep kill chance always 15 now
-
-BOSS:
-Skorpion abilities works now
-Skorpion Drops Gu with 10% chance
-Skorpion Drops ABILITY BOOK with 25% chance [Ability book can be 8th ability of your hero]
+Syllabear's Bear can use Midas-based items
 
 GAME:
-Fountain now doesn't makes you invulnerable just full resistance to all damage types
-You can use spellbook as 7th spell of your hero
-
-ITEMS
-Gu interaction with bear fixed
-
-
-0.9.7b Summoners War
-
-ITEMS
-Leaf buckler recipe cost 390 > 200
-Leaf buckler now crafts with Boots of elvenskin
-Vanguard now is based on Leaf Buckler
-
-Midas Sword shares cooldown with midas now
-Midas gold formula now based on hero level instead of monsters
-
-Poor Man's Shield excluded from drop tables
-Iron Talon excluded from drop tables
-
-
-ABILITIES:
-Ursa's Enrage cooldown now 60
-
-NEW Summon spirit bear (7 lvls)
-
-
-GAME:
-Starting gold increased to 1000
-
-
+Reworked herobuilds
+Fountain now properly gives immunity to all damage
 
 
 OPEN:

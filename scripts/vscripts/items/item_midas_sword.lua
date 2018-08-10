@@ -6,18 +6,18 @@ LinkLuaModifier("modifier_midas_sword_gold","items/item_midas_sword.lua",LUA_MOD
 function item_midas_sword:OnSpellStart(  )
 	if IsClient() then ClientLoadGridNav() end
 	local target = self:GetCursorTarget()
+	
 	local caster = self:GetCaster()
+	local hero = caster:GetPlayerOwner():GetAssignedHero()
 	local target_gold = caster:GetLevel() * 0.2 * RandomFloat(target:GetMinimumGoldBounty(),target:GetMaximumGoldBounty())
 	local gold = self:GetSpecialValueFor("gold_active") + target_gold
 	local exp = self:GetSpecialValueFor("exp")
 
 	if target:IsBoss() or target:IsAncient() or target:IsMagicImmune() then return end
 
-		if caster:IsRealHero() then 
-			caster:AddExperience(target:GetDeathXP() * exp * 0.01, false,false) 
-		end
-		
-		caster:ModifyGold(gold,true,0)
+
+		hero:AddExperience(target:GetDeathXP() * exp * 0.01, false,false) 
+		hero:ModifyGold(gold,true,0)
 		SendOverheadEventMessage( caster,  OVERHEAD_ALERT_GOLD , target, gold, nil )
 	target:EmitSound("DOTA_Item.Hand_Of_Midas")
 

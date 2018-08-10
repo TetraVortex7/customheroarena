@@ -8,16 +8,17 @@ function item_hand_of_midas_custom_two:OnSpellStart( event )
 	local target_gold = caster:GetLevel() * 0.2 * RandomFloat(target:GetMinimumGoldBounty(),target:GetMaximumGoldBounty())
 	local gold = self:GetSpecialValueFor("gold") + target_gold
 	local exp = self:GetSpecialValueFor("exp")
+	local hero = caster:GetPlayerOwner():GetAssignedHero()
 
 	if target:IsBoss() or target:IsAncient() or target:IsMagicImmune() then return end
 
 	if RollPercentage(self:GetSpecialValueFor("chance")) then
-		caster:AddExperience(target:GetDeathXP() * exp*2 / 100, false,false)
-		caster:ModifyGold(gold*1.75,true,0)
+		hero:AddExperience(target:GetDeathXP() * exp*2 / 100, false,false)
+		hero:ModifyGold(gold*1.75,true,0)
 		SendOverheadEventMessage( caster,  OVERHEAD_ALERT_GOLD , target, gold*1.75, nil )
 	else
-		caster:AddExperience(target:GetDeathXP() * exp / 100, false,false)
-		caster:ModifyGold(gold,true,0)
+		hero:AddExperience(target:GetDeathXP() * exp / 100, false,false)
+		hero:ModifyGold(gold,true,0)
 		SendOverheadEventMessage( caster,  OVERHEAD_ALERT_GOLD , target, gold, nil )
 	end
 	target:EmitSound("DOTA_Item.Hand_Of_Midas")

@@ -45,6 +45,16 @@
             "DOTA_Tooltip_ability_necrolyte_heartstopper_aura_Note0"    "Dont deal damage to bosses"
             "DOTA_Tooltip_ability_enigma_midnight_pulse_Note_0"         "Dont deal damage to bosses"
 			
+		//Cold Snap
+
+            "DOTA_Tooltip_ability_cold_snap_datadriven"                     "Cold Snap"
+            "DOTA_Tooltip_ability_cold_snap_datadriven_Description"         "Invoker draws the heat from an enemy, chilling them to their very core for a duration. The enemy will take damage and be briefly frozen. Further damage taken in this state will freeze the enemy again, dealing bonus damage. The enemy can only be frozen so often, but the freeze cooldown decreases based on the level of ability."
+            "DOTA_Tooltip_ability_cold_snap_datadriven_duration"      		"DURATION:"
+			"DOTA_Tooltip_ability_cold_snap_datadriven_freeze_duration"     "STUN:"
+			"DOTA_Tooltip_ability_cold_snap_datadriven_freeze_cooldown"     "CD BETWEEN ATTACKS:"
+			"DOTA_Tooltip_ability_cold_snap_datadriven_freeze_damage"      	"DMG:"
+            "DOTA_Tooltip_ability_cold_snap_datadriven_Lore"    "They say that here in winter it is so cold that laughter freezes in the throat and strangles a person to death."	
+			
 		//Ядовитое оружие
 
             "DOTA_Tooltip_ability_hero_poison"                     "Vescor"
@@ -55,7 +65,11 @@
             "DOTA_Tooltip_ability_hero_poison_Lore"    "Poison always was best weapon for GREATEST SCORPIONS."
 			
 		//QoP Scream of pain
-		DOTA_Tooltip_ability_queenofpain_scream_of_pain_damage_pct"    "%DMG HP:"
+				//QoP Scream of pain
+		    "DOTA_Tooltip_ability_queenofpain_scream_of_pain"                     "Scream of pain"
+            "DOTA_Tooltip_ability_queenofpain_scream_of_pain_Description"         "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies."
+            "DOTA_Tooltip_ability_queenofpain_scream_of_pain_damage_pct"    "%HP AS DAMAGE:"
+            "DOTA_Tooltip_ability_queenofpain_scream_of_pain_Lore"    "Ultrasound therapy."
 
         //Рулетка
 
@@ -655,7 +669,7 @@
 
             //Крепкий щит
 
-            "DOTA_Tooltip_ability_item_insane_shield"               "Sturdy Armor"
+            "DOTA_Tooltip_ability_item_insane_shield"               "Kadash"
             "DOTA_Tooltip_ability_item_insane_shield_Description"   "<h1>Passive: Block</h1>Block %reduce_c%% incoming physical damage.\n<h1>Active: Defense</h1>Add stability to owner, and allowing to block %reduce%% more physical damage.<br>Lasts %duration% sec."
             "DOTA_Tooltip_ability_item_insane_shield_Lore"          "Very strong Armor, forged from legendary materials."
             "DOTA_Tooltip_ability_item_insane_shield_hp"            "+$health"

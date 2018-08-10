@@ -14,7 +14,6 @@ function item_black_king_hood:OnChannelFinish( bInterrupted )
 	if not bInterrupted then
 	    local ability = self
 		local caster = self:GetCaster()
-
 		caster:AddNewModifier(caster,ability,"modifier_black_king_hood_spell",{duration = ability:GetSpecialValueFor("duration")})
 	else
 		return nil
