@@ -48,12 +48,20 @@
 		//Cold Snap
 
             "DOTA_Tooltip_ability_cold_snap_datadriven"                     "Cold Snap"
-            "DOTA_Tooltip_ability_cold_snap_datadriven_Description"         "Invoker draws the heat from an enemy, chilling them to their very core for a duration. The enemy will take damage and be briefly frozen. Further damage taken in this state will freeze the enemy again, dealing bonus damage. The enemy can only be frozen so often, but the freeze cooldown decreases based on the level of ability."
+            "DOTA_Tooltip_ability_cold_snap_datadriven_Description"         "Hero draws the heat from an enemy, chilling them to their very core for a duration. The enemy will take damage and be briefly frozen. Further damage taken in this state will freeze the enemy again, dealing bonus damage. The enemy can only be frozen so often, but the freeze cooldown decreases based on the level of ability."
             "DOTA_Tooltip_ability_cold_snap_datadriven_duration"      		"DURATION:"
 			"DOTA_Tooltip_ability_cold_snap_datadriven_freeze_duration"     "STUN:"
 			"DOTA_Tooltip_ability_cold_snap_datadriven_freeze_cooldown"     "CD BETWEEN ATTACKS:"
 			"DOTA_Tooltip_ability_cold_snap_datadriven_freeze_damage"      	"DMG:"
             "DOTA_Tooltip_ability_cold_snap_datadriven_Lore"    "They say that here in winter it is so cold that laughter freezes in the throat and strangles a person to death."	
+
+		//Alacrity
+
+            "DOTA_Tooltip_ability_alacrity_datadriven"                     "Alacrity"
+            "DOTA_Tooltip_ability_alacrity_datadriven_Description"         "Hero infuses an ally with an immense surge of energy, increasing their attack speed and their damage."
+            "DOTA_Tooltip_ability_alacrity_datadriven_bonus_attack_speed"  "ATTACK SPEED:"
+			"DOTA_Tooltip_ability_alacrity_datadriven_bonus_damage"     	"DAMAGE:"
+            "DOTA_Tooltip_ability_alacrity_datadriven_Lore"    "Gaster's Mandate of Impetuous Strife."	
 			
 		//Ядовитое оружие
 
@@ -1939,8 +1947,8 @@
         "DOTA_Tooltip_ability_item_time_scale_shard_Note0"      "Drops in dead forest."
 		
 		"DOTA_Tooltip_ability_item_manteau_invis"                "Manteau of life"
-        "DOTA_Tooltip_ability_item_manteau_invis_Description"    "<h1>Permanent invisibility</h1> Gains invisibility when not casting or attacking.\n<h1>Passive: MAGIC ABSORB</h1> Absorbs 25% magic damage before reductions.\n<h1>Passive: HIDING</h1> Hero not visible through minimap.\n"
-            "DOTA_Tooltip_ability_item_manteau_invis_Lore"           "I'm here not to fuck with the spiders."
+        "DOTA_Tooltip_ability_item_manteau_invis_Description"    "<h1>Lothar's Edge</h1> Gains invisibility after casting. Any attack or spellcasting will unhide you from invisibility.\n<h1>Passive: MAGIC ABSORB</h1> Absorbs 25% magic damage before reductions.\n<h1>Passive: HIDING</h1> Hero not visible through minimap.\n"
+            "DOTA_Tooltip_ability_item_manteau_invis_Lore"           "Hiding is not bad. Worse is to be killed."
             "DOTA_Tooltip_ability_item_manteau_invis_a"  "+$attack"
             "DOTA_Tooltip_ability_item_manteau_invis_dmg"    "+$damage"
 			"DOTA_Tooltip_ability_item_manteau_invis_resist"  "M. Resist:"

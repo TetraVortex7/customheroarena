@@ -1,16 +1,13 @@
---[[Author: Pizzalol
-	Date: 12.04.2015.
-	Applies the alacrity values depending on wex and exort levels]]
+--[[Author: Pizzalol reworked by Morningstar
+	Date: 12.04.2015 > 11.08.2018
+	Applies the alacrity values depending on ability lvl]]
 function Alacrity( keys )
 	local caster = keys.caster
 	local target = keys.target
 	local ability = keys.ability
-
-	-- Ability variables
-	local wex_level = caster:FindAbilityByName("wex_datadriven"):GetLevel() - 1
-	local exort_level = caster:FindAbilityByName("exort_datadriven"):GetLevel() - 1
-	local damage = ability:GetLevelSpecialValueFor("bonus_damage", exort_level) 
-	local attack_speed = ability:GetLevelSpecialValueFor("bonus_attack_speed", wex_level)
+	local ability_lvl = ability:GetLevel() - 1
+	local damage = ability:GetLevelSpecialValueFor("bonus_damage", ability_lvl) 
+	local attack_speed = ability:GetLevelSpecialValueFor("bonus_attack_speed", ability_lvl)
 	local damage_modifier = keys.damage_modifier
 	local speed_modifier = keys.speed_modifier
 

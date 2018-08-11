@@ -5,7 +5,6 @@ function ColdSnapStart( keys )
 	local caster = keys.caster
 	local target = keys.target
 	local ability = keys.ability
-	local ability_level = ability:GetLevel() - 1
 	local quas_level = ability:GetLevel() - 1
 
 	local duration = ability:GetLevelSpecialValueFor("duration", quas_level) 

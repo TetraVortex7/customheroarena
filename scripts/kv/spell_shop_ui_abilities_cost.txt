@@ -94,7 +94,7 @@
 	"terrorblade_metamorphosis"				  "3"
 	"terrorblade_sunder"					  "3"
     "faceless_void_chronosphere"              "3"
-	"venomancer_poison_sting"				  "3"
+	"venomancer_poison_sting"				  "1"
 	"venomancer_poison_nova"				  "2"
 	"huskar_berserkers_blood"			 	  "2"
 	"medusa_stone_gaze"						  "2"

@@ -1,0 +1,351 @@
+ПЕРВЫЙ ПАТЧ
+All heroes at the start has 1.8 attack speed
+
+Some buggy skills now works fine
+Leshrac Aghanim bug fixed
+
+Some farming abilites are now balanced
+Sven Great cleave
+Magnus Empower
+Medusa Split Shot
+Alchemist Greevil's Greed
+
+Now works:
+Tidehunter's Kraken Shell
+Tiny Grow
+Kunkka Tidebringer
+Juggernaut Blade Dance
+Centaur Return
+Centaur Double Edge
+Timber Reactive Armor
+Bristleback Warpath
+Bristleback bristleback
+
+Unbalanced but fixed:
+Brewmaster Drunken Brawler
+
+
+
+ВТОРОЙ ПАТЧ
+Balanced Many ability costs
+Now you can't level up strong abilities every skill point
+
+Balanced:
+Chaos Knight's chaos strike
+Antimage's Mana Break
+Ember Spirit's Slaight of Fist
+Sand King's Caustic Finale
+
+Now works:
+Phantom Assasin's Coup De Grace
+Antimage's Spell Shield
+Vengeful Spirit's Command Aura
+Riki's Tricks of the Trade
+Luna's Lunar Blessing
+Omniknight's Repel
+Night Stalker's Hunter in the Night
+Lycan's Feral Impulse
+Abaddon's Curse of Avernus
+Abyssal Underlord's Atrophy Aura
+Viper's Corrosive Skin
+
+
+Upgraded:
+Drow Ranger's True Shot
+
+
+
+ТРЕТИЙ ПАТЧ
+Works now:
+Beastmaster's Inner Beast
+Medusa's Split Shot
+
+Fixed:
+Riki's Cloak and Dagger
+Terrorblade's Metamorphosis
+Viper's Corrosive Skin
+Razor's Unstable Current
+Venomancer's Poison Sting
+Bloodseeker's Thirst
+Slark's Essence Shift
+
+
+
+ЧЕТВЕРТЫЙ ПАТЧ
+Bugs fixed:
+Leshrac's Pulse Nova damage
+Jakiro's Dual Breath damage
+Sven's Storm bolt stun
+Petuh's Arcane Bolt int multiplicator
+Dragon Knight's Breathe Fire dmg reduction
+Dragon Knight's Dragon Tail stun
+Clockwerk's Battery assault ministun
+Huskar's Burning Spear dot dmg
+Alchemist's Unstable Concoction dmg
+Brewmaster's Thunder Clap duration
+Brewmaster's Drunken Haze miss chance
+Treant's Leech Seed dmg
+Wisp's Spirits max range
+Centaur's Stampede str dmg
+Timbersaw's Chain range
+Antimage's Blink range
+
+Nerf:
+Dragon Knight's Dragon Blood armor reduced
+Huskar's Berserker's Blood
+
+Costs:
+Drunken Brawler cost reduced
+Drow Ranger's Marksmanship cost increased
+
+
+
+ПЯТЫЙ ПАТЧ
+Fixes:
+Obsidian Destroyer's Arcane Orb fixed
+Removed Leshrac's Lightning Storm
+Fixed Razor's Eye of Storm 
+Shrine cooldown now 30 sec
+Shine hp/mana heal increased 200/90
+Jugger's Omnislash jump count fixed
+Abaddon's Aphotic Shield cooldown fixed
+
+
+
+ШЕСТОЙ ПАТЧ
+DUEL ABILITY COST INCREASED BY 1
+DUEL COOLDOWN INCREASED (60 on last lvl)
+DUEL MANACOST INCREASED 75>125
+
+RAZOR'S EYE OF THE STORM COOLDOWN INCREASED 70 > 150
+ZEUS' ARC LIGHTNING DAMAGE BUG FIXED
+BREWMASTER'S CRITICAL STRIKE FIXED
+STORM SPIRIT'S STATIC REMNANT DAMAGE FIXED
+
+VOID'S CHRONOSPHERE WORKS NOW
+MAGNUS' EMPOWER WORKS NOW
+TREANT'S OVERGROWTH WORKS NOW
+WITCH DOCTOR'S MALEDICT WORKS NOW
+SLARKS' SHADOW DANCE WORKS NOW
+NECROPHOS' HEARTSTOPPER AURA WORKS NOW
+BANE'S FIENDS GRIP WORKS NOW
+
+
+REMOVED BATRIDER'S STICKY NAPALM
+REMOVED ARC WARDEN'S TEMPEST DOUBLE
+
+DAMAGE BY BASE FOUNTAIN INCREASED TO 5000
+
+
+
+СЕДЬМОЙ ПАТЧЕК
+
+Tiny Grab Tree bug fixed
+OD's Sanity Eclipse now working
+Jugger's Blade Dance now working
+Jugger's Blade Dance crit mult increased (220>250)
+Naga's Mirror Image fixed
+WK's Mortal Strike crit multiplier increased (225>275)
+BS' Thirst now works
+Centaur's Return works
+Centaur's Return base dmg decreased by 10
+Brood's Insatiable Hunger works now
+REMOVER WITCHRAFT
+Dazzle's Weave works now
+Arc Warden's Flux works now
+Enchantress' Impetus works now
+Enchantress' Untouchable works now
+Ember Spirit's Searing Chains dmg fix
+Ember Spirit's Flame guard dmg fix
+Earthshaker's Echo Slam echo dmg fix
+Spectre's Desolate works now
+Tuskar's Walrus Punch cooldown increased to 50
+Sven's GS str fix
+Tiny's Grab Tree lvl fix
+Tidehunter's Gush works (with agha too)
+
+
+All critical strike based abilities rescaled max crit now 200%
+
+Juggernaut's Omnislash cost increased by 1
+
+
+ВОСЬМОЙ ПАТЧЕК
+All agility heroes base attack time increased 1.8
+All strength heroes base attack reduced to 1.9
+All intelligence heroes base attack reduced to 2.0
+
+Intelligence heroes now have 20 magic resist
+Agility and strength heroes now have 10 magic resist
+
+All heroes now have same attribute grow per lvl 
+(2 to main, 1.5 to additional attribs)
+
+All heroes now have same stats on 1st lvl
+(20 to main attrib, 15 to additional attribs)
+
+
+
+ДЕВЯТЫЙ ПАТЧЕК
+
+ABILITIES:
+Kunkka tidebringer splash % rescaled
+Kunkka torrent dmg fix
+Removed Beastmaster's Call of the Wild
+Dragon Blood armor greatly decreased
+LC's Overwhelming odds damage decreased 
+Vengeful's Wave of terror armor issue fixed
+Sniper's Assassinate cast range 3500 now
+BH's Shuriken Toss dmg fixed
+BH's Jinada crit fixed
+Ursa's Earthshock works now
+Lone Druid's Rabid works now
+Naga's Mirror Image outgoing dmg fixed
+Naga's Rip tide armor reduction fixed
+Doom's Scorched Earth works now
+BS' Blood Rite dmg fixed
+Viper's Nethertoxin works now
+Puck's Illusory Orb now 7 lvls
+Undying Decay works now
+Gyrocopter's Rocket Barrage dmg fixed
+Enchantress' Nature Attendants heal fix
+Silencer's Curse of the Silent damage fix
+Rubick's Null field works now
+Rubick's Fade Bolt dmg reduction fix
+Disruptor's Thunder Strike dmg fix
+Kotl's Chakra Magic mana restore fix
+Skywrath's Ancient seal works now
+Skywrath's Mystic Flare dmg fix
+Oracle's Fortune's End works now
+Lich's Dark Ritual now can consume enemy creeps
+Enigma's Malefice works now
+Necrophos' Ghost Shroud works now
+Warlock's Fata Bounds dmg share fixed
+Dazzle's Poison Touch works now
+
+COSTS:
+Beastmaster's Wild Roar cost increased (3 now)
+Tuskar's Walrus Kick cost increased (2 now)
+Vengeful's Magic Missile cost increased (2 now)
+Sniper's Headshot cost increased (2 now)
+Luna's Eclipse cost increased (2 now)
+Gyro's Call down cost increased (3 now)
+Pudge's Dismember cost increased (2 now)
+CK's Phantasm cost increased (3 now)
+Abbadon's Borrowed Time cost increased (3 now)
+Venomancer's Poison Nova cost increased (2 now)
+Nyx's Vendetta cost increased (2 now)
+CM's Freezing Field cost increased (2 now)
+Bane's Fiends Grip cost increased (3 now)
+
+Removed:
+Morphling morph abilities removed
+Lycan's Summon Wolves
+Venomancer's Plague Ward
+Void's Backtrack
+Brood's Spawn Spiderlings
+Shadow Shaman's Mass Serpent Ward
+Dark Seer's Wall of Replica
+
+ADDED:
+Morphling's new adaptive strike added (agi and str versions)
+
+
+
+ДЕСЯТЫЙ ПАТЧЕК
+Durandal periodic damage 130 > 85
+Durandal's cooldown 15 > 45
+Durandal's manacost 200 > 400
+Durandal's burst damage 1300 > 1000
+
+Centaur's Return damage increased
+Axe's Counter Helix damage increased
+Axe's Counter Helix aghanim interaction fixed
+Magnus' Empower splash greatly increased
+Sven's Great Cleave splash greatly increased
+
+
+ОДИНАДЦАТЫЙ ПАТЧЕК:
+ITEMS:
+ALL POTIONS cooldown 60 > 30
+ALL POTIONS have no manacost now
+Leaf buckler is now purchasable
+Fireblend now has cooldown
+Illusions now can't deal damage with fireblend
+
+
+ABILITIES:
+Drow's Marksmanship cost 3 > 4
+Storm's Static Remnant damage increased 650 > 800 
+
+GAME:
+Hero pick time reduced 15 > 10 
+
+
+ДВЕНАДЦАТЫЙ ПАТЧЕК
+ITEMS:
+Midas Sword now gives gold per hit with chance
+Midas Sword active ability now works like a Midas Glove
+
+Ganker Coat now gives 25 to all stats
+Ganker Coat now gives 25% strong magic resist (before any resistance calculation)
+Ganker Coat resistance while active bug fixed
+Ganker coat active ability duration increased 5 > 9
+
+Madness Bashium cost increased +1000
+Madness Bashium atk increased 16 > 50
+Madness Bashium armor increased 7 > 10
+Madness Bashium regen increased 9 > 15
+Madness Bashium lifesteal (inactive) increased 5 > 10
+
+
+COSMETICS:
+Madness Bashium (active) will not show in shop
+Mana and heal potions icons changed
+Combined potion icon changed
+
+PLAYER GIFTS:
+Some playes was gifted with title on hero (from youtube comments)
+
+
+ТРИНАДЦАТЫЙ ПАТЧЕК
+0.9.5 - Born to be mage
+ITEMS:
+NEW ITEM Quibbela is heaven for mages!
+NEW ITEM Manteau of life 
+Heal and mana potion cd decreased 30 > 15
+
+COSMETICS:
+Hero Builds reworked
+
+
+ЧЕТЫРНАДЦАТЫЙ ПАТЧЕК
+Quibbela bug fixed
+Quibbela 3 lvls added
+Quibbela exp per cast decreased 20 30 40 > 10 20 30
+Quibbela exp per lvl decreased 10 15 20 > 5 10 15
+
+
+ABILITIES:
+Enigma's Black hole damage decreased 910 > 350 
+
+QoP's Sonic wave aghanim damage now same as normal 2500 > 1500
+QoP's Sonic Wave manacost increased 610 > 910
+
+Jakiro's Macropyre damage decreased (with aghs too)
+
+COSMETICS:
+Added builds for some unused heroes
+
+
+ПЯТНАДЦАТЫЙ ПАТЧЕК
+0.9.5b
+BUGS:
+Fixed midas sword being refreshable with tinker ulti
+
+ABILITIES:
+Fixed Shadow Demon's Ulti
+
+ITEMS:
+Quibbela exp per cast always 5 now
+Quibbela recipe cost now 1k 2k 3k

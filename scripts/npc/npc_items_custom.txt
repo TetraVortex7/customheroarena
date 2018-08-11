@@ -4315,17 +4315,16 @@
 "item_venom_liquid"
     {
         "ID" "2116"
-        "BaseClass"                     "item_lua"
+        "BaseClass"                     "item_datadriven"
         "ItemPurchasable"               "1"
 		"ItemCost"                      "30000"
-        "ScriptFile"                    "items/item_venom_liquid.lua"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "Model"                         "models/props_gameplay/red_box.vmdl" 
         "Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
         "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
         "AbilityTextureName"            "venom_liquid"
         "ItemQuality"                   "rare"
-		"ItemAliases"                   "liquid; venom; poison"
+		"ItemAliases"                   "gu; poison"
         
         "AbilitySpecial"
         {
@@ -4353,11 +4352,6 @@
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
                 "cap"           "4"
-            }
-            "06"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "rate"          "1"
             }
         }
     }
@@ -7582,8 +7576,8 @@
 		
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityCastPoint"              "0.0"
-        "AbilityCooldown"               "6.0"
-        "AbilityManaCost"               "0"
+        "AbilityCooldown"               "30.0"
+        "AbilityManaCost"               "250"
 
         "SideShop"     "1" 
         "SecretShop"   "0"
@@ -7623,15 +7617,39 @@
             "06"
             {
                 "var_type"      "FIELD_INTEGER"
-                "health"    "3000"
+                "health"    "2000"
             }
-            "07"
-            {
-                "var_type"      "FIELD_FLOAT"
-                "fade_time"    "6"
-            }
+			"07"
+			{
+				"var_type"									"FIELD_FLOAT"
+				"windwalk_duration"							"15.0"
+			}
+			"08"
+			{
+				"var_type"									"FIELD_INTEGER"
+				"windwalk_bonus_movement_speed_percentage"	"20"
+			}
+			"09"
+			{
+				"var_type"									"FIELD_FLOAT"
+				"windwalk_fade_time"						"0.3"
+			}
+			"10"
+			{
+				"var_type"									"FIELD_INTEGER"
+				"windwalk_bonus_damage"						"175"
+			}
         }
-        
+        	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/invis_manteau.lua"
+				"Function"				"item_invis_sword_datadriven_on_spell_start"
+				"WindwalkFadeTime"		"%windwalk_fade_time"
+			}
+		}
 
         "Modifiers"
         {
@@ -7654,7 +7672,50 @@
                 {
                 "MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES" "MODIFIER_STATE_VALUE_ENABLED"
                 }
+				
+				
             }
+			
+			"modifier_item_invis_sword_datadriven_active"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsBuff"			"1"
+				"IsDebuff"			"0"
+				"IsPurgable"		"1"
+				"Duration"			"%windwalk_duration"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%windwalk_bonus_movement_speed_percentage"
+				}
+				
+				"States"
+				{
+					"MODIFIER_STATE_INVISIBLE"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				
+				"OnAbilityExecuted"  //Remove this modifier from the unit, since they should no longer be invis.
+				{
+					"RemoveModifier"
+					{
+						"Target"			"CASTER"
+						"ModifierName"		"modifier_item_invis_sword_datadriven_active"
+					}
+				}
+				
+				//Remove this modifier and deal extra damage to the target.  Note: For parity, the invisibility should be 
+				//removed when the autoattack projectile appears, but there is currently no event that can be used for this.
+				"OnAttackLanded" 
+				{				
+					"RemoveModifier"
+					{
+						"Target"			"CASTER"
+						"ModifierName"		"modifier_item_invis_sword_datadriven_active"
+					}
+				}
+			}
 
         }
     }

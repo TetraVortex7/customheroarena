@@ -2580,6 +2580,7 @@
 			        "RingRadius"                "190"
                 	"ConsideredHero"            "1"
                 	"DisableResistance"			"100"
+					"UnitLabel"				"boss"
 
 			        "vscripts"	"ai/ai_doom_miniboss.lua"
 			              

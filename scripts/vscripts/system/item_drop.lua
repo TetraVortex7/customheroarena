@@ -251,12 +251,10 @@ end
 function DropSkorpion(unit)
 	if unit.disable_drop then return end
 	local point = unit:GetAbsOrigin()
-		if RollPercentage(15) then
 			LaunchItem("item_spellbook_hero_poison",point)
-		end
 
-		if RollPercentage(10) then
-			LaunchItem("item_venom_liquid",point)
+		if RollPercentage(45) then
+			LaunchItem("item_venom_liquid_3",point)
 		end
 end
 

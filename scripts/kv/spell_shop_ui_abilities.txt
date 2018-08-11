@@ -38,6 +38,7 @@
   }
    "invoker" {
   "1"	 "cold_snap_datadriven"
+  "2"	 "alacrity_datadriven"
 
   }
   "rattletrap" {
@@ -115,7 +116,7 @@
   "zuus" {
   "1"    "zuus_arc_lightning"
   "2"    "zuus_lightning_bolt"
-  "3"    "zuus_static_field"
+  "3"    "static_field_datadriven"
   "4"	 "zuus_cloud"
   "5"	 "zuus_thundergods_wrath"
   }
