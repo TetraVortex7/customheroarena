@@ -637,7 +637,7 @@
 		"Level"						"7"
 		"ModelScale" 				".65"
 		"ConsideredHero"			"1"
-		"UnitLabel"			"spirit_bear"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -648,13 +648,13 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"3"			// Physical protection.
+		"ArmorPhysical"				"9"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"40"		// Damage range min.
-		"AttackDamageMax"			"40"		// Damage range max.	
+		"AttackDamageMin"			"120"		// Damage range min.
+		"AttackDamageMax"			"120"		// Damage range max.	
 		"AttackRate"				"1.65"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -681,9 +681,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1500"		// Base health.
-		"StatusHealthRegen"			"5"			// Health regeneration rate.
-		"StatusMana"				"300"		// Base mana.
+		"StatusHealth"				"4500"		// Base health.
+		"StatusHealthRegen"			"15"			// Health regeneration rate.
+		"StatusMana"				"900"		// Base mana.
 		"StatusManaRegen"			"0.5"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -713,7 +713,7 @@
 		"Level"						"7"
 		"ModelScale" 					".72"
 		"ConsideredHero"			"1"
-		"UnitLabel"			"spirit_bear"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -724,13 +724,13 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"4"			// Physical protection.
+		"ArmorPhysical"				"12"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"50"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.	
+		"AttackDamageMin"			"150"		// Damage range min.
+		"AttackDamageMax"			"150"		// Damage range max.	
 		"AttackRate"				"1.55"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -757,9 +757,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2000"		// Base health.
+		"StatusHealth"				"6000"		// Base health.
 		"StatusHealthRegen"			"6"			// Health regeneration rate.
-		"StatusMana"				"300"		// Base mana.
+		"StatusMana"				"900"		// Base mana.
 		"StatusManaRegen"			"0.5"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -789,7 +789,7 @@
 		"Level"						"7"
 		"ModelScale" 					".78"
 		"ConsideredHero"			"1"
-		"UnitLabel"			"spirit_bear"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -805,8 +805,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"60"		// Damage range min.
-		"AttackDamageMax"			"60"		// Damage range max.	
+		"AttackDamageMin"			"180"		// Damage range min.
+		"AttackDamageMax"			"180"		// Damage range max.	
 		"AttackRate"				"1.45"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -833,9 +833,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2500"		// Base health.
-		"StatusHealthRegen"			"10"			// Health regeneration rate.
-		"StatusMana"				"300"			// Base mana.
+		"StatusHealth"				"7500"		// Base health.
+		"StatusHealthRegen"			"30"			// Health regeneration rate.
+		"StatusMana"				"900"			// Base mana.
 		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -865,7 +865,7 @@
 		"Level"						"7"
 		"ModelScale" 					".85"
 		"ConsideredHero"			"1"
-		"UnitLabel"			"spirit_bear"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -878,13 +878,13 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"6"			// Physical protection.
+		"ArmorPhysical"				"21"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"70"		// Damage range min.
-		"AttackDamageMax"			"70"		// Damage range max.	
+		"AttackDamageMin"			"210"		// Damage range min.
+		"AttackDamageMax"			"210"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -911,9 +911,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3000"		// Base health.
-		"StatusHealthRegen"			"15"			// Health regeneration rate.
-		"StatusMana"				"300"		// Base mana.
+		"StatusHealth"				"9000"		// Base health.
+		"StatusHealthRegen"			"45"			// Health regeneration rate.
+		"StatusMana"				"900"		// Base mana.
 		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -943,7 +943,7 @@
 		"Level"						"9"
 		"ModelScale" 					".89"
 		"ConsideredHero"			"1"
-		"UnitLabel"			"spirit_bear"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -956,7 +956,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"7"			// Physical protection.
+		"ArmorPhysical"				"24"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -1021,7 +1021,7 @@
 		"Level"						"12"
 		"ModelScale" 					".95"
 		"ConsideredHero"			"1"
-		"UnitLabel"			"spirit_bear"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -1034,13 +1034,13 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"8"			// Physical protection.
+		"ArmorPhysical"				"27"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"90"		// Damage range min.
-		"AttackDamageMax"			"90"		// Damage range max.	
+		"AttackDamageMin"			"210"		// Damage range min.
+		"AttackDamageMax"			"210"		// Damage range max.	
 		"AttackRate"				"1.15"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -1067,10 +1067,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4000"		// Base health.
-		"StatusHealthRegen"			"25"			// Health regeneration rate.
-		"StatusMana"				"400"		// Base mana.
-		"StatusManaRegen"			"3.0"		// Mana regeneration rate.		 
+		"StatusHealth"				"12000"		// Base health.
+		"StatusHealthRegen"			"75"			// Health regeneration rate.
+		"StatusMana"				"1200"		// Base mana.
+		"StatusManaRegen"			"9.0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -1099,7 +1099,7 @@
 		"Level"						"12"
 		"ModelScale" 					"1.05"
 		"ConsideredHero"			"1"
-		"UnitLabel"			"spirit_bear"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -1112,13 +1112,13 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"9"			// Physical protection.
+		"ArmorPhysical"				"30"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"100"		// Damage range min.
-		"AttackDamageMax"			"100"		// Damage range max.	
+		"AttackDamageMin"			"300"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.	
 		"AttackRate"				"1.05"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -1140,15 +1140,15 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"360"		// Speed.
+		"MovementSpeed"				"390"		// Speed.
 		"MovementTurnRate"			"0.6"		// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4500"		// Base health.
-		"StatusHealthRegen"			"30"			// Health regeneration rate.
-		"StatusMana"				"500"		// Base mana.
-		"StatusManaRegen"			"3.5"		// Mana regeneration rate.		 
+		"StatusHealth"				"13500"		// Base health.
+		"StatusHealthRegen"			"90"			// Health regeneration rate.
+		"StatusMana"				"1500"		// Base mana.
+		"StatusManaRegen"			"12.5"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -2478,7 +2478,7 @@
 			        "Model" "models/heroes/doom/doom.vmdl"
 			        "SoundSet" "Hero_Pudge" 
 			        "GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
-			        "ModelScale" "1.3" 
+			        "ModelScale" "1.3"
 			        "Level" "50" 
 			        "IsAncient" "1"
 			        "IsNeutralUnitType"            "1"
@@ -2581,6 +2581,7 @@
                 	"ConsideredHero"            "1"
                 	"DisableResistance"			"100"
 					"UnitLabel"				"boss"
+					
 
 			        "vscripts"	"ai/ai_doom_miniboss.lua"
 			              

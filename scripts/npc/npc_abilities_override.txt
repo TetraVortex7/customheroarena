@@ -5000,7 +5000,8 @@
 		{
 			"MaxLevel"						"7"
 			"LevelsBetweenUpgrades"			"8"
-			"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
+			"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+			"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
 			// Casting
 			//-------------------------------------------------------------------------------------------------------------
 			"AbilityCastRange"				"600"
@@ -11420,6 +11421,7 @@
 			"LevelsBetweenUpgrades"			"11"
 			"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 			"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+			"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
 	
 			// Casting
 			//-------------------------------------------------------------------------------------------------------------
@@ -19957,7 +19959,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilitySound"					"Hero_Venomancer.Plague_Ward"
-		"MaxLevel"						"10"
+		"MaxLevel"						"7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------

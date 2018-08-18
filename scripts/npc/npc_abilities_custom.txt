@@ -1,6 +1,68 @@
 "DOTAAbilities"
 {
 		//=================================================================================================================
+		// Zeus: Static Field
+		//=================================================================================================================
+	"static_field_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC	| DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"	
+		"AbilityTextureName"			"zuus_static_field"
+		"MaxLevel"						"7"
+		
+		"precache"
+		{
+			"particle"		"particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
+			"soundfile"		"sounds/weapons/hero/zuus/static_field.vsnd"
+		}
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"1200"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_health_pct"			"1 3 5 7 9 11 13"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"static_field_datadriven"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				
+				"OnAbilityExecuted"
+				{
+							"RunScript"
+							{
+								"ScriptFile"	"heroes/hero_zuus/static_field.lua"
+								"Function"		"StaticField"
+								"sound"			"Hero_Zuus.StaticField"
+								"particle"		"particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
+							}
+				}
+			}
+		}
+	}
+		//=================================================================================================================
 		// Queen of Pain: Scream of Pain
 		//=================================================================================================================
 		"queenofpain_scream_of_pain"
@@ -122,16 +184,16 @@
 				}
 			}
 		}
-
+		
+/////////////INVOKERS////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
 "cold_snap_datadriven"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"MaxLevel"						"1"
-	"HotKeyOverride"				"Y"
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"invoker_cold_snap"
 	"MaxLevel"						"7"
@@ -288,6 +350,154 @@
 	}
 }
 
+"alacrity_datadriven"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"MaxLevel"						"7"
+	"AbilityTextureName"			"invoker_alacrity"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+		"particle"		"particles/units/heroes/hero_invoker/invoker_alacrity.vpcf"
+		"particle"		"particles/units/heroes/hero_invoker/invoker_alacrity_buff.vpcf"
+		"particle"		"particles/status_fx/status_effect_alacrity.vpcf"
+	}
+	
+	// Unit Targeting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"650"
+	"AbilityCastPoint"				"0"
+	"AbilityCooldown"				"15"
+	"AbilityManaCost"				"75 100 125 150 175 200 225"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_attack_speed"		"10 25 40 55 70 85 100"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_damage"				"10 25 40 55 70 85 100"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"9"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Invoker.Alacrity"
+			"Target" 		"TARGET"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_alacrity_datadriven"
+			"Target" 		"TARGET"
+			"Duration"		"%duration"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_alacrity_datadriven"
+		{
+			"IsBuff"	"1"
+			"IsHidden"	"1"
+
+			"StatusEffectName" 		"particles/status_fx/status_effect_alacrity.vpcf" 	   
+			"StatusEffectPriority"  "10"
+
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"        "particles/units/heroes/hero_invoker/invoker_alacrity.vpcf"
+					"EffectAttachType"  "follow_overhead"
+					"Target"            "TARGET"
+				}
+
+				"AttachEffect"
+				{
+					"EffectName"        "particles/units/heroes/hero_invoker/invoker_alacrity_buff.vpcf"
+					"EffectAttachType"  "follow_overhead"
+					"Target"            "TARGET"
+				}
+
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_invoker/alacrity.lua"
+					"Function"		"Alacrity"
+					"speed_modifier"	"modifier_alacrity_attack_speed_datadriven"
+					"damage_modifier"	"modifier_alacrity_damage_datadriven"
+				}
+			}
+
+			"OnDestroy"
+			{
+				"RemoveModifier"
+				{
+					"ModifierName"	"modifier_alacrity_damage_datadriven"
+					"Target" 		"TARGET"
+				}
+
+				"RemoveModifier"
+				{
+					"ModifierName"	"modifier_alacrity_attack_speed_datadriven"
+					"Target" 		"TARGET"
+				}
+			}
+		}
+
+		"modifier_alacrity_attack_speed_datadriven"
+		{
+			"IsHidden"	"1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "1"
+			}
+		}
+
+		"modifier_alacrity_damage_datadriven"
+		{
+			"IsHidden"	"1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "1"
+			}
+		}
+	}
+}
+
+/////////////INVOKERS END////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////BOSSES//////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 "boss_hard_skin"
 {
 	// General
@@ -776,7 +986,7 @@
 		}
 	
 	
-	"Modifiers"
+		"Modifiers"
 		{
 			"modifier_fiery_soul_datadriven"
 			{
@@ -843,7 +1053,7 @@
 			}
 		}
 		
-	"Modifiers"
+		"Modifiers"
 		{
 					"modifier_aftershock_datadriven"
 			{
@@ -916,7 +1126,7 @@
 			}
 		}
 	
-	"Modifiers"
+		"Modifiers"
 		{
 			//Static bonus mana which applies to od only
 	
@@ -1075,7 +1285,7 @@
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"20 35 50 75 120 250 350"
+		"AbilityManaCost"				"20 35 50 75 120 240 300"
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1289,16 +1499,13 @@
 	      {
 	        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"   "5.00"
 	        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE" "8.00"
-		    "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE" "MODIFIER_STATE_VALUE_ENABLED"
-		    "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL" "MODIFIER_STATE_VALUE_ENABLED"
-		    "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL" "MODIFIER_STATE_VALUE_ENABLED"
 	      }
 		  		  "States"
 		  {
-		  "MODIFIER_STATE_NO_UNIT_COLLISION" "MODIFIER_STATE_VALUE_ENABLED"
-		  "MODIFIER_STATE_TRUESIGHT_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED"
-		  "MODIFIER_STATE_CANNOT_MISS" "MODIFIER_STATE_VALUE_ENABLED"
-		  "MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES" "MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_STATE_INVULNERABLE"				    "MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_STATE_NO_UNIT_COLLISION" 			"MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_STATE_CANNOT_MISS" 					"MODIFIER_STATE_VALUE_ENABLED"
+		  "MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"   "MODIFIER_STATE_VALUE_ENABLED"
 		  }
 	    }
 	  }
@@ -1328,53 +1535,58 @@
 	
 "phantom_roulette"
 	{
-	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"phantom_roulette"
-	"MaxLevel" "7"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"phantom_roulette"
+		"MaxLevel" "7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
-	"AbilitySpecial"
-	{
-		"01"
+		"AbilitySpecial"
 		{
-			"var_type"		"FIELD_INTEGER"
-			"increase"		"10 15 20 25 30 35 40"
-		}
-		"02"
-		{
-			"var_type"		"FIELD_INTEGER"
-			"dur"		"0.5"
-		}
-	}
-
-	"Modifiers"
-	{
-		"control"
-		{
-			"Passive" "1"
-			"IsHidden" "1"
-	        "ThinkInterval" ".5"
-
-			"OnIntervalThink"
+			"01"
 			{
-			    "RunScript"
-			  {
-				"ScriptFile"  "abilities/phantom/roulette.lua"
-				"Function"    "roulette"
-			  }
+				"var_type"		"FIELD_INTEGER"
+				"increase_min"		"10 15 20 25 30 35 40"
 			}
-		}	
-		"modifier_inc"
-		{
-			"Passive"	"0"
-			"IsHidden" "1"
-			"Duration" "%dur"
-			"Properties"
+			"02"
 			{
-				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"%increase"
+				"var_type"		"FIELD_INTEGER"
+				"increase_max"		"20 30 40 50 60 70 80"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"dur"		"0.5"
 			}
 		}
-	}
+
+		"Modifiers"
+		{
+			"control"
+			{
+				"Passive" "1"
+				"IsHidden" "1"
+				"ThinkInterval" "1.0"
+
+				"OnIntervalThink"
+				{
+					"RunScript"
+				  {
+					"ScriptFile"  "abilities/phantom/roulette.lua"
+					"Function"    "roulette"
+				  }
+				}
+			}	
+			"modifier_inc"
+			{
+				"Passive"	"0"
+				"IsHidden" "1"
+				"Duration" "%dur"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE_PROC"	"%increase"
+				}
+			}
+		}
 	}
 
 "boss_ability_loh"
@@ -2106,48 +2318,6 @@
 		}
 	}
 
-"spectre_dispersion_custom"
-	{
-		"BaseClass"						"ability_lua"
-		"ScriptFile"					"heroes/hero_spectre/dispersion.lua"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellImmunityType"         	"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"AbilityTextureName"			"spectre_dispersion"
-		"AbilityCastRange"				"1000"
-		"MaxLevel"						"7"
-		"LevelsBetweenUpgrades"			"3"
-		
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"prc"					"8 10 13 16 17 18 20"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"c_prc"					"3 4 5 6 7 8 10"
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"reduce"				"15"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"min_range"					"300"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"max_range"				"1000"
-			}
-		}
-	}
-
 "storm_spirit_overload_c"
 	{
 		"BaseClass"						"ability_lua"
@@ -2698,7 +2868,7 @@
 					"move_slow"				"15 17 18 19 26 33 40"
 				}
 			}
-		}
+	}
 
 "monkey_king_jingu_mastery_custom"
 	{

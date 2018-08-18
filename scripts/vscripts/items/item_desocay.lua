@@ -41,10 +41,9 @@ function modifier_desocay_passive:OnAttackLanded( params )
 		local caster = self:GetCaster()
 		local target = params.target
 
-		if caster == params.attacker and not target:IsMagicImmune() and caster:IsRealHero() then
+		if caster == params.attacker and not target:IsMagicImmune() and not caster:IsIllusion() then
 			local ability = self:GetAbility()
 			local max_cap = ability:GetSpecialValueFor("max_cap")
-			local name = target:GetUnitName()
 
 			target:EmitSound("DOTA_Item.Desolator")
 			local desolate_particle = ParticleManager:CreateParticle("particles/econ/items/shadow_fiend/sf_desolation/sf_base_attack_desolation_explode.vpcf", PATTACH_ABSORIGIN_FOLLOW, target)	

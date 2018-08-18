@@ -1,5 +1,5 @@
 if item_lightning_rod == nil then item_lightning_rod = class({}) end
-
+require('libraries/IsBoss')
 LinkLuaModifier("modifier_lightning_rod_passive","items/item_lightning_rod.lua",LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_stun","libraries/modifiers/modifier_stun.lua",LUA_MODIFIER_MOTION_NONE)
 
@@ -39,10 +39,15 @@ end
 
 function modifier_lightning_rod_passive:OnAttackLanded( params )
 	local caster = self:GetCaster()
+	if caster:IsIllusion() then return end
 	if params.attacker == caster then 
 		self.proc = false
 		local ability = self:GetAbility()
-		if not caster:IsRealHero() then self.chance = self.chance / 2 self.jump_count = self.jump_count / 2 end
+		if IsSummoned(caster) then 
+			self.chance = self.chance / 2 
+			self.jump_count = self.jump_count / 2 
+		end
+		
 		if RollPercentage(self.chance) then
 			self.proc = true
 			if self:IsActiveOrb() then

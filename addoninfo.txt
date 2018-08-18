@@ -1,13 +1,15 @@
 "AddonInfo"
 {
-  "TeamCount" "2"
   "maps"  "zxc"
+  "PenaltiesEnabled"		"1"
+  "CheckAFKPlayers"	"1"
   
   "zxc"
   {
     "MaxPlayers"    "10"
-	"IsPlayable"  "1"
+	"TeamCount"		"2"
   }
+  
      "Default_Keys"
 	{
 		"01"

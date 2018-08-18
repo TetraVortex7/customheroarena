@@ -2,13 +2,21 @@
 	Date: March 24, 2016 > 11.08.2018
 	Checks if the event was called by an ability and if so deals the health-based damage]]
 function StaticField(keys)
-	if not keys.caster:PassivesDisabled() then
+	if not keys.caster:PassivesDisabled() and keys.event_ability:GetCooldown(keys.event_ability:GetLevel()-1) > 1 and not keys.event_ability:IsItem() then
 		local caster = keys.caster
 		local ability = keys.ability
 		local radius = ability:GetLevelSpecialValueFor("radius", (ability:GetLevel() -1))
 		local damage_health_pct = ability:GetLevelSpecialValueFor("damage_health_pct", (ability:GetLevel() -1))/100
 			-- Finds every unit in the radius
-			local units = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, radius, ability:GetAbilityTargetTeam(), ability:GetAbilityTargetType(), DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+			local units = FindUnitsInRadius(caster:GetTeamNumber(), 
+											caster:GetAbsOrigin(), 
+											nil, 
+											radius, 
+											DOTA_UNIT_TARGET_TEAM_ENEMY, 
+											DOTA_UNIT_TARGET_BASIC, 
+											DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS, 
+											FIND_ANY_ORDER, 
+											false)
 			DeepPrintTable(units)
 			for i,unit in ipairs(units) do
 				-- Attaches the particle

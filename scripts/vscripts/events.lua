@@ -94,10 +94,10 @@ function GameMode:OnItemPickedUp(keys)
   DebugPrint( '[BAREBONES] OnItemPickedUp' )
   DebugPrintTable(keys)
 
-  local heroEntity = EntIndexToHScript(keys.HeroEntityIndex)
+--[[  local heroEntity = EntIndexToHScript(keys.HeroEntityIndex)
   local itemEntity = EntIndexToHScript(keys.ItemEntityIndex)
   local player = PlayerResource:GetPlayer(keys.PlayerID)
-  local itemname = keys.itemname
+  local itemname = keys.itemname]]
 end
 
 -- A player has reconnected to the game.  This function can be used to repaint Player-based particles or change

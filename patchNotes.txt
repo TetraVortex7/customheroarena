@@ -1,15 +1,17 @@
-0.9.7e
+0.9.7e ALACRITY
 ABILITIES:
 Drow's Marksmanship and Doom Miniboss bug fixed
 Venomancer's Poison Sting cost 3 > 1
 Silencer's Glaives of Wisdom manacost reduced 350 > 300
 NEW ABILITY: Alacrity (See Invoker)
-RENEWED Zuus' Static Field, now you need spend mana and have cooldown to trigger it
+RENEWED Zuus' Static Field, now you need spend mana to trigger it
+Zeus' Static Field doesn't work on bosses
 Necrophos' Reaper Skythe now can't be usable on bosses
---RENEWED Lucky Chance (See PA)
 
 ITEMS:
---Gu reworked and has 5 lvls
+Gu reworked
+Bear now can use Desocay, Lightning Bar
+Lightning Bar can't be used by illusions now
 
 BOSSES:
 Vescor (AbilityDrop) now drops with 100% chance
@@ -58,7 +60,7 @@ Fountain now properly gives immunity to all damage
 OPEN:
 
 --Tank class added to itembuilds
-
+--RENEWED Lucky Chance (See PA)
 
 ITEMS:
 --Manteau of life

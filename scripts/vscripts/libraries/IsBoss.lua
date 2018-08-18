@@ -1,6 +1,12 @@
 function IsBoss(unit)
-
 	if unit:GetUnitLabel() == "boss" then 
+		return true 
+	end
+return false
+end
+
+function IsSummoned(unit)
+	if unit:GetUnitLabel() == "summon" then 
 		return true 
 	end
 return false

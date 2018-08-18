@@ -4312,49 +4312,150 @@
             }
         }
     }
+	
 "item_venom_liquid"
-    {
-        "ID" "2116"
-        "BaseClass"                     "item_datadriven"
-        "ItemPurchasable"               "1"
-		"ItemCost"                      "30000"
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "Model"                         "models/props_gameplay/red_box.vmdl" 
-        "Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
-        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-        "AbilityTextureName"            "venom_liquid"
-        "ItemQuality"                   "rare"
-		"ItemAliases"                   "gu; poison"
-        
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "dps"           "20"
-            }
-            "02"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "duration"      "6"
-            }
-            "03"
-            {
-                "var_type"  "FIELD_FLOAT"   //FIELD_FLOAT or FIELD_INTEGER
-                "hpd"           "1.4" //max health prc damage
-            }
-            "04"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "slow"          "20"
-            }
-            "05"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "cap"           "4"
-            }
-        }
-    }
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"2116"  //Valve's version of this item uses the ID "181".
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"Model"							"models/props_gameplay/red_box.vmdl" 
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"gu"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"350"
+	"ItemShopTags"					"hard_to_tag"
+	"ItemQuality"					"secret_shop"
+	"SecretShop"					"1"	
+	"SideShop"						"1"
+
+		
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"poison_movement_speed_melee"		"-15"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"poison_movement_speed_ranged"		"-6"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"poison_duration"					"5.0"
+		}
+		"04"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"poison_damage_per_second"			"20.0"
+		}
+		"05"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"poison_damage_interval"			"1.0"
+		}
+		"06"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"max_stacks"		"3"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_orb_of_venom_datadriven"
+		{
+			"Passive"				"1"
+			"IsHidden"				"1"
+			"Attributes" 			"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Orb"
+			{
+				"Priority"				"DOTA_ORB_PRIORITY_ITEM"
+				"Label"					"DOTA_ORB_LABEL_SKADI"  //This does not currently seem to have an effect.  "Label" may not be the right key.
+				"CastAttack"			"0"
+			}
+
+			"OnOrbImpact"
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"items/item_gu.lua"
+					"Function"				"modifier_item_orb_of_venom_datadriven_on_orb_impact"
+				}
+			}
+		}
+		"modifier_item_orb_of_venom_datadriven_poison_attack_melee"
+		{
+			"Duration"				"%poison_duration"
+			"Passive"				"0"
+			"IsHidden"				"0"
+			"IsBuff"				"0"
+			"IsDebuff"				"1"
+			"IsPurgable"			"1"
+			"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"EffectName"			"particles/items2_fx/orb_of_venom.vpcf"
+			"EffectAttachType"		"follow_origin"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%poison_movement_speed_melee"
+			}
+			
+			"ThinkInterval" 		"%poison_damage_interval"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"					"items/item_gu.lua"
+					"Function"						"modifier_item_orb_of_venom_datadriven_poison_attack_on_interval_think"
+					"PoisonDamagePerSecond"			"%poison_damage_per_second"
+					"PoisonDamageInterval"			"%poison_damage_interval"
+				}
+			}
+		}
+		"modifier_item_orb_of_venom_datadriven_poison_attack_ranged"
+		{
+			"Duration"				"%poison_duration"
+			"Passive"				"0"
+			"IsHidden"				"0"
+			"IsBuff"				"0"
+			"IsDebuff"				"1"
+			"IsPurgable"			"1"
+			"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"EffectName"			"particles/items2_fx/orb_of_venom.vpcf"
+			"EffectAttachType"		"follow_origin"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%poison_movement_speed_ranged"
+			}
+			
+			"ThinkInterval" 		"%poison_damage_interval"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"					"items/item_gu.lua"
+					"Function"						"modifier_item_orb_of_venom_datadriven_poison_attack_on_interval_think"
+					"PoisonDamagePerSecond"			"%poison_damage_per_second"
+					"PoisonDamageInterval"			"%poison_damage_interval"
+				}
+			}
+		}
+	}
+}
+
 	
 "item_treatment_greaves"
     {

@@ -9,15 +9,19 @@
         "DOTA_GoodGuys"                 "Not a bad Guys"
         "DOTA_BadGuys"                  "Bad Guys"
 		
-            "DOTA_Item_Build_Ganker"    "Ganker"
-            "DOTA_Item_Build_Carry"     "Carry"
-            "DOTA_Item_Build_Mage"      "Mage"
+            "#DOTA_Item_Build_Ganker"    "Ganker"
+            "#DOTA_Item_Build_Carry"     "Carry"
+            "#DOTA_Item_Build_Mage"      "Mage"
 			"#DOTA_Item_Build_Tank"     "Tank"
-			"DOTA_Item_Build_Potions"	"Potions"
-            "DOTA_Item_Build_Ascention" "LEGENDARY"
+			"#DOTA_Item_Build_Potions"	"Potions"
+            "#DOTA_Item_Build_Ascention" "LEGENDARY"
 			
             "spell_shop" "Spell Shop"
             "spell_shop_text" "Press this button to buy abilities."
+			
+		"npc_dota_lone_druid_bear5" 	"Spirit Bear"
+		"npc_dota_lone_druid_bear6" 	"Spirit Bear"
+		"npc_dota_lone_druid_bear7" 	"Spirit Bear"
         
         "Ursa_level_1"                              "Zeta Bear"
         "Ursa_level_5"                              "Epsilon Bear"
@@ -63,6 +67,14 @@
 			"DOTA_Tooltip_ability_alacrity_datadriven_bonus_damage"     	"DAMAGE:"
             "DOTA_Tooltip_ability_alacrity_datadriven_Lore"    "Gaster's Mandate of Impetuous Strife."	
 			
+		//Static field
+
+            "DOTA_Tooltip_ability_static_field_datadriven"                     "Static field"
+            "DOTA_Tooltip_ability_static_field_datadriven_Description"         "Zeus shocks all nearby enemy units whenever he casts a spell, causing damage proportional to their current health."
+            "DOTA_Tooltip_ability_static_field_datadriven_radius"  			   "RADIUS:"
+			"DOTA_Tooltip_ability_static_field_datadriven_damage_health_pct"   "%DMG:"
+            "DOTA_Tooltip_ability_static_field_datadriven_Lore"    			   "The air crackles with static when the Thunder God walks the world."	
+			
 		//Ядовитое оружие
 
             "DOTA_Tooltip_ability_hero_poison"                     "Vescor"
@@ -82,9 +94,9 @@
         //Рулетка
 
             "DOTA_Tooltip_ability_phantom_roulette"                     "Lucky chance"
-            "DOTA_Tooltip_ability_phantom_roulette_Description"         "Randomly increases or decreases attack damage 4 times per second. Goes well with critical strikes."
-            "DOTA_Tooltip_ability_phantom_roulette_reduce"                 "%DECREASE:"
-            "DOTA_Tooltip_ability_phantom_roulette_increase"                 "%INCREASE:"
+            "DOTA_Tooltip_ability_phantom_roulette_Description"         "Randomly increases attack damage 2 times per second. Goes well with critical strikes."
+            "DOTA_Tooltip_ability_phantom_roulette_increase_min"                 "%INC MIN:"
+			"DOTA_Tooltip_ability_phantom_roulette_increase_max"                 "%INC MAX:"
             "DOTA_Tooltip_ability_phantom_roulette_Lore"    "Take your lucky moment on impending chaos!"
 
         //Реарм
@@ -1136,15 +1148,12 @@
         //Ядовитые Когти
 
             "DOTA_Tooltip_ability_item_venom_liquid"                 "Gu"
-            "DOTA_Tooltip_ability_item_venom_liquid_Description"     "<h1>Passive: Pyrexia</h1> Every attack infects enemy, dealing %dps% + %hpd%% max health pure damage with interval %rate% sec, decrease target movement speed by %slow%% on each stack.<br>Max stack count: %cap%"
+            "DOTA_Tooltip_ability_item_venom_liquid_Description"     "<h1>Passive: Pyrexia</h1> Every attack infects enemy and decreases target movement speed on each stack."
             "DOTA_Tooltip_ability_item_venom_liquid_Lore"            "At every opportunity better will be pour poison to enemy wounds."
-            "DOTA_Tooltip_ability_item_venom_liquid_dps"             "DAMAGE PER STACK:"
-            "DOTA_Tooltip_ability_item_venom_liquid_duration"        "DURATION:"
-            "DOTA_Tooltip_ability_item_venom_liquid_hpd"             "%MAX HEALTH DAMAGE:"
-            "DOTA_Tooltip_ability_item_venom_liquid_cap"             "MAX STACKS:"
-
-                "DOTA_Tooltip_modifier_venome_gale_venome"                 "Venome"
-                "DOTA_Tooltip_modifier_venome_gale_venome_Description"     "Every second take pure damage."
+            "DOTA_Tooltip_ability_item_venom_liquid_poison_movement_speed_melee"         "%SLOW MELEE:"
+            "DOTA_Tooltip_ability_item_venom_liquid_poison_movement_speed_ranged"        "%SLOW RANGED:"
+            "DOTA_Tooltip_ability_item_venom_liquid_poison_damage_per_second"             "DPS:"
+            "DOTA_Tooltip_ability_item_venom_liquid_max_stacks"             "MAX STACK:"
 
         //Кость титана
 
