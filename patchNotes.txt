@@ -1,3 +1,13 @@
+0.9.7f 
+Swashbuckle removed due abuses
+Drow's Marksmanship will not kill summons
+Drow's Marksmanship can kill creeps with same lvl or below
+
+GAME:
+Attempt to hide leavers
+
+
+
 0.9.7e ALACRITY
 ABILITIES:
 Drow's Marksmanship and Doom Miniboss bug fixed
