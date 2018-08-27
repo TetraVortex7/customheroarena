@@ -58,18 +58,18 @@ function modifier_greater_lightning_passive:OnAttackLanded( params )
 	local caster = self:GetCaster()
 	if params.attacker == caster then
 		self.succes = false
-		if not caster:IsRealHero() then self.chance = self.chance / 2 self.jump_count = self.jump_count / 2 end
+		if caster:IsIllusion() then return end
 		if RollPercentage(self.chance) then
 			self.succes = true
 			if self:IsActiveOrb() then
-				print("Start Lightning")
+				--print("Start Lightning")
 				caster:CreateLightning(ability, 
 					self.lightning_damage, 
 					self.lightning_range, 
 					self.jump_count,
 					DAMAGE_TYPE_MAGICAL,
 					params.target)
-				print("Damage = "..self.lightning_damage.." | Range = "..self.lightning_range.." | Jumps count = "..self.jump_count)
+				--print("Damage = "..self.lightning_damage.." | Range = "..self.lightning_range.." | Jumps count = "..self.jump_count)
 			end
 		end
 	end

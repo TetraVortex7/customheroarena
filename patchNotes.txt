@@ -1,3 +1,11 @@
+0.9.7d 
+Marksmanship will not kill summons now
+
+GAME:
+If player leaves game, hero will be hidden (allowed to control when connects)
+
+
+
 0.9.7e ALACRITY
 ABILITIES:
 Drow's Marksmanship and Doom Miniboss bug fixed

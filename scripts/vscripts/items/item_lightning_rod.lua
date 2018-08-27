@@ -43,10 +43,6 @@ function modifier_lightning_rod_passive:OnAttackLanded( params )
 	if params.attacker == caster then 
 		self.proc = false
 		local ability = self:GetAbility()
-		if IsSummoned(caster) then 
-			self.chance = self.chance / 2 
-			self.jump_count = self.jump_count / 2 
-		end
 		
 		if RollPercentage(self.chance) then
 			self.proc = true

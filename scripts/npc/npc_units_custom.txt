@@ -11,7 +11,7 @@
 		"Level"						"1"
 		"ModelScale" 				"0.8"
 		"SelectionGroup"			"Venomancer_Wards"
-		"UnitLabel"			"plaguewards"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -89,7 +89,7 @@
 		"Level"						"1"
 		"ModelScale" 				"0.8"
 		"SelectionGroup"			"Venomancer_Wards"
-		"UnitLabel"			"plaguewards"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -167,7 +167,7 @@
 		"Level"						"1"
 		"ModelScale" 				"0.8"
 		"SelectionGroup"			"Venomancer_Wards"
-		"UnitLabel"			"plaguewards"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -245,7 +245,7 @@
 		"Level"						"1"
 		"ModelScale" 				"0.8"
 		"SelectionGroup"			"Venomancer_Wards"
-		"UnitLabel"			"plaguewards"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -323,7 +323,7 @@
 		"Level"						"1"
 		"ModelScale" 				"0.8"
 		"SelectionGroup"			"Venomancer_Wards"
-		"UnitLabel"			"plaguewards"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -401,7 +401,7 @@
 		"Level"						"1"
 		"ModelScale" 				"0.8"
 		"SelectionGroup"			"Venomancer_Wards"
-		"UnitLabel"			"plaguewards"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -479,7 +479,7 @@
 		"Level"						"1"
 		"ModelScale" 				"0.8"
 		"SelectionGroup"			"Venomancer_Wards"
-		"UnitLabel"			"plaguewards"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -557,7 +557,7 @@
 		"Level"						"1"
 		"ModelScale" 				"0.8"
 		"SelectionGroup"			"Venomancer_Wards"
-		"UnitLabel"			"plaguewards"
+		"UnitLabel"			"summon"
 
 		// Abilities
 		//----------------------------------------------------------------
