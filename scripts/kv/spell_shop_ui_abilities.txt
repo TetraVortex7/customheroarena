@@ -626,10 +626,9 @@
   "4"    "terrorblade_sunder"
   }
   "pangolier" {
-  "1"    "pangolier_swashbuckle"
-  "2"    "pangolier_shield_crash"
-  "3"    "pangolier_heartpiercer"
-  "4"    "pangolier_gyroshell"
+  "1"    "pangolier_shield_crash"
+  "2"    "pangolier_heartpiercer"
+  "3"    "pangolier_gyroshell"
   }
   "dark_willow" {
   "1"    "dark_willow_bramble_maze"
