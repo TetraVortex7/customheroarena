@@ -54,13 +54,6 @@ function modifier_gauntlet_of_madness_passive:GetModifierAttackSpeedBonus_Consta
 	return self:GetAbility():GetSpecialValueFor("atk")
 end
 
-function modifier_gauntlet_of_madness_passive:GetModifierOrbPriority(  )
-	if self.activated == false then
-		return DOTA_ORB_PRIORITY_ITEM
-	end
-	return DOTA_ORB_PRIORITY_FALSE
-end
-
 function modifier_gauntlet_of_madness_passive:OnCreated(  )
 	if IsServer() then
 		self.activated = false
@@ -137,9 +130,6 @@ end
 
 if modifier_gauntlet_of_madness_active == nil then modifier_gauntlet_of_madness_active = class({}) end
 
-function modifier_gauntlet_of_madness_active:GetModifierOrbPriority(  )
-	return DOTA_ORB_PRIORITY_ITEM
-end
 
 function modifier_gauntlet_of_madness_active:OnCreated(  )
 	local ability = self:GetAbility()
@@ -234,10 +224,6 @@ end
 
 function modifier_gauntlet_of_madness_active:GetModifierBonusStats_Strength(  )
 	return self.str
-end
-
-function modifier_gauntlet_of_madness_active:GetModifierOrbPriority(  )
-	return DOTA_ORB_PRIORITY_ITEM
 end
 
 function modifier_gauntlet_of_madness_active:OnAttackLanded( params )

@@ -4,9 +4,9 @@ function item_rune_gold:OnSpellStart(  )
 	local caster = self:GetCaster()
 	if not caster:HasItem("item_bottle_small") then
 		bounty_gold_bonus_table = {
-			[item_hand_of_midas_custom] = 125,
-			[item_hand_of_midas_custom_two] = 350,
-			[item_hand_of_midas_custom_two_item_hand_of_midas_custom] = 500	
+			[item_hand_of_midas_custom] = 150,
+			[item_hand_of_midas_custom_two] = 300,
+			[item_hand_of_midas_custom_two_item_hand_of_midas_custom] = 450	
 		}
 		local gold = self:GetSpecialValueFor("gold")
 		local gpm = self:GetSpecialValueFor("gpm")

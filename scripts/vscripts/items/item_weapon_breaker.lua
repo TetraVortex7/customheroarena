@@ -38,12 +38,16 @@ function modifier_weapon_breaker_passive:OnAttackLanded( params )
 		if caster:IsRealHero() then
 			if caster:GetAttackCapability() == DOTA_UNIT_CAP_RANGED_ATTACK then chance = ability:GetSpecialValueFor("chance_ranged") else chance = ability:GetSpecialValueFor("chance") end
 			if caster:GetAttacksPerSecond() > 2.5 then chance = chance * 0.5 end
+			if caster:GetAttacksPerSecond() > 3 then chance = chance * 0.45 end
+			if caster:GetAttacksPerSecond() > 3.5 then chance = chance * 0.4 end
 			if RollPercentage(chance) then
 				params.target:AddNewModifier(caster,ability,"modifier_generic_disarm",{duration = self.duration})
 			end
 		else
 			if caster:GetAttackCapability() == DOTA_UNIT_CAP_RANGED_ATTACK then chance = ability:GetSpecialValueFor("chance_ranged") else chance = ability:GetSpecialValueFor("chance") end
 			if caster:GetAttacksPerSecond() > 2.5 then chance = chance * 0.5 end
+			if caster:GetAttacksPerSecond() > 3 then chance = chance * 0.45 end
+			if caster:GetAttacksPerSecond() > 3.5 then chance = chance * 0.4 end
 			if RollPercentage(chance/10) then
 				caster:SetHealth(caster:GetHealth() * 0.60)
 				params.target:AddNewModifier(caster,ability,"modifier_generic_disarm",{duration = self.duration})

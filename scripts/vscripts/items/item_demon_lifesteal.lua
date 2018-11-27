@@ -115,10 +115,6 @@ function modifier_demon_lifesteal_aura:GetModifierConstantHealthRegen(  )
 	return self.reg
 end
 
-function modifier_demon_lifesteal_aura:GetModifierOrbPriority(  )
-	return DOTA_ORB_PRIORITY_ITEM
-end
-
 function modifier_demon_lifesteal_aura:OnAttackLanded( params )
 	local damage = params.damage
 	local target = params.target

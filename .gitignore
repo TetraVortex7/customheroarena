@@ -54,3 +54,8 @@ materials/props_gameplay/rock_001_normal_psd_427a9069.vtex_c
 tools_thumbnail_cache.bin
 *.vxml_c
 *.bin
+scripts/vscripts/abilities/spider/РќРѕРІС‹Р№ С‚РµРєСЃС‚РѕРІС‹Р№ РґРѕРєСѓРјРµРЅС‚.txt
+scripts/vscripts/abilities/sven/РќРѕРІС‹Р№ С‚РµРєСЃС‚РѕРІС‹Р№ РґРѕРєСѓРјРµРЅС‚.txt
+scripts/vscripts/abilities/tiny/РќРѕРІС‹Р№ С‚РµРєСЃС‚РѕРІС‹Р№ РґРѕРєСѓРјРµРЅС‚.txt
+scripts/vscripts/events.lua
+scripts/vscripts/heroes/hero_troll_warlord/berserkers_rage_c.lua

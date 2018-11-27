@@ -1,5 +1,9 @@
 modifier_hide_lua = class({})
 
+function modifier_hide_lua:IsPurgable()
+	return false
+end
+
 function modifier_hide_lua:IsHidden()
 	return true
 end
@@ -34,6 +38,3 @@ end
 function modifier_hide_lua:GetDisableHealing(params)
 	return 1
 end
-
-
-

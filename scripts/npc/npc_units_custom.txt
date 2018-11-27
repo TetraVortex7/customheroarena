@@ -641,11 +641,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"bear_empty1"
-		"Ability2"					"bear_empty2"
-		"Ability3"					"lone_druid_savage_roar_bear"
-		"Ability4"					""
-
+		"Ability1"					"bear_empty1"			// Ability 1
+		"Ability2"					"bear_empty2"			// Ability 2
+		"Ability3"					"lone_druid_savage_roar_bear"			// Ability 3
+		"Ability4"					"lone_druid_spirit_bear_defender"	// Ability 4
+		"Ability5"					"generic_hidden"			// Ability 5
+		"Ability6"					"generic_hidden"			// Ability 6
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"9"			// Physical protection.
@@ -717,10 +718,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"lone_druid_spirit_bear_return"
-		"Ability2"					"bear_empty2"
-		"Ability3"					"lone_druid_savage_roar_bear"
-		"Ability4"					""
+		"Ability1"					"lone_druid_spirit_bear_return"			// Ability 1
+		"Ability2"					"bear_empty2"			// Ability 2
+		"Ability3"					"lone_druid_savage_roar_bear"			// Ability 3
+		"Ability4"					"lone_druid_spirit_bear_defender"	// Ability 4
+		"Ability5"					"generic_hidden"			// Ability 5
+		"Ability6"					"generic_hidden"			// Ability 6
 
 		// Armor
 		//----------------------------------------------------------------
@@ -796,8 +799,9 @@
 		"Ability1"					"lone_druid_spirit_bear_return"			// Ability 1
 		"Ability2"					"lone_druid_spirit_bear_entangle"			// Ability 2
 		"Ability3"					"lone_druid_savage_roar_bear"			// Ability 3
-		"Ability4"					""			// Ability 4
-
+		"Ability4"					"lone_druid_spirit_bear_defender"	// Ability 4
+		"Ability5"					"generic_hidden"			// Ability 5
+		"Ability6"					"generic_hidden"			// Ability 6
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"5"			// Physical protection.
@@ -872,9 +876,10 @@
 		"Ability1"					"lone_druid_spirit_bear_return"			// Ability 1
 		"Ability2"					"lone_druid_spirit_bear_entangle"			// Ability 2
 		"Ability3"					"lone_druid_savage_roar_bear"			// Ability 3
-		"Ability4"					"generic_hidden"
-		"Ability5"					"generic_hidden"
-		"Ability6"					"lone_druid_spirit_bear_demolish"			// Ability 6
+		"Ability4"					"lone_druid_spirit_bear_defender"	// Ability 4
+		"Ability5"					"lone_druid_spirit_bear_demolish" // Ability 5
+		"Ability6"					"generic_hidden"			// Ability 6
+
 
 		// Armor
 		//----------------------------------------------------------------
@@ -950,9 +955,10 @@
 		"Ability1"					"lone_druid_spirit_bear_return"			// Ability 1
 		"Ability2"					"lone_druid_spirit_bear_entangle"			// Ability 2
 		"Ability3"					"lone_druid_savage_roar_bear"			// Ability 3
-		"Ability4"					"generic_hidden"
-		"Ability5"					"generic_hidden"
-		"Ability6"					"lone_druid_spirit_bear_demolish"			// Ability 6
+		"Ability4"					"lone_druid_spirit_bear_defender"	// Ability 4
+		"Ability5"					"lone_druid_spirit_bear_demolish" // Ability 5
+		"Ability6"					"generic_hidden"			// Ability 6
+
 
 		// Armor
 		//----------------------------------------------------------------
@@ -1028,9 +1034,10 @@
 		"Ability1"					"lone_druid_spirit_bear_return"			// Ability 1
 		"Ability2"					"lone_druid_spirit_bear_entangle"			// Ability 2
 		"Ability3"					"lone_druid_savage_roar_bear"			// Ability 3
-		"Ability4"					"generic_hidden"
-		"Ability5"					"generic_hidden"
-		"Ability6"					"lone_druid_spirit_bear_demolish"			// Ability 6
+		"Ability4"					"lone_druid_spirit_bear_defender"	// Ability 4
+		"Ability5"					"lone_druid_spirit_bear_demolish" // Ability 5
+		"Ability6"					"generic_hidden"			// Ability 6
+
 
 		// Armor
 		//----------------------------------------------------------------
@@ -1106,9 +1113,10 @@
 		"Ability1"					"lone_druid_spirit_bear_return"			// Ability 1
 		"Ability2"					"lone_druid_spirit_bear_entangle"			// Ability 2
 		"Ability3"					"lone_druid_savage_roar_bear"			// Ability 3
-		"Ability4"					"generic_hidden"
-		"Ability5"					"generic_hidden"
-		"Ability6"					"lone_druid_spirit_bear_demolish"			// Ability 6
+		"Ability4"					"lone_druid_spirit_bear_defender"	// Ability 4
+		"Ability5"					"lone_druid_spirit_bear_demolish" // Ability 5
+		"Ability6"					"generic_hidden"			// Ability 6
+
 
 		// Armor
 		//----------------------------------------------------------------
@@ -1302,7 +1310,7 @@
 					"Ability8" "" 
 		
 					"ArmorPhysical" "1" 
-					"MagicalResistance" "25" 
+					"MagicalResistance" "65" 
 					
 					"UseNeutralCreepBehavior"    "1" 	
 					"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1325,7 +1333,7 @@
 					"MovementTurnRate" "0.8" 
 				
 					"StatusHealth" "460" 
-					"StatusHealthRegen" "4.5" 
+					"StatusHealthRegen" "9" 
 					"StatusMana" "200" 
 					"StatusManaRegen" "20" 
 		
@@ -1387,8 +1395,8 @@
 							"Ability7" "" 
 							"Ability8" "" 
 				
-							"ArmorPhysical" "46" 
-							"MagicalResistance" "25" 
+							"ArmorPhysical" "86" 
+							"MagicalResistance" "65" 
 							
 							"UseNeutralCreepBehavior"    "1" 	
 							"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1407,11 +1415,11 @@
 							"BountyGoldMax" "82" 
 							 
 							"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-							"MovementSpeed" "320" 
+							"MovementSpeed" "420" 
 							"MovementTurnRate" "0.8" 
 						
 							"StatusHealth" "1860" 
-							"StatusHealthRegen" "35" 
+							"StatusHealthRegen" "65" 
 							"StatusMana" "250" 
 							"StatusManaRegen" "25" 
 							 
@@ -1453,7 +1461,7 @@
 						"SoundSet" "Hero_Pudge" 
 						"GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
 						"ModelScale" "1.35" 
-						"Level" "25" 
+						"Level" "50" 
 						"IsNeutralUnitType"            "1"
 						
 						"AbilityLayout"				"4"
@@ -1467,7 +1475,7 @@
 						"Ability8" "" 
 			
 						"ArmorPhysical" "4" 
-						"MagicalResistance" "25" 
+						"MagicalResistance" "65" 
 						
 						"UseNeutralCreepBehavior"    "1" 	
 						"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1486,11 +1494,11 @@
 						"BountyGoldMax" "48" 
 						 
 						"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-						"MovementSpeed" "320" 
+						"MovementSpeed" "420" 
 						"MovementTurnRate" "0.8" 
 					
 						"StatusHealth" "690" 
-						"StatusHealthRegen" "9" 
+						"StatusHealthRegen" "18" 
 						"StatusMana" "250" 
 						"StatusManaRegen" "25" 
 						 
@@ -1529,7 +1537,7 @@
 						"SoundSet" "Hero_Pudge" 
 						"GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
 						"ModelScale" "1.9" 
-						"Level" "75" 
+						"Level" "50" 
 						"HealthBarOffset"           "310"
 						"IsNeutralUnitType"            "1"
 						"RingRadius"                "110"
@@ -1544,8 +1552,8 @@
 						"Ability7" "" 
 						"Ability8" "" 
 			
-						"ArmorPhysical" "59" 
-						"MagicalResistance" "25" 
+						"ArmorPhysical" "79" 
+						"MagicalResistance" "65" 
 						
 						"UseNeutralCreepBehavior"    "1" 	
 						"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1564,11 +1572,11 @@
 						"BountyGoldMax" "93" 
 						 
 						"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-						"MovementSpeed" "320" 
+						"MovementSpeed" "420" 
 						"MovementTurnRate" "0.8" 
 					
 						"StatusHealth" "3150" 
-						"StatusHealthRegen" "45" 
+						"StatusHealthRegen" "65" 
 						"StatusMana" "250" 
 						"StatusManaRegen" "25" 
 						 
@@ -1625,18 +1633,18 @@
 		
 						"vscripts"	"ai/ai_slark_miniboss.lua"
 					
-					"AbilityLayout"				"4"
+					"AbilityLayout"				"7"
 					"Ability1" "creeps_slark_ability_shield" 
 					"Ability2" "enchantress_untouchable" 
 					"Ability3" "omniknight_degen_aura" 
 					"Ability4" "necronomicon_warrior_sight" 
-					"Ability5" "" 
+					"Ability5" "tidehunter_kraken_shell" 
 					"Ability6" "" 
 					"Ability7" "" 
 					"Ability8" "" 
 		
-					"ArmorPhysical" "46" 
-					"MagicalResistance" "25" 
+					"ArmorPhysical" "136" 
+					"MagicalResistance" "75" 
 					
 					"UseNeutralCreepBehavior"    "1" 	
 					"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1655,7 +1663,7 @@
 					"BountyGoldMax" "3600" 
 					 
 					"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-					"MovementSpeed" "320" 
+					"MovementSpeed" "380" 
 					"MovementTurnRate" "0.8" 
 				
 					"StatusHealth" "112000" 
@@ -1776,7 +1784,7 @@
 
 						// Status
 						//----------------------------------------------------------------
-						"StatusHealth"				"18"		// Base health.
+						"StatusHealth"				"16"		// Base health.
 						"StatusHealthRegen"			"0"		// Health regeneration rate.
 						"StatusMana"				"0"			// Base mana.
 						"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -1848,7 +1856,7 @@
 
 						// Status
 						//----------------------------------------------------------------
-						"StatusHealth"				"26"		// Base health.
+						"StatusHealth"				"18"		// Base health.
 						"StatusHealthRegen"			"0"		// Health regeneration rate.
 						"StatusMana"				"0"			// Base mana.
 						"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -1920,7 +1928,7 @@
 
 						// Status
 						//----------------------------------------------------------------
-						"StatusHealth"				"32"		// Base health.
+						"StatusHealth"				"20"		// Base health.
 						"StatusHealthRegen"			"0"		// Health regeneration rate.
 						"StatusMana"				"0"			// Base mana.
 						"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -2209,7 +2217,7 @@
 			        "SoundSet" "Hero_Pudge" 
 			        "GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
 			        "ModelScale" "0.8" 
-			        "Level" "5" 
+			        "Level" "75" 
 			        "IsNeutralUnitType"            "1"
 			        "RingRadius"                "90"
 			              
@@ -2223,8 +2231,8 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 			
-			        "ArmorPhysical" "12" 
-			        "MagicalResistance" "30" 
+			        "ArmorPhysical" "92" 
+			        "MagicalResistance" "80" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
 			        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -2243,11 +2251,11 @@
 			        "BountyGoldMax" "190" 
 			                 
 			        "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-			        "MovementSpeed" "320" 
+			        "MovementSpeed" "420" 
 			        "MovementTurnRate" "0.8" 
 			            
 			        "StatusHealth" "3250" 
-			        "StatusHealthRegen" "20" 
+			        "StatusHealthRegen" "80" 
 			        "StatusMana" "200" 
 			        "StatusManaRegen" "20" 
 			
@@ -2298,7 +2306,7 @@
 		        "SoundSet" "Hero_Pudge" 
 		        "GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
 		        "ModelScale" "1" 
-		        "Level" "25" 
+		        "Level" "75" 
 		        "IsNeutralUnitType"            "1"
 		        "RingRadius"                "110"
 		              
@@ -2312,13 +2320,13 @@
 		        "Ability7" "" 
 		        "Ability8" "" 
 
-		        "ArmorPhysical" "18" 
-		        "MagicalResistance" "30" 
+		        "ArmorPhysical" "88" 
+		        "MagicalResistance" "80" 
 		                
 		        "UseNeutralCreepBehavior"    "1"    
 		        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 		        "AttackDamageMin" "310" 
-		        "AttackDamageMax" "320" 
+		        "AttackDamageMax" "420" 
 		        "AttackRate" "1.5" 
 		        "AttackAnimationPoint" "0.3" 
 		        "AttackAcquisitionRange" "300" 
@@ -2332,13 +2340,13 @@
 		        "BountyGoldMax" "200" 
 		                 
 		        "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-		        "MovementSpeed" "320" 
+		        "MovementSpeed" "420" 
 		        "MovementTurnRate" "0.8" 
 		            
 		        "StatusHealth" "4550" 
 		        "StatusHealthRegen" "28" 
 		        "StatusMana" "200" 
-		        "StatusManaRegen" "20" 
+		        "StatusManaRegen" "80" 
 
 
 		                 
@@ -2387,7 +2395,7 @@
 			        "SoundSet" "Hero_Juggernaut" 
 			        "GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
 			        "ModelScale" "1.15" 
-			        "Level" "50" 
+			        "Level" "75" 
 			        "IsAncient" "1"
 			        "IsNeutralUnitType"            "1"
 			        "RingRadius"                "150"
@@ -2402,8 +2410,8 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 
-			        "ArmorPhysical" "29" 
-			        "MagicalResistance" "30" 
+			        "ArmorPhysical" "99" 
+			        "MagicalResistance" "80" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
 			        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -2422,11 +2430,11 @@
 			        "BountyGoldMax" "210" 
 			                 
 			        "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-			        "MovementSpeed" "320" 
+			        "MovementSpeed" "420" 
 			        "MovementTurnRate" "0.8" 
 			            
 			        "StatusHealth" "9500" 
-			        "StatusHealthRegen" "45" 
+			        "StatusHealthRegen" "85" 
 			        "StatusMana" "200" 
 			        "StatusManaRegen" "20" 
 
@@ -2479,7 +2487,7 @@
 			        "SoundSet" "Hero_Pudge" 
 			        "GameSoundsFile"  "soundevents/game_sounds_creeps.vsndevts" 
 			        "ModelScale" "1.3"
-			        "Level" "50" 
+			        "Level" "75" 
 			        "IsAncient" "1"
 			        "IsNeutralUnitType"            "1"
 			        "RingRadius"                "190"
@@ -2514,7 +2522,7 @@
 			        "BountyGoldMax" "240" 
 			                 
 			        "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-			        "MovementSpeed" "320" 
+			        "MovementSpeed" "420" 
 			        "MovementTurnRate" "0.8" 
 			            
 			        "StatusHealth" "16000" 
@@ -2590,22 +2598,22 @@
 			        "Ability2" "creeps_doom_ability_illusioness" 
 			        "Ability3" "creeps_doom_ability_mana_steal" 
 			        "Ability4" "necronomicon_warrior_sight" 
-			        "Ability5" "" 
+			        "Ability5" "tidehunter_kraken_shell" 
 			        "Ability6" "" 
 			        "Ability7" "" 
 			        "Ability8" "" 
 			
-			        "ArmorPhysical" "134" 
-			        "MagicalResistance" "10" 
+			        "ArmorPhysical" "220" 
+			        "MagicalResistance" "85" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
 			        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 			        "AttackDamageMin" "1812" 
 			        "AttackDamageMax" "1815" 
-			        "AttackRate" "0.85" 
+			        "AttackRate" "0.65" 
 			        "AttackAnimationPoint" "0.3" 
 			        "AttackAcquisitionRange" "300" 
-			        "AttackRange" "340" 
+			        "AttackRange" "350" 
 			        "ProjectileModel" "" 
 			        "ProjectileSpeed" ""
 			        //"AttackRangeBuffer" "200"         
@@ -2615,13 +2623,13 @@
 			        "BountyGoldMax" "16000" 
 			                 
 			        "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
-			        "MovementSpeed" "320" 
+			        "MovementSpeed" "520" 
 			        "MovementTurnRate" "0.8" 
 			            
 			        "StatusHealth" "64000" 
-			        "StatusHealthRegen" "640" 
+			        "StatusHealthRegen" "740" 
 			        "StatusMana" "4000" 
-			        "StatusManaRegen" "-60" 	
+			        "StatusManaRegen" "-30" 	
 			                 
 			        "TeamName"                  "DOTA_TEAM_NEUTRALS"                            // Team name.
 			        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -2841,13 +2849,14 @@
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
 				"Ability3"				"roshan_spell_block"
-				//"Ability4"				"heal_block_aura"
+				"Ability4"                        "tidehunter_kraken_shell"
+				//"Ability5"				"heal_block_aura"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "32"
-		        "MagicalResistance"     "30"
+		        "ArmorPhysical"         "132"
+		        "MagicalResistance"     "75"
 		        "DisableResistance"     "99.9"
 		       
 		        // Attack
@@ -2855,8 +2864,8 @@
 		        "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
 		        "AttackDamageType"      "DAMAGE_TYPE_ArmorPhysical"
 		        "AttackDamageMin"       "555"
-		        "AttackDamageMax"       "666"
-		        "AttackRate"            "0.8"
+		        "AttackDamageMax"       "999"
+		        "AttackRate"            "0.7"
 		        "AttackAnimationPoint"  "0.3"
 		        "AttackAcquisitionRange""666"
 		        "AttackRange"           "360"
@@ -2877,13 +2886,13 @@
 		        // Movement
 		        //----------------------------------------------------------------
 		        "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
-		        "MovementSpeed"         "340"
+		        "MovementSpeed"         "380"
 		        "MovementTurnRate"      "0.4"
 		       
 		        // Status
 		        //----------------------------------------------------------------
 		        "StatusHealth"          "160000"
-		        "StatusHealthRegen"     "120"
+		        "StatusHealthRegen"     "190"
 		        "StatusMana" 			"6000" 
 				"StatusManaRegen" 		"120" 
 		       
@@ -2937,9 +2946,8 @@
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "99"
-		        "MagicalResistance"     "15"
-		        "DisableResistance"     "25.0"
+		        "ArmorPhysical"         "169"
+		        "MagicalResistance"     "85"
 		       
 		        // Attack
 		        //----------------------------------------------------------------
@@ -3066,8 +3074,8 @@
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "32"
-		        "MagicalResistance"     "30"
+		        "ArmorPhysical"         "132"
+		        "MagicalResistance"     "80"
 		        "DisableResistance"     "99.9"
 		       
 		        // Attack
@@ -3097,13 +3105,13 @@
 		        // Movement
 		        //----------------------------------------------------------------
 		        "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
-		        "MovementSpeed"         "340"
+		        "MovementSpeed"         "380"
 		        "MovementTurnRate"      "0.4"
 		       
 		        // Status
 		        //----------------------------------------------------------------
 		        "StatusHealth"          "160000"
-		        "StatusHealthRegen"     "120"
+		        "StatusHealthRegen"     "180"
 		        "StatusMana" 			"6000" 
 				"StatusManaRegen" 		"120" 
 		       
@@ -3157,8 +3165,8 @@
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "56"
-		        "MagicalResistance"     "30"
+		        "ArmorPhysical"         "156"
+		        "MagicalResistance"     "80"
 		        "DisableResistance"     "99.9"
 		       
 		        // Attack
@@ -3255,8 +3263,8 @@
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "84"
-		        "MagicalResistance"     "35"
+		        "ArmorPhysical"         "200"
+		        "MagicalResistance"     "85"
 		        "DisableResistance"     "99.9"
 		       
 		        // Attack
@@ -3357,8 +3365,8 @@
 	           
 	            // Armor
 	            //----------------------------------------------------------------
-	            "ArmorPhysical"         "64"
-	            "MagicalResistance"     "10"
+	            "ArmorPhysical"         "164"
+	            "MagicalResistance"     "90"
 	            "DisableResistance"     "120"
 	           
 	            // Attack

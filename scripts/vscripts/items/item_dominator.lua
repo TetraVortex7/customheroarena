@@ -91,10 +91,6 @@ function modifier_dominator_passive:DeclareFunctions(  )
 	return {MODIFIER_EVENT_ON_ATTACK_LANDED,MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE}
 end
 
-function modifier_dominator_passive:GetModifierOrbPriority()
-	return DOTA_ORB_PRIORITY_ITEM
-end
-
 function modifier_dominator_passive:OnAttackLanded( params )
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()

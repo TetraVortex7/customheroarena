@@ -34,9 +34,6 @@ function modifier_doebalus_passive:CheckState()
 	return states
 end
 
-function modifier_doebalus_passive:GetModifierOrbPriority(  )
-	return DOTA_ORB_CUSTOM
-end
 
 function modifier_doebalus_passive:OnAttackLanded( params )
 	local caster = self:GetCaster()

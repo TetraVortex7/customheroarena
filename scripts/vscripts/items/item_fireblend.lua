@@ -30,25 +30,57 @@ function modifier_fireblend_passive:IsPurgable(  )
 end
 
 function modifier_fireblend_passive:DeclareFunctions(  )
-	return {MODIFIER_PROPERTY_MANA_BONUS,MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT}
+	return {MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,MODIFIER_EVENT_ON_ATTACK_LANDED}
 end
 
 function modifier_fireblend_passive:GetModifierAttackSpeedBonus_Constant(  )
 	return self:GetAbility():GetSpecialValueFor("atk")
 end
 
-function modifier_fireblend_passive:GetModifierManaBonus(  )
-	return self:GetAbility():GetSpecialValueFor("mana")
+function modifier_fireblend_passive:GetModifierPreAttack_BonusDamage(  )
+	return self:GetAbility():GetSpecialValueFor("attack")
 end
 
 function modifier_fireblend_passive:OnCreated(  )
 	self:GetCaster():AddNewModifier(self:GetCaster(),self:GetAbility(),"modifier_fireblend_fire",{})
+	self.quell = ability:GetSpecialValueFor("quell") 
+	self.quell_ranged = ability:GetSpecialValueFor("quell_ranged") 
 end
 
 function modifier_fireblend_passive:OnDestroy(  )
 	self:GetCaster():RemoveModifierByName("modifier_fireblend_fire")
 end
 
+function modifier_demonic_axe_passive:OnAttackLanded( params )
+	local caster = self:GetParent()
+	local target = params.target
+
+	if IsServer() and params.attacker == caster then
+		damage = params.damage
+		local ability = self:GetAbility()
+
+		if caster:IsRealHero() then
+			if IsBoss(target) then
+				print('This unit is boss, Quell dont work on boss')
+				return;
+			else
+				if target:IsCreep() then
+					local quell = nil
+
+					if self:GetCaster():IsRangedAttacker() then
+						quell = self.quell_ranged
+					else
+						quell = self.quell
+					end
+
+					local damage_quell = (damage  * self.quell - damage) / 100
+
+					ApplyDamage({victim = target, attacker = caster, damage = damage_quell, damage_type = DAMAGE_TYPE_PHYSICAL})
+				end
+			end
+		end	
+	end	
+end		
 if modifier_fireblend_fire == nil then modifier_fireblend_fire = class({}) end
 
 function modifier_fireblend_fire:IsHidden(  )
@@ -61,10 +93,6 @@ end
 
 function modifier_fireblend_fire:DeclareFunctions(  )
 	return {MODIFIER_EVENT_ON_ATTACK_LANDED}
-end
-
-function modifier_fireblend_fire:GetModifierOrbPriority()
-	return DOTA_ORB_CUSTOM
 end
 
 function modifier_fireblend_fire:OnAttackLanded( params )

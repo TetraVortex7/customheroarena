@@ -6,18 +6,15 @@ LinkLuaModifier("modifier_mana_burn_first_slow","items/item_mana_burn_1.lua",LUA
 function item_mana_burn_1:OnSpellStart(  )
 	local target = self:GetCursorTarget()
 	local charges = self:GetCurrentCharges()
-	if charges > 0 then
-		self:SetCurrentCharges(charges - 1)
-		if target:GetTeamNumber() == self:GetCaster():GetTeamNumber() then
-			target:Purge(false,true,false,true,false)
-		else
-			if target:TriggerSpellAbsorb(self) then return end
-			target:TriggerSpellReflect(self) 
-			target:AddNewModifier(self:GetCaster(),self,"modifier_mana_burn_first_slow",{duration = self:GetSpecialValueFor("duration")})
-			target:Purge(true,false,false,false,false)
-			local D01 = ParticleManager:CreateParticle("particles/generic_gameplay/generic_purge.vpcf", PATTACH_ABSORIGIN_FOLLOW, target)
-          	ParticleManager:SetParticleControlEnt(D01, 0, target, PATTACH_ABSORIGIN_FOLLOW, "attach_hitloc", target:GetAbsOrigin(), false)
-		end
+	if target:GetTeamNumber() == self:GetCaster():GetTeamNumber() then
+	   target:Purge(false,true,false,true,false)
+	else
+		if target:TriggerSpellAbsorb(self) then return end
+		target:TriggerSpellReflect(self) 
+		target:AddNewModifier(self:GetCaster(),self,"modifier_mana_burn_first_slow",{duration = self:GetSpecialValueFor("duration")})
+		target:Purge(true,false,false,false,false)
+		local D01 = ParticleManager:CreateParticle("particles/generic_gameplay/generic_purge.vpcf", PATTACH_ABSORIGIN_FOLLOW, target)
+        ParticleManager:SetParticleControlEnt(D01, 0, target, PATTACH_ABSORIGIN_FOLLOW, "attach_hitloc", target:GetAbsOrigin(), false)
 	end
 end
 
@@ -62,10 +59,6 @@ end
 
 function modifier_mana_burn_first_passive:GetModifierBonusStats_Intellect(  )
 	return self:GetAbility():GetSpecialValueFor("int")
-end
-
-function modifier_mana_burn_first_passive:GetModifierOrbPriority(  )
-	return DOTA_ORB_CUSTOM
 end
 
 function modifier_mana_burn_first_passive:OnAttackLanded( params )

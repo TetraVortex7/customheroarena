@@ -36,6 +36,7 @@ function modifier_insane_shield_passive:OnCreated(  )
 	self.hp_regen = self:GetAbility():GetSpecialValueFor("hp_regen")
 	self.armor = self:GetAbility():GetSpecialValueFor("armor")
 	self.block = self:GetAbility():GetSpecialValueFor("block")
+	self.agi = self:GetAbility():GetSpecialValueFor("bonus_agi")
 end
 
 function modifier_insane_shield_passive:OnRefresh(  )
@@ -44,6 +45,7 @@ function modifier_insane_shield_passive:OnRefresh(  )
 	self.hp_regen = self:GetAbility():GetSpecialValueFor("hp_regen")
 	self.armor = self:GetAbility():GetSpecialValueFor("armor")
 	self.block = self:GetAbility():GetSpecialValueFor("block")
+	self.agi = self:GetAbility():GetSpecialValueFor("bonus_agi")
 end
 
 function modifier_insane_shield_passive:GetAttributes(  )
@@ -51,12 +53,16 @@ function modifier_insane_shield_passive:GetAttributes(  )
 end
 
 function modifier_insane_shield_passive:DeclareFunctions(  )
-	local funcs = { MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK,MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS, MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT, MODIFIER_PROPERTY_HEALTH_BONUS, MODIFIER_PROPERTY_MANA_BONUS  }
+	local funcs = { MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK, MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS, MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT, MODIFIER_PROPERTY_HEALTH_BONUS, MODIFIER_PROPERTY_MANA_BONUS, MODIFIER_PROPERTY_STATS_AGILITY_BONUS  }
 	return funcs
 end
 
 function modifier_insane_shield_passive:GetModifierPhysical_ConstantBlock()
 	return self.block
+end
+
+function modifier_insane_shield_passive:GetModifierBonusStats_Agility(  )
+	return self:bonus_agi
 end
 
 function modifier_insane_shield_passive:GetModifierHealthBonus(  )

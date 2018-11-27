@@ -50,7 +50,7 @@
   "antimage" {
   "1"    "mana_break_datadriven"
   "2"    "antimage_blink"
-  "3"    "antimage_spell_shield"
+  "3"    "antimage_counterspell"
   "4"    "antimage_mana_void"
   }
   "drow_ranger" {
@@ -79,8 +79,7 @@
   "phantom_lancer" {
   "1"    "phantom_lancer_spirit_lance"
   "2"    "phantom_lancer_doppelwalk"
-  "3"    "phantom_lancer_phantom_edge"
-  "4"    "phantom_lancer_juxtapose"
+  "3"    "phantom_lancer_juxtapose"
   }
   "vengefulspirit" {
   "1"    "vengefulspirit_magic_missile"
@@ -138,7 +137,7 @@
   "4"    "omniknight_guardian_angel"
   }
   "huskar" {
-  "1"    "huskar_inner_vitality"
+  "1"    "huskar_inner_fire"
   "2"    "huskar_burning_spear"
   "3"    "huskar_berserkers_blood"
   "4"    "huskar_life_break"
@@ -151,7 +150,7 @@
   }
   "brewmaster" {
   "1"    "brewmaster_thunder_clap"
-  "2"    "brewmaster_drunken_haze"
+  "2"    "brewmaster_cinder_brew"
   "3"    "brewmaster_drunken_brawler"
   }
   "treant" {
@@ -165,6 +164,7 @@
   "1"    "wisp_tether"
   "2"    "wisp_overcharge"
   "3"    "wisp_relocate"
+  "4"    "wisp_spirits"
   }
   "centaur" {
   "1"    "centaur_hoof_stomp"
@@ -176,6 +176,7 @@
   "1"    "riki_smoke_screen"
   "2"    "riki_blink_strike"
   "3"    "riki_tricks_of_the_trade"
+  "4"    "riki_permanent_invisibility"
   }
   "sniper" {
   "1"    "sniper_shrapnel"
@@ -237,8 +238,9 @@
   "4"    "jakiro_macropyre"
   }
   "chen" {
-  "1"    "chen_test_of_faith"
+  "1"    "chen_chen_penitence"
   "2"    "chen_hand_of_god"
+  "3"    "chen_divine_favor"
   }
   "silencer" {
   "1"    "silencer_curse_of_the_silent"
@@ -269,7 +271,7 @@
   "tusk" {
   "1"    "tusk_ice_shards"
   "2"    "tusk_snowball"
-  "3"    "tusk_frozen_sigil"
+  "3"    "tusk_tag_team"
   "4"    "tusk_walrus_punch"
   "5"    "tusk_walrus_kick"
   }
@@ -282,7 +284,7 @@
   "legion_commander" {
   "1"    "legion_commander_overwhelming_odds"
   "2"    "legion_commander_press_the_attack"
-  "3"	 "legion_commander_moment_of_courage_datadriven"
+  "3"	 "legion_commander_moment_of_courage"
   "4"    "legion_commander_duel"
   }
   "earth_spirit" {
@@ -333,7 +335,7 @@
   "rubick" {
   "1"    "rubick_telekinesis"
   "2"    "rubick_fade_bolt"
-  "3"    "rubick_null_field"
+  "3"    "rubick_arcane_supremacy"
   }
   "disruptor" {
   "1"    "disruptor_thunder_strike"
@@ -343,8 +345,9 @@
   }
   "keeper_of_the_light" {
   "1"    "keeper_of_the_light_illuminate"
-  "2"    "keeper_of_the_light_mana_leak"
+  "2"    "keeper_of_the_light_blinding_light"
   "3"    "keeper_of_the_light_chakra_magic"
+  "4"    "keeper_of_the_light_will_o_wisp"
   }
   "skywrath_mage" {
   "1"    "skywrath_mage_arcane_bolt"
@@ -402,7 +405,7 @@
   }
   "life_stealer" {
   "1"    "life_stealer_rage"
-  "2"    "naix_feast_c"
+  "2"    "life_stealer_feast"
   "3"    "life_stealer_open_wounds"
   }
   "bloodseeker" {
@@ -437,8 +440,7 @@
   "1"    "phantom_assassin_stifling_dagger"
   "2"    "phantom_assassin_phantom_strike"
   "3"    "phantom_assassin_blur"
-  "4"    "phantom_roulette"
-  "5"    "phantom_assassin_coup_de_grace"
+  "4"    "phantom_assassin_coup_de_grace"
   }
   "viper" {
   "1"    "viper_nethertoxin"
@@ -453,8 +455,8 @@
   }
   "lich" {
   "1"    "lich_frost_nova"
-  "2"    "lich_frost_armor"
-  "3"    "lich_dark_ritual"
+  "2"    "lich_frost_shield"
+  "3"    "lich_sinister_gaze"
   "4"    "lich_chain_frost"
   }
   "lion" {
@@ -496,7 +498,7 @@
   }
   "spirit_breaker" {
   "1"    "spirit_breaker_charge_of_darkness"
-  "2"    "spirit_breaker_empowering_haste"
+  "2"    "spirit_breaker_bulldoze"
   "3"	   "spirit_breaker_greater_bash"
   "4"    "spirit_breaker_nether_strike"
   }
@@ -527,7 +529,7 @@
   "1"    "clinkz_strafe"
   "2"    "clinkz_searing_arrows"
   "3"    "clinkz_wind_walk"
-  "4"    "clinkz_death_pact"
+  "4"    "clinkz_burning_army"
   }
   "broodmother" {
   "1"    "broodmother_spin_web"
@@ -585,7 +587,7 @@
   "1"    "dazzle_poison_touch"
   "2"    "dazzle_shallow_grave"
   "3"    "dazzle_shadow_wave"
-  "4"    "dazzle_weave"
+  "4"    "dazzle_bad_juju"
   }
   "leshrac" {
   "1"    "leshrac_split_earth"
@@ -600,6 +602,7 @@
   "batrider" {
   "1"    "batrider_flamebreak"
   "2"    "batrider_firefly"
+  "3"    "batrider_sticky_napalm"
   }
   "abaddon" {
   "1"    "abaddon_death_coil"
@@ -616,7 +619,7 @@
   "medusa" {
   "1"    "medusa_split_shot"
   "2"    "medusa_mystic_snake"
-  "3"    "medusa_mana_shield_custom"
+  "3"    "medusa_mana_shield"
   "4"    "medusa_stone_gaze"
   }
   "terrorblade" {
@@ -627,7 +630,7 @@
   }
   "pangolier" {
   "1"    "pangolier_shield_crash"
-  "2"    "pangolier_heartpiercer"
+  "2"    "pangolier_lucky_shot"
   "3"    "pangolier_gyroshell"
   }
   "dark_willow" {
@@ -646,7 +649,7 @@
   "obsidian_destroyer" {
   "1"    "obsidian_destroyer_arcane_orb"
   "2"    "obsidian_destroyer_astral_imprisonment"
-  "3"    "obsidian_destroyer_essence_aura_datadriven"
+  "3"    "obsidian_destroyer_equilibrium"
   "4"	 "obsidian_destroyer_sanity_eclipse"
   }
   "shadow_demon" {
@@ -677,5 +680,8 @@
   "monkey_king" {
   "1"    "monkey_king_boundless_strike"
   "2"    "monkey_king_jingu_mastery_custom"
+  "3"    "monkey_king_mischief"
+  "4"    "monkey_king_tree_dance"
+  "5"    "monkey_king_wukongs_command"
   }
 }

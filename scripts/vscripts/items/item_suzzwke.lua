@@ -52,10 +52,6 @@ function modifier_suzzwke_passive:GetModifierBonusStats_Intellect(  )
 	return self:GetAbility():GetSpecialValueFor("int")
 end
 
-function modifier_suzzwke_passive:GetModifierOrbPriority(  )
-	return DOTA_ORB_CUSTOM
-end
-
 function modifier_suzzwke_passive:OnAttackLanded( params )
 	local caster = self:GetCaster()
 	local target = params.target

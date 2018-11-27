@@ -27,7 +27,7 @@ function modifier_titan_bone_passive:IsPurgable(  )
 end
 
 function modifier_titan_bone_passive:DeclareFunctions(  )
-	local hFuncs = { MODIFIER_PROPERTY_STATS_AGILITY_BONUS,MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,MODIFIER_EVENT_ON_ATTACK_LANDED }
+	local hFuncs = { MODIFIER_PROPERTY_STATS_AGILITY_BONUS,MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,MODIFIER_EVENT_ON_ATTACK_LANDED }
 	return hFuncs
 end
 
@@ -35,6 +35,7 @@ function modifier_titan_bone_passive:OnCreated(  )
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
 	self.chance = ability:GetSpecialValueFor("chance")
+	self.resistance_passive = ability:GetSpecialValueFor("resistance_passive")
 	self.all = ability:GetSpecialValueFor("all")
 	self.damage = ability:GetSpecialValueFor("damage")
 	self.atk = ability:GetSpecialValueFor("atk")
@@ -72,4 +73,8 @@ end
 
 function modifier_titan_bone_passive:GetModifierBonusStats_Agility(  )
 	return self.all
+end
+
+function modifier_titan_bone_passive:GetModifierMagicalResistanceBonus()
+	return self.resistance_passive
 end
