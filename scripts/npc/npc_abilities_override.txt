@@ -9053,19 +9053,19 @@
 		"lion_finger_of_death"
 		{
 			"MaxLevel"						"7"
-			"LevelsBetweenUpgrades"			"11"
+			"LevelsBetweenUpgrades"			"14"
 			// Casting
 			//-------------------------------------------------------------------------------------------------------------
-			"AbilityCastRange"				"1000"
-			"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.2"
+			"AbilityCastRange"				"900"
+			"AbilityCastPoint"				"0.3"
 	
 			// Time		
 			//-------------------------------------------------------------------------------------------------------------
-			"AbilityCooldown"				"160.0 100.0 40.0 40.0 40.0 40.0"
+			"AbilityCooldown"				"160 145 130 115 100 85 70"
 	
 			// Cost
 			//-------------------------------------------------------------------------------------------------------------
-			"AbilityManaCost"				"200 420 650 980 1400 1800 2500"
+			"AbilityManaCost"				"200 400 600 800 1000 1200 1400"
 			
 			// Special
 			//-------------------------------------------------------------------------------------------------------------
@@ -9074,19 +9074,17 @@
 				"01"
 				{
 					"var_type"					"FIELD_INTEGER"
-					"damage"					"600 725 850 1250 1750 2250 2500"
-					"LinkedSpecialBonus"		"special_bonus_unique_lion_3"
+					"damage"					"600 725 850 975 1100 1225 1350"
 				}
 				"02"
 				{
 					"var_type"					"FIELD_INTEGER"
-					"damage_scepter"			"725 875 1025 1500 2100 2800 3600"
-					"LinkedSpecialBonus"			"special_bonus_unique_lion_3"
+					"damage_scepter"			"725 875 1025 1175 1325 1475 1625"
 				}
 				"03"
 				{
 					"var_type"					"FIELD_INTEGER"
-					"mana_cost_scepter"			"200 420 625 950 1300 1600 2300"
+					"mana_cost_scepter"			"250 450 650 850 1050 1250 1450"
 				}
 				"04"
 				{
@@ -9096,12 +9094,17 @@
 				"05"
 				{
 					"var_type"					"FIELD_FLOAT"
-					"cooldown_scepter"			"100.0 60.0 20.0 20.0 20.0 15.0 12.0"
+					"cooldown_scepter"			"140 125 110 95 80 65 50"
 				}
 				"06"
 				{
 					"var_type"					"FIELD_FLOAT"
-					"splash_radius_scepter"		"200"
+					"splash_radius_scepter"		"325"
+				}
+				"07"
+				{
+					"var_type"					"FIELD_FLOAT"
+					"damage_per_kill"		"50"
 				}
 			}
 		}

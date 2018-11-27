@@ -890,7 +890,6 @@
     "ItemBaseLevel"                 "2"
 	"ItemAliases"                   	"regen; health; heart"
     
-    "AbilityCooldown"               "7 6 5"
     "AbilitySpecial"
         {
             "01"
@@ -911,12 +910,17 @@
             "04"
             {
                 "var_type"  "FIELD_INTEGER"
-                "cooldown_melee""7 6 5"
+                "melee_cooldown" "7 6 5"
             }
             "05"
             {
                 "var_type"  "FIELD_FLOAT"
                 "heal_interval" "0.1"
+            }
+			"06"
+            {
+                "var_type"      "FIELD_FLOAT"
+                "ranged_cooldown"   "7 6 5"
             }
         }
 
@@ -955,7 +959,8 @@
                     {
                         "ScriptFile"        "items/item_heart2.lua"
                         "Function"          "modifier_item_heart2_regen_on_take_damage"
-                        "CooldownMelee"     "%cooldown_melee"
+                        "CooldownMelee"     "%melee_cooldown"
+						"CooldownRanged"    "%ranged_cooldown"
                     }
                 }
                 
@@ -979,15 +984,11 @@
 "item_purged_heart"
 	{
         "ID" "2034"
-        "BaseClass"                     "item_lua"
-        "ScriptFile"                    "items/item_purged_heart.lua"
+        "BaseClass"         "item_datadriven"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-        "Model"                         "models/props_gameplay/red_box.vmdl" 
-        "Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
         "AbilityTextureName"            "purged_heart"
 		"ItemAliases"                   "heart; health; mana; pure; purged"
-        "AbilityCooldown"               "%cooldown%"
         "ItemQuality"                   "artifact"      // consumable component rare epic artifact secretshop
         "MaxUpgradeLevel"               "3"
         "ItemBaseLevel"                 "3"
@@ -1012,7 +1013,7 @@
             "04"
             {
                 "var_type"      "FIELD_FLOAT"
-                "regen_interval"    ".5"
+                "regen_interval"    "0.5"
             }
             "05"
             {
@@ -1041,8 +1042,91 @@
             }
             "10"
             {
+                "var_type"      "FIELD_INTEGER"
+                "melee_cooldown"    "5 4 3"
+            }
+            "11"
+            {
                 "var_type"      "FIELD_FLOAT"
-                "cooldown"      "5"
+                "ranged_cooldown"   "7 6 5"
+            }
+			"12"
+            {
+                "var_type"      "FIELD_FLOAT"
+                "heal_interval"    "0.5"
+            }
+        }
+    "Modifiers"
+        {
+            "heart3_effect"
+            {
+                "Passive"   "1"
+                "IsHidden"  "1"
+                "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%str_bonus"
+                    "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%int_bonus"
+                    "MODIFIER_PROPERTY_MANA_BONUS"              "%bonus_mana"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%hp_regen"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"     "%mp_regen"
+                }
+            }
+            "modifier_item_heart3_regen"
+            {
+                "Passive"   "1"
+                "IsHidden"  "1"
+                
+                "ThinkInterval"     "%interval"
+                "OnIntervalThink"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"        "items/item_purged_heart.lua"
+                        "Function"          "modifier_item_heart3_regen_on_interval_think"
+						"ManaRegenPercentPerSecond"     "%mana_regen_prc"
+						"RegenInterval"                 "%regen_interval"
+                        "HealthRegenPercentPerSecond"   "%health_regen_prc"
+                        "HealInterval"                  "%heal_interval"
+                    }
+                }
+                "OnTakeDamage"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"        "items/item_purged_heart.lua"
+                        "Function"          "modifier_item_heart3_regen_on_take_damage"
+                        "CooldownMelee"     "%melee_cooldown"
+                        "CooldownRanged"    "%ranged_cooldown"
+                    }
+                }
+
+                "OnAbilityExecuted"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"        "items/item_purged_heart.lua"
+                        "Function"          "modifier_item_heart3_regen_on_cast_spell"
+                        "CooldownMelee"     "%melee_cooldown"
+                        "CooldownRanged"    "%ranged_cooldown"
+                    }
+                }
+                
+                "OnDestroy"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"        "items/item_purged_heart.lua"
+                        "Function"          "modifier_item_heart3_regen_on_destroy"
+                    }
+                }
+            }
+            "modifier_item_heart3_regen_visible"
+            {
+                "Passive"       "0"
+                "IsHidden"      "1"
+                "TextureName"   "heart3_regen"
             }
         }
     }	

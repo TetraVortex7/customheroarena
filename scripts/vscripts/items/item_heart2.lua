@@ -1,6 +1,6 @@
 function modifier_item_heart2_regen_on_take_damage(keys)
 	if keys.caster:IsRangedAttacker()	then
-		keys.ability:StartCooldown(keys.ability:GetCooldown(keys.ability:GetLevel()))
+		keys.ability:StartCooldown(keys.CooldownRanged)
 	else
 		keys.ability:StartCooldown(keys.CooldownMelee)
 	end
