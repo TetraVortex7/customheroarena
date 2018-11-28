@@ -14122,7 +14122,7 @@
 				"02"
 				{
 					"var_type"						"FIELD_INTEGER"
-					"status_resistance"				"15 20 25 30 35 40 45"
+					"status_resistance"				"4 8 12 16 20 24 28"
 				}
 			}
 		}
