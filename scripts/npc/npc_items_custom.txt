@@ -1,6 +1,35 @@
 "DOTAAbilities"
 {
     //=================================================================================================================
+	// Courier
+	//=================================================================================================================
+	"item_courier"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"45"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"50"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"donkey;chicken;animal courier"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemStockInitial"              "5"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"36000"
+		"ItemSupport"					"1"
+		"ItemKillable"					"0"
+		"ItemSellable"					"0"
+		"IsTempestDoubleClonable"		"0"
+		"ShouldBeInitiallySuggested"	"1"
+		// Not sellable, but handled in code.
+	}
+	
+    //=================================================================================================================
 	// Refresher
 	//=================================================================================================================
 	"item_refresher"
@@ -38,7 +67,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"12.0"
+				"bonus_mana_regen"		"12"
 			}		
 		}
 	}
@@ -245,7 +274,7 @@
 				"01"
 				{
 					"var_type"              "FIELD_INTEGER"
-					"aura_radius"           "900"
+					"aura_radius"           "1200"
 				}
 				"02"
 				{
@@ -1313,6 +1342,11 @@
                 "var_type"  "FIELD_INTEGER"
                 "bonus_agi"         "65"
             }
+			"11"
+            {
+                "var_type"      "FIELD_INTEGER"
+                "mp_regen"          "20"
+            }
         }
     }
 "item_war_axe_piece"
@@ -1486,6 +1520,7 @@
             {
                 "var_type"      "FIELD_INTEGER"
                 "mp_regen"      "10"
+			}	
         }
         "Modifiers"
         {
@@ -1498,6 +1533,7 @@
                 {
                     "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor"
                     "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%hp_regen"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"     "%mp_regen"
                     "MODIFIER_PROPERTY_HEALTH_BONUS"            "%hp_mp"
 					"MODIFIER_PROPERTY_MANA_BONUS"              "%hp_mp"
                 }
@@ -1538,6 +1574,11 @@
                 "var_type"      "FIELD_INTEGER"
                 "hp_regen"          "25"
             }
+			"05"
+            {
+                "var_type"      "FIELD_INTEGER"
+                "mp_regen"      "15"
+			}
 			
         }
         "Modifiers"
@@ -1551,6 +1592,7 @@
                 {
                     "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor"
                     "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%hp_regen"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"     "%mp_regen"
                     "MODIFIER_PROPERTY_HEALTH_BONUS"            "%hp_mp"
 					"MODIFIER_PROPERTY_MANA_BONUS"              "%hp_mp"
                 }
@@ -1795,12 +1837,12 @@
             "04"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed_active"      "24 30 36"
+                "movespeed_active"      "24 28 32"
             }
             "05"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed_active_range"        "20 24 28"
+                "movespeed_active_range"        "22 24 26"
             }
             "06"
             {
@@ -1853,12 +1895,12 @@
             "04"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed_active"      "24 30 36"
+                "movespeed_active"      "24 28 32"
             }
             "05"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed_active_range"        "20 24 28"
+                "movespeed_active_range"        "22 24 26"
             }
             "06"
             {
@@ -1953,11 +1995,13 @@
                 "Function"      "Swap_agi"
             }
         }
-        
-        "01"
+		
+        "AbilitySpecial"
+        {
+            "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed"     "50 50 50"
+                "movespeed"     "15 15 15"
             }
             "02"
             {
@@ -2015,7 +2059,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed"     "50 50 50"
+                "movespeed"     "15 15 15"
             }
             "02"
             {
@@ -2073,7 +2117,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed"     "50 50 50"
+                "movespeed"     "15 15 15"
             }
             "02"
             {
@@ -2093,7 +2137,7 @@
             "05"
             {
                 "var_type"              "FIELD_INTEGER"
-                "aura_radius"           "900"
+                "aura_radius"           "1200"
             }
             "06"
             {
@@ -2199,7 +2243,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed"     "50 50 50"
+                "movespeed"     "15 15 15"
             }
             "02"
             {
@@ -2219,7 +2263,7 @@
             "05"
             {
                 "var_type"              "FIELD_INTEGER"
-                "aura_radius"           "900"
+                "aura_radius"           "1200"
             }
             "06"
             {
@@ -2325,7 +2369,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed"     "50 50 50"
+                "movespeed"     "15 15 15"
             }
             "02"
             {
@@ -2345,7 +2389,7 @@
             "05"
             {
                 "var_type"              "FIELD_INTEGER"
-                "aura_radius"           "900"
+                "aura_radius"           "1200"
             }
             "06"
             {
@@ -2441,6 +2485,7 @@
         
         // Stats        
         //-------------------------------------------------------------------------------------------------------------
+		"ItemCost"                      "100"
         "AbilityCastPoint"              "0"
         "AbilityCooldown"               "15"
         "AbilityManaCost"               "0"
@@ -2448,7 +2493,6 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "45"
         "ItemShopTags"                  "consumable"
         "ItemQuality"                   "consumable"
         "ItemAliases"                   "mana; potion"
@@ -2461,17 +2505,17 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "buff_duration"         "5"
+                "buff_duration"         "25"
             }
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "total_mana_regen"      "150"
+                "total_mana_regen"      "225"
             }
             "03"
             {
                 "var_type"              "FIELD_FLOAT"
-                "mana_per_second"       "30"
+                "mana_per_second"       "9"
             }
             "04"
             {
@@ -2554,7 +2598,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "45"
+        "ItemCost"                      "100"
         "ItemShopTags"                  "consumable"
         "ItemQuality"                   "consumable"
         "ItemAliases"                   "heal; potion"
@@ -2572,7 +2616,7 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "health_per_second"     "40"
+                "health_per_second"     "20"
             }
             "04"
             {
@@ -2632,8 +2676,8 @@
     "AbilityCooldown"               "30"
 
         "ItemStockTime"                  "60"           
-        "ItemStockInitial"               "1"
-        "ItemStockMax"                   "10"
+        "ItemStockInitial"               "5"
+        "ItemStockMax"                   "5"
         "ItemInitialStockTime"           "90.0"
     
     // Stats        
@@ -2643,7 +2687,7 @@
     
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"                      "65"
+    "ItemCost"                      "150"
     "ItemShopTags"                  "consumable"
     "ItemQuality"                   "consumable"
     "ItemAliases"                   "strength; potion"
@@ -2716,8 +2760,8 @@
     "AbilityCooldown"               "30"
 
         "ItemStockTime"                  "60"           
-        "ItemStockInitial"               "10"
-        "ItemStockMax"                   "10"
+        "ItemStockInitial"               "5"
+        "ItemStockMax"                   "5"
         "ItemInitialStockTime"           "90.0"
     
     // Stats        
@@ -2727,7 +2771,7 @@
     
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"                      "65"
+    "ItemCost"                      "150"
     "ItemShopTags"                  "consumable"
     "ItemQuality"                   "consumable"
     "ItemAliases"                   "agility; potion"
@@ -2801,8 +2845,8 @@
     "AbilityCooldown"               "30"
 
         "ItemStockTime"                  "60"           
-        "ItemStockInitial"               "10"
-        "ItemStockMax"                   "10"
+        "ItemStockInitial"               "5"
+        "ItemStockMax"                   "5"
         "ItemInitialStockTime"           "90.0"
     
     // Stats        
@@ -2812,7 +2856,7 @@
     
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"                      "65"
+    "ItemCost"                      "150"
     "ItemShopTags"                  "consumable"
     "ItemQuality"                   "consumable"
     "ItemAliases"                   "int; potion"
@@ -2886,8 +2930,8 @@
         "AbilityManaCost"               "0"
 
         "ItemStockTime"                 "60"           
-        "ItemStockInitial"               "10"
-        "ItemStockMax"                   "10"
+        "ItemStockInitial"               "5"
+        "ItemStockMax"                   "5"
         "ItemInitialStockTime"           "90.0"
     
        // Stats        
@@ -2911,22 +2955,22 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "buff_duration"               "35"
+                "buff_duration"               "40"
             }
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "int_bonus"                  "40"
+                "int_bonus"                  "30"
             }
             "03"
             {
                 "var_type"              "FIELD_INTEGER"
-                "str_bonus"                 "40"
+                "str_bonus"                 "30"
             }
             "04"
             {
                 "var_type"              "FIELD_INTEGER"
-                "agi_bonus"                 "40"
+                "agi_bonus"                 "30"
             }
         }    
     "OnSpellStart"
@@ -4302,11 +4346,6 @@
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
                 "atk"           "120"
             }
-			"04"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "resistance_passive"    "50"
-            }
         }
     }
 "item_iron_branch_2"
@@ -4513,22 +4552,22 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"poison_movement_speed_melee"		"-15"
+			"poison_movement_speed_melee"		"-5"
 		}
 		"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"poison_movement_speed_ranged"		"-6"
+			"poison_movement_speed_ranged"		"-3"
 		}
 		"03"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"poison_duration"					"10.0"
+			"poison_duration"					"5.0"
 		}
 		"04"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"poison_damage_per_second"			"40.0"
+			"poison_damage_per_second"			"10.0"
 		}
 		"05"
 		{
@@ -4538,7 +4577,7 @@
 		"06"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"max_stacks"		"60"
+			"max_stacks"		"10"
 		}
 	}
 	
@@ -4767,55 +4806,6 @@
                 "var_type" "FIELD_INTEGER"
                 "cast_range_bonus" "250 280 310 340 370"
             }
-        }
-    }
-"item_aether_lens_1"
-    {
-        "ID" "2120"
-        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
-
-        // Item Info
-        //-------------------------------------------------------------------------------------------------------------
-        "BaseClass" "item_lua"
-        "ScriptFile"    "items/item_lens_1.lua"
-        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityTextureName" "aether_lens_1"
-        "ItemQuality" "artifact"
-        "ItemAliases" "mana;regen;support;mage"
-        //"AbilitySharedCooldown" ""
-        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-        "MaxUpgradeLevel"               "5"
-        "ItemBaseLevel"                 "1"
-        //"AbilityCooldown"               ""
-        //"AbilityManaCost"               ""
-        "ItemAliases"                   "aether; lens; amplification; rune; spell; cast; range"
-        // Special
-        //-------------------------------------------------------------------------------------------------------------
-
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type" "FIELD_INTEGER"
-                "mana" "450 650 850 1050 1250"
-            }
-            "02"
-            {
-                "var_type" "FIELD_INTEGER"
-                "mp_regen" "1.25 2.5 5 10 20"
-            }
-            "03"
-            {
-                "var_type" "FIELD_INTEGER"
-                "spell_amp" "5 10 15 20 25"
-            }
-            "04"
-            {
-                "var_type" "FIELD_INTEGER"
-                "cast_range_bonus" "250 280 310 340 370"
-            }
-            
         }
     }
 "item_aether_lens_4"
@@ -6447,8 +6437,8 @@
         "ID"                            "2600"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
         "AbilityCastRange"              "1000"
-        "AbilityCooldown"               "1"
-        "AbilityManaCost"               "100"
+        "AbilityCooldown"               "5"
+        "AbilityManaCost"               "250"
         "AoERadius"                     "650"
         "ItemQuality"                   "artifact"
         "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
@@ -6469,17 +6459,17 @@
             "03"
             {
                 "var_type"              "FIELD_INTEGER"
-                "slow"                  "9"
+                "slow"                  "4.5"
             }
             "04"
             {
                 "var_type"              "FIELD_INTEGER"
-                "slow_atk"              "35"
+                "slow_atk"              "17"
             }
             "05"
             {
                 "var_type"              "FIELD_INTEGER"
-                "cold_magic_resist"     "6"
+                "cold_magic_resist"     "3"
             }
             "06"
             {
@@ -6837,7 +6827,7 @@
             "06"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "mana_regen"          "315"
+                "mana_regen"          "100"
             }
             "07"
             {
@@ -6852,17 +6842,17 @@
             "09"
             {
                 "var_type"  "FIELD_FLOAT" //FIELD_FLOAT or FIELD_INTEGER
-                "reduce_cooldown"          "30"
+                "reduce_cooldown"          "27.5"
             }
             "10"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "hero_lifesteal"          "35"
+                "hero_lifesteal"          "30"
             }
             "11"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "creep_lifesteal"          "15"
+                "creep_lifesteal"          "10"
             }
         }
     }
@@ -7195,12 +7185,12 @@
             "03"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "manaregen"          "1 2 4"
+                "manaregen"          "3.25 5.25 7.25"
             }  
             "04"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "int"          "4 6 10"
+                "int"          "10 15 20"
             }        
             "05"
             {
@@ -7216,7 +7206,12 @@
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
                 "damagepct"          "45 65 85"
-            }      
+            }
+			"08"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "regen"          "6 8 10"
+            }
         }
     }
 
@@ -7251,12 +7246,12 @@
             "03"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "manaregen"          "1 2 4"
+                "manaregen"          "3.25 5.25 7.25"
             }  
             "04"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "int"          "2 6 10"
+                "int"          "10 15 20"
             }        
             "05"
             {
@@ -7272,7 +7267,12 @@
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
                 "damagepct"          "45 65 85"
-            }      
+            }  
+			"08"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "regen"          "6 8 10"
+            }
         }
     }
 
@@ -7307,12 +7307,12 @@
             "03"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "manaregen"          "1 2 4"
+                "manaregen"          "3.25 5.25 7.25"
             }  
             "04"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "int"          "2 6 10"
+                "int"          "10 15 20"
             }        
             "05"
             {
@@ -7328,7 +7328,12 @@
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
                 "damagepct"          "45 65 85"
-            }      
+            }  
+			"08"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "regen"          "6 8 10"
+            }
         }
     }
 
@@ -7366,7 +7371,7 @@
         }
     }
 
-		"item_manteau_invis"
+"item_manteau_invis"
     {
         "ID" "2210"
         "BaseClass"    "item_datadriven"
@@ -7565,12 +7570,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana"				"150 250 350"
+				"mana"				    "250 350 450"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"3 5 7"
+				"mana_regen"			"1.5 3 6"
 			}
 		}
 		
@@ -7643,12 +7648,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana"				"150 250 350"
+				"mana"				    "250 350 450"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"3 5 7"
+				"mana_regen"			"1.5 3 6"
 			}
 		}
 		
@@ -7721,12 +7726,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana"				"150 250 350"
+				"mana"				    "250 350 450"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"3 5 7"
+				"mana_regen"			"1.5 3 6"
 			}
 		}
 		
@@ -7799,12 +7804,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana"					"500 700 900"
+				"mana"					"550 750 950"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"9 11 13"
+				"mana_regen"			"9 11 14"
 			}
 			"06"
 			{
@@ -7883,12 +7888,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana"					"500 700 900"
+				"mana"					"550 750 950"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"9 11 13"
+				"mana_regen"			"9 11 14"
 			}
 			"06"
 			{
@@ -7967,12 +7972,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana"					"500 700 900"
+				"mana"					"550 750 950"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"9 11 13"
+				"mana_regen"			"9 11 14"
 			}
 			"06"
 			{
@@ -8698,7 +8703,7 @@
         "AbilityTextureName"            "recipe"
         "ItemRequirements"
         {
-            "01"                        "item_aether_lens_1"
+            "01"                        "item_aether_lens"
         }
     }
 "item_recipe_cursed_eye"
@@ -9048,7 +9053,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "1720"   
+        "ItemCost"                      "3440"   
         "ItemShopTags"                  ""
         
         // Recipe
@@ -9071,7 +9076,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "3840"   
+        "ItemCost"                      "7680"   
         "ItemShopTags"                  ""
         
         // Recipe
@@ -9156,29 +9161,6 @@
         "ItemRequirements"
         {
             "01"                        "item_guardian_greaves"
-        }
-    }
-"item_recipe_aether_lens_1"
-    {
-        "ID" "5050"
-        // General
-        //------------------------------------                      
-        "Model"                         "models/props_gameplay/recipe.mdl"
-        "BaseClass"                     "item_datadriven"
-        
-        // Item Info
-        //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "550"   
-        "ItemShopTags"                  ""
-        
-        // Recipe
-        //-------------------------------------------------------------------------------------------------------------
-        "ItemRecipe"                    "1"
-        "ItemResult"                    "item_aether_lens_1"
-        "AbilityTextureName"            "recipe"
-        "ItemRequirements"
-        {
-            "01"                        "item_energy_booster;item_void_stone"
         }
     }
 "item_recipe_aether_lens_3"

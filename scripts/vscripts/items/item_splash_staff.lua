@@ -23,7 +23,7 @@ function modifier_splash_staff_passive:IsPurgable(  )
 end
 
 function modifier_splash_staff_passive:DeclareFunctions(  )
-	return {MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE}
+	return {MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE}
 end
 
 function modifier_splash_staff_passive:OnCreated(  )
@@ -39,6 +39,10 @@ end
 
 function modifier_splash_staff_passive:GetModifierConstantManaRegen(  )
 	return self:GetAbility():GetSpecialValueFor("manaregen")
+end
+
+function modifier_splash_staff_passive:GetModifierGetModifierConstantHealthRegen(  )
+	return self:GetAbility():GetSpecialValueFor("regen")
 end
 
 function modifier_splash_staff_passive:GetModifierAttackSpeedBonus_Constant(  )

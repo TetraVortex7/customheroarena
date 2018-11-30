@@ -29,7 +29,7 @@ function modifier_grand_magus_core_passive:IsPurgable(  )
 end
 
 function modifier_grand_magus_core_passive:DeclareFunctions( )
-	return {MODIFIER_PROPERTY_IS_SCEPTER,MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE,MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE,MODIFIER_PROPERTY_HEALTH_BONUS,MODIFIER_PROPERTY_MANA_BONUS,MODIFIER_PROPERTY_STATS_AGILITY_BONUS,MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,MODIFIER_PROPERTY_STATS_INTELLECT_BONUS}
+	return {MODIFIER_PROPERTY_IS_SCEPTER,MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE,MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE,MODIFIER_PROPERTY_HEALTH_BONUS,MODIFIER_PROPERTY_MANA_BONUS,MODIFIER_PROPERTY_STATS_AGILITY_BONUS,MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,MODIFIER_PROPERTY_STATS_INTELLECT_BONUS}
 end
 
 function modifier_grand_magus_core_passive:OnCreated(  )
@@ -39,7 +39,6 @@ function modifier_grand_magus_core_passive:OnCreated(  )
 	self.int = ability:GetSpecialValueFor("int")
 	self.hp = ability:GetSpecialValueFor("hp")
 	self.mana = ability:GetSpecialValueFor("mana")
-	self.dmg = ability:GetSpecialValueFor("dmg")
 	self.hp_regen = ability:GetSpecialValueFor("hp_regen")
 	self.mana_regen = ability:GetSpecialValueFor("mana_regen")
 	self.reduce = ability:GetSpecialValueFor("reduce_cooldown")
@@ -47,6 +46,10 @@ end
 
 function modifier_grand_magus_core_passive:GetModifierBonusStats_Intellect(  )
 	return self.int
+end
+
+function modifier_grand_magus_core_passive:GetModifierConstantHealthRegen(  )
+	return self.hp_regen
 end
 
 function modifier_grand_magus_core_passive:GetModifierBonusStats_Agility(  )
@@ -69,20 +72,12 @@ function modifier_grand_magus_core_passive:GetModifierPercentageCooldown(  )
 	return self.reduce
 end
 
-function modifier_grand_magus_core_passive:GetModifierPercentageCooldown(  )
-	return self.reduce
-end
-
 function modifier_grand_magus_core_passive:GetModifierPercentageManaRegen(  )
 	return self.mana_regen
 end
 
 function modifier_grand_magus_core_passive:GetModifierConstantHealthRegen(  )
 	return self.hp_regen
-end
-
-function modifier_grand_magus_core_passive:GetModifierPreAttack_BonusDamage(  )
-	return self.dmg
 end
 
 function modifier_grand_magus_core_passive:GetModifierScepter(  )

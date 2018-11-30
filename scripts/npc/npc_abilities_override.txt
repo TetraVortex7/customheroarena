@@ -152,21 +152,6 @@
 			"ItemHidden" 	  "1"
 		}
 
-	"item_recipe_aether_lens"
-	    {               
-	        "ItemRecipe"                    "1"
-	        "ItemResult"                    ""
-	        "ItemRequirements"
-	        {
-	            "01"                        "item_dummy2"
-	        }
-	    }
-	"item_aether_lens"
-		{
-			"ItemPurchasable" "0"
-			"ItemHidden" 	  "1"
-		}
-
 	"item_recipe_diffusal_blade"
 	    {
 	        // General
@@ -2449,7 +2434,7 @@
 			"LevelsBetweenUpgrades"			"9"
 			// Stats
 			//-------------------------------------------------------------------------------------------------------------
-			"AbilityCooldown"				"16 15 14 13 12 11 10"
+			"AbilityCooldown"				"20 18 16 14 12 10 8"
 				
 			// Special
 			//-------------------------------------------------------------------------------------------------------------
@@ -14651,7 +14636,7 @@
 			
 			// Casting
 			//-------------------------------------------------------------------------------------------------------------
-			"AbilityCastRange"				"900"
+			"AbilityCastRange"				"1200"
 	
 			// Special
 			//-------------------------------------------------------------------------------------------------------------
@@ -14660,13 +14645,12 @@
 				"01"
 				{
 					"var_type"						"FIELD_INTEGER"
-					"presence_armor_reduction"		"-3 -6 -8 -10 -14 -16 -18"
-					"LinkedSpecialBonus"			"special_bonus_unique_nevermore_5"
+					"presence_armor_reduction"		"-5 -10 -15 -20 -25 -30 -35"
 				}
 				"02"
 				{
 					"var_type"						"FIELD_INTEGER"
-					"presence_radius"				"900"
+					"presence_radius"				"1200"
 				}
 			}
 		}

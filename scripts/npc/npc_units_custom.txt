@@ -1633,23 +1633,23 @@
 		
 						"vscripts"	"ai/ai_slark_miniboss.lua"
 					
-					"AbilityLayout"				"7"
+					"AbilityLayout"				"6"
 					"Ability1" "creeps_slark_ability_shield" 
 					"Ability2" "enchantress_untouchable" 
 					"Ability3" "omniknight_degen_aura" 
 					"Ability4" "necronomicon_warrior_sight" 
 					"Ability5" "tidehunter_kraken_shell" 
-					"Ability6" "" 
+					"Ability6" "slark_essence_shift" 
 					"Ability7" "" 
 					"Ability8" "" 
 		
-					"ArmorPhysical" "136" 
-					"MagicalResistance" "75" 
+					"ArmorPhysical" "74" 
+					"MagicalResistance" "60" 
 					
 					"UseNeutralCreepBehavior"    "1" 	
 					"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
-					"AttackDamageMin" "640" 
-					"AttackDamageMax" "740" 
+					"AttackDamageMin" "740" 
+					"AttackDamageMax" "840" 
 					"AttackRate" "0.6" 
 					"AttackAnimationPoint" "0.3" 
 					"AttackAcquisitionRange" "300" 
@@ -2221,9 +2221,9 @@
 			        "IsNeutralUnitType"            "1"
 			        "RingRadius"                "90"
 			              
-			        "AbilityLayout"             "4"
+			        "AbilityLayout"             "2"
 			        "Ability1" "huskar_berserkers_blood"
-			        "Ability2" "meepo_geostrike" 
+			        "Ability2" "meepo_ransack" 
 			        "Ability3" "" 
 			        "Ability4" "" 
 			        "Ability5" "" 
@@ -2312,7 +2312,7 @@
 		              
 		        "AbilityLayout"             "4"
 		        "Ability1" "spectre_desolate"
-		        "Ability2" "meepo_geostrike" 
+		        "Ability2" "meepo_ransack" 
 		        "Ability3" "" 
 		        "Ability4" "" 
 		        "Ability5" "" 
@@ -2400,9 +2400,9 @@
 			        "IsNeutralUnitType"            "1"
 			        "RingRadius"                "150"
 			              
-			        "AbilityLayout"             "4"
+			        "AbilityLayout"             "2"
 			        "Ability1" "ursa_fury_swipes"
-			        "Ability2" "meepo_geostrike" 
+			        "Ability2" "meepo_ransack" 
 			        "Ability3" "" 
 			        "Ability4" "" 
 			        "Ability5" "" 
@@ -2492,7 +2492,7 @@
 			        "IsNeutralUnitType"            "1"
 			        "RingRadius"                "190"
 			              
-			        "AbilityLayout"             "4"
+			        "AbilityLayout"             "2"
 			        "Ability1" "juggernaut_blade_dance"
 			        "Ability2" "elder_titan_natural_order_custom" 
 			        "Ability3" "" 
@@ -2502,8 +2502,8 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 			
-			        "ArmorPhysical" "46" 
-			        "MagicalResistance" "30" 
+			        "ArmorPhysical" "105" 
+			        "MagicalResistance" "80" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
 			        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -2593,7 +2593,7 @@
 
 			        "vscripts"	"ai/ai_doom_miniboss.lua"
 			              
-			        "AbilityLayout"             "4"
+			        "AbilityLayout"             "5"
 			        "Ability1" "creeps_doom_ability_shift"
 			        "Ability2" "creeps_doom_ability_illusioness" 
 			        "Ability3" "creeps_doom_ability_mana_steal" 
@@ -2603,8 +2603,8 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 			
-			        "ArmorPhysical" "220" 
-			        "MagicalResistance" "85" 
+			        "ArmorPhysical" "120" 
+			        "MagicalResistance" "75" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
 			        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -2846,16 +2846,17 @@
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
+				"AbilityLayout"             "5"
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
 				"Ability3"				"roshan_spell_block"
-				"Ability4"                        "tidehunter_kraken_shell"
-				//"Ability5"				"heal_block_aura"
+				"Ability4"              "tidehunter_kraken_shell"
+				"Ability5"				"huskar_berserkers_blood"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "132"
+		        "ArmorPhysical"         "68"
 		        "MagicalResistance"     "75"
 		        "DisableResistance"     "99.9"
 		       
@@ -2886,7 +2887,7 @@
 		        // Movement
 		        //----------------------------------------------------------------
 		        "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
-		        "MovementSpeed"         "380"
+		        "MovementSpeed"         "480"
 		        "MovementTurnRate"      "0.4"
 		       
 		        // Status
@@ -2939,14 +2940,16 @@
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
+				"AbilityLayout"             "4"
 		        "Ability1"              "boss_hard_skin"
 				"Ability2"				"boss_poison"
 		        "Ability3"              "necronomicon_warrior_sight"
+				"Ability4"              "tidehunter_kraken_shell"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "169"
+		        "ArmorPhysical"         "89"
 		        "MagicalResistance"     "85"
 		       
 		        // Attack
@@ -3066,15 +3069,17 @@
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
+				"AbilityLayout"             "5"
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
 				"Ability3"				"roshan_spell_block"
-			//		"Ability4"				"heal_block_aura"
+                "Ability4"				"tidehunter_kraken_shell"
+				"Ability5"              "nevermore_dark_lord"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "132"
+		        "ArmorPhysical"         "78"
 		        "MagicalResistance"     "80"
 		        "DisableResistance"     "99.9"
 		       
@@ -3159,13 +3164,16 @@
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
+				"AbilityLayout"             "4"
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
+                "Ability3"				"tidehunter_kraken_shell"
+				"Ability4"              "nevermore_dark_lord"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "156"
+		        "ArmorPhysical"         "84"
 		        "MagicalResistance"     "80"
 		        "DisableResistance"     "99.9"
 		       
@@ -3255,15 +3263,17 @@
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
+				"AbilityLayout"         "5"
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
 		        "Ability3"				"boss_ability_purge"
 		        "Ability4"				"boss_ability_hardcore"
+				"Ability5"				"bounty_hunter_jinada"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "200"
+		        "ArmorPhysical"         "150"
 		        "MagicalResistance"     "85"
 		        "DisableResistance"     "99.9"
 		       

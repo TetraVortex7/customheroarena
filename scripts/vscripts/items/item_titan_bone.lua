@@ -35,7 +35,6 @@ function modifier_titan_bone_passive:OnCreated(  )
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
 	self.chance = ability:GetSpecialValueFor("chance")
-	self.resistance_passive = ability:GetSpecialValueFor("resistance_passive")
 	self.all = ability:GetSpecialValueFor("all")
 	self.damage = ability:GetSpecialValueFor("damage")
 	self.atk = ability:GetSpecialValueFor("atk")
@@ -73,8 +72,4 @@ end
 
 function modifier_titan_bone_passive:GetModifierBonusStats_Agility(  )
 	return self.all
-end
-
-function modifier_titan_bone_passive:GetModifierMagicalResistanceBonus()
-	return self.resistance_passive
 end
