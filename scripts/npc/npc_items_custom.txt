@@ -5316,6 +5316,63 @@
             }
         }
     }
+"item_dominator"
+    {
+        "ID" "2143"
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "items/item_dominator.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_CREEP"
+        "AbilityCastRange"              "640"
+        "AbilityCastPoint"              "0.4"
+        "AbilityCooldown"               "60"
+        "Model"                         "models/props_gameplay/red_box.vmdl" 
+        "Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+        "AbilityTextureName"            "dominator"
+        "ItemQuality"                   "epic"
+		"ItemAliases"                   "dominator; helm; lifesteal"
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "dmg"          "20"
+            }
+            "02"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "armor"          "5"
+            }
+            "03"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "hp_regen"          "3"
+            }
+            "04"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "lifesteal"          "15"
+            }
+            "05"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "speed"          "350"
+            }
+            "06"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "hp"          "1400"
+            }
+            "06"
+            {
+                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
+                "duration"          "95"
+            }
+        }
+    }	
 "item_satanic_custom"
     {
         "ID" "2145"
@@ -9321,7 +9378,7 @@
         "AbilityTextureName"            "recipe"
         "ItemRequirements"
         {
-            "01"                        "item_dominator;item_mask_of_madnessitem_mask_of_madness;item_vladmir"
+            "01"                        "item_dominator;item_mask_of_madness;item_vladmir"
         }
     }
 "item_recipe_dominator"
