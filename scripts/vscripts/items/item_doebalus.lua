@@ -34,10 +34,12 @@ function modifier_doebalus_passive:CheckState()
 	return states
 end
 
+require('libraries/IsBoss')
 
 function modifier_doebalus_passive:OnAttackLanded( params )
 	local caster = self:GetCaster()
 	if params.attacker == caster then
+		local stun_recover
 		caster:RemoveModifierByName("modifier_doebalus_crit")
 		local ability = self:GetAbility()
 		if RollPercentage(ability:GetSpecialValueFor("chance")) then

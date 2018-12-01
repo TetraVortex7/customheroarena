@@ -667,7 +667,7 @@
                 "DOTA_Tooltip_ability_item_heart_shard_Note0"           "Drops from boss."
                 "DOTA_Tooltip_ability_item_heart_shard_Lore"            "This Artifact rare to see."
                 "DOTA_Tooltip_ability_item_heart_shard_hp_regen"        "+$hp_regen"
-                "DOTA_Tooltip_ability_item_heart_shard_mp_regen"        "+$mp_regen"
+                "DOTA_Tooltip_ability_item_heart_shard_mp_regen"        "+$mana_regen"
                 "DOTA_Tooltip_ability_item_heart_shard_hp_mp"           "+$health"
 
             //Пластина брони
@@ -684,7 +684,7 @@
                 "DOTA_Tooltip_ability_item_enchanted_plate_Lore"            "I do not know from where this thing."
                 "DOTA_Tooltip_ability_item_enchanted_plate_hp_mp"           "+$health"
                 "DOTA_Tooltip_ability_item_enchanted_plate_armor"           "+$armor"
-				"DOTA_Tooltip_ability_item_enchanted_plate_mp_regen"        "+$mp_regen"
+				"DOTA_Tooltip_ability_item_enchanted_plate_mp_regen"        "+$mana_regen"
                 "DOTA_Tooltip_ability_item_enchanted_plate_hp_regen"        "+$hp_regen"
 
             //Крепкий щит
@@ -695,7 +695,7 @@
             "DOTA_Tooltip_ability_item_insane_shield_hp"            "+$health"
             "DOTA_Tooltip_ability_item_insane_shield_mp"            "+$mana"
             "DOTA_Tooltip_ability_item_insane_shield_armor"         "+$armor"
-			"DOTA_Tooltip_ability_item_insane_shield_mp_regen"      "+$mp_regen"
+			"DOTA_Tooltip_ability_item_insane_shield_mp_regen"      "+$mana_regen"
             "DOTA_Tooltip_ability_item_insane_shield_hp_regen"      "+$hp_regen"
 			"DOTA_Tooltip_ability_item_insane_shield_bonus_agi"     "+$agi"
 
@@ -929,7 +929,7 @@
                 "DOTA_Tooltip_ability_item_aether_lens_1_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
                 "DOTA_Tooltip_ability_item_aether_lens_1_Lore"                  "Focusing on the glass that thing enhance your magical potential."
                 "DOTA_Tooltip_ability_item_aether_lens_1_bonus_mana"            "+$mana"
-                "DOTA_Tooltip_ability_item_aether_lens_1_bonus_mana_regen"      "+$mp_regen"
+                "DOTA_Tooltip_ability_item_aether_lens_1_bonus_mana_regen"      "+$mana_regen"
                 "DOTA_Tooltip_ability_item_aether_lens_1_cast_range_bonus"      "+spell cast range"
                 "DOTA_Tooltip_ability_item_aether_lens_1_spell_amp"             "%BONUS SPELL DAMAGE:"
 
@@ -939,7 +939,7 @@
                 "DOTA_Tooltip_ability_item_aether_lens_2_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
                 "DOTA_Tooltip_ability_item_aether_lens_2_Lore"                  "Focusing on the glass that thing enhance your magical potential."
                 "DOTA_Tooltip_ability_item_aether_lens_2_bonus_mana"            "+$mana"
-                "DOTA_Tooltip_ability_item_aether_lens_2_bonus_mana_regen"      "+$mp_regen"
+                "DOTA_Tooltip_ability_item_aether_lens_2_bonus_mana_regen"      "+$mana_regen"
                 "DOTA_Tooltip_ability_item_aether_lens_2_cast_range_bonus"      "+spell cast range"
                 "DOTA_Tooltip_ability_item_aether_lens_2_spell_amp"             "%BONUS SPELL DAMAGE:"
 
@@ -949,7 +949,7 @@
                 "DOTA_Tooltip_ability_item_aether_lens_3_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
                 "DOTA_Tooltip_ability_item_aether_lens_3_Lore"                  "Focusing on the glass that thing enhance your magical potential."
                 "DOTA_Tooltip_ability_item_aether_lens_3_bonus_mana"            "+$mana"
-                "DOTA_Tooltip_ability_item_aether_lens_3_bonus_mana_regen"      "+$mp_regen"
+                "DOTA_Tooltip_ability_item_aether_lens_3_bonus_mana_regen"      "+$mana_regen"
                 "DOTA_Tooltip_ability_item_aether_lens_3_cast_range_bonus"      "+spell cast range"
                 "DOTA_Tooltip_ability_item_aether_lens_3_spell_amp"             "%BONUS SPELL DAMAGE:"
 
@@ -959,7 +959,7 @@
                 "DOTA_Tooltip_ability_item_aether_lens_4_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
                 "DOTA_Tooltip_ability_item_aether_lens_4_Lore"                  "Focusing on the glass that thing enhance your magical potential."
                 "DOTA_Tooltip_ability_item_aether_lens_4_bonus_mana"            "+$mana"
-                "DOTA_Tooltip_ability_item_aether_lens_4_bonus_mana_regen"      "+$mp_regen"
+                "DOTA_Tooltip_ability_item_aether_lens_4_bonus_mana_regen"      "+$mana_regen"
                 "DOTA_Tooltip_ability_item_aether_lens_4_cast_range_bonus"      "+spell cast range"
                 "DOTA_Tooltip_ability_item_aether_lens_4_spell_amp"             "%BONUS SPELL DAMAGE:"
 

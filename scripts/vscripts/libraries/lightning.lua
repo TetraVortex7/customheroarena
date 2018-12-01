@@ -82,7 +82,7 @@ function CDOTA_BaseNPC:CreateBashingLightning( ability, damage, range, jump_coun
     else
       if RollPercentage(bash_chance) then 
         old_target:AddNewModifier(caster, ability, "modifier_stun",{duration = 0.1}) 
-        ApplyDamage({victim = old_target, attacker = caster, damage = bash_damage, damage_type = DAMAGE_TYPE_PHYSICAL, ability = ability}) 
+        ApplyDamage({victim = old_target, attacker = caster, damage = bash_damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability}) 
       end
       old_target:EmitSound("Hero_Leshrac.Lightning_Storm")
       local id1 = ParticleManager:CreateParticle(particle_name,PATTACH_ABSORIGIN_FOLLOW, old_target)
@@ -107,7 +107,7 @@ function CDOTA_BaseNPC:CreateBashingLightning( ability, damage, range, jump_coun
             else
               if RollPercentage(bash_chance) then 
             old_target:AddNewModifier(caster, ability, "modifier_stun",{duration = 0.1}) 
-            ApplyDamage({victim = new_target, attacker = caster, damage = bash_damage, damage_type = DAMAGE_TYPE_PHYSICAL, ability = ability}) 
+            ApplyDamage({victim = new_target, attacker = caster, damage = bash_damage, damage_type = DAMAGE_TYPE_MAGICAL, ability = ability}) 
           end
               old_target:EmitSound("Hero_Leshrac.Lightning_Storm")
               local id1 = ParticleManager:CreateParticle(particle_name,PATTACH_ABSORIGIN_FOLLOW, new_target)
