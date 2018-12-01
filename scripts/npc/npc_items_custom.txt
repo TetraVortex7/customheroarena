@@ -4366,7 +4366,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "bonus_all_stats"           "48"
+                "bonus_all_stats"           "50"
             }
             "01"
             {
@@ -4393,7 +4393,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "bonus_all_stats"           "96"
+                "bonus_all_stats"           "100"
             }
             "01"
             {
@@ -9030,7 +9030,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "8400"  
+        "ItemCost"                      "15000"  
         "ItemShopTags"                  ""
         
         // Recipe
@@ -9053,7 +9053,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "3440"   
+        "ItemCost"                      "5000"   
         "ItemShopTags"                  ""
         
         // Recipe
@@ -9076,7 +9076,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "7680"   
+        "ItemCost"                      "10000"   
         "ItemShopTags"                  ""
         
         // Recipe
