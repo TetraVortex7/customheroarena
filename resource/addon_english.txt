@@ -1569,14 +1569,13 @@
         //FireBlend
 
             "DOTA_Tooltip_ability_item_fireblend"                   "FireBlend"
-            "DOTA_Tooltip_ability_item_fireblend_Description"       "<h1>Passive: Explose</h1> On attack has chance %chance%% to create explosion on every target who stay nearby main target in %radius% radius and deal magic %damage% damage.\n<h1>Active: Destroy Tree</h1> Destroy trees around selected tree in 160 radius and give vision on tree pos.\n<h1>Passive: Quell</h1> Increases damage done to creeps by %dmg%%, It does not apply to the bosses."
+            "DOTA_Tooltip_ability_item_fireblend_Description"       "<h1>Passive: Explose</h1> On attack has chance %chance%% to create explosion on every target who stay nearby main target in %radius% radius and deal magic %damage% damage.\n<h1>Active: Destroy Tree</h1> Destroy trees around selected tree in 160 radius and give vision on tree pos.\n<h1>Passive: Quell</h1> Increases damage done to creeps if the type of melee attacks while damage to creeps will %quell%%, if ranged, will %quell_ranged%%, It does not apply to the bosses."
             "DOTA_Tooltip_ability_item_fireblend_Lore"              ""
             "DOTA_Tooltip_ability_item_fireblend_chance"            "%CHANCE:"
-            "DOTA_Tooltip_ability_item_fireblend_atk"               "+$attack"
-            "DOTA_Tooltip_ability_item_fireblend_mana"              "+$mana"
+            "DOTA_Tooltip_ability_item_fireblend_atk"               "+$damage"
+			"DOTA_Tooltip_ability_item_fireblend_attack"            "+$attack"
             "DOTA_Tooltip_ability_item_fireblend_radius"            "DAMAGE RADIUS:"
             "DOTA_Tooltip_ability_item_fireblend_damage"            "DAMAGE:"
-            "DOTA_Tooltip_ability_item_fireblend_bonus_dmg"         "%QUELL DAMAGE:"
 
         //Doom craft scroll
 
@@ -1609,7 +1608,6 @@
             "DOTA_Tooltip_ability_item_midas_sword_mana"                "+$mana"
             "DOTA_Tooltip_ability_item_midas_sword_radius"              "• DAMAGE RADIUS:"
             "DOTA_Tooltip_ability_item_midas_sword_damage"              "• DAMAGE:"
-            "DOTA_Tooltip_ability_item_midas_sword_bonus_dmg"           "%QUELL DAMAGE:"
             "DOTA_Tooltip_ability_item_midas_sword_gold_per_hit"        "MIDAS TOUCH:<br>• GOLD PER HIT:"
             "DOTA_Tooltip_ability_item_midas_sword_gold_per_hit_chance" "%• CHANCE:"
             "DOTA_Tooltip_ability_item_midas_sword_gold_per_hit_cooldown""• COOLDOWN AFTER SUCCES:"

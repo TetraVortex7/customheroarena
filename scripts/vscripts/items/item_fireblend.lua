@@ -51,7 +51,7 @@ function modifier_fireblend_passive:OnDestroy(  )
 	self:GetCaster():RemoveModifierByName("modifier_fireblend_fire")
 end
 
-function modifier_demonic_axe_passive:OnAttackLanded( params )
+function modifier_fireblend_passive:OnAttackLanded( params )
 	local caster = self:GetParent()
 	local target = params.target
 
@@ -101,7 +101,6 @@ function modifier_fireblend_fire:OnAttackLanded( params )
 	local old_target
 	local basic_target = params.target
 	if params.attacker == caster then
-		if not self:IsActiveOrb() then return end
 		if RollPercentage(ability:GetSpecialValueFor("chance")) then
 			if (caster:IsRealHero() and ability:IsCooldownReady()) then
 				ability:StartCooldown(4);
@@ -131,6 +130,5 @@ function modifier_fireblend_fire:OnAttackLanded( params )
 				end
 			end
 		end
-		
 	end
 end

@@ -6556,7 +6556,7 @@
             "11"
             {
                 "var_type"              "FIELD_FLOAT"
-                "duration_v"                   "10"
+                "duration_v"                   "5"
             }
         }
     }
