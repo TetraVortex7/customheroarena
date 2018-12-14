@@ -121,7 +121,7 @@ function modifier_demon_lifesteal_aura:OnAttackLanded( params )
 	local parent = self:GetParent()
 	local caster = self:GetCaster()
 	local percentage = self:GetAbility():GetSpecialValueFor("lifesteal") / 100
-	if params.attacker == parent and target ~= parent and self:IsActiveOrb() then
+	if params.attacker == parent and target ~= parent then
 		local heal = damage * percentage
 		parent:HealCustom(heal,parent,true,false)
 	end

@@ -556,7 +556,7 @@
 
             "DOTA_Tooltip_ability_item_katana"                                          "Katana"
             "DOTA_Tooltip_ability_item_katana_Note0"                                    "Drops from bosses."
-            "DOTA_Tooltip_ability_item_katana_Description"                              "<h1>Active: Flutter 2</h1> Exchanges a attack dodge chance to additional %evasion%% movement speed, lasts %duration% seconds."
+            "DOTA_Tooltip_ability_item_katana_Description"                              "<h1>Active: Flutter</h1> Exchanges a attack dodge chance to additional %evasion%% movement speed, lasts %duration% seconds."
             "DOTA_Tooltip_ability_item_katana_Lore"                                     "Very hard to use, but extends owner speed"
             "DOTA_Tooltip_ability_item_katana_bonus_agi"                                "+$agi"
             "DOTA_Tooltip_ability_item_katana_bonus_attack_speed"                       "+$attack"
@@ -573,7 +573,7 @@
             "DOTA_Tooltip_ability_item_fly_bonus_damage"                                "+$damage"
             "DOTA_Tooltip_ability_item_fly_bonus_evasion"                               "%+$evasion"
             "DOTA_Tooltip_ability_item_fly_bonus_attack_speed"                          "+$attack"
-		    "DOTA_Tooltip_ability_item_fly_bonus_move_speed_percent"                    "%+move_speed"
+		    "DOTA_Tooltip_ability_item_fly_bonus_move_speed_percent"                    "%+$move_speed"
         
         // хендед сворд
 

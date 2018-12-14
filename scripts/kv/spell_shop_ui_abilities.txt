@@ -238,9 +238,10 @@
   "4"    "jakiro_macropyre"
   }
   "chen" {
-  "1"    "chen_chen_penitence"
-  "2"    "chen_hand_of_god"
-  "3"    "chen_divine_favor"
+  "1"    "chen_penitence"
+  "2"    "chen_divine_favor"
+  "3"    "chen_holy_persuasion"
+  "4"    "chen_hand_of_god"
   }
   "silencer" {
   "1"    "silencer_curse_of_the_silent"
@@ -370,7 +371,7 @@
   "axe" {
   "1"    "axe_berserkers_call"
   "2"    "axe_battle_hunger"
-  "3"    "axe_counter_helix_custom"
+  "3"    "axe_counter_helix"
   "4"    "axe_culling_blade"
   }
   "pudge" {
@@ -499,7 +500,7 @@
   "spirit_breaker" {
   "1"    "spirit_breaker_charge_of_darkness"
   "2"    "spirit_breaker_bulldoze"
-  "3"	   "spirit_breaker_greater_bash"
+  "3"	 "spirit_breaker_greater_bash"
   "4"    "spirit_breaker_nether_strike"
   }
   "lycan" {
@@ -635,10 +636,10 @@
   }
   "dark_willow" {
   "1"    "dark_willow_bramble_maze"
-  "2"    "dark_willow_bedlam"
-  "3"    "dark_willow_terrorize"
-  "4"    "dark_willow_shadow_realm"
-  "5"    "dark_willow_cursed_crown"
+  "2"    "dark_willow_shadow_realm"
+  "3"    "dark_willow_cursed_crown"
+  "4"    "dark_willow_bedlam"
+  "5"    "dark_willow_terrorize"
   }
   "ancient_apparition" {
   "1"    "ancient_apparition_cold_feet"
@@ -681,7 +682,6 @@
   "1"    "monkey_king_boundless_strike"
   "2"    "monkey_king_jingu_mastery_custom"
   "3"    "monkey_king_mischief"
-  "4"    "monkey_king_tree_dance"
-  "5"    "monkey_king_wukongs_command"
+  "4"    "monkey_king_wukongs_command"
   }
 }

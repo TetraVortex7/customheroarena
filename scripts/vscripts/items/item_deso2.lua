@@ -30,7 +30,7 @@ function modifier_deso2_passive:OnAttackLanded( params )
 	local ability = self:GetAbility()
 	local target = params.target
 
-	if target ~= caster and params.attacker == caster and not target:IsMagicImmune() and self:IsActiveOrb() then
+	if target ~= caster and params.attacker == caster and not target:IsMagicImmune() then
 		target:AddNewModifier(caster,ability,"deso2_modifier_corrupt",{duration = ability:GetSpecialValueFor("corrupt_duration")})
 	end
 end

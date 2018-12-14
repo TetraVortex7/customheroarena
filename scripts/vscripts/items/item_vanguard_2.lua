@@ -54,3 +54,7 @@ end
 function modifier_item_vanguard_2:GetModifierPhysical_ConstantBlock()
 	return self.blockDamage 
 end
+
+function modifier_item_vanguard_2:GetModifierBonusStats_Agility(  )
+	return self.agi
+end

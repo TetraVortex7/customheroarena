@@ -1395,7 +1395,7 @@
 							"Ability7" "" 
 							"Ability8" "" 
 				
-							"ArmorPhysical" "86" 
+							"ArmorPhysical" "46" 
 							"MagicalResistance" "65" 
 							
 							"UseNeutralCreepBehavior"    "1" 	
@@ -1552,7 +1552,7 @@
 						"Ability7" "" 
 						"Ability8" "" 
 			
-						"ArmorPhysical" "79" 
+						"ArmorPhysical" "59" 
 						"MagicalResistance" "65" 
 						
 						"UseNeutralCreepBehavior"    "1" 	
@@ -1638,7 +1638,7 @@
 					"Ability2" "enchantress_untouchable" 
 					"Ability3" "omniknight_degen_aura" 
 					"Ability4" "necronomicon_warrior_sight" 
-					"Ability5" "tidehunter_kraken_shell" 
+					"Ability5" "boss_kraken_shell" 
 					"Ability6" "slark_essence_shift" 
 					"Ability7" "" 
 					"Ability8" "" 
@@ -2231,7 +2231,7 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 			
-			        "ArmorPhysical" "92" 
+			        "ArmorPhysical" "72" 
 			        "MagicalResistance" "80" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
@@ -2320,7 +2320,7 @@
 		        "Ability7" "" 
 		        "Ability8" "" 
 
-		        "ArmorPhysical" "88" 
+		        "ArmorPhysical" "78" 
 		        "MagicalResistance" "80" 
 		                
 		        "UseNeutralCreepBehavior"    "1"    
@@ -2410,7 +2410,7 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 
-			        "ArmorPhysical" "99" 
+			        "ArmorPhysical" "83" 
 			        "MagicalResistance" "80" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
@@ -2502,7 +2502,7 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 			
-			        "ArmorPhysical" "105" 
+			        "ArmorPhysical" "86" 
 			        "MagicalResistance" "80" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
@@ -2598,7 +2598,7 @@
 			        "Ability2" "creeps_doom_ability_illusioness" 
 			        "Ability3" "creeps_doom_ability_mana_steal" 
 			        "Ability4" "necronomicon_warrior_sight" 
-			        "Ability5" "tidehunter_kraken_shell" 
+			        "Ability5" "boss_kraken_shell" 
 			        "Ability6" "" 
 			        "Ability7" "" 
 			        "Ability8" "" 
@@ -2850,7 +2850,7 @@
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
 				"Ability3"				"roshan_spell_block"
-				"Ability4"              "tidehunter_kraken_shell"
+				"Ability4"              "boss_kraken_shell"
 				"Ability5"				"huskar_berserkers_blood"
                 "ConsideredHero"            "1"
 		       
@@ -2944,7 +2944,7 @@
 		        "Ability1"              "boss_hard_skin"
 				"Ability2"				"boss_poison"
 		        "Ability3"              "necronomicon_warrior_sight"
-				"Ability4"              "tidehunter_kraken_shell"
+				"Ability4"              "boss_kraken_shell"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
@@ -3073,8 +3073,8 @@
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
 				"Ability3"				"roshan_spell_block"
-                "Ability4"				"tidehunter_kraken_shell"
-				"Ability5"              "nevermore_dark_lord"
+                "Ability4"				"boss_kraken_shell"
+				"Ability5"              "disarmor"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
@@ -3167,8 +3167,8 @@
 				"AbilityLayout"             "4"
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
-                "Ability3"				"tidehunter_kraken_shell"
-				"Ability4"              "nevermore_dark_lord"
+                "Ability3"				"boss_kraken_shell"
+				"Ability4"              "disarmor"
                 "ConsideredHero"            "1"
 		       
 		        // Armor

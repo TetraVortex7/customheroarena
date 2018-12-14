@@ -13,7 +13,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"50"
+		"ItemCost"						"500"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
 		"ItemAliases"					"donkey;chicken;animal courier"
@@ -5373,60 +5373,6 @@
             }
         }
     }	
-"item_satanic_custom"
-    {
-        "ID" "2145"
-        "BaseClass"                     "item_lua"
-        "ScriptFile"                    "items/item_satanic_custom.lua"
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
-        "Model"                         "models/props_gameplay/red_box.vmdl" 
-        "Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
-        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-        "AbilityTextureName"            "satanic_custom"
-        "AbilityManaCost"               "220"
-        "AbilityCooldown"               "18"
-        "ItemQuality"                   "artifact"
-		"ItemAliases"                   "satanic; lifesteal"
-        
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "dmg"          "20"
-            }
-            "02"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "str"          "25"
-            }
-            "03"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "armor"          "5"
-            }
-            "04"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "lifesteal"          "25"
-            }
-            "05"
-            {
-                "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "act_lifesteal"          "200"
-            }
-            "06"
-            {
-                "var_type"  "FIELD_FLOAT" //FIELD_FLOAT or FIELD_INTEGER
-                "duration"          "4.5"
-            }
-			"07"
-            {
-                "var_type"  "FIELD_FLOAT" //FIELD_FLOAT or FIELD_INTEGER
-                "hp_regen"          "3"
-            }
-        }
-    }
 "item_mana_burn_2"
     {
         "ID" "2151"
@@ -8820,7 +8766,7 @@
         "AbilityTextureName"            "recipe"
         "ItemRequirements"
         {
-            "01"                        "item_bfury;item_satanic_custom;item_demonic_rod"
+            "01"                        "item_bfury;item_satanic;item_demonic_rod"
         }
     }
 "item_recipe_greater_javelin"
@@ -8949,7 +8895,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "1250"  
+        "ItemCost"                      "2460"  
         "ItemShopTags"                  ""
         
         // Recipe
@@ -8972,7 +8918,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "3600"  
+        "ItemCost"                      "5000"  
         "ItemShopTags"                  ""
         
         // Recipe
@@ -8995,7 +8941,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "1250"  
+        "ItemCost"                      "2460"  
         "ItemShopTags"                  ""
         
         // Recipe
@@ -9018,7 +8964,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "3600"  
+        "ItemCost"                      "5000"  
         "ItemShopTags"                  ""
         
         // Recipe
@@ -9041,7 +8987,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "1250"  
+        "ItemCost"                      "2460"  
         "ItemShopTags"                  ""
         
         // Recipe
@@ -9064,7 +9010,7 @@
         
         // Item Info
         //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "3600"  
+        "ItemCost"                      "5000"  
         "ItemShopTags"                  ""
         
         // Recipe
@@ -9402,28 +9348,6 @@
         "ItemRequirements"
         {
             "01"                        "item_lifesteal;item_helm_of_iron_will"
-        }
-    }
-"item_recipe_satanic_custom"
-    {
-        "ID" "5061"
-        // General
-        //-------------------------------------                     
-        "BaseClass"                     "item_datadriven"
-        
-        // Item Info
-        //-------------------------------------------------------------------------------------------------------------
-        "ItemCost"                      "1100"  
-        "ItemShopTags"                  ""
-        
-        // Recipe
-        //-------------------------------------------------------------------------------------------------------------
-        "ItemRecipe"                    "1"
-        "ItemResult"                    "item_satanic_custom"
-        "AbilityTextureName"            "recipe"
-        "ItemRequirements"
-        {
-            "01"                        "item_dominator;item_reaver"
         }
     }
 "item_recipe_mana_burn_1"

@@ -66,7 +66,6 @@ function modifier_gauntlet_of_madness_passive:OnAttackLanded( params )
 	local ability = self:GetAbility()
 	if self:GetAbility():GetName() == "item_gauntlet_of_madness_active" then return end
 	if params.attacker == caster and params.target ~= caster then 
-		if not self:IsActiveOrb() then return end
 		local prc = ability:GetSpecialValueFor("lifesteal")
 		if modifier_gauntlet_of_madness_active.current_tick then 
 			local tick = modifier_gauntlet_of_madness_active.current_tick
@@ -230,9 +229,7 @@ function modifier_gauntlet_of_madness_active:OnAttackLanded( params )
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
 	if params.attacker == caster and params.target ~= caster then 
-		if self:IsActiveOrb() then 
-			caster:HealCustom(params.damage * self.lifesteal * 0.01,caster,true,false)
-		end
+		caster:HealCustom(params.damage * self.lifesteal * 0.01,caster,true,false)
 	end
 end
 

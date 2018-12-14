@@ -19,16 +19,8 @@ function item_mana_burn_2:OnSpellStart(  )
 end
 
 function item_mana_burn_2:CastFilterResultTarget( hTarget )
-	local charges = self:GetCurrentCharges()
-	if charges == 0 then return UF_FAIL_CUSTOM end
 	if hTarget:IsMagicImmune() then return UF_FAIL_MAGIC_IMMUNE_ENEMY end
 	return UF_SUCCESS
-end
-
-function item_mana_burn_2:GetCustomCastErrorTarget(hTarget)
-	if self:CastFilterResultTarget() == UF_FAIL_CUSTOM then return "#dota_hud_error_custom_not_enought_charges" end
-	
-	return ""
 end
 
 function item_mana_burn_2:GetIntrinsicModifierName(  )
@@ -67,7 +59,6 @@ function modifier_mana_burn_two_passive:OnAttackLanded( params )
 	local ability = self:GetAbility()
 	if params.attacker ~= caster then return end
 	if target == caster or target:GetTeamNumber() == caster:GetTeamNumber() then return end
-	if not self:IsActiveOrb() then return end
 	target:ManaBurn(ability:GetSpecialValueFor("burn"),"particles/mana_burn_burn.vpcf",true,0,ability:GetSpecialValueFor("burn_damage"),ability,caster)
 end
 

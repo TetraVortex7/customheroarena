@@ -15,7 +15,7 @@ if modifier_item_sacred_shield == nil then
 end
 
 function modifier_item_sacred_shield:GetAttributes() 
-	return MODIFIER_ATTRIBUTE_MULTIPLE 
+	return MODIFIER_ATTRIBUTE_MULTIPLE + MODIFIER_ATTRIBUTE_PERMANENT
 end
 
 function modifier_item_sacred_shield:IsPurgable(  )
@@ -56,6 +56,6 @@ function modifier_item_sacred_shield:GetModifierPhysical_ConstantBlock()
 	return self.blockDamage 
 end
 
-function modifier_sacred_shield_passive:GetModifierBonusStats_Agility(  )
-	return self:bonus_agi
+function modifier_item_sacred_shield:GetModifierBonusStats_Agility(  )
+	return self:agi
 end

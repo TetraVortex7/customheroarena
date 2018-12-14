@@ -64,7 +64,7 @@ function modifier_insane_shield_passive:GetModifierPhysical_ConstantBlock()
 end
 
 function modifier_insane_shield_passive:GetModifierBonusStats_Agility(  )
-	return self:bonus_agi
+	return self:agi
 end
 
 function modifier_insane_shield_passive:GetModifierHealthBonus(  )

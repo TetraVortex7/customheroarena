@@ -94,7 +94,7 @@ end
 function modifier_dominator_passive:OnAttackLanded( params )
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
-	if params.attacker == caster and params.target ~= caster and not params.target:IsMagicImmune() and self:IsActiveOrb() then
+	if params.attacker == caster and params.target ~= caster and not params.target:IsMagicImmune() then
 		local heal = params.damage * self.lifesteal
 		caster:HealCustom(heal,caster,true)
 	end
