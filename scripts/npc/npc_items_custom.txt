@@ -1482,7 +1482,7 @@
             "04"
             {
                 "var_type"                      "FIELD_INTEGER"
-                "cleave_pct"                    "45"
+                "cleave_pct"                    "120"
             }
             "05"
             {
@@ -3257,7 +3257,7 @@
             "06"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "cleave_damage_percent"         "50"
+                "cleave_damage_percent"         "60"
             }
             "07"
             {
