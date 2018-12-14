@@ -51,7 +51,7 @@ function modifier_insane_shield_passive:OnRefresh(  )
 end
 
 function modifier_insane_shield_passive:GetAttributes(  )
-	return MODIFIER_ATTRIBUTE_MULTIPLE
+	return MODIFIER_ATTRIBUTE_MULTIPLE + MODIFIER_ATTRIBUTE_PERMANENT 
 end
 
 function modifier_insane_shield_passive:DeclareFunctions(  )
@@ -64,7 +64,7 @@ function modifier_insane_shield_passive:GetModifierPhysical_ConstantBlock()
 end
 
 function modifier_insane_shield_passive:GetModifierBonusStats_Agility(  )
-	return self:agi
+	return self.agi
 end
 
 function modifier_insane_shield_passive:GetModifierHealthBonus(  )
@@ -75,7 +75,7 @@ function modifier_insane_shield_passive:GetModifierManaBonus(  )
 	return self.mp
 end
 
-function modifier_grand_magus_core_passive:GetModifierConstantManaRegen(  )
+function modifier_insane_shield_passive:GetModifierConstantManaRegen(  )
 	return self.mp_regen
 end
 

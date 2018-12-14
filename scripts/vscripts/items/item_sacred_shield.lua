@@ -15,24 +15,23 @@ if modifier_item_sacred_shield == nil then
 end
 
 function modifier_item_sacred_shield:GetAttributes() 
-	return MODIFIER_ATTRIBUTE_MULTIPLE + MODIFIER_ATTRIBUTE_PERMANENT
-end
-
-function modifier_item_sacred_shield:IsPurgable(  )
-	return false
+	return MODIFIER_ATTRIBUTE_MULTIPLE + MODIFIER_ATTRIBUTE_PERMANENT 
 end
 
 function modifier_item_sacred_shield:IsHidden()
 	return true 
 end
 
+function modifier_item_sacred_shield:IsPurgable()
+	return false
+end
+
 function modifier_item_sacred_shield:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK,
 		MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
-		MODIFIER_PROPERTY_HEALTH_BONUS,
-		MODIFIER_PROPERTY_STATS_AGILITY_BONUS
-	}
+		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
+		MODIFIER_PROPERTY_HEALTH_BONUS
  
 	return funcs
 end
@@ -56,6 +55,6 @@ function modifier_item_sacred_shield:GetModifierPhysical_ConstantBlock()
 	return self.blockDamage 
 end
 
-function modifier_item_sacred_shield:GetModifierBonusStats_Agility(  )
-	return self:agi
+function modifier_item_sacred_shield:GetModifierBonusStats_Agility()
+	return self.agi
 end

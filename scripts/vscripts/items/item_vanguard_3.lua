@@ -33,7 +33,6 @@ function modifier_item_vanguard_3:DeclareFunctions()
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 		MODIFIER_PROPERTY_HEALTH_BONUS
 	}
- 
 	return funcs
 end
 
