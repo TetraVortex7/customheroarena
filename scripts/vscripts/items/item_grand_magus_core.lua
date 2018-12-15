@@ -15,6 +15,12 @@ function item_grand_magus_core:OnSpellStart(  )
         if ability then
             ability:EndCooldown()
         end
+    end    
+    for i=0, 5, 1 do
+        local current_item = self:GetCaster():GetItemInSlot(i)
+        if current_item ~= nil then
+            if current_item ~= self and current_item:GetSharedCooldownName() ~= "refresher" then current_item:EndCooldown() end    
+        end
     end
 end
 

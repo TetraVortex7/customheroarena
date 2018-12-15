@@ -34,7 +34,7 @@ function modifier_insane_shield_passive:OnCreated(  )
 	self.hp = self:GetAbility():GetSpecialValueFor("hp")
 	self.mp = self:GetAbility():GetSpecialValueFor("mp")
 	self.hp_regen = self:GetAbility():GetSpecialValueFor("hp_regen")
-	self.mp_regen = ability:GetSpecialValueFor("mp_regen")
+	self.mp_regen = self.ability:GetSpecialValueFor("mp_regen")
 	self.armor = self:GetAbility():GetSpecialValueFor("armor")
 	self.block = self:GetAbility():GetSpecialValueFor("block")
 	self.agi = self:GetAbility():GetSpecialValueFor("bonus_agi")
@@ -44,7 +44,7 @@ function modifier_insane_shield_passive:OnRefresh(  )
 	self.hp = self:GetAbility():GetSpecialValueFor("hp")
 	self.mp = self:GetAbility():GetSpecialValueFor("mp")
 	self.hp_regen = self:GetAbility():GetSpecialValueFor("hp_regen")
-	self.mp_regen = ability:GetSpecialValueFor("mp_regen")
+	self.mp_regen = self.ability:GetSpecialValueFor("mp_regen")
 	self.armor = self:GetAbility():GetSpecialValueFor("armor")
 	self.block = self:GetAbility():GetSpecialValueFor("block")
 	self.agi = self:GetAbility():GetSpecialValueFor("bonus_agi")
@@ -78,7 +78,6 @@ end
 function modifier_insane_shield_passive:GetModifierConstantManaRegen(  )
 	return self.mp_regen
 end
-
 
 function modifier_insane_shield_passive:GetModifierConstantHealthRegen(  )
 	return self.hp_regen

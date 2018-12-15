@@ -32,7 +32,7 @@ function modifier_item_sacred_shield:DeclareFunctions()
 		MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 		MODIFIER_PROPERTY_HEALTH_BONUS
- 
+    }
 	return funcs
 end
 
