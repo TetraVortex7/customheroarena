@@ -23,6 +23,7 @@ end
 function modifier_item_heart3_regen_on_interval_think(keys)
 	if keys.ability:IsCooldownReady() and keys.caster:IsRealHero() then
 		keys.caster:GiveMana(keys.caster:GetMaxMana() * (keys.ManaRegenPercentPerSecond / 100) * keys.RegenInterval)
+		keys.caster:Heal(keys.caster:GetMaxHealth() * (keys.HealthRegenPercentPerSecond / 100) * keys.HealInterval, keys.caster)
 		if not keys.caster:HasModifier("modifier_item_heart3_regen_visible") then
 			keys.ability:ApplyDataDrivenModifier(keys.caster, keys.caster, "modifier_item_heart3_regen_visible", {duration = -1})
 		end

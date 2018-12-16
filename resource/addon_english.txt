@@ -321,7 +321,7 @@
             "DOTA_Tooltip_ability_visage_gravekeepers_cloak_custom_radius"              "MAX RADIUS:"
 
                 "DOTA_Tooltip_modifier_visage_gravekeepers_cloak_custom_layer"              "Gravekeeper's Cloak"
-                "DOTA_Tooltip_modifier_visage_gravekeepers_cloak_custom_layer_Description"  "Absorb %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% any damage. Layers recover over time."
+                "DOTA_Tooltip_modifier_visage_gravekeepers_cloak_custom_layer_Description"  "Absorb %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% any damage. Layers recover over time."
 
         //Arctic Burn
 
@@ -649,8 +649,8 @@
 
                 "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART"                "Pure Heart"
                 "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_Description"    "<h1>Passive: FullyRecharge</h1> Regenerate your health by %health_regen_prc%% and mana by %mana_regen_prc%% of max value.<br><br> Disables if owner has attacked or channeled any spell by %cooldown% sec."
-                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_health_bonus"   "+$health"
-                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_mana_bonus"     "+$mana"
+                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_bonus_health"   "+$health"
+                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_bonus_mana"     "+$mana"
                 "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_int_bonus"      "+$int"
                 "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_str_bonus"      "+$str"
                 "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_hp_regen"       "+$hp_regen"

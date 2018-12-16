@@ -163,8 +163,8 @@
   "wisp" {
   "1"    "wisp_tether"
   "2"    "wisp_overcharge"
-  "3"    "wisp_relocate"
-  "4"    "wisp_spirits"
+  "3"    "wisp_spirits"
+  "4"    "wisp_relocate"
   }
   "centaur" {
   "1"    "centaur_hoof_stomp"
@@ -305,9 +305,10 @@
   }
   "lone_druid" {
   "1"    "lone_druid_spirit_bear"
-  "2"    "lone_druid_rabid"
-  "3"    "lone_druid_true_form_battle_cry"
-  "4"    "lone_druid_true_form"
+  "2"    "lone_druid_spirit_link"
+  "3"    "lone_druid_savage_roar"
+  "4"    "lone_druid_true_form_battle_cry"
+  "5"    "lone_druid_true_form"
   }
   "naga_siren" {
   "1"    "naga_siren_mirror_image"
@@ -367,6 +368,7 @@
   "2"    "techies_suicide"
   "3"    "techies_remote_mines"
   "4"    "techies_focused_detonate"
+  "5"    "techies_remote_mines"
   }
   "axe" {
   "1"    "axe_berserkers_call"
@@ -489,8 +491,10 @@
   "3"    "warlock_upheaval"
   }
   "night_stalker" {
-  "1"    "night_stalker_hunter_in_the_night"
-  "2"    "night_stalker_darkness"
+  "1"    "night_stalker_void"
+  "2"    "night_stalker_crippling_fear"
+  "3"    "night_stalker_hunter_in_the_night"
+  "4"    "night_stalker_darkness"
   }
   "doom_bringer" {
   "1"    "doom_bringer_scorched_earth"
@@ -547,11 +551,12 @@
   "1"    "spectre_spectral_dagger"
   "2"    "spectre_desolate"
   "3"    "spectre_dispersion"
+  "4"    "spectre_haunt"
   }
   "meepo" {
   "1"    "meepo_earthbind"
   "2"    "meepo_poof"
-  "3"    "meepo_geostrike"
+  "3"    "meepo_ransack"
   }
   "nyx_assassin" {
   "1"    "nyx_assassin_impale"
@@ -614,7 +619,7 @@
   "abyssal_underlord" {
   "1"    "abyssal_underlord_firestorm"
   "2"    "abyssal_underlord_pit_of_malice"
-  "3"    "abyssal_underlord_atrophy_aura_custom"
+  "3"    "abyssal_underlord_atrophy_aura"
   "4"    "abyssal_underlord_dark_rift"
   }
   "medusa" {
@@ -664,7 +669,6 @@
   "1"    "visage_grave_chill"
   "2"    "visage_soul_assumption"
   "3"    "visage_gravekeepers_cloak_custom"
-  "4"    "visage_summon_familiars"
   }
   "winter_wyvern" {
   "1"    "winter_wyvern_arctic_burn"

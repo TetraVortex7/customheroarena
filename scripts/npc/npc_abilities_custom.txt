@@ -2642,7 +2642,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"9017"	
-        "BaseClass"                             "tidehunter_kraken_shell"													// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+        "BaseClass"                     "tidehunter_kraken_shell"													// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilitySound"					"Hero_Tidehunter.KrakenShell"
 		"AbilityTextureName"			"bossshell"
@@ -2665,7 +2665,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"damage_reset_interval"	"3.0"
+				"damage_reset_interval"	"1.0"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"

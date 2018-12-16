@@ -3347,6 +3347,8 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilitySound"					"Hero_Morphling.Replicate"
+		"MaxLevel"					    "7"
+		"LevelsBetweenUpgrades"			"12"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -3356,11 +3358,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"160 100 40"
+		"AbilityCooldown"				"160 140 120 100 80 60 40"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"		
+		"AbilityManaCost"				"250"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -3731,7 +3733,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"OnCastbar"					"0"
 		"MaxLevel"					    "7"
-		"LevelsBetweenUpgrades"			"13"
+		"LevelsBetweenUpgrades"			"9"
 		
 		
 		// Casting
@@ -3996,6 +3998,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 		"FightRecapLevel"				"1"
 		"AbilitySound"			"Hero_PhantomLancer.Doppelganger.Cast"
+		"MaxLevel"					    "7"
+		"LevelsBetweenUpgrades"			"8"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -4004,11 +4008,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"25 20 15 10"
+		"AbilityCooldown"				"22 20 18 16 14 12 10"
 			
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"50 75 100 125 150 175 200"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -5327,7 +5331,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_mult"					"300"
+				"crit_mult"					"400"
 			}
 			"02"
 			{
@@ -10018,7 +10022,7 @@
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"proc_chance"					"35 30 25 20 15 10 5"
+				"proc_chance"					"40 35 30 25 20 15 10"
 			}
 			"03"
 			{
@@ -12696,7 +12700,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"max_traps"					"2 4 6 8 12 14"
+				"max_traps"					"2 4 6 8 12 14 16"
 				"LinkedSpecialBonus"		"special_bonus_unique_templar_assassin_6"
 			}
 			"02"
@@ -15583,6 +15587,8 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Clinkz.DeathPact"
+		"MaxLevel"					    "7"
+		"LevelsBetweenUpgrades"			"11"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -22142,6 +22148,8 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_LoneDruid.Rabid"
+		"MaxLevel"					    "7"
+		"LevelsBetweenUpgrades"			"8"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -22154,7 +22162,7 @@
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50 50 50 50"
+		"AbilityManaCost"				"50 100 150 200 250 300 350"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -22163,13 +22171,13 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_attack_speed"		"20 30 40 50"		
+				"bonus_attack_speed"		"20 30 40 50 60 70 80"		
 				"LinkedSpecialBonus"	"special_bonus_unique_lone_druid_6"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_move_speed"	"10 15 20 25"
+				"bonus_move_speed"	"10 15 20 25 30 35 40"
 			}
 			"03"
 			{
@@ -22192,7 +22200,7 @@
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_LoneDruid.Rabid"
 		"MaxLevel"					    "7"
-		"LevelsBetweenUpgrades"			"5"
+		"LevelsBetweenUpgrades"			"7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -22440,10 +22448,12 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"MaxLevel"						"3"
 		"AbilitySound"					"Hero_LoneDruid.BattleCry"
+		"MaxLevel"					    "7"
+		"LevelsBetweenUpgrades"			"9"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.5 0.5 0.5"
+		"AbilityCastPoint"				"0.5 0.5 0.5 0.5 0.5 0.5 0.5"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		// Time		
@@ -22452,7 +22462,7 @@
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50 50 50"
+		"AbilityManaCost"				"50 125 200 275 350 425 500"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -22461,17 +22471,17 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_damage"		"70 100 130"		
+				"bonus_damage"		"40 70 100 130 160 190 220"		
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_armor"		"10 15 20"
+				"bonus_armor"		"10 15 20 25 30 35 40"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"cry_duration"		"5.0"
+				"cry_duration"		"10.0"
 			}
 			"04"
 			{
@@ -30405,7 +30415,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"hit_count"				"4 5 6 7 8 9 10"
+				"hit_count"				    "4"
 			}
 			"04"
 			{
@@ -31382,6 +31392,8 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilitySound"					"Hero_EmberSpirit.FireRemnant.Cast"
+		"MaxLevel"					    "7"
+		"LevelsBetweenUpgrades"			"11"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -31422,7 +31434,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"100 200 300"
+				"damage"				"100 200 300 400 500 600 700"
 			}
 			"05"
 			{
