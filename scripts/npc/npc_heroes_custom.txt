@@ -274,6 +274,44 @@
 		"ArmorPhysical"		"0"
 		"MagicalResistance"		"20"
 	}
+	
+	//=================================================================================================================
+	// HERO: Template
+	//=================================================================================================================
+	"npc_dota_hero_grimstroke"
+	{
+		"AbilityLayout"				"6"
+		"TalentLevels" "10 20 30 50"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"Ability11"					""
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+		"Ability15"					""
+		"Ability16"					""
+		"Ability17"					""
+		"VisionNightTimeRange"		"800"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"15"
+		"AttributeStrengthGain"		"1.500000"
+		"AttributeBaseIntelligence"		"20"
+		"AttributeIntelligenceGain"		"2.000000"
+		"AttributeBaseAgility"		"15"
+		"AttributeAgilityGain"		"1.500000"
+		
+		"AttackRate" 				"2.00"
+		"ArmorPhysical"		"0"
+		"MagicalResistance"		"20"
+	}
 
 	//=================================================================================================================
 	// HERO: Template
@@ -665,6 +703,44 @@
 	// HERO: Template
 	//=================================================================================================================
 	"npc_dota_hero_furion"
+	{
+		"AbilityLayout"				"6"
+		"TalentLevels" "10 20 30 50"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"Ability11"					""
+		"Ability12"					""
+		"Ability13"					""
+		"Ability14"					""
+		"Ability15"					""
+		"Ability16"					""
+		"Ability17"					""
+		"VisionNightTimeRange"		"800"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"15"
+		"AttributeStrengthGain"		"1.500000"
+		"AttributeBaseIntelligence"		"20"
+		"AttributeIntelligenceGain"		"2.000000"
+		"AttributeBaseAgility"		"15"
+		"AttributeAgilityGain"		"1.500000"
+		
+		"AttackRate" 				"2.00"
+		"ArmorPhysical"		"0"
+		"MagicalResistance"		"20"
+	}
+	
+	//=================================================================================================================
+	// HERO: Template
+	//=================================================================================================================
+	"npc_dota_hero_techies"
 	{
 		"AbilityLayout"				"6"
 		"TalentLevels" "10 20 30 50"

@@ -1,10 +1,10 @@
 --==================SETTINGS=============================
 ITEM_PER_MOB_MIN = 1
 ITEM_PER_MOB_MAX = 1
-ITEM_CHANCE = 20
+ITEM_CHANCE = 15
 ITEM_BOSS_CHANCE = 100
 ITEM_BOSS_MIN = 2
-ITEM_BOSS_MAX = 4
+ITEM_BOSS_MAX = 5
 --==================SETTINGS=============================
 
 --==================TABLES=================================
@@ -36,8 +36,7 @@ _G.easy_drop = { --1-10 min
 	"item_sobi_mask",
 	"item_ring_of_regen",
 	"item_ring_of_basilius",
-	"item_gold_bag"
-	
+	"item_gold_bag"	
 }
 
 _G.middle_drop = { --10-15 min

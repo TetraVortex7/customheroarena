@@ -427,7 +427,7 @@ function GameMode:OnPlayerPickHero(keys)
       hero:AddNewModifier(hero,modifier_cha_mmar,"modifier_cha_mmar",{}) --Melee max attack range cap
     end
 		
-        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 59874861 then --Aqua
+        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 115582908 then --Aqua
           local green = 0
           local blue = 0
           local red = 0

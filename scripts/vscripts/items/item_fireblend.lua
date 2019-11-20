@@ -73,7 +73,7 @@ function modifier_fireblend_passive:OnAttackLanded( params )
 						quell = self.quell
 					end
 
-					local damage_quell = (damage  * self.quell - damage) / 100
+					local damage_quell = self.quell
 
 					ApplyDamage({victim = target, attacker = caster, damage = damage_quell, damage_type = DAMAGE_TYPE_PHYSICAL})
 				end
@@ -121,9 +121,9 @@ function modifier_fireblend_fire:OnAttackLanded( params )
 				for _,target in pairs(Units) do
 					if target == old_target then break end
 					
-					local int = caster:GetIntellect() / 12
+					local int = caster:GetIntellect()
 					local damage = ability:GetSpecialValueFor("damage")
-					damage = damage + damage * int * 0.01
+					damage = damage + int * 2
 					if not caster:IsRealHero() then damage = damage * 0.2 end
 					ApplyDamage({victim = target, attacker = caster, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL,ability = ability})
 					old_target = target

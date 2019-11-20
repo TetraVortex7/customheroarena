@@ -656,7 +656,7 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"120"		// Damage range min.
 		"AttackDamageMax"			"120"		// Damage range max.	
-		"AttackRate"				"1.65"		// Speed of attack.
+		"AttackRate"				"1.75"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 		"AttackRange"				"128"		// Range within a target can be attacked.
@@ -683,7 +683,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"4500"		// Base health.
-		"StatusHealthRegen"			"15"			// Health regeneration rate.
+		"StatusHealthRegen"			"5"			// Health regeneration rate.
 		"StatusMana"				"900"		// Base mana.
 		"StatusManaRegen"			"0.5"		// Mana regeneration rate.		 
 		
@@ -734,7 +734,7 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"150"		// Damage range min.
 		"AttackDamageMax"			"150"		// Damage range max.	
-		"AttackRate"				"1.55"		// Speed of attack.
+		"AttackRate"				"1.65"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 		"AttackRange"				"128"		// Range within a target can be attacked.
@@ -761,7 +761,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"6000"		// Base health.
-		"StatusHealthRegen"			"6"			// Health regeneration rate.
+		"StatusHealthRegen"			"10"			// Health regeneration rate.
 		"StatusMana"				"900"		// Base mana.
 		"StatusManaRegen"			"0.5"		// Mana regeneration rate.		 
 		
@@ -804,14 +804,14 @@
 		"Ability6"					"generic_hidden"			// Ability 6
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"			// Physical protection.
+		"ArmorPhysical"				"15"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"180"		// Damage range min.
 		"AttackDamageMax"			"180"		// Damage range max.	
-		"AttackRate"				"1.45"		// Speed of attack.
+		"AttackRate"				"1.55"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 		"AttackRange"				"128"		// Range within a target can be attacked.
@@ -838,7 +838,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"7500"		// Base health.
-		"StatusHealthRegen"			"30"			// Health regeneration rate.
+		"StatusHealthRegen"			"15"			// Health regeneration rate.
 		"StatusMana"				"900"			// Base mana.
 		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
 		
@@ -883,14 +883,14 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"21"			// Physical protection.
+		"ArmorPhysical"				"18"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"210"		// Damage range min.
 		"AttackDamageMax"			"210"		// Damage range max.	
-		"AttackRate"				"1.35"		// Speed of attack.
+		"AttackRate"				"1.45"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 		"AttackRange"				"128"		// Range within a target can be attacked.
@@ -917,7 +917,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"9000"		// Base health.
-		"StatusHealthRegen"			"45"			// Health regeneration rate.
+		"StatusHealthRegen"			"20"			// Health regeneration rate.
 		"StatusMana"				"900"		// Base mana.
 		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
 		
@@ -962,14 +962,14 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"24"			// Physical protection.
+		"ArmorPhysical"				"21"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"80"		// Damage range min.
 		"AttackDamageMax"			"80"		// Damage range max.	
-		"AttackRate"				"1.25"		// Speed of attack.
+		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 		"AttackRange"				"128"		// Range within a target can be attacked.
@@ -995,10 +995,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3500"		// Base health.
-		"StatusHealthRegen"			"20"			// Health regeneration rate.
-		"StatusMana"				"300"		// Base mana.
-		"StatusManaRegen"			"2.5"		// Mana regeneration rate.		 
+		"StatusHealth"				"10500"		// Base health.
+		"StatusHealthRegen"			"25"			// Health regeneration rate.
+		"StatusMana"				"900"		// Base mana.
+		"StatusManaRegen"			"2.0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -1041,7 +1041,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"27"			// Physical protection.
+		"ArmorPhysical"				"24"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -1075,9 +1075,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"12000"		// Base health.
-		"StatusHealthRegen"			"75"			// Health regeneration rate.
-		"StatusMana"				"1200"		// Base mana.
-		"StatusManaRegen"			"9.0"		// Mana regeneration rate.		 
+		"StatusHealthRegen"			"30"			// Health regeneration rate.
+		"StatusMana"				"900"		// Base mana.
+		"StatusManaRegen"			"2.5"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -1120,7 +1120,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"30"			// Physical protection.
+		"ArmorPhysical"				"27"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -1154,9 +1154,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"13500"		// Base health.
-		"StatusHealthRegen"			"90"			// Health regeneration rate.
-		"StatusMana"				"1500"		// Base mana.
-		"StatusManaRegen"			"12.5"		// Mana regeneration rate.		 
+		"StatusHealthRegen"			"35"			// Health regeneration rate.
+		"StatusMana"				"900"		// Base mana.
+		"StatusManaRegen"			"3.0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -1310,7 +1310,7 @@
 					"Ability8" "" 
 		
 					"ArmorPhysical" "1" 
-					"MagicalResistance" "65" 
+					"MagicalResistance" "45" 
 					
 					"UseNeutralCreepBehavior"    "1" 	
 					"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1396,7 +1396,7 @@
 							"Ability8" "" 
 				
 							"ArmorPhysical" "46" 
-							"MagicalResistance" "65" 
+							"MagicalResistance" "45" 
 							
 							"UseNeutralCreepBehavior"    "1" 	
 							"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1475,7 +1475,7 @@
 						"Ability8" "" 
 			
 						"ArmorPhysical" "4" 
-						"MagicalResistance" "65" 
+						"MagicalResistance" "45" 
 						
 						"UseNeutralCreepBehavior"    "1" 	
 						"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1552,8 +1552,8 @@
 						"Ability7" "" 
 						"Ability8" "" 
 			
-						"ArmorPhysical" "59" 
-						"MagicalResistance" "65" 
+						"ArmorPhysical" "55" 
+						"MagicalResistance" "45" 
 						
 						"UseNeutralCreepBehavior"    "1" 	
 						"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1638,7 +1638,7 @@
 					"Ability2" "enchantress_untouchable" 
 					"Ability3" "omniknight_degen_aura" 
 					"Ability4" "necronomicon_warrior_sight" 
-					"Ability5" "boss_kraken_shell" 
+					"Ability5" "tidehunter_kraken_shell" 
 					"Ability6" "slark_essence_shift" 
 					"Ability7" "" 
 					"Ability8" "" 
@@ -2231,8 +2231,8 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 			
-			        "ArmorPhysical" "72" 
-			        "MagicalResistance" "80" 
+			        "ArmorPhysical" "62" 
+			        "MagicalResistance" "60" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
 			        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -2320,8 +2320,8 @@
 		        "Ability7" "" 
 		        "Ability8" "" 
 
-		        "ArmorPhysical" "78" 
-		        "MagicalResistance" "80" 
+		        "ArmorPhysical" "68" 
+		        "MagicalResistance" "60" 
 		                
 		        "UseNeutralCreepBehavior"    "1"    
 		        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -2410,8 +2410,8 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 
-			        "ArmorPhysical" "83" 
-			        "MagicalResistance" "80" 
+			        "ArmorPhysical" "75" 
+			        "MagicalResistance" "60" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
 			        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -2502,8 +2502,8 @@
 			        "Ability7" "" 
 			        "Ability8" "" 
 			
-			        "ArmorPhysical" "86" 
-			        "MagicalResistance" "80" 
+			        "ArmorPhysical" "79" 
+			        "MagicalResistance" "60" 
 			                
 			        "UseNeutralCreepBehavior"    "1"    
 			        "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -2598,7 +2598,7 @@
 			        "Ability2" "creeps_doom_ability_illusioness" 
 			        "Ability3" "creeps_doom_ability_mana_steal" 
 			        "Ability4" "necronomicon_warrior_sight" 
-			        "Ability5" "boss_kraken_shell" 
+			        "Ability5" "tidehunter_kraken_shell" 
 			        "Ability6" "" 
 			        "Ability7" "" 
 			        "Ability8" "" 
@@ -2850,14 +2850,14 @@
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
 				"Ability3"				"roshan_spell_block"
-				"Ability4"              "boss_kraken_shell"
+				"Ability4"              "tidehunter_kraken_shell"
 				"Ability5"				"huskar_berserkers_blood"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
 		        "ArmorPhysical"         "68"
-		        "MagicalResistance"     "75"
+		        "MagicalResistance"     "60"
 		        "DisableResistance"     "99.9"
 		       
 		        // Attack
@@ -2944,13 +2944,13 @@
 		        "Ability1"              "boss_hard_skin"
 				"Ability2"				"boss_poison"
 		        "Ability3"              "necronomicon_warrior_sight"
-				"Ability4"              "boss_kraken_shell"
+				"Ability4"              "tidehunter_kraken_shell"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "89"
-		        "MagicalResistance"     "85"
+		        "ArmorPhysical"         "79"
+		        "MagicalResistance"     "65"
 		       
 		        // Attack
 		        //----------------------------------------------------------------
@@ -3073,14 +3073,14 @@
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
 				"Ability3"				"roshan_spell_block"
-                "Ability4"				"boss_kraken_shell"
+                "Ability4"				"tidehunter_kraken_shell"
 				"Ability5"              "disarmor"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "78"
-		        "MagicalResistance"     "80"
+		        "ArmorPhysical"         "68"
+		        "MagicalResistance"     "60"
 		        "DisableResistance"     "99.9"
 		       
 		        // Attack
@@ -3167,14 +3167,14 @@
 				"AbilityLayout"             "4"
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
-                "Ability3"				"boss_kraken_shell"
+                "Ability3"				"tidehunter_kraken_shell"
 				"Ability4"              "disarmor"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "84"
-		        "MagicalResistance"     "80"
+		        "ArmorPhysical"         "74"
+		        "MagicalResistance"     "70"
 		        "DisableResistance"     "99.9"
 		       
 		        // Attack
@@ -3263,18 +3263,17 @@
 		             //Дальше - смотрите по гайду
 		        // Abilities
 		        //----------------------------------------------------------------
-				"AbilityLayout"         "5"
+				"AbilityLayout"         "4"
 		        "Ability1"              "boss_ability_loh"
 		        "Ability2"              "necronomicon_warrior_sight"
 		        "Ability3"				"boss_ability_purge"
 		        "Ability4"				"boss_ability_hardcore"
-				"Ability5"				"bounty_hunter_jinada"
                 "ConsideredHero"            "1"
 		       
 		        // Armor
 		        //----------------------------------------------------------------
-		        "ArmorPhysical"         "150"
-		        "MagicalResistance"     "85"
+		        "ArmorPhysical"         "140"
+		        "MagicalResistance"     "75"
 		        "DisableResistance"     "99.9"
 		       
 		        // Attack
@@ -4424,7 +4423,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "1" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "30" 
@@ -4486,7 +4485,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "5" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "80" 
@@ -4548,7 +4547,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "20" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				
 				"UseNeutralCreepBehavior"    "1" 	
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -4622,7 +4621,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "6" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "240" 
@@ -4684,7 +4683,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "7" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "300" 
@@ -4746,7 +4745,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "8" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "320" 
@@ -4806,7 +4805,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "8" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				
 				"UseNeutralCreepBehavior"    "1" 	
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -4878,7 +4877,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "4" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "48" 
@@ -4941,7 +4940,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "10" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				
 				"UseNeutralCreepBehavior"    "1" 	
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -5015,7 +5014,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "12" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "25" 
 				
 				"UseNeutralCreepBehavior"    "1" 	
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -5094,7 +5093,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "1" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "28" 
@@ -5156,7 +5155,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "5" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "78" 
@@ -5218,7 +5217,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "16" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"UseNeutralCreepBehavior"    "1"
@@ -5293,7 +5292,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "7" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "240" 
@@ -5355,7 +5354,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "8" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "300" 
@@ -5417,7 +5416,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "9" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "320" 
@@ -5477,7 +5476,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "10" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"UseNeutralCreepBehavior"    "1"
@@ -5550,7 +5549,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "4" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"AttackDamageMin" "46" 
@@ -5613,7 +5612,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "10" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"UseNeutralCreepBehavior"    "1"
@@ -5686,7 +5685,7 @@
 				"Ability8" "" 
 				 
 				"ArmorPhysical" "12" 
-				"MagicalResistance" "45" 
+				"MagicalResistance" "20" 
 				 
 				"AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"
 				"UseNeutralCreepBehavior"    "1"

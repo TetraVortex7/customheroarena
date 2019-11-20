@@ -58,6 +58,17 @@ function PrintTable(t, indent, done)
   end
 end
 
+function ListModifiers(hUnit)
+  if not hUnit then
+    print('Failed to find unit to  list modifiers.')
+    return
+  end
+  print('Modifiers for '..hUnit:GetUnitName())
+  local count = hUnit:GetModifierCount()
+  for i=0,count-1 do
+    print(hUnit:GetModifierNameByIndex(i))
+  end
+end
 -- Colors
 COLOR_NONE = '\x06'
 COLOR_GRAY = '\x06'
@@ -76,6 +87,35 @@ COLOR_PURPLE = '\x1A'
 COLOR_ORANGE = '\x1B'
 COLOR_LRED = '\x1C'
 COLOR_GOLD = '\x1D'
+
+
+function ReportHeroAbilities(hHero)
+  if IsValidEntity(hHero) then
+    for i=1,20 do
+      local ability=hHero:GetAbilityByIndex(i-1)
+      if ability then
+        print("Abilities Report: "..hHero:GetUnitName().."ability["..i.."] is "..ability:GetAbilityName())
+      else
+        print("Abilities Report: "..hHero:GetUnitName().."ability["..i.."] is empty")
+      end
+    end
+  end
+end
+
+
+function ListLearnedAbilities(hHero)  --输出天赋树、damage_counter以外的技能
+  local result="" --输出一个技能列表
+  if IsValidEntity(hHero) then
+    for i=1,20 do
+      local ability=hHero:GetAbilityByIndex(i-1)
+      if ability and string.sub(ability:GetAbilityName(),1,14)~="special_bonus_" and ability:GetAbilityName()~="damage_counter" then
+        result=result..ability:GetAbilityName()..":"..ability:GetLevel()..";"          
+      end
+    end
+  end
+  return result
+end
+
 
 
 --[[Author: Noya

@@ -225,7 +225,7 @@
 				"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 					{				
-						"MODIFIER_PROPERTY_BASE_MANA_REGEN"				"%mana_regen"
+						"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"				"%mana_regen"
 						"MODIFIER_PROPERTY_MANA_BONUS"          "%bonus_mana"
 					}
 				}
@@ -1045,7 +1045,7 @@
             "04"
             {
                 "var_type"      "FIELD_FLOAT"
-                "regen_interval"    "0.5"
+                "regen_interval"    "0.1"
             }
             "05"
             {
@@ -1085,12 +1085,12 @@
 			"12"
             {
                 "var_type"      "FIELD_FLOAT"
-                "heal_interval"    "0.5"
+                "heal_interval"    "0.1"
             }
         }
     "Modifiers"
         {
-            "heart3_effect"
+            "purged_heart_effect"
             {
                 "Passive"   "1"
                 "IsHidden"  "1"
@@ -1105,18 +1105,18 @@
 					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"     "%mp_regen"
                 }
             }
-            "modifier_item_heart3_regen"
+            "modifier_item_purged_heart_regen"
             {
                 "Passive"   "1"
                 "IsHidden"  "1"
                 
-                "ThinkInterval"     "%interval"
+                "ThinkInterval"     "%heal_interval"
                 "OnIntervalThink"
                 {
                     "RunScript"
                     {
                         "ScriptFile"        "items/item_purged_heart.lua"
-                        "Function"          "modifier_item_heart3_regen_on_interval_think"
+                        "Function"          "modifier_item_purged_heart_regen_on_interval_think"
 						"ManaRegenPercentPerSecond"     "%mana_regen_prc"
 						"RegenInterval"                 "%regen_interval"
                         "HealthRegenPercentPerSecond"   "%health_regen_prc"
@@ -1128,7 +1128,7 @@
                     "RunScript"
                     {
                         "ScriptFile"        "items/item_purged_heart.lua"
-                        "Function"          "modifier_item_heart3_regen_on_take_damage"
+                        "Function"          "modifier_item_purged_heart_regen_on_take_damage"
                         "CooldownMelee"     "%melee_cooldown"
                         "CooldownRanged"    "%ranged_cooldown"
                     }
@@ -1139,7 +1139,7 @@
                     "RunScript"
                     {
                         "ScriptFile"        "items/item_purged_heart.lua"
-                        "Function"          "modifier_item_heart3_regen_on_cast_spell"
+                        "Function"          "modifier_item_purged_heart_regen_on_cast_spell"
                         "CooldownMelee"     "%melee_cooldown"
                         "CooldownRanged"    "%ranged_cooldown"
                     }
@@ -1150,15 +1150,15 @@
                     "RunScript"
                     {
                         "ScriptFile"        "items/item_purged_heart.lua"
-                        "Function"          "modifier_item_heart3_regen_on_destroy"
+                        "Function"          "modifier_item_purged_heart_regen_on_destroy"
                     }
                 }
             }
-            "modifier_item_heart3_regen_visible"
+            "modifier_item_purged_heart_regen_visible"
             {
                 "Passive"       "0"
                 "IsHidden"      "1"
-                "TextureName"   "heart3_regen"
+                "TextureName"   "purged_heart_regen"
             }
         }
     }	
@@ -1182,7 +1182,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "damage_block" "32 46 68 100"
+                "damage_block" "32 56 80 102"
             }
             "02"
             {
@@ -1221,7 +1221,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "damage_block" "32 46 68 100"
+                "damage_block" "32 56 80 102"
             }
             "02"
             {
@@ -1260,7 +1260,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "damage_block" "32 46 68 100"
+                "damage_block" "32 56 80 102"
             }
             "02"
             {
@@ -1313,7 +1313,7 @@
             "04"
             {
                 "var_type"  "FIELD_INTEGER"
-                "reduce_c"      "10"
+                "reduce_c"      "25"
             }
             "05"
             {
@@ -1338,7 +1338,7 @@
             "09"
             {
                 "var_type"  "FIELD_INTEGER"
-                "block"         "164"
+                "block"         "124"
             }
 			"10"
             {
@@ -1491,6 +1491,16 @@
             {
                 "var_type"                      "FIELD_INTEGER"
                 "cleave_radius"                 "450" //радиус сплэша
+            }
+			"06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "quell"                        "150"
+            }
+            "07"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "quell_ranged"                 "50"
             }
         }
     }
@@ -1803,7 +1813,7 @@
         "BaseClass"                     "item_lua"
         "ScriptFile"                    "items/item_phase_boots_2.lua"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
-        "AbilityCooldown"               "8 8 7"
+        "AbilityCooldown"               "8 7 6"
         "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
         "AbilitySharedCooldown"         "item_phase_boots_2;item_phase_boots;item_phase_boots_3"
         "Model"                         "models/props_gameplay/red_box.vmdl" 
@@ -1825,12 +1835,12 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "armor"        "5 15 30"
+                "armor"        "6 16 26"
             }
 			"02"
             {
                 "var_type"  "FIELD_INTEGER"
-                "bonus_attack_speed"        "25 65 110"
+                "damage"        "18 36 96"
             }
             "03"
             {
@@ -1845,7 +1855,7 @@
             "05"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed_active_range"        "22 24 26"
+                "movespeed_active_range"        "22 26 30"
             }
             "06"
             {
@@ -1860,7 +1870,7 @@
         "BaseClass"                     "item_lua"
         "ScriptFile"                    "items/item_phase_boots_3.lua"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
-        "AbilityCooldown"               "8 8 7"
+        "AbilityCooldown"               "8 7 6"
         "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
         "AbilitySharedCooldown"         "item_phase_boots_2;item_phase_boots;item_phase_boots_3"
         "Model"                         "models/props_gameplay/red_box.vmdl" 
@@ -1883,12 +1893,12 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "armor"        "5 15 30"
+                "armor"        "6 16 26"
             }
 			"02"
             {
                 "var_type"  "FIELD_INTEGER"
-                "bonus_attack_speed"        "25 65 110"
+                "damage"        "18 36 96"
             }
             "03"
             {
@@ -1903,7 +1913,7 @@
             "05"
             {
                 "var_type"  "FIELD_INTEGER"
-                "movespeed_active_range"        "22 24 26"
+                "movespeed_active_range"        "22 26 30"
             }
             "06"
             {
@@ -3285,12 +3295,12 @@
             "11"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "quell"         "85"
+                "quell"         "450"
             }
             "12"
             {
                 "var_type"  "FIELD_INTEGER" //FIELD_FLOAT or FIELD_INTEGER
-                "quell_ranged"  "50"
+                "quell_ranged"  "150"
             }
             "13"
             {
@@ -4426,7 +4436,7 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"
-                "damage_block" "32 46 68 100"
+                "damage_block" "32 56 80 102"
             }
             "02"
             {
@@ -5534,12 +5544,12 @@
             "06"
             {
                 "var_type"      "FIELD_INTEGER"
-                "quell"            "30"
+                "quell"            "60"
             }
 			"07"
             {
                 "var_type"      "FIELD_INTEGER"
-                "quell_ranged"            "15"
+                "quell_ranged"            "20"
             }
         }
     }
@@ -8590,7 +8600,7 @@
         "AbilityTextureName"            "recipe"
         "ItemRequirements"
         {
-            "01"                        "item_phase_boots;item_platemail;item_hyper_glove"
+            "01"                        "item_phase_boots;item_platemail;item_broadsword"
         }
     }
 "item_recipe_phase_boots_3"
@@ -8613,7 +8623,7 @@
         "AbilityTextureName"            "recipe"
         "ItemRequirements"
         {
-            "01"                        "item_phase_boots_2;item_assault"
+            "01"                        "item_phase_boots_2;item_platemail;item_relic"
         }
     }
 "item_recipe_power_treads_strength_2"
@@ -9396,7 +9406,7 @@
         "AbilityTextureName"            "recipe"
         "ItemRequirements"
         {
-            "01"                        "item_mana_burn_1;item_recipe_mana_burn_1"
+            "01"                        "item_diffusal_blade;item_recipe_mana_burn_1"
         }
     }
 "item_recipe_fireblend"

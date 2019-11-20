@@ -61,21 +61,21 @@ local heroListKV = LoadKeyValues('scripts/npc/npc_heroes.txt')
 
 local meleeList = {}
 for heroName, values in pairs(heroListKV) do
-    if heroName ~= 'Version' and heroName ~= 'npc_dota_hero_base' then
-        if values.AttackCapabilities == 'DOTA_UNIT_CAP_MELEE_ATTACK' then
-            meleeList[heroName] = true
-        end
+  if heroName ~= 'Version' and heroName ~= 'npc_dota_hero_base' then
+    if values.AttackCapabilities == 'DOTA_UNIT_CAP_MELEE_ATTACK' then
+      meleeList[heroName] = true
     end
+  end
 end
 
 
 -- Tells you if a given heroName is melee or not
 local function isMeleeHero(heroName)
-    if meleeList[heroName] then
-        return true
-    end
-
+  if meleeList[heroName] then
+    return true
+  else
     return false
+  end
 end
 
 
@@ -108,106 +108,124 @@ function GameMode:AddAbility(keys)
 	if PlayerResource:HasSelectedHero( keys.playerId ) then
 		local hero = PlayerResource:GetSelectedHeroEntity( keys.playerId )
 		local abilityName=keys.abilityName
-		  if hero then
-		  	 if keys.enough==1 then
-
-	           if isMeleeHero(hero:GetUnitName()) and meleeMap[abilityName] then
-	               abilityName = meleeMap[abilityName]
-	           end
-               hero:AddAbility(abilityName)
-               if pairedAbility[abilityName]~=nil then
-                  hero:AddAbility(pairedAbility[abilityName])
-                  if pairedAbility[abilityName]=="nyx_assassin_unburrow" then
-                  	hero:FindAbilityByName("nyx_assassin_unburrow"):SetLevel(1)  --默认升一级
-                  end
-               end
-
-
-               if manualActivate[abilityName] then  --激活光法的两个技能
-                 local ab = hero:FindAbilityByName(abilityName)
-                 if ab then
-                    ab:SetActivated(true)
-                 end
-               end
-               ------------------------------------------------
-               if  GameMode._vHeroList[abilityName]~=nil then
-                if alreadyCached[ GameMode._vHeroList[abilityName]]==true then
-                else				
-                  alreadyCached[ GameMode._vHeroList[abilityName]] = true
-                  print('Precaching unit: '.. GameMode._vHeroList[abilityName]) 
-                  if unitExists('npc_precache_'.. GameMode._vHeroList[abilityName]) then     
-                    PrecacheUnitByNameAsync('npc_precache_'.. GameMode._vHeroList[abilityName], function() end)
-                  else
-                    print('Failed to precache unit: npc_precache_'.. GameMode._vHeroList[abilityName])
-                  end
-                end
-              else
-                PrecacheUnitByNameAsync('npc_precache_'..abilityName, function() end)    --自定义的技能需要单独加载         
-              end 
-	           ------------------------------------------------------ 
-               local p = hero:GetAbilityPoints()
-               hero:SetAbilityPoints(p-keys.abilityCost)
-               local ability = hero:FindAbilityByName(abilityName)
-		           ability:SetLevel(1)
-		           ability:SetHidden(false)
-               CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(keys.playerId),"UpdateAbilityList", keys)
-               EmitSoundOn("General.Buy",PlayerResource:GetPlayer(keys.playerId))
-               if brokenModifierAbilityMap[abilityName]~=nil then
-	               local modifier = hero:FindModifierByName(brokenModifierAbilityMap[abilityName])
-			       if modifier then
-			       	    local stack= brokenModifierCounts[brokenModifierAbilityMap[abilityName]]
-			            modifier:SetStackCount(stack)
-			       end
-		       end
-             else
-               Notifications:Bottom(keys.playerId, {text="#not_enough_ability_points", duration=2, style={color="Red"}})
-               EmitSoundOn("General.Cancel",PlayerResource:GetPlayer(keys.playerId))
-             end
-		  end
+		if hero then
+		  if keys.enough==1 then
+	      if isMeleeHero(hero:GetUnitName()) and meleeMap[abilityName] then
+	        abilityName = meleeMap[abilityName]
+	      end
+        hero:AddAbility(abilityName)
+        if pairedAbility[abilityName]~=nil then
+          hero:AddAbility(pairedAbility[abilityName])
+          if pairedAbility[abilityName]=="nyx_assassin_unburrow" then
+            hero:FindAbilityByName("nyx_assassin_unburrow"):SetLevel(1)  --默认升一级
+          end
+        end
+        if manualActivate[abilityName] then  --激活光法的两个技能
+          local ab = hero:FindAbilityByName(abilityName)
+          if ab then
+              ab:SetActivated(true)
+          end
+        end
+        ------------------------------------------------
+        if  GameMode._vHeroList[abilityName]~=nil then
+          if alreadyCached[ GameMode._vHeroList[abilityName]]==true then
+          else				
+            alreadyCached[ GameMode._vHeroList[abilityName]] = true
+            print('Precaching unit: '.. GameMode._vHeroList[abilityName]) 
+            if unitExists('npc_precache_'.. GameMode._vHeroList[abilityName]) then     
+              PrecacheUnitByNameAsync('npc_precache_'.. GameMode._vHeroList[abilityName], function() end)
+            else
+              print('Failed to precache unit: npc_precache_'.. GameMode._vHeroList[abilityName])
+            end
+          end
+        else
+          PrecacheUnitByNameAsync('npc_precache_'..abilityName, function() end)    --自定义的技能需要单独加载         
+        end 
+	      ------------------------------------------------------ 
+        local p = hero:GetAbilityPoints()
+        hero:SetAbilityPoints(p-keys.abilityCost)
+        local ability = hero:FindAbilityByName(abilityName)
+		    ability:SetLevel(1)
+		    ability:SetHidden(false)
+        CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(keys.playerId),"UpdateAbilityList", keys)
+        EmitSoundOn("General.Buy",PlayerResource:GetPlayer(keys.playerId))
+        if brokenModifierAbilityMap[abilityName]~=nil then
+	        local modifier = hero:FindModifierByName(brokenModifierAbilityMap[abilityName])
+			    if modifier then
+			      local stack= brokenModifierCounts[brokenModifierAbilityMap[abilityName]]
+			      modifier:SetStackCount(stack)
+			    end
+        end  
+      else
+        Notifications:Bottom(keys.playerId, {text="#not_enough_ability_points", duration=2, style={color="Red"}})
+        EmitSoundOn("General.Cancel",PlayerResource:GetPlayer(keys.playerId))
+      end
+		end
 	end
+end
+
+function GameMode:PointToGold(keys)
+  if PlayerResource:HasSelectedHero( keys.playerId ) then
+    local hero = PlayerResource:GetSelectedHeroEntity( keys.playerId )
+    keys.heroName=false
+    if hero then
+      if keys.enough==1 then
+        hero:ModifyGold(1400,true, 0)
+        local p = hero:GetAbilityPoints()
+        hero:SetAbilityPoints(p-1)
+        CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(keys.playerId),"UpdateAbilityList", keys)                
+        EmitSoundOn("General.CoinsBig",PlayerResource:GetPlayer(keys.playerId))       
+      else
+        Notifications:Bottom(keys.playerId, {text="#not_enough_ability_points", duration=2, style={color="Red"}})
+        EmitSoundOn("General.Cancel",PlayerResource:GetPlayer(keys.playerId))
+      end
+    end
+  end
 end
 
 function GameMode:RemoveAbility(keys)
 	if PlayerResource:HasSelectedHero( keys.playerId ) then
 		local hero = PlayerResource:GetSelectedHeroEntity( keys.playerId )
-		  if hero then
-		  	 local ability = hero:FindAbilityByName(keys.abilityName)
-		  	  if ability then
-		  	    local abilityLevel=ability:GetLevel()
-		  	    if noReturnAbility[ability:GetAbilityName()] ~= nil then  --同时升级的技能不退技能点
-                  abilityLevel=1
-            end
-		  	    local pointsReturn=keys.abilityCost+abilityLevel-1
-            local expense=PlayerResource:GetLevel(keys.playerId)*pointsReturn*30
-	             if(hero:GetGold() >= expense) then
-	               local abilityLevel=ability:GetLevel()
-	               local modifiers=hero:FindAllModifiers()
-	                for _,modifier in pairs(modifiers) do
-		              if modifier:GetAbility()==ability then
-		               modifier:Destroy()
-		              end
-		            end
-                print(hero:GetUnitName().." removing ability: ".. keys.abilityName)
-		            hero:RemoveAbility(keys.abilityName)
-		             if pairedAbility[keys.abilityName]~=nil then                      
-                      hero:RemoveAbility(pairedAbility[keys.abilityName])
-                      print(hero:GetUnitName().." removing pairs ability: ".. keys.abilityName)
-                 end
-		            local p = hero:GetAbilityPoints()
-                    hero:SetAbilityPoints(p + pointsReturn)
-	                hero:SpendGold(expense, DOTA_ModifyGold_Unspecified)
-	                CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(keys.playerId),"UpdatePlayerAbilityList",keys)
-	                CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(keys.playerId),"UpdateAbilityList", {heroName=false,playerId=keys.playerId})
-	                EmitSoundOn("compendium_points",PlayerResource:GetPlayer(keys.playerId))
-		          else
-		                Notifications:Bottom(keys.playerId, {text="#you_need", duration=3, style={color="Red"}})
-                    Notifications:Bottom(keys.playerId, {text=tostring(expense), duration=3, style={color="Red"}, continue=true})
-                    Notifications:Bottom(keys.playerId, {text="#gold_to_sell_this_spell", duration=3, style={color="Red"}, continue=true})
-                    EmitSoundOn("General.Cancel",PlayerResource:GetPlayer(keys.playerId))
-	              end
+		if hero then
+		  local ability = hero:FindAbilityByName(keys.abilityName)
+		  if ability then
+		  	local abilityLevel=ability:GetLevel()
+		  	if noReturnAbility[ability:GetAbilityName()] ~= nil then  --同时升级的技能不退技能点
+          abilityLevel=1
+        end
+		  	local pointsReturn=keys.abilityCost+abilityLevel-1
+        local expense=PlayerResource:GetLevel(keys.playerId)*pointsReturn*30
+	      if(hero:GetGold() >= expense) then
+	        local abilityLevel=ability:GetLevel()
+	        local modifiers=hero:FindAllModifiers()
+	        for _,modifier in pairs(modifiers) do
+		        if modifier:GetAbility()==ability then
+		          modifier:Destroy()
+		        end
 		      end
-		   end
-	 end
+          print(hero:GetUnitName().." removing ability: ".. keys.abilityName)
+		      hero:RemoveAbility(keys.abilityName)
+		      if pairedAbility[keys.abilityName]~=nil then                      
+            hero:RemoveAbility(pairedAbility[keys.abilityName])
+            print(hero:GetUnitName().." removing pairs ability: ".. keys.abilityName)
+          end
+		      local p = hero:GetAbilityPoints()
+          hero:SetAbilityPoints(p + pointsReturn)
+	        hero:SpendGold(expense, DOTA_ModifyGold_Unspecified)
+          keys.deleteAbilityName=keys.abilityName
+	        CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(keys.playerId),"UpdatePlayerAbilityList",keys)
+	        CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(keys.playerId),"UpdateAbilityList", {heroName=false,playerId=keys.playerId})
+	        EmitSoundOn("compendium_points",PlayerResource:GetPlayer(keys.playerId))
+	      else
+	        Notifications:Bottom(keys.playerId, {text="#you_need", duration=3, style={color="Red"}})
+          Notifications:Bottom(keys.playerId, {text=tostring(expense), duration=3, style={color="Red"}, continue=true})
+          Notifications:Bottom(keys.playerId, {text="#gold_to_sell_this_spell", duration=3, style={color="Red"}, continue=true})
+          EmitSoundOn("General.Cancel",PlayerResource:GetPlayer(keys.playerId))
+        end
+      end    
+    end
+    ReportHeroAbilities(hero)
+  end 
 end
 
 

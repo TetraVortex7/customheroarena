@@ -30,13 +30,13 @@ end
 
 function modifier_phase_boots_2:OnCreated(  )
 	self.armor = self:GetAbility():GetSpecialValueFor("armor")
-	self.bonus_attack_speed = self:GetAbility():GetSpecialValueFor("bonus_attack_speed")
+	self.damage = self:GetAbility():GetSpecialValueFor("damage")
 	self.movespeed_pas = self:GetAbility():GetSpecialValueFor("movespeed")
 end
 
 function modifier_phase_boots_2:OnRefresh(  )
 	self.armor = self:GetAbility():GetSpecialValueFor("armor")
-	self.bonus_attack_speed = self:GetAbility():GetSpecialValueFor("bonus_attack_speed")
+	self.damage = self:GetAbility():GetSpecialValueFor("damage")
 	self.movespeed_pas = self:GetAbility():GetSpecialValueFor("movespeed")
 end
 
@@ -45,11 +45,11 @@ function modifier_phase_boots_2:IsHidden(  )
 end
 
 function modifier_phase_boots_2:DeclareFunctions(  )
-	local funcs = { MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE, MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS, MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT }
+	local funcs = { MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE, MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS, MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE }
 	return funcs
 end
 
-function modifier_treatment_greaves_passive:GetModifierPhysicalArmorBonus(  )
+function modifier_phase_boots_2:GetModifierPhysicalArmorBonus(  )
 	return self.armor
 end
 
@@ -57,8 +57,8 @@ function modifier_phase_boots_2:GetModifierMoveSpeedBonus_Special_Boots(  )
 	return self.movespeed_pas
 end
 
-function modifier_katana_and_handed_passive:GetModifierAttackSpeedBonus_Constant(  )
-    return self.bonus_attack_speed
+function modifier_phase_boots_2:GetModifierPreAttack_BonusDamage(  )
+	return self.damage
 end
 
 -------------------------------

@@ -17,21 +17,6 @@ if entindex_inflictor_const then ability = EntIndexToHScript(entindex_inflictor_
 	if victim:IsAlive() and victim:IsRealHero() and (victim:HasItemInInventory("item_stalker_coat") or victim:HasItemInInventory("item_manteau_invis")) and damagetype == "DAMAGE_TYPE_MAGICAL" then
 		event.damage = event.damage / 4
 	end
-	if victim ~= attacker and victim:IsAlive() and not victim:IsRealHero() and not IsBoss(victim) and damagetype == 2 then 
-		
-		if attacker:HasItemInInventory("item_solomon_book") then
-			event.damage = event.damage * 2
-			boosted = true
-		end
-		if attacker:HasItemInInventory("item_solomon_book_2") and not boosted then
-			event.damage = event.damage * 3
-			boosted = true
-		end
-		if attacker:HasItemInInventory("item_solomon_book_3") and not boosted then
-			event.damage = event.damage * 4
-			boosted = true
-		end
-	end
 	
 
 
