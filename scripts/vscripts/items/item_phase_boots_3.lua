@@ -30,12 +30,14 @@ end
 
 function modifier_phase_boots_3:OnCreated(  )
 	self.cap = self:GetAbility():GetSpecialValueFor("cap")
+	self.armor = self:GetAbility():GetSpecialValueFor("armor")
 	self.damage = self:GetAbility():GetSpecialValueFor("damage")
 	self.movespeed_pas = self:GetAbility():GetSpecialValueFor("movespeed")
 end
 
 function modifier_phase_boots_3:OnRefresh(  )
 	self.cap = self:GetAbility():GetSpecialValueFor("cap")
+	self.armor = self:GetAbility():GetSpecialValueFor("armor")
 	self.damage = self:GetAbility():GetSpecialValueFor("damage")
 	self.movespeed_pas = self:GetAbility():GetSpecialValueFor("movespeed")
 end
@@ -45,7 +47,7 @@ function modifier_phase_boots_3:IsHidden(  )
 end
 
 function modifier_phase_boots_3:DeclareFunctions(  )
-	local funcs = { MODIFIER_PROPERTY_MOVESPEED_MAX, MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE, MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE }
+	local funcs = { MODIFIER_PROPERTY_MOVESPEED_MAX, MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE, MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS, MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE }
 	return funcs
 end
 
@@ -53,12 +55,16 @@ function modifier_phase_boots_3:GetModifierMoveSpeed_Max(  )
 	return self.cap
 end
 
-function modifier_phase_boots_3:GetModifierPreAttack_BonusDamage(  )
-	return self.damage
+function modifier_phase_boots_3:GetModifierPhysicalArmorBonus(  )
+	return self.armor
 end
 
 function modifier_phase_boots_3:GetModifierMoveSpeedBonus_Special_Boots(  )
 	return self.movespeed_pas
+end
+
+function modifier_phase_boots_3:GetModifierPreAttack_BonusDamage(  )
+	return self.damage
 end
 
 -------------------------------

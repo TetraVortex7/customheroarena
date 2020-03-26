@@ -30,6 +30,7 @@ function modifier_item_vanguard_c:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK,
 		MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
+		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 		MODIFIER_PROPERTY_HEALTH_BONUS
 	} 
 	return funcs
@@ -39,6 +40,7 @@ function modifier_item_vanguard_c:OnCreated()
 	self.blockDamage = self:GetAbility():GetSpecialValueFor("damage_block")
 	self.healthRegen = self:GetAbility():GetSpecialValueFor("hp_regen")
 	self.healthBonus = self:GetAbility():GetSpecialValueFor("health")
+	self.agi = self:GetAbility():GetSpecialValueFor("bonus_agi")
 end
 
 function modifier_item_vanguard_c:GetModifierConstantHealthRegen()
@@ -51,4 +53,8 @@ end
 
 function modifier_item_vanguard_c:GetModifierPhysical_ConstantBlock()
 	return self.blockDamage 
+end
+
+function modifier_item_vanguard_c:GetModifierBonusStats_Agility(  )
+	return self.agi
 end

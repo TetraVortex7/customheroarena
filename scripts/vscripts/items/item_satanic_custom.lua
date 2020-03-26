@@ -23,11 +23,15 @@ function modifier_satanic_passive:IsPurgable(  )
 end
 
 function modifier_satanic_passive:DeclareFunctions(  )
-	return {MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,MODIFIER_EVENT_ON_ATTACK_LANDED}
+	return {MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,MODIFIER_EVENT_ON_ATTACK_LANDED}
 end
 
 function modifier_satanic_passive:GetModifierPreAttack_BonusDamage(  )
 	return self:GetAbility():GetSpecialValueFor("dmg")
+end
+
+function modifier_satanic_lifesteal_passive:GetModifierConstantHealthRegen(  )
+	return self:GetAbility():GetSpecialValueFor("hp_regen")
 end
 
 function modifier_satanic_passive:GetModifierBonusStats_Strength(  )
@@ -36,10 +40,6 @@ end
 
 function modifier_satanic_passive:GetModifierPhysicalArmorBonus(  )
 	return self:GetAbility():GetSpecialValueFor("armor")
-end
-
-function modifier_satanic_passive:GetModifierOrbPriority()
-	return DOTA_ORB_PRIORITY_ITEM
 end
 
 function modifier_satanic_passive:OnAttackLanded( params )

@@ -115,17 +115,13 @@ function modifier_demon_lifesteal_aura:GetModifierConstantHealthRegen(  )
 	return self.reg
 end
 
-function modifier_demon_lifesteal_aura:GetModifierOrbPriority(  )
-	return DOTA_ORB_PRIORITY_ITEM
-end
-
 function modifier_demon_lifesteal_aura:OnAttackLanded( params )
 	local damage = params.damage
 	local target = params.target
 	local parent = self:GetParent()
 	local caster = self:GetCaster()
 	local percentage = self:GetAbility():GetSpecialValueFor("lifesteal") / 100
-	if params.attacker == parent and target ~= parent and self:IsActiveOrb() then
+	if params.attacker == parent and target ~= parent then
 		local heal = damage * percentage
 		parent:HealCustom(heal,parent,true,false)
 	end

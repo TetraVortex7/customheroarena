@@ -34,10 +34,6 @@ function modifier_big_crit_passive:CheckState()
 	return states
 end
 
-function modifier_big_crit_passive:GetModifierOrbPriority(  )
-	return DOTA_ORB_CUSTOM
-end
-
 require('libraries/IsBoss')
 
 function modifier_big_crit_passive:OnAttackLanded( params )

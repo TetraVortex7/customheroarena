@@ -19,6 +19,8 @@ function modifier_war_axe_passive:OnCreated(  )
 	self.cleave_radius = ability:GetSpecialValueFor("cleave_radius")
 	self.hp_regen = ability:GetSpecialValueFor("hp_regen")
 	self.mp_regen = ability:GetSpecialValueFor("mp_regen_pct")
+	self.quell = ability:GetSpecialValueFor("quell") 
+	self.quell_ranged = ability:GetSpecialValueFor("quell_ranged") 
 end
 
 function modifier_war_axe_passive:IsPurgable(  )return false end
@@ -41,6 +43,30 @@ function modifier_war_axe_passive:OnAttackLanded( params )
 	if IsServer() and params.attacker == caster and not caster:IsRangedAttacker() and not target:IsMagicImmune() then
 		damage = params.damage
 		local ability = self:GetAbility()
-		target:SplashDamage(damage,self.cleave_pct,DAMAGE_TYPE_PHYSICAL,false,caster,self.cleave_radius,ability)
+
+		if caster:IsRealHero() then
+			if IsBoss(target) then
+				print('This unit is boss, Quell dont work on boss')
+				return;
+			else
+				if target:IsCreep() then
+					local quell = nil
+
+					if self:GetCaster():IsRangedAttacker() then
+						quell = self.quell_ranged
+					else
+						quell = self.quell
+					end
+
+					local damage_quell = self.quell
+
+					ApplyDamage({victim = target, attacker = caster, damage = damage_quell, damage_type = DAMAGE_TYPE_PHYSICAL})
+				end
+			end
+
+			if not caster:IsRangedAttacker() and not target:IsMagicImmune() then
+				target:SplashDamage(damage, self.cleave_pct,DAMAGE_TYPE_PHYSICAL,false,caster,self.cleave_radius,ability)
+			end
+		end
 	end
 end

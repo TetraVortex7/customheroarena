@@ -1,10 +1,10 @@
 --==================SETTINGS=============================
 ITEM_PER_MOB_MIN = 1
 ITEM_PER_MOB_MAX = 1
-ITEM_CHANCE = 20
+ITEM_CHANCE = 15
 ITEM_BOSS_CHANCE = 100
 ITEM_BOSS_MIN = 2
-ITEM_BOSS_MAX = 4
+ITEM_BOSS_MAX = 5
 --==================SETTINGS=============================
 
 --==================TABLES=================================
@@ -36,8 +36,7 @@ _G.easy_drop = { --1-10 min
 	"item_sobi_mask",
 	"item_ring_of_regen",
 	"item_ring_of_basilius",
-	"item_gold_bag"
-	
+	"item_gold_bag"	
 }
 
 _G.middle_drop = { --10-15 min
@@ -59,7 +58,7 @@ _G.middle_drop = { --10-15 min
 	"item_ring_of_protection",
 	"item_quelling_blade",
 	"item_infused_raindrop",
-	"item_blight_stone_custom",
+	"item_blight_stone",
 	"item_stout_shield",
     "item_blades_of_attack",
     "item_chainmail",
@@ -73,7 +72,7 @@ _G.middle_drop = { --10-15 min
     "item_boots",
     "item_gloves",
     "item_cloak",
-    "item_lifesteal_custom",
+    "item_lifesteal",
     "item_ghost",
     "item_blink",
     "item_shadow_amulet",
@@ -83,11 +82,9 @@ _G.middle_drop = { --10-15 min
 	"item_chainmail",
 	"item_quarterstaff",
 	"item_soul_ring",
-	"item_ring_of_basilius",
 	"item_headdress",
 	"item_buckler",
 	"item_urn_of_shadows",
-	"item_ring_of_aquila",
 	"item_tranquil_boots"
 }
 
@@ -95,7 +92,7 @@ _G.only_middle = {  --15-25 min
     "item_boots",
     "item_gloves",
     "item_cloak",
-    "item_lifesteal_custom",
+    "item_lifesteal",
     "item_ghost",
     "item_blink",
     "item_shadow_amulet",
@@ -109,7 +106,6 @@ _G.only_middle = {  --15-25 min
 	"item_headdress",
 	"item_buckler",
 	"item_urn_of_shadows",
-	"item_ring_of_aquila",
 	"item_tranquil_boots",
 	"item_energy_booster",
 	"item_vitality_booster",
@@ -123,7 +119,7 @@ _G.hard_drop = {  --25-to end game
     "item_phase_boots",
     "item_hyper_glove",
     "item_cloak",
-    "item_lifesteal_custom",
+    "item_lifesteal",
     "item_ghost",
     "item_blink",
     "item_shadow_amulet",
@@ -134,10 +130,9 @@ _G.hard_drop = {  --25-to end game
 	"item_quarterstaff",
 	"item_soul_ring",
 	"item_ring_of_basilius",
-	"item_headdress",
+    "item_headdress",
 	"item_buckler",
 	"item_urn_of_shadows",
-	"item_ring_of_aquila",
 	"item_tranquil_boots",
 	"item_energy_booster",
 	"item_vitality_booster",

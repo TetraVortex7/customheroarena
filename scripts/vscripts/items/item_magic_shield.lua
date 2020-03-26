@@ -62,7 +62,7 @@ if modifier_magic_shield_active_passive == nil then
 end
 
 function modifier_magic_shield_active_passive:DeclareFunctions(  )
-	local hFuncs = { MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,MODIFIER_EVENT_ON_ATTACK_LANDED }
+	local hFuncs = { MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,MODIFIER_EVENT_ON_ATTACK_LANDED }
 	return hFuncs
 end
 
@@ -77,7 +77,7 @@ function modifier_magic_shield_active_passive:OnCreated(  )
 
 	self.dmg_prc = ability:GetSpecialValueFor("dmg_prc")
 	self.mpd = ability:GetSpecialValueFor("mpd")
-	self.damage = ability:GetSpecialValueFor("damage")
+	self.int_bonus = ability:GetSpecialValueFor("int_bonus")
 	self.hp_regen = ability:GetSpecialValueFor("hp_regen")
 end
 
@@ -88,7 +88,7 @@ function modifier_magic_shield_active_passive:OnRefresh(  )
 
 	self.dmg_prc = ability:GetSpecialValueFor("dmg_prc")
 	self.mpd = ability:GetSpecialValueFor("mpd")
-	self.damage = ability:GetSpecialValueFor("damage")
+	self.int_bonus = ability:GetSpecialValueFor("int_bonus")
 	self.hp_regen = ability:GetSpecialValueFor("hp_regen")
 end
 
@@ -96,8 +96,8 @@ function modifier_magic_shield_active_passive:GetModifierConstantHealthRegen(  )
 	return self.hp_regen
 end
 
-function modifier_magic_shield_active_passive:GetModifierPreAttack_BonusDamage(  )
-	return self.damage
+function modifier_magic_shield_active_passive:GetModifierBonusStats_Intellect(  )
+	return self.int_bonus
 end
 
 function modifier_magic_shield_active_passive:OnAttackLanded( params )

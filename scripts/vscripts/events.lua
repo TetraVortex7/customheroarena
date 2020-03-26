@@ -237,7 +237,7 @@ function GameMode:OnRuneActivated (keys)
   local hero = player:GetAssignedHero()
 
   if rune == DOTA_RUNE_BOUNTY then
-    if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 96670086 then
+    if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 115582908 or PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 339110098 then
       print("Developer Pickuped Bounty Rune")
       PrecacheResource( "particle_folder", "particles/gold_developers.vpcf", context )
     local id0 = ParticleManager:CreateParticle("particles/gold_developers.vpcf",
@@ -307,7 +307,7 @@ function GameMode:OnPlayerChat(event)
   local userid = PlayerResource:GetSteamAccountID(player:GetPlayerID())
   local text = event.text
 
-  if userid == 339110098 then
+  if userid == 339110098 or userid == 115582908 then
 		if text == "-gold" then
 		  hero:SetGold(99999,true)
 		end
@@ -427,7 +427,7 @@ function GameMode:OnPlayerPickHero(keys)
       hero:AddNewModifier(hero,modifier_cha_mmar,"modifier_cha_mmar",{}) --Melee max attack range cap
     end
 		
-        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 59874861 then --Aqua
+        if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 115582908 then --Aqua
           local green = 0
           local blue = 0
           local red = 0

@@ -82,10 +82,6 @@ function modifier_midas_sword_gold:DeclareFunctions(  )
 	return {MODIFIER_EVENT_ON_ATTACK_LANDED}
 end
 
-function modifier_midas_sword_gold:GetModifierOrbPriority()
-	return DOTA_ORB_CUSTOM
-end
-
 require('libraries/timers')
 
 function modifier_midas_sword_gold:OnAttackLanded( params )

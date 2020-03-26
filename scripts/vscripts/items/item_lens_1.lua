@@ -28,7 +28,7 @@ function modifier_lens_1_passive:OnCreated(  )
 end
 
 function modifier_lens_1_passive:DeclareFunctions(  )
-	return {MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,MODIFIER_PROPERTY_MANA_BONUS,MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE ,MODIFIER_PROPERTY_CAST_RANGE_BONUS}
+	return {MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,MODIFIER_PROPERTY_MANA_BONUS,MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE ,MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,MODIFIER_PROPERTY_CAST_RANGE_BONUS}
 end
 
 function modifier_lens_1_passive:GetModifierManaBonus(  )
@@ -39,8 +39,8 @@ function modifier_lens_1_passive:GetModifierBonusStats_Intellect(  )
 	return self.int
 end
 
-function modifier_lens_1_passive:GetModifierConstantHealthRegen(  )
-	return self.hp_reg
+function modifier_lens_1_passive:GetModifierConstantManaRegen(  )
+	return self.mp_regen
 end
 
 function modifier_lens_1_passive:GetModifierSpellAmplify_Percentage(  )

@@ -1,7 +1,6 @@
 "AddonInfo"
 {
   "maps"  "zxc"
-  "PenaltiesEnabled"		"1"
   "CheckAFKPlayers"	"1"
   
   "zxc"

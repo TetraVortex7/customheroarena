@@ -25,16 +25,12 @@ function modifier_deso2_passive:GetModifierPreAttack_BonusDamage(  )
 	return self:GetAbility():GetSpecialValueFor("bonus_dmg")
 end
 
-function modifier_deso2_passive:GetModifierOrbPriority()
-	return DOTA_ORB_PRIORITY_ITEM
-end
-
 function modifier_deso2_passive:OnAttackLanded( params )
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
 	local target = params.target
 
-	if target ~= caster and params.attacker == caster and not target:IsMagicImmune() and self:IsActiveOrb() then
+	if target ~= caster and params.attacker == caster and not target:IsMagicImmune() then
 		target:AddNewModifier(caster,ability,"deso2_modifier_corrupt",{duration = ability:GetSpecialValueFor("corrupt_duration")})
 	end
 end

@@ -34,29 +34,37 @@ function modifier_insane_shield_passive:OnCreated(  )
 	self.hp = self:GetAbility():GetSpecialValueFor("hp")
 	self.mp = self:GetAbility():GetSpecialValueFor("mp")
 	self.hp_regen = self:GetAbility():GetSpecialValueFor("hp_regen")
+	self.mp_regen = self.ability:GetSpecialValueFor("mp_regen")
 	self.armor = self:GetAbility():GetSpecialValueFor("armor")
 	self.block = self:GetAbility():GetSpecialValueFor("block")
+	self.agi = self:GetAbility():GetSpecialValueFor("bonus_agi")
 end
 
 function modifier_insane_shield_passive:OnRefresh(  )
 	self.hp = self:GetAbility():GetSpecialValueFor("hp")
 	self.mp = self:GetAbility():GetSpecialValueFor("mp")
 	self.hp_regen = self:GetAbility():GetSpecialValueFor("hp_regen")
+	self.mp_regen = self.ability:GetSpecialValueFor("mp_regen")
 	self.armor = self:GetAbility():GetSpecialValueFor("armor")
 	self.block = self:GetAbility():GetSpecialValueFor("block")
+	self.agi = self:GetAbility():GetSpecialValueFor("bonus_agi")
 end
 
 function modifier_insane_shield_passive:GetAttributes(  )
-	return MODIFIER_ATTRIBUTE_MULTIPLE
+	return MODIFIER_ATTRIBUTE_MULTIPLE + MODIFIER_ATTRIBUTE_PERMANENT 
 end
 
 function modifier_insane_shield_passive:DeclareFunctions(  )
-	local funcs = { MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK,MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS, MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT, MODIFIER_PROPERTY_HEALTH_BONUS, MODIFIER_PROPERTY_MANA_BONUS  }
+	local funcs = { MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK, MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS, MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT, MODIFIER_PROPERTY_HEALTH_BONUS, MODIFIER_PROPERTY_MANA_REGEN_CONSTANT, MODIFIER_PROPERTY_MANA_BONUS, MODIFIER_PROPERTY_STATS_AGILITY_BONUS  }
 	return funcs
 end
 
 function modifier_insane_shield_passive:GetModifierPhysical_ConstantBlock()
 	return self.block
+end
+
+function modifier_insane_shield_passive:GetModifierBonusStats_Agility(  )
+	return self.agi
 end
 
 function modifier_insane_shield_passive:GetModifierHealthBonus(  )
@@ -65,6 +73,10 @@ end
 
 function modifier_insane_shield_passive:GetModifierManaBonus(  )
 	return self.mp
+end
+
+function modifier_insane_shield_passive:GetModifierConstantManaRegen(  )
+	return self.mp_regen
 end
 
 function modifier_insane_shield_passive:GetModifierConstantHealthRegen(  )

@@ -37,13 +37,13 @@ function modifier_lens_5_passive:OnCreated(  )
 	local ability = self:GetAbility()
 	self.mana = ability:GetSpecialValueFor("mana")
 	self.int = ability:GetSpecialValueFor("int")
-	self.hp_reg = ability:GetSpecialValueFor("hp_reg")
+	self.mp_regen = ability:GetSpecialValueFor("mp_regen")
 	self.ampl = ability:GetSpecialValueFor("spell_amp")
 	self.range = ability:GetSpecialValueFor("cast_range_bonus")
 end
 
 function modifier_lens_5_passive:DeclareFunctions(  )
-	return {MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,MODIFIER_PROPERTY_MANA_BONUS,MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE ,MODIFIER_PROPERTY_CAST_RANGE_BONUS}
+	return {MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,MODIFIER_PROPERTY_MANA_BONUS,,MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE ,MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,MODIFIER_PROPERTY_CAST_RANGE_BONUS}
 end
 
 function modifier_lens_5_passive:GetModifierManaBonus(  )
@@ -54,8 +54,8 @@ function modifier_lens_5_passive:GetModifierBonusStats_Intellect(  )
 	return self.int
 end
 
-function modifier_lens_5_passive:GetModifierConstantHealthRegen(  )
-	return self.hp_reg
+function modifier_lens_5_passive:GetModifierConstantManaRegen(  )
+	return self.mp_regen
 end
 
 function modifier_lens_5_passive:GetModifierSpellAmplify_Percentage(  )

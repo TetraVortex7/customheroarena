@@ -8,7 +8,7 @@ end
 
 function TimerThing(newItem)
   	Timers:CreateTimer({
-             	endTime = 20,
+             	endTime = 30,
                 callback = function()
                 	if newItem and IsValidEntity(newItem) then
                 		if not newItem:GetOwnerEntity() then 

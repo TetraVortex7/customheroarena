@@ -61,10 +61,6 @@ function modifier_demonic_axe_passive:GetModifierTotalPercentageManaRegen(  )ret
 
 function modifier_demonic_axe_passive:GetModifierPhysicalArmorBonus(  )return self.armor end
 
-function modifier_demonic_axe_passive:GetModifierOrbPriority()
-	return DOTA_ORB_PRIORITY_ITEM
-end
-
 function modifier_demonic_axe_passive:OnAttackLanded( params )
 	local caster = self:GetParent()
 	local target = params.target
@@ -87,7 +83,7 @@ function modifier_demonic_axe_passive:OnAttackLanded( params )
 						quell = self.quell
 					end
 
-					local damage_quell = (damage  * self.quell - damage) / 100
+					local damage_quell = self.quell
 
 					ApplyDamage({victim = target, attacker = caster, damage = damage_quell, damage_type = DAMAGE_TYPE_PHYSICAL})
 				end

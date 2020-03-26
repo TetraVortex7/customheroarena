@@ -7,14 +7,14 @@
         "addon_game_name"               "Custom Hero Arena"
         "addon_name_t"                  "Custom Hero Arena"
         "DOTA_GoodGuys"                 "Not a bad Guys"
-        "DOTA_BadGuys"                  "Bad Guys"
+        "DOTA_BadGuys"                  "Maybe Bad Guys"
 		
-            "#DOTA_Item_Build_Ganker"    "Ganker"
-            "#DOTA_Item_Build_Carry"     "Carry"
-            "#DOTA_Item_Build_Mage"      "Mage"
-			"#DOTA_Item_Build_Tank"     "Tank"
-			"#DOTA_Item_Build_Potions"	"Potions"
-            "#DOTA_Item_Build_Ascention" "LEGENDARY"
+            "DOTA_Item_Build_Ganker"    "Ganker"
+            "DOTA_Item_Build_Carry"     "Carry"
+            "DOTA_Item_Build_Mage"      "Mage"
+			"DOTA_Item_Build_Tank"     "Tank"
+			"DOTA_Item_Build_Potions"	"Potions"
+            "DOTA_Item_Build_Ascention" "LEGENDARY"
 			
             "spell_shop" "Spell Shop"
             "spell_shop_text" "Press this button to buy abilities."
@@ -321,7 +321,7 @@
             "DOTA_Tooltip_ability_visage_gravekeepers_cloak_custom_radius"              "MAX RADIUS:"
 
                 "DOTA_Tooltip_modifier_visage_gravekeepers_cloak_custom_layer"              "Gravekeeper's Cloak"
-                "DOTA_Tooltip_modifier_visage_gravekeepers_cloak_custom_layer_Description"  "Absorb %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% any damage. Layers recover over time."
+                "DOTA_Tooltip_modifier_visage_gravekeepers_cloak_custom_layer_Description"  "Absorb %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% any damage. Layers recover over time."
 
         //Arctic Burn
 
@@ -502,7 +502,7 @@
             "DOTA_Tooltip_ability_item_mana_stone_Description"          "This is magic stone"
             "DOTA_Tooltip_ability_item_mana_stone_Lore"                 "It was pulled from ring"
             "DOTA_Tooltip_ability_item_mana_stone_mana_regen"                               "+$mana_regen"
-            "DOTA_Tooltip_ability_item_mana_stone_bonus_int"                                "+$int"
+            "DOTA_Tooltip_ability_item_mana_stone_bonus_mana"                                "+$mana"
         
         // Гипер-спид перчатка
 
@@ -525,7 +525,6 @@
             "DOTA_Tooltip_ability_item_ringed_glove"                                    "Ringed Glove"
             "DOTA_Tooltip_ability_item_ringed_glove_Description"                        "<h1>Passive: Vasilius Aura</h1>Increase armor by %aura_bonus_armor% and int by %aura_int%.<br>Range: %aura_radius%."
             "DOTA_Tooltip_ability_item_ringed_glove_Lore"                               "Magic Glove with Magic Ring, good thing."
-            "DOTA_Tooltip_ability_item_ringed_glove_bonus_damage"                       "+$damage"
             "DOTA_Tooltip_ability_item_ringed_glove_bonus_int"                          "+$int"
             "DOTA_Tooltip_ability_item_ringed_glove_bonus_armor"                        "+$armor"
             "DOTA_Tooltip_ability_item_ringed_glove_mana_regen"                         "+$mana_regen"
@@ -537,7 +536,7 @@
         // камень разложения
 
             "DOTA_Tooltip_ability_item_stone_of_decay"                                  "Stone of Decay"
-            "DOTA_Tooltip_ability_item_stone_of_decay_Description"                      "<h1>Passive: Armor Decay</h1>Your attacks reduce target armor by %corrupt_armor%<br>Lasts %corrupt_duration% sec.<br><br>Stone of Decay - unique attack modifier, it not stack with other unique attack modifiers."
+            "DOTA_Tooltip_ability_item_stone_of_decay_Description"                      "<h1>Passive: Armor Decay</h1>Your attacks reduce target armor by %corrupt_armor%<br>Lasts %corrupt_duration% sec."
             "DOTA_Tooltip_ability_item_stone_of_decay_Lore"                             "This thing can make with 2 folded stones under a lot of money. At least as it is written in the recipe."
 
                 "DOTA_Tooltip_decay_modifier_corrupt"                                   "Stone Of Decay"
@@ -546,7 +545,7 @@
         // дезоль 2
 
             "DOTA_Tooltip_ability_item_deso2"                                           "Desolator 2"
-            "DOTA_Tooltip_ability_item_deso2_Description"                               "<h1>Passive: Armor Corrupt</h1> Your attacks reduce target armor by %corrupt_armor%ю<br> Lasts %corrupt_duration% sec.<br><br> Desolator 2 - unique attack modifier, it will not stack with other unique attack modifiers."
+            "DOTA_Tooltip_ability_item_deso2_Description"                               "<h1>Passive: Armor Corrupt</h1> Your attacks reduce target armor by %corrupt_armor%ю<br> Lasts %corrupt_duration% sec."
             "DOTA_Tooltip_ability_item_deso2_Lore"                                      "Upgraded Desolator, on attack, reduce enemy armor."
             "DOTA_Tooltip_ability_item_deso2_bonus_dmg"                                 "+$damage"
 
@@ -557,7 +556,7 @@
 
             "DOTA_Tooltip_ability_item_katana"                                          "Katana"
             "DOTA_Tooltip_ability_item_katana_Note0"                                    "Drops from bosses."
-            "DOTA_Tooltip_ability_item_katana_Description"                              "<h1>Active: Flutter 2</h1> Exchanges a attack dodge chance to additional %evasion%% movement speed, lasts %duration% seconds."
+            "DOTA_Tooltip_ability_item_katana_Description"                              "<h1>Active: Flutter</h1> Exchanges a attack dodge chance to additional %evasion%% movement speed, lasts %duration% seconds."
             "DOTA_Tooltip_ability_item_katana_Lore"                                     "Very hard to use, but extends owner speed"
             "DOTA_Tooltip_ability_item_katana_bonus_agi"                                "+$agi"
             "DOTA_Tooltip_ability_item_katana_bonus_attack_speed"                       "+$attack"
@@ -574,6 +573,7 @@
             "DOTA_Tooltip_ability_item_fly_bonus_damage"                                "+$damage"
             "DOTA_Tooltip_ability_item_fly_bonus_evasion"                               "%+$evasion"
             "DOTA_Tooltip_ability_item_fly_bonus_attack_speed"                          "+$attack"
+		    "DOTA_Tooltip_ability_item_fly_bonus_move_speed_percent"                    "%+$move_speed"
         
         // хендед сворд
 
@@ -648,9 +648,9 @@
             //Чистое сердце
 
                 "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART"                "Pure Heart"
-                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_Description"    "<h1>Passive: FullyRecharge</h1> Regenerate your health by %health_regen_prc%% and mana by %mana_regen_prc%% of max value.<br><br> Disables if owner has attacked or channeled any spell by %cooldown% sec."
-                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_health_bonus"   "+$health"
-                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_mana_bonus"     "+$mana"
+                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_Description"    "<h1>Passive: FullyRecharge</h1> Regenerate your health by %health_regen_prc%% and mana by %mana_regen_prc%% of max value.<br><br> Disables if owner has attacked or channeled any spell by %melee_cooldown% sec. for melee and by %ranged_cooldown% sec. for ranged heroes."
+                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_bonus_health"   "+$health"
+                "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_bonus_mana"     "+$mana"
                 "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_int_bonus"      "+$int"
                 "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_str_bonus"      "+$str"
                 "DOTA_TOOLTIP_ABILITY_ITEM_PURGED_HEART_hp_regen"       "+$hp_regen"
@@ -667,7 +667,7 @@
                 "DOTA_Tooltip_ability_item_heart_shard_Note0"           "Drops from boss."
                 "DOTA_Tooltip_ability_item_heart_shard_Lore"            "This Artifact rare to see."
                 "DOTA_Tooltip_ability_item_heart_shard_hp_regen"        "+$hp_regen"
-                "DOTA_Tooltip_ability_item_heart_shard_armor"           "+$armor"
+                "DOTA_Tooltip_ability_item_heart_shard_mp_regen"        "+$mana_regen"
                 "DOTA_Tooltip_ability_item_heart_shard_hp_mp"           "+$health"
 
             //Пластина брони
@@ -675,7 +675,6 @@
                 "DOTA_Tooltip_ability_item_armor_plate"                 "Armor Plate"
                 "DOTA_Tooltip_ability_item_armor_plate_Description"     "Simple, hardened plate."
                 "DOTA_Tooltip_ability_item_armor_plate_Note0"           "Drops from boss."
-                "DOTA_Tooltip_ability_item_armor_plate_hp_mp"           "+health and mana"
                 "DOTA_Tooltip_ability_item_armor_plate_armor"           "+$armor"
 
             //Зачарованная пластина
@@ -685,17 +684,20 @@
                 "DOTA_Tooltip_ability_item_enchanted_plate_Lore"            "I do not know from where this thing."
                 "DOTA_Tooltip_ability_item_enchanted_plate_hp_mp"           "+$health"
                 "DOTA_Tooltip_ability_item_enchanted_plate_armor"           "+$armor"
+				"DOTA_Tooltip_ability_item_enchanted_plate_mp_regen"        "+$mana_regen"
                 "DOTA_Tooltip_ability_item_enchanted_plate_hp_regen"        "+$hp_regen"
 
             //Крепкий щит
 
             "DOTA_Tooltip_ability_item_insane_shield"               "Kadash"
-            "DOTA_Tooltip_ability_item_insane_shield_Description"   "<h1>Passive: Block</h1>Block %reduce_c%% incoming physical damage.\n<h1>Active: Defense</h1>Add stability to owner, and allowing to block %reduce%% more physical damage.<br>Lasts %duration% sec."
+            "DOTA_Tooltip_ability_item_insane_shield_Description"   "<h1>Passive: Block</h1>Block %reduce_c%% + %block% incoming physical damage.\n<h1>Active: Defense</h1>Add stability to owner, and allowing to block %reduce%% more physical damage.<br>Lasts %duration% sec."
             "DOTA_Tooltip_ability_item_insane_shield_Lore"          "Very strong Armor, forged from legendary materials."
             "DOTA_Tooltip_ability_item_insane_shield_hp"            "+$health"
             "DOTA_Tooltip_ability_item_insane_shield_mp"            "+$mana"
             "DOTA_Tooltip_ability_item_insane_shield_armor"         "+$armor"
+			"DOTA_Tooltip_ability_item_insane_shield_mp_regen"      "+$mana_regen"
             "DOTA_Tooltip_ability_item_insane_shield_hp_regen"      "+$hp_regen"
+			"DOTA_Tooltip_ability_item_insane_shield_bonus_agi"     "+$agi"
 
             "DOTA_Tooltip_modifier_insane_shield_reduce_spell"              "Defense"
             "DOTA_Tooltip_modifier_insane_shield_reduce_spell_Description"  "Your incoming damage decreased."
@@ -708,6 +710,7 @@
                 "DOTA_Tooltip_ability_item_vanguard_2_Lore"         "Mighty Shield, defends the owner from very fury attacks."
                 "DOTA_Tooltip_ability_item_vanguard_2_hp_regen"     "+$hp_regen"
                 "DOTA_Tooltip_ability_item_vanguard_2_health"       "+$health"
+				"DOTA_Tooltip_ability_item_vanguard_2_bonus_agi"    "+$agi"
 
             //3 вангвард
                 "DOTA_Tooltip_ability_item_vanguard_3"              "Vanguard 3"
@@ -715,6 +718,7 @@
                 "DOTA_Tooltip_ability_item_vanguard_3_Lore"         "Mighty Shield, defends the owner from very fury attacks."
                 "DOTA_Tooltip_ability_item_vanguard_3_hp_regen"     "+$hp_regen"
                 "DOTA_Tooltip_ability_item_vanguard_3_health"       "+$health"
+				"DOTA_Tooltip_ability_item_vanguard_3_bonus_agi"    "+$agi"
 
             //крутой вангвард
                 "DOTA_Tooltip_ability_item_sacred_shield"               "Strong Shield"
@@ -722,6 +726,7 @@
                 "DOTA_Tooltip_ability_item_sacred_shield_Lore"          "Mighty Shield, defends the owner from very fury attacks."
                 "DOTA_Tooltip_ability_item_sacred_shield_hp_regen"      "+$hp_regen"
                 "DOTA_Tooltip_ability_item_sacred_shield_health"        "+$health"
+				"DOTA_Tooltip_ability_item_sacred_shield_bonus_agi"     "+$agi"
 
             //Вангвард кастомный
 
@@ -730,6 +735,7 @@
                 "DOTA_Tooltip_ability_item_vanguard_c_Lore"         "Mighty Shield, defends the owner from very fury attacks."
                 "DOTA_Tooltip_ability_item_vanguard_c_hp_regen"     "+$hp_regen"
                 "DOTA_Tooltip_ability_item_vanguard_c_health"       "+$health"
+				"DOTA_Tooltip_ability_item_vanguard_c_bonus_agi"    "+$agi"
                 //"DOTA_Tooltip_ability_item_vanguard_c_damage_block" "BLOCK DAMAGE:"
 
         //Топор войны
@@ -748,7 +754,7 @@
             "DOTA_Tooltip_ability_item_war_axe_dummy_damage"        "+$damage"
 
             "DOTA_Tooltip_ability_item_war_axe"                                 "War Axe"
-            "DOTA_Tooltip_ability_item_war_axe_Description"                     "<h1>Passive: Cleave</h1> Deal %cleave_pct%% damage done to main target to other targets<br>Radius: %cleave_radius%."
+            "DOTA_Tooltip_ability_item_war_axe_Description"                     "<h1>Passive: Cleave</h1> Deal %cleave_pct%% damage done to main target to other targets<br>Radius: %cleave_radius%.\n<h1>Passive: Quell</h1> Increases damage done to creeps if the type of melee attacks while damage to creeps will %quell%, if ranged, will %quell_ranged%, It does not apply to the bosses."
             "DOTA_Tooltip_ability_item_war_axe_Lore"                            "Axe with unreal power inside."
             "DOTA_Tooltip_ability_item_war_axe_damage"                    "+$damage"
             "DOTA_Tooltip_ability_item_war_axe_hp_regen"              "+$hp_regen"
@@ -845,7 +851,8 @@
                 "DOTA_Tooltip_ability_item_phase_boots_2"                           "Phase Boots 2"
                 "DOTA_Tooltip_ability_item_phase_boots_2_Description"               "<h1>Active: Phase 2</h1> Increases movement speed, allowing you to walk through units.<br>Movement speed bonus for ranged %movespeed_active_range%%<br>Movement speed for melee %movespeed_active%<br>Lasts %duration% seconds"
                 "DOTA_Tooltip_ability_item_phase_boots_2_Lore"                      "Shoes that allow the wearer to travel between worlds."
-                "DOTA_Tooltip_ability_item_phase_boots_2_damage"                    "+$damage"
+                "DOTA_Tooltip_ability_item_phase_boots_2_damage"                    "+$damage
+                "DOTA_Tooltip_ability_item_phase_boots_2_armor"                     "+$armor"
                 "DOTA_Tooltip_ability_item_phase_boots_2_movespeed"                 "+$move_speed"
                 "DOTA_Tooltip_ability_item_phase_boots_2_duration"                  "DURATION:"
                 "DOTA_Tooltip_ability_item_phase_boots_2_movespeed_active"          "%BOOST MELEE HEROES:"
@@ -857,7 +864,8 @@
                 "DOTA_Tooltip_ability_item_phase_boots_3"                           "Phase Boots 3"
                 "DOTA_Tooltip_ability_item_phase_boots_3_Description"               "<h1>Active: Phase 3</h1> Increases movement speed, allowing you to walk through units.<br>Movement speed bonus for ranged %movespeed_active_range%%<br>Movement speed for melee %movespeed_active%<br>Lasts %duration% seconds"
                 "DOTA_Tooltip_ability_item_phase_boots_3_Lore"                      "Shoes that allow the wearer to travel between worlds."
-                "DOTA_Tooltip_ability_item_phase_boots_3_damage"                    "+$damage"
+                "DOTA_Tooltip_ability_item_phase_boots_3_damage"                    "+$damage
+                "DOTA_Tooltip_ability_item_phase_boots_3_armor"                     "+$armor"
                 "DOTA_Tooltip_ability_item_phase_boots_3_cap"                       "MAXIMUM MOVEMENT SPEED:"
                 "DOTA_Tooltip_ability_item_phase_boots_3_movespeed"                 "+$move_speed"
                 "DOTA_Tooltip_ability_item_phase_boots_3_duration"                  "DURATION:"
@@ -921,7 +929,7 @@
                 "DOTA_Tooltip_ability_item_aether_lens_1_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
                 "DOTA_Tooltip_ability_item_aether_lens_1_Lore"                  "Focusing on the glass that thing enhance your magical potential."
                 "DOTA_Tooltip_ability_item_aether_lens_1_bonus_mana"            "+$mana"
-                "DOTA_Tooltip_ability_item_aether_lens_1_bonus_health_regen"    "+$hp_regen"
+                "DOTA_Tooltip_ability_item_aether_lens_1_bonus_mana_regen"      "+$mana_regen"
                 "DOTA_Tooltip_ability_item_aether_lens_1_cast_range_bonus"      "+spell cast range"
                 "DOTA_Tooltip_ability_item_aether_lens_1_spell_amp"             "%BONUS SPELL DAMAGE:"
 
@@ -931,7 +939,7 @@
                 "DOTA_Tooltip_ability_item_aether_lens_2_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
                 "DOTA_Tooltip_ability_item_aether_lens_2_Lore"                  "Focusing on the glass that thing enhance your magical potential."
                 "DOTA_Tooltip_ability_item_aether_lens_2_bonus_mana"            "+$mana"
-                "DOTA_Tooltip_ability_item_aether_lens_2_bonus_health_regen"    "+$hp_regen"
+                "DOTA_Tooltip_ability_item_aether_lens_2_bonus_mana_regen"      "+$mana_regen"
                 "DOTA_Tooltip_ability_item_aether_lens_2_cast_range_bonus"      "+spell cast range"
                 "DOTA_Tooltip_ability_item_aether_lens_2_spell_amp"             "%BONUS SPELL DAMAGE:"
 
@@ -941,7 +949,7 @@
                 "DOTA_Tooltip_ability_item_aether_lens_3_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
                 "DOTA_Tooltip_ability_item_aether_lens_3_Lore"                  "Focusing on the glass that thing enhance your magical potential."
                 "DOTA_Tooltip_ability_item_aether_lens_3_bonus_mana"            "+$mana"
-                "DOTA_Tooltip_ability_item_aether_lens_3_bonus_health_regen"    "+$hp_regen"
+                "DOTA_Tooltip_ability_item_aether_lens_3_bonus_mana_regen"      "+$mana_regen"
                 "DOTA_Tooltip_ability_item_aether_lens_3_cast_range_bonus"      "+spell cast range"
                 "DOTA_Tooltip_ability_item_aether_lens_3_spell_amp"             "%BONUS SPELL DAMAGE:"
 
@@ -951,7 +959,7 @@
                 "DOTA_Tooltip_ability_item_aether_lens_4_Description"           "<h1>Passive: Aethereal Focus</h1> Increases targeted spell and item cast range by %cast_range_bonus%.<br>Increases magic damage by %spell_amp%%"
                 "DOTA_Tooltip_ability_item_aether_lens_4_Lore"                  "Focusing on the glass that thing enhance your magical potential."
                 "DOTA_Tooltip_ability_item_aether_lens_4_bonus_mana"            "+$mana"
-                "DOTA_Tooltip_ability_item_aether_lens_4_bonus_health_regen"    "+$hp_regen"
+                "DOTA_Tooltip_ability_item_aether_lens_4_bonus_mana_regen"      "+$mana_regen"
                 "DOTA_Tooltip_ability_item_aether_lens_4_cast_range_bonus"      "+spell cast range"
                 "DOTA_Tooltip_ability_item_aether_lens_4_spell_amp"             "%BONUS SPELL DAMAGE:"
 
@@ -1023,7 +1031,7 @@
         //Демонический топор
 
             "DOTA_Tooltip_ability_item_demonic_axe"                             "Demonic Axe"
-            "DOTA_Tooltip_ability_item_demonic_axe_Description"                 "<h1>Active: HellRage</h1> You enraged, attack speed increased by %atk%, damage increased by %dmg%%. Add your attacks will steal target health by %lifesteal_prc_act%% of current enemy health for %duration% sec.\n<h1>Passive: Cleave</h1> Deal %cleave_damage_percent%% damage done to main target to other targets<br>Radius: %cleave_radius%.\n<h1>Passive: Quell</h1> Increases damage done to creeps if the type of melee attacks while damage to creeps will %quell%%, if ranged, will %quell_ranged%%, It does not apply to the bosses."
+            "DOTA_Tooltip_ability_item_demonic_axe_Description"                 "<h1>Active: HellRage</h1> You enraged, attack speed increased by %atk%, damage increased by %dmg%%. Add your attacks will steal target health by %lifesteal_prc_act%% of current enemy health for %duration% sec.\n<h1>Passive: Cleave</h1> Deal %cleave_damage_percent%% damage done to main target to other targets<br>Radius: %cleave_radius%.\n<h1>Passive: Quell</h1> Increases damage done to creeps if the type of melee attacks while damage to creeps will %quell%, if ranged, will %quell_ranged%, It does not apply to the bosses."
             "DOTA_Tooltip_ability_item_demonic_axe_Lore"                        "The axe of one of the guards pass to hell."
             "DOTA_Tooltip_ability_item_demonic_axe_damage"                      "+$damage"
             "DOTA_Tooltip_ability_item_demonic_axe_hp_mp"                       "+health and mana"
@@ -1088,7 +1096,7 @@
             "DOTA_Tooltip_ability_item_magic_shield_Description"    "<h1>Active: Mana Phasing</h1> Materialize mana and creates a barrier that protects owner, if you will miss the mana unit damage, you will be inflicted %dnm% pure damage."
             "DOTA_Tooltip_ability_item_magic_shield_Lore"           "Solid magic energy shield."
             "DOTA_Tooltip_ability_item_magic_shield_Note0"          "Drops from Bounty Hunter."
-            "DOTA_Tooltip_ability_item_magic_shield_damage"         "+$damage"
+            "DOTA_Tooltip_ability_item_magic_shield_int_bonus"      "+$int"
             "DOTA_Tooltip_ability_item_magic_shield_hp_regen"       "+$hp_regen"
             "DOTA_Tooltip_ability_item_magic_shield_dnm"            "INFLICTS DAMAGE IF NOT ENOUGH MANA:"
             "DOTA_Tooltip_ability_item_magic_shield_mpd"            "MANA PER DAMAGE:"
@@ -1098,7 +1106,7 @@
             "DOTA_Tooltip_ability_item_magic_shield_active_Description" "<h1>Active: Mana Phasing</h1> Materialize mana and creates a barrier that protects owner, if you will miss the mana unit damage, you will be inflicted %dnm% pure damage.."
             "DOTA_Tooltip_ability_item_magic_shield_active_Lore"            "Solid magic energy shield."
             "DOTA_Tooltip_ability_item_magic_shield_active_Note0"          "Drops from Bounty Hunter."
-            "DOTA_Tooltip_ability_item_magic_shield_active_damage"          "+$damage"
+            "DOTA_Tooltip_ability_item_magic_shield_active_int_bonus"      "+$int"
             "DOTA_Tooltip_ability_item_magic_shield_active_hp_regen"        "+$hp_regen"
             "DOTA_Tooltip_ability_item_magic_shield_active_dnm"         "INFLICTS DAMAGE IF NOT ENOUGH MANA:"
             "DOTA_Tooltip_ability_item_magic_shield_active_mpd"         "MANA PER DAMAGE:"
@@ -1217,7 +1225,7 @@
                 "DOTA_Tooltip_ability_item_reflect_shield_Note0"            "Drops from Slark Miniboss."
                 "DOTA_Tooltip_ability_item_reflect_shield_Description"      "<h1>Passive: Reflect</h1> If attacked, has %chance%% chance to return full taked damage."
                 "DOTA_Tooltip_ability_item_reflect_shield_Lore"             ""
-                "DOTA_Tooltip_ability_item_reflect_shield_chance"           "%RETURN DAMAGE CHANCE:"
+                "DOTA_Tooltip_ability_item_reflect_shield_chance"           "%RETURN DAMAGE CHANCE: "
                 "DOTA_Tooltip_ability_item_reflect_shield_armor"            "+$armor"
                 "DOTA_Tooltip_ability_item_reflect_shield_hp"               "+$health"
                 "DOTA_Tooltip_ability_item_reflect_shield_str"              "+$str"
@@ -1354,7 +1362,7 @@
         //Демон лайфстил
 
             "DOTA_Tooltip_ability_item_demon_lifesteal"                     "Demon Lifesteal"
-            "DOTA_Tooltip_ability_item_demon_lifesteal_Description"         "<h1>Active: Berserk</h1> Your taking damage increased by %act_damage%%, attack speed by %act_atk%, movement speed by %act_speed%%.\n<h1>Passive: Demon Aura</h1> Give %aura_armor% armor, %aura_dmg% damage, %aura_mana% constant mana regen, %aura_regen% health regeneration.<br>Radius: %range%\n<br>Demon Aura buff - unique attack modifier, he dont stack with other unique attack modifiers."
+            "DOTA_Tooltip_ability_item_demon_lifesteal_Description"         "<h1>Active: Berserk</h1> Your taking damage increased by %act_damage%%, attack speed by %act_atk%, movement speed by %act_speed%%.\n<h1>Passive: Demon Aura</h1> Give %aura_armor% armor, %aura_dmg% damage, %aura_mana% constant mana regen, %aura_regen% health regeneration.<br>Radius: %range%"
             "DOTA_Tooltip_ability_item_demon_lifesteal_Lore"                ""
             "DOTA_Tooltip_ability_item_demon_lifesteal_dmg"                 "+$damage"
             "DOTA_Tooltip_ability_item_demon_lifesteal_act_atk"             "ATTACK BOOST:"
@@ -1374,7 +1382,7 @@
         //Desolator
 
             "DOTA_Tooltip_ability_item_desolator_custom"                    "Desolator"       
-            "DOTA_Tooltip_ability_item_desolator_custom_Description"        "<h1>Passive: Corruption</h1> Attacks decrease target armor by %disarmor%.<br>Lasts %duration% sec.<br><br>Desolator - unique attack modifier, it not stack with other unique attack modifiers."
+            "DOTA_Tooltip_ability_item_desolator_custom_Description"        "<h1>Passive: Corruption</h1> Attacks decrease target armor by %disarmor%.<br>Lasts %duration% sec."
             "DOTA_Tooltip_ability_item_desolator_custom_Lore"               ""
             "DOTA_Tooltip_ability_item_desolator_custom_dmg"                "+$damage"
             "DOTA_Tooltip_ability_item_desolator_custom_disarmor"           "DISARMOR:"
@@ -1402,7 +1410,7 @@
         //Blight Stone
 
             "DOTA_Tooltip_ability_item_blight_stone_custom"                 "Blight Stone"
-            "DOTA_Tooltip_ability_item_blight_stone_custom_Description"     "<h1>Passive: Lesser Corruption</h1> Your attacks reduce the target's armor by %disarmor% for %duration% seconds.\n<br>Blight Stone - unique attack modifier, it not stack with other unique attack modifiers."
+            "DOTA_Tooltip_ability_item_blight_stone_custom_Description"     "<h1>Passive: Lesser Corruption</h1> Your attacks reduce the target's armor by %disarmor% for %duration% seconds."
             "DOTA_Tooltip_ability_item_blight_stone_custom_Lore"            ""
             "DOTA_Tooltip_ability_item_blight_stone_custom_duration"        "DURATION:"
             "DOTA_Tooltip_ability_item_blight_stone_custom_disarmor"        "DISARMOR:"
@@ -1413,7 +1421,7 @@
         //Morbid Mask
 
             "DOTA_Tooltip_ability_item_lifesteal_custom"                "Morbid Mask"
-            "DOTA_Tooltip_ability_item_lifesteal_custom_Description"    "<h1>Passive: Lifesteal</h1>Heals the attacker for %lifesteal%%% of attack damage dealt.\n<br>Morbid Mask - is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
+            "DOTA_Tooltip_ability_item_lifesteal_custom_Description"    "<h1>Passive: Lifesteal</h1>Heals the attacker for %lifesteal%%% of attack damage dealt."
             "DOTA_Tooltip_ability_item_lifesteal_custom_Lore"           "Mask, absorbing the energy of those who caught her eye."
             "DOTA_Tooltip_ability_item_lifesteal_custom_lifesteal"      "%LIFESTEAL:"
 
@@ -1421,7 +1429,7 @@
 
             "DOTA_Tooltip_ability_item_dominator"                   "Helm of the Dominator"
             "DOTA_Tooltip_ability_item_dominator_Note0"             "On dominate disable item drop on dominated unit"
-            "DOTA_Tooltip_ability_item_dominator_Description"       "<h1>Active: Dominate</h1> Give control on selected unit, it is not a ancient and not a hero and increases him movement speed to %speed% and more if base movespeed more than %speed%. Dominated creature health increases by %hp%.\n<h1>Passive: Lifesteal</h1>Heals the attacker for %lifesteal%%% of attack damage dealt\n<br>Helm of the Dominator - is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
+            "DOTA_Tooltip_ability_item_dominator_Description"       "<h1>Active: Dominate</h1> Give control on selected unit, it is not a ancient and not a hero and increases him movement speed to %speed% and more if base movespeed more than %speed%. Dominated creature health increases by %hp%.\n<h1>Passive: Lifesteal</h1>Heals the attacker for %lifesteal%%% of attack damage dealt"
             "DOTA_Tooltip_ability_item_dominator_Lore"              ""
             "DOTA_Tooltip_ability_item_dominator_duration"          "CREATURE LIFETIME:"
             "DOTA_Tooltip_ability_item_dominator_lifesteal"         "%LIFESTEAL:"
@@ -1434,7 +1442,7 @@
         //Satanic
 
             "DOTA_Tooltip_ability_item_satanic_custom"                     "Satanic"
-            "DOTA_Tooltip_ability_item_satanic_custom_Description"         "<h1>Active: Unholy Rage</h1>Increases Lifesteal percentage to %act_lifesteal%%% for %duration% seconds,\n<h1>Passive: Lifesteal</h1>Heals the attacker for %lifesteal%%% of attack damage dealt.\n<br>Satanic - is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
+            "DOTA_Tooltip_ability_item_satanic_custom_Description"         "<h1>Active: Unholy Rage</h1>Increases Lifesteal percentage to %act_lifesteal%%% for %duration% seconds,\n<h1>Passive: Lifesteal</h1>Heals the attacker for %lifesteal%%% of attack damage dealt."
             "DOTA_Tooltip_ability_item_satanic_custom_Lore"                "Immense power at the cost of your soul."
             "DOTA_Tooltip_ability_item_satanic_custom_dmg"                 "+$damage"
             "DOTA_Tooltip_ability_item_satanic_custom_armor"               "+$armor"
@@ -1449,7 +1457,7 @@
         //MoM 
 
             "DOTA_Tooltip_ability_item_mask_of_madness_custom"                  "Mask of Madness"
-            "DOTA_Tooltip_ability_item_mask_of_madness_custom_Description"      "<h1>Active: Berserk</h1> Gives %atk% attack speed and %speed%%% movement speed, but causes you to take extra %dmg%%% damage. Lasts %duration% seconds.\n<h1>Passive: Lifesteal</h1>Heals the attacker for %lifesteal%%% of attack damage dealt.\n<br>Mask of Madness is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
+            "DOTA_Tooltip_ability_item_mask_of_madness_custom_Description"      "<h1>Active: Berserk</h1> Gives %atk% attack speed and %speed%%% movement speed, but causes you to take extra %dmg%%% damage. Lasts %duration% seconds.\n<h1>Passive: Lifesteal</h1>Heals the attacker for %lifesteal%%% of attack damage dealt."
             "DOTA_Tooltip_ability_item_mask_of_madness_custom_Lore"             ""
             "DOTA_Tooltip_ability_item_mask_of_madness_custom_lifesteal"        "%LIFESTEAL:"
             "DOTA_Tooltip_ability_item_mask_of_madness_custom_atk"              "BERSERK:<br>• ATTACK SPEED:"
@@ -1465,7 +1473,7 @@
             //1 lvl
 
                 "DOTA_Tooltip_ability_item_mana_burn_1"                 "Diffusal Blade"
-                "DOTA_Tooltip_ability_item_mana_burn_1_Description"     "<h1>Active: Purge</h1> If cast on an enemy, removes buffs from the target and slows it for %duration% seconds. If cast on an ally, Purge removes most debuffs.\n<h1>Passive: Manabreak</h1> Each attack burns %burn% mana from the target, and deals the %burn_damage%%% of %burn% magical damage. Illusions burn 20%% of %burn% mana per attack.\n<br>Diffusal Blade is a Mana burn Modifier, and does not stack with other Mana burn Modifiers."
+                "DOTA_Tooltip_ability_item_mana_burn_1_Description"     "<h1>Active: Purge</h1> If cast on an enemy, removes buffs from the target and slows it for %duration% seconds. If cast on an ally, Purge removes most debuffs.\n<h1>Passive: Manabreak</h1> Each attack burns %burn% mana from the target, and deals the %burn_damage%%% of %burn% magical damage. Illusions burn 20%% of %burn% mana per attack."
                 "DOTA_Tooltip_ability_item_mana_burn_1_Note0"           "Manabreak damage % increases by your intellect"
                 "DOTA_Tooltip_ability_item_mana_burn_1_Lore"            "An enchanted blade that allows the owner to cut straight into the enemy's soul."
                 "DOTA_Tooltip_ability_item_mana_burn_1_burn"            "MANABREAK: <br>• MANABURN:"
@@ -1480,7 +1488,7 @@
             //2 lvl
 
                 "DOTA_Tooltip_ability_item_mana_burn_2"                 "Diffusal Blade"
-                "DOTA_Tooltip_ability_item_mana_burn_2_Description"     "<h1>Active: Purge</h1> If cast on an enemy, removes buffs from the target and slows it for %duration% seconds. If cast on an ally, Purge removes most debuffs.\n<h1>Passive: Manabreak</h1> Each attack burns %burn% mana from the target, and deals the %burn_damage%%% of %burn% magical damage. Illusions burn 20%% of %burn% mana per attack.\n<br>Diffusal Blade is a Mana burn Modifier, and does not stack with other Mana burn Modifiers."
+                "DOTA_Tooltip_ability_item_mana_burn_2_Description"     "<h1>Active: Purge</h1> If cast on an enemy, removes buffs from the target and slows it for %duration% seconds. If cast on an ally, Purge removes most debuffs.\n<h1>Passive: Manabreak</h1> Each attack burns %burn% mana from the target, and deals the %burn_damage%%% of %burn% magical damage. Illusions burn 20%% of %burn% mana per attack."
                 "DOTA_Tooltip_ability_item_mana_burn_2_Note0"           "Manabreak damage % increases by your intellect"
                 "DOTA_Tooltip_ability_item_mana_burn_2_Lore"            "An enchanted blade that allows the owner to cut straight into the enemy's soul."
                 "DOTA_Tooltip_ability_item_mana_burn_2_burn"            "MANABREAK: <br>• MANABURN:"
@@ -1495,7 +1503,7 @@
             //3 lvl (Suzzwke)
 
                 "DOTA_Tooltip_ability_item_suzzwke"                 "Suzzwke"
-                "DOTA_Tooltip_ability_item_suzzwke_Description"     "<h1>Passive: Tricks</h1> On attack have %chance%% chance to steal buff. Buff max duration time is %max_duration% sec.\n<h1>Active: Purge</h1> If cast on an enemy, removes buffs from the target and slows it for %duration% seconds. If cast on an ally, Purge removes most debuffs.\n<h1>Passive: Manabreak</h1> Each attack burns %burn% mana from the target, and deals the %burn_damage%%% of %burn% magical damage. Illusions burn 20%% of %burn% mana per attack.\n<br>Diffusal Blade is a Mana burn Modifier, and does not stack with other Mana burn Modifiers."
+                "DOTA_Tooltip_ability_item_suzzwke_Description"     "<h1>Passive: Tricks</h1> On attack have %chance%% chance to steal buff. Buff max duration time is %max_duration% sec.\n<h1>Active: Purge</h1> If cast on an enemy, removes buffs from the target and slows it for %duration% seconds. If cast on an ally, Purge removes most debuffs.\n<h1>Passive: Manabreak</h1> Each attack burns %burn% mana from the target, and deals the %burn_damage%%% of %burn% magical damage. Illusions burn 20%% of %burn% mana per attack."
                 "DOTA_Tooltip_ability_item_suzzwke_Note0"           "Manabreak damage % increases by your intellect<br>Have infinitie charges"
                 "DOTA_Tooltip_ability_item_suzzwke_Lore"            "Suzzwke is an a relic weapon for slaying gods, and contains demonic power."
                 "DOTA_Tooltip_ability_item_suzzwke_burn"            "MANABREAK: <br>• MANABURN:"
@@ -1514,7 +1522,7 @@
             //Maelstrom
 
                 "DOTA_Tooltip_ability_item_lesser_lightning"                    "Maelstrom"
-                "DOTA_Tooltip_ability_item_lesser_lightning_Description"        "<h1>Active: Lightning Override</h1> Multiplies lightning damage by %damage_multiplier%%, lasts %duration% sec.\n<h1>Passive: Chain Lightning</h1> Give %chance%% chance on attack to create lightning, jump on %jump_count% targets, and deal %lightning_damage% damage.\n<br>Maelstrom is a unique attack Modifier, and does not stack with other unique attack Modifiers."
+                "DOTA_Tooltip_ability_item_lesser_lightning_Description"        "<h1>Active: Lightning Override</h1> Multiplies lightning damage by %damage_multiplier%%, lasts %duration% sec.\n<h1>Passive: Chain Lightning</h1> Give %chance%% chance on attack to create lightning, jump on %jump_count% targets, and deal %lightning_damage% damage."
                 "DOTA_Tooltip_ability_item_lesser_lightning_Lore"               ""
                 "DOTA_Tooltip_ability_item_lesser_lightning_dmg"                "+$damage"
                 "DOTA_Tooltip_ability_item_lesser_lightning_atk"                "+$attack"
@@ -1531,7 +1539,7 @@
             //Mjollnir
 
                 "DOTA_Tooltip_ability_item_greater_lightning"                    "Mjollnir"
-                "DOTA_Tooltip_ability_item_greater_lightning_Description"        "<h1>Active: Lightning Override</h1> Multiplies lightning damage by %damage_multiplier%%, lasts %duration% sec.\n<h1>Passive: Chain Lightning</h1> Give %chance%% chance on attack to create lightning, jump on %jump_count% targets, and deal %lightning_damage% damage.\n<br>Mjollnir is a unique attack Modifier, and does not stack with other unique attack Modifiers."
+                "DOTA_Tooltip_ability_item_greater_lightning_Description"        "<h1>Active: Lightning Override</h1> Multiplies lightning damage by %damage_multiplier%%, lasts %duration% sec.\n<h1>Passive: Chain Lightning</h1> Give %chance%% chance on attack to create lightning, jump on %jump_count% targets, and deal %lightning_damage% damage."
                 "DOTA_Tooltip_ability_item_greater_lightning_Lore"               ""
                 "DOTA_Tooltip_ability_item_greater_lightning_dmg"                "+$damage"
                 "DOTA_Tooltip_ability_item_greater_lightning_atk"                "+$attack"
@@ -1561,14 +1569,13 @@
         //FireBlend
 
             "DOTA_Tooltip_ability_item_fireblend"                   "FireBlend"
-            "DOTA_Tooltip_ability_item_fireblend_Description"       "<h1>Passive: Explose</h1> On attack has chance %chance%% to create explosion on every target who stay nearby main target in %radius% radius and deal magic %damage% damage.\n<h1>Active: Destroy Tree</h1> Destroy trees around selected tree in 160 radius and give vision on tree pos.\n<h1>Passive: Quell</h1> Increases damage done to creeps by %dmg%%, It does not apply to the bosses.\n<br>FireBlend - is an a unique explosive modifier, and he don't stack's with other explosive modifiers."
+            "DOTA_Tooltip_ability_item_fireblend_Description"       "<h1>Passive: Explose</h1> On attack has chance %chance%% to create explosion on every target who stay nearby main target in %radius% radius and deal magic %damage% damage.\n<h1>Active: Destroy Tree</h1> Destroy trees around selected tree in 160 radius and give vision on tree pos.\n<h1>Passive: Quell</h1> Increases damage done to creeps if the type of melee attacks while damage to creeps will %quell%, if ranged, will %quell_ranged%, It does not apply to the bosses."
             "DOTA_Tooltip_ability_item_fireblend_Lore"              ""
             "DOTA_Tooltip_ability_item_fireblend_chance"            "%CHANCE:"
-            "DOTA_Tooltip_ability_item_fireblend_atk"               "+$attack"
-            "DOTA_Tooltip_ability_item_fireblend_mana"              "+$mana"
+            "DOTA_Tooltip_ability_item_fireblend_atk"               "+$damage"
+			"DOTA_Tooltip_ability_item_fireblend_attack"            "+$attack"
             "DOTA_Tooltip_ability_item_fireblend_radius"            "DAMAGE RADIUS:"
             "DOTA_Tooltip_ability_item_fireblend_damage"            "DAMAGE:"
-            "DOTA_Tooltip_ability_item_fireblend_bonus_dmg"         "%QUELL DAMAGE:"
 
         //Doom craft scroll
 
@@ -1601,7 +1608,6 @@
             "DOTA_Tooltip_ability_item_midas_sword_mana"                "+$mana"
             "DOTA_Tooltip_ability_item_midas_sword_radius"              "• DAMAGE RADIUS:"
             "DOTA_Tooltip_ability_item_midas_sword_damage"              "• DAMAGE:"
-            "DOTA_Tooltip_ability_item_midas_sword_bonus_dmg"           "%QUELL DAMAGE:"
             "DOTA_Tooltip_ability_item_midas_sword_gold_per_hit"        "MIDAS TOUCH:<br>• GOLD PER HIT:"
             "DOTA_Tooltip_ability_item_midas_sword_gold_per_hit_chance" "%• CHANCE:"
             "DOTA_Tooltip_ability_item_midas_sword_gold_per_hit_cooldown""• COOLDOWN AFTER SUCCES:"
@@ -1610,7 +1616,7 @@
             // Inactive
 
                 "DOTA_Tooltip_ability_item_gauntlet_of_madness"                 "Madness Bashium"
-                "DOTA_Tooltip_ability_item_gauntlet_of_madness_Description"     "<h1>Active: Darkness graze</h1> Increases damage by %dmg_act%, strength by %str_act%, lifesteal by %lifesteal_act%%, attack speed by %atk_act% and take damage by %take_dmg_act%%, Drains %hp_per_sec% + %hp_prc%% max health per second.\n<br>Madness Bashium - is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
+                "DOTA_Tooltip_ability_item_gauntlet_of_madness_Description"     "<h1>Active: Darkness graze</h1> Increases damage by %dmg_act%, strength by %str_act%, lifesteal by %lifesteal_act%%, attack speed by %atk_act% and take damage by %take_dmg_act%%, Drains %hp_per_sec% + %hp_prc%% max health per second."
                 "DOTA_Tooltip_ability_item_gauntlet_of_madness_Lore"            "The two evils grants an unmatched egregious, vile power to any power-hungry individual, but only the strongests of minds can wield it with free will without succumbing to its poisonous madness and insanity."
                 "DOTA_Tooltip_ability_item_gauntlet_of_madness_dmg"             "+$damage"
                 "DOTA_Tooltip_ability_item_gauntlet_of_madness_atk"             "+$attack"
@@ -1622,7 +1628,7 @@
             //Active
 
                 "DOTA_Tooltip_ability_item_gauntlet_of_madness_active"                 "Madness Bashium"
-                "DOTA_Tooltip_ability_item_gauntlet_of_madness_active_Description"     "<h1>Active: Darkness graze</h1> Increases damage by %dmg_act%, strength by %str_act%, lifesteal by %lifesteal_act%%, attack speed by %atk_act% and take damage by %take_dmg_act%%, Drains %hp_per_sec% + %hp_prc%% max health per second.\n<br>Madness Bashium - is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
+                "DOTA_Tooltip_ability_item_gauntlet_of_madness_active_Description"     "<h1>Active: Darkness graze</h1> Increases damage by %dmg_act%, strength by %str_act%, lifesteal by %lifesteal_act%%, attack speed by %atk_act% and take damage by %take_dmg_act%%, Drains %hp_per_sec% + %hp_prc%% max health per second."
                 "DOTA_Tooltip_ability_item_gauntlet_of_madness_active_Lore"            "The two evils grants an unmatched egregious, vile power to any power-hungry individual, but only the strongests of minds can wield it with free will without succumbing to its poisonous madness and insanity."
                 "DOTA_Tooltip_ability_item_gauntlet_of_madness_active_dmg"             "+$damage"
                 "DOTA_Tooltip_ability_item_gauntlet_of_madness_active_atk"             "+$attack"
@@ -1652,7 +1658,7 @@
         //Lightning Rod (MKB + Maelstrom)
 
             "DOTA_Tooltip_ability_item_lightning_rod"                   "Lightning Bar"
-            "DOTA_Tooltip_ability_item_lightning_rod_Description"       "<h1>Passive: TrueStrike</h1> Excludes miss chance.\n<h1>Passive: Chain Lightning</h1> Give %chance%% chance on attack to create lightning, jump on %jump_count% targets, and deal %lightning_damage% damage.\n<h1>Passive: Lightning Bash</h1> Lightning has %chance_b%% chance to briefly stun target at hit and deal additional %damage_b% physical damage.\n<br>Lightning Bar is a unique attack Modifier, and does not stack with other unique attack Modifiers."
+            "DOTA_Tooltip_ability_item_lightning_rod_Description"       "<h1>Passive: TrueStrike</h1> Excludes miss chance.\n<h1>Passive: Chain Lightning</h1> Give %chance%% chance on attack to create lightning, jump on %jump_count% targets, and deal %lightning_damage% damage.\n<h1>Passive: Lightning Bash</h1> Lightning has %chance_b%% chance to briefly stun target at hit and deal additional %damage_b% physical damage."
             "DOTA_Tooltip_ability_item_lightning_rod_Lore"              "Staff of the thunder god Thor, throws in all lightning and with a little chance to stun the victims of them."
             "DOTA_Tooltip_ability_item_lightning_rod_dmg"               "+$damage"
             "DOTA_Tooltip_ability_item_lightning_rod_atk"               "+$attack"
@@ -1861,6 +1867,7 @@
         "DOTA_Tooltip_ability_item_grand_magus_core_int"                    "+$int"
         "DOTA_Tooltip_ability_item_grand_magus_core_mana"                   "+$mana"
         "DOTA_Tooltip_ability_item_grand_magus_core_hp"                     "+$health"
+		"DOTA_Tooltip_ability_item_grand_magus_core_hp_regen"               "%+$hp_regen"
         "DOTA_Tooltip_ability_item_grand_magus_core_mana_regen"             "%+$mana_regen"
         "DOTA_Tooltip_ability_item_grand_magus_core_creep_lifesteal"        "%SPELL CREEP LIFESTEAL:"
         "DOTA_Tooltip_ability_item_grand_magus_core_hero_lifesteal"         "%SPELL HERO LIFESTEAL:"
@@ -1994,34 +2001,34 @@
 		
 		//Sanctum Regnum
 		    "DOTA_Tooltip_ability_item_solomon_book"                "Sanctum Regnum"
-			"DOTA_Tooltip_ability_item_solomon_book_Description"    "<h1>Experience gain</h1> Gains (%exp_per_cast% + bonus per hero level) experience per every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Creep killer</h1> Amplificates outgoing damage to crees by %amplification%%.\n"
-            "DOTA_Tooltip_ability_item_solomon_book_Lore"           "Секреты магии открываются постепенно."
-            "DOTA_Tooltip_ability_item_solomon_book_exp_per_cast"  "Опыт за каст:"
-            "DOTA_Tooltip_ability_item_solomon_book_exp_lvl_bonus"    "Бонус опыта за уровень героя:"
+			"DOTA_Tooltip_ability_item_solomon_book_Description"    "<h1>Experience gain</h1> Gains (%exp_per_cast% + bonus per hero level) experience per every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Mage killer</h1> Amplificates outgoing damage by %amplification%%.\n"
+            "DOTA_Tooltip_ability_item_solomon_book_Lore"           "Secrets of magic are opening gradually."
+            "DOTA_Tooltip_ability_item_solomon_book_exp_per_cast"  "EXP per cast:"
+            "DOTA_Tooltip_ability_item_solomon_book_exp_lvl_bonus"    "EXP increase per hero level:"
 			"DOTA_Tooltip_ability_item_solomon_book_int"  "+$int"
 			"DOTA_Tooltip_ability_item_solomon_book_mana"  "+$mana"
 			"DOTA_Tooltip_ability_item_solomon_book_mana_regen"	"%+$mana_regen"
-			"DOTA_Tooltip_ability_item_solomon_book_amplification"	"%Увеличение урона по крипам:"
+			"DOTA_Tooltip_ability_item_solomon_book_amplification"	"%Amplification outgoing damage:"
 			
 		    "DOTA_Tooltip_ability_item_solomon_book_2"                "Sanctum Regnum"
-			"DOTA_Tooltip_ability_item_solomon_book_2_Description"    "<h1>Experience gain</h1> Gains (%exp_per_cast% + bonus per hero level) experience per every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Creep killer</h1> Amplificates outgoing damage to crees by %amplification%%.\n"
-            "DOTA_Tooltip_ability_item_solomon_book_2_Lore"           "Секреты магии открываются постепенно."
-            "DOTA_Tooltip_ability_item_solomon_book_2_exp_per_cast"  "Опыт за каст:"
-            "DOTA_Tooltip_ability_item_solomon_book_2_exp_lvl_bonus"    "Бонус опыта за уровень героя:"
+			"DOTA_Tooltip_ability_item_solomon_book_2_Description"    "<h1>Experience gain</h1> Gains (%exp_per_cast% + bonus per hero level) experience per every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Mage killer</h1> Amplificates outgoing damage by %amplification%%.\n"
+            "DOTA_Tooltip_ability_item_solomon_book_2_Lore"           "Secrets of magic are opening gradually."
+            "DOTA_Tooltip_ability_item_solomon_book_2_exp_per_cast"  "EXP per cast:"
+            "DOTA_Tooltip_ability_item_solomon_book_2_exp_lvl_bonus"    "EXP increase per hero level:"
 			"DOTA_Tooltip_ability_item_solomon_book_2_int"  "+$int"
 			"DOTA_Tooltip_ability_item_solomon_book_2_mana"  "+$mana"
 			"DOTA_Tooltip_ability_item_solomon_book_2_mana_regen"	"%+$mana_regen"
-			"DOTA_Tooltip_ability_item_solomon_book_2_amplification"	"%Увеличение урона по крипам:"
+			"DOTA_Tooltip_ability_item_solomon_book_2_amplification"	"%Amplification outgoing damage:"
 			
 		    "DOTA_Tooltip_ability_item_solomon_book_3"                "Sanctum Regnum"
-			"DOTA_Tooltip_ability_item_solomon_book_3_Description"    "<h1>Experience gain</h1> Gains (%exp_per_cast% + bonus per hero level) experience per every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Creep killer</h1> Amplificates outgoing damage to crees by %amplification%%.\n"
-            "DOTA_Tooltip_ability_item_solomon_book_3_Lore"           "Секреты магии открываются постепенно."
-            "DOTA_Tooltip_ability_item_solomon_book_3_exp_per_cast"  "Опыт за каст:"
-            "DOTA_Tooltip_ability_item_solomon_book_3_exp_lvl_bonus"    "Бонус опыта за уровень героя:"
+			"DOTA_Tooltip_ability_item_solomon_book_3_Description"    "<h1>Experience gain</h1> Gains (%exp_per_cast% + bonus per hero level) experience per every cast of abilites.You gain full experience bonus if cooldown of casted ability is 10 or above.\n <h1>Mage killer</h1> Amplificates outgoing damage by %amplification%%.\n"
+            "DOTA_Tooltip_ability_item_solomon_book_3_Lore"           "Secrets of magic are opening gradually."
+            "DOTA_Tooltip_ability_item_solomon_book_3_exp_per_cast"  "EXP per cast:"
+            "DOTA_Tooltip_ability_item_solomon_book_3_exp_lvl_bonus"    "EXP increase per hero level:"
 			"DOTA_Tooltip_ability_item_solomon_book_3_int"  "+$int"
 			"DOTA_Tooltip_ability_item_solomon_book_3_mana"  "+$mana"
 			"DOTA_Tooltip_ability_item_solomon_book_3_mana_regen"	"%+$mana_regen"
-			"DOTA_Tooltip_ability_item_solomon_book_3_amplification"	"%Увеличение урона по крипам:"
+			"DOTA_Tooltip_ability_item_solomon_book_3_amplification"	"%Amplification outgoing damage:"
 			
 	
 		//книжки с боссов

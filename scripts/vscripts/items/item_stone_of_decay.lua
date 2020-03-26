@@ -31,10 +31,6 @@ function modifier_stone_of_decay_passive:OnAttackLanded( params )
 	end
 end
 
-function modifier_stone_of_decay_passive:GetModifierOrbPriority(  )
-	return DOTA_ORB_PRIORITY_ITEM
-end
-
 if decay_modifier_corrupt == nil then decay_modifier_corrupt = class({}) end
 
 function decay_modifier_corrupt:GetTexture(  )

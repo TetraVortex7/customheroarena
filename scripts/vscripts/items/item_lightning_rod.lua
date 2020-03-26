@@ -47,7 +47,7 @@ function modifier_lightning_rod_passive:OnAttackLanded( params )
 		if RollPercentage(self.chance) then
 			self.proc = true
 			if self:IsActiveOrb() then
-				caster:CreateBashingLightning(ability, self.damage, self.range, self.jump_count, DAMAGE_TYPE_MAGICAL, params.target, nil, self.damage_b, self.chance_b)
+				caster:CreateBashingLightning(ability, self.damage, self.range, self.jump_count, DAMAGE_TYPE_MAGICAL, params.target, nil, self.damage_b, self.chance_b, DAMAGE_TYPE_MAGICAL)
 			end
 		else
 			self.proc = false
@@ -61,12 +61,4 @@ end
 
 function modifier_lightning_rod_passive:GetModifierAttackSpeedBonus_Constant(  )
 	return self.atk
-end
-
-function modifier_lightning_rod_passive:GetModifierOrbPriority(  )
-	if self.proc == true then
-		return DOTA_ORB_PRIORITY_ITEM_UNIQUE
-	else
-		return DOTA_ORB_PRIORITY_FALSE
-	end
 end
